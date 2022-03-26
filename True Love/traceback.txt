@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 1108, in script
+    menu:
+  File "game/script.rpy", line 1109, in <module>
+    "Do you want to go out?" if not event_BA:
+NameError: name 'event_BA' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 1108, in script
+    menu:
+  File "C:\Users\Kim\Desktop\renpy-7.4.11-sdk/renpy/ast.py", line 1688, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Kim\Desktop\renpy-7.4.11-sdk/renpy/exports.py", line 1026, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Kim\Desktop\renpy-7.4.11-sdk/renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Kim\Desktop\renpy-7.4.11-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 1109, in <module>
+    "Do you want to go out?" if not event_BA:
+NameError: name 'event_BA' is not defined
+
+Windows-10-10.0.22000
+Ren'Py 7.4.11.2266
+True Love 1.0
+Thu Mar 24 21:16:53 2022
