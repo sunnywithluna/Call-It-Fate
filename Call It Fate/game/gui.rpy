@@ -83,9 +83,27 @@ define gui.title_text_size = 75
 
 ## Main and Game Menus #########################################################
 
+
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "gui/000.png"
+define gui.game_menu_background = "gui/000.png"
+
+define gui.main_menu_background000 = "gui/000.png"
+define gui.game_menu_background000 = "gui/000.png"
+define gui.main_menu_background001 = "gui/001.png"
+define gui.game_menu_background001 = "gui/001.png"
+define gui.main_menu_background010 = "gui/010.png"
+define gui.game_menu_background010 = "gui/010.png"
+define gui.main_menu_background011 = "gui/011.png"
+define gui.game_menu_background011 = "gui/011.png"
+define gui.main_menu_background100 = "gui/100.png"
+define gui.game_menu_background100 = "gui/100.png"
+define gui.main_menu_background101 = "gui/101.png"
+define gui.game_menu_background101 = "gui/101.png"
+define gui.main_menu_background110 = "gui/110.png"
+define gui.game_menu_background110 = "gui/110.png"
+define gui.main_menu_background111 = "gui/111.png"
+define gui.game_menu_background111 = "gui/111.png"
 
 
 ## Dialogue ####################################################################

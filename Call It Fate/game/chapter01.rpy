@@ -22,7 +22,7 @@ label ch1_day1:
             show neko
             nc "\"...\""
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
 
             jump ch1_schoolday1
     return
@@ -98,7 +98,7 @@ label ch1_day1_confidenc:
             nc "\"...\""
 
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
 
             jump ch1_schoolday1
     return
@@ -112,7 +112,7 @@ label whoops_edit:
             nc "\"...\""
 
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
 
             jump ch1_schoolday1
 
@@ -145,7 +145,7 @@ label ch1_day1_goodbyenc:
         nc "\"...\""
 
         stop music fadeout 1.0
-        scene black with fade
+        scene black with longfade
         jump ch1_schoolday1
     stop music fadeout 1.0
     hide neko
@@ -157,5 +157,5 @@ label whoop2_edit:
     nc "\"...\""
 
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump ch1_schoolday1

@@ -85,7 +85,7 @@ label epi_maddie:
 
     "As we eat our lunch, I think on Maddie's words and all the ways I've tried to work on myself this summer."
     "I'm exercising more, eating better."
-    "I'm trying to be more confident-- even just telling Maddie how I feel was a huge step for me."
+    "I'm trying to be more confident--even just telling Maddie how I feel was a huge step for me."
 
     "For a long time, I let my patterns control me."
 
@@ -94,9 +94,10 @@ label epi_maddie:
     "I don't want to let my unconscious direct my life or control my behavior."
 
     "I worked for the person I am. I worked for the relationship I have with Maddie."
-
+    scene black with longfade
     "And I won't call it fate."
     $ a_ending_success = True
+    $ persistent.a_ending_success2 = True
 
     jump credits
     return
@@ -118,7 +119,7 @@ label epi_anna:
     b "\"Did you already eat?\""
     $ renpy.show(custom_show("anna", "embarrassed2"), [])
 
-    n "\"No, it's just-- I didn't expect it.\""
+    n "\"No, it's just--I didn't expect it.\""
 
     $ renpy.show(custom_show("anna", "flirty"), [])
 
@@ -193,9 +194,11 @@ label epi_anna:
     "I don't want to let my unconscious direct my life or control my behavior."
 
     "I worked for the person I am. I worked for the relationship I have with Anna."
+    scene black with longfade
 
     "And I won't call it fate."
     $ b_ending_success = True
+    $ persistent.b_ending_success2 = True
 
     jump credits
     return
@@ -246,7 +249,7 @@ label epi_erin:
 
     "As we eat our lunch, I think on Erin's words and all the ways I've tried to work on myself this summer."
     "I'm drawing more, and working on myself."
-    "I'm trying to be more confident-- even just telling Erin how I feel was a huge step for me."
+    "I'm trying to be more confident--even just telling Erin how I feel was a huge step for me."
 
     "For a long time, I let my patterns control me."
 
@@ -255,43 +258,83 @@ label epi_erin:
     "I don't want to let my unconscious direct my life or control my behavior."
 
     "I worked for the person I am. I worked for the relationship I have with Erin."
+    scene black with longfade
 
     "And I won't call it fate."
     $ c_ending_success = True
+    $ persistent.c_ending_success2 = True
 
     jump credits
     return
 
 label credits:
+
+    if persistent.a_ending_success2 == True:
+        if persistent.b_ending_success2 == True:
+            if persistent.c_ending_success2 == True:
+                $ persistent.score = 7
+            else:
+                $ persistent.score = 4
+        else:
+            if persistent.c_ending_success2 == True:
+                $ persistent.score = 5
+            else:
+                $ persistent.score = 4
+    elif persistent.b_ending_success2 == True:
+        if persistent.a_ending_success2 == True:
+            if persistent.c_ending_success2 == True:
+                $ persistent.score = '111'
+            else:
+                $ persistent.score = 6
+        else:
+            if persistent.c_ending_success2 == True:
+                $ persistent.score = 3
+            else:
+                $ persistent.score = 1
+    elif persistent.c_ending_success2 == True:
+        if persistent.b_ending_success2 == True:
+            if persistent.a_ending_success2 == True:
+                $ persistent.score = 7
+            else:
+                $ persistent.score = 3
+        else:
+            if persistent.a_ending_success2 == True:
+                $ persistent.score = 6
+            else:
+                $ persistent.score = 2
+    else:
+        $ persistent.score = 0
+
     if a_ending_success:
-        scene black with fade
+        
+        scene black with longfade
 
         play music "audio/end.mp3"
-        "ended up with maddie"
+        "ended up with maddie with [A] points"
 
         "Kim Jang Kris Gathman Nick Gathman Etc"
     elif b_ending_success:
-        scene black with fade
+        scene black with longfade
 
         play music "audio/end.mp3"
         "ended up with anna"
 
         "Kim Jang Kris Gathman Nick Gathman Etc"
     elif c_ending_success:
-        scene black with fade
+        scene black with longfade
 
         play music "audio/end.mp3"
         "ended up with erin"
 
         "Kim Jang Kris Gathman Nick Gathman Etc"
     elif d_ending_success:
-        scene black with fade
+        scene black with longfade
 
         play music "audio/end.mp3"
         "ended up with neko"
         "Kim Jang Kris Gathman Nick Gathman Etc"
     else:
-        scene black with fade
+        scene black with longfade
 
         play music "audio/end.mp3"
 

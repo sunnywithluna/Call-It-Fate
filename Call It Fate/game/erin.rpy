@@ -186,7 +186,7 @@ label art_choice_2_b:
         $ renpy.show(custom_show("erin", "flirty"), [])
         c "\"That's actually a big reason I started drawing in the first place. I'd love to be a character artist or work on illustrations for deck-building games or something. No pressure though.\""
     
-        c "\"Well... Actually, there is a little pressure.\""
+        c "\"Well...Actually, there is a little pressure.\""
 
         n "\"There is?\""
 
@@ -240,7 +240,7 @@ label art_choice_2_c:
         "She flips through the pages, and though I'm a little nervous, I know I need to get used to criticism if I want to improve."
         if arting_counter >= 3:
             $ renpy.show(custom_show("erin", "flirty"), [])
-            c "\"You have a great eye. Maybe try inking some of the sketches-- that'd give you a chance to experiment outside of graphite. Other than that, I really like what you've done so far!\""
+            c "\"You have a great eye. Maybe try inking some of the sketches--that'd give you a chance to experiment outside of graphite. Other than that, I really like what you've done so far!\""
             $ C = C + 1
         elif arting_counter >=1:
             $ renpy.show(custom_show("erin", "happy"), [])
@@ -398,13 +398,13 @@ label art_1_workout:
                 "I say goodbye to Erin before heading out."
                 $ C = C + 1
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
 
             jump end_of_day
         "Go Home":
             "I've been out for a while. I think it's time to go home."
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
 
             jump end_of_day
     stop music fadeout 1.0
@@ -539,7 +539,7 @@ label event_ac:
     n "\"I guess we should have coordinated this better.\""
     $ renpy.show(custom_show("erin", "angry"), [])
     c "\"Oh well. I guess we'll just have to eat two whole pizzas.\""
-    n "\"Haha, or maybe just have trueleftovers?\""
+    n "\"Haha, or maybe just have leftovers?\""
     "Erin feigns a dramatic sigh."
     $ renpy.show(custom_show("erin", "flirty"), [])
 
@@ -580,7 +580,7 @@ label event_ac:
     $ renpy.hide(custom_hide("erin"))
     "We soon move on to drawing other food items with various emotions, and I only get stuck once when trying to decide how a hamburger might look when in love."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
 
     jump quick_calculations
 
@@ -702,7 +702,7 @@ label event_bc:
         c "\"Thanks for believing in me, Sam.\""
 
     $ renpy.show(custom_show("erin", "uncomf"), [])
-    c "\"...I didn't realize it until now, but I think waiting to hear back about the whole thing was really starting to wear on me. I try not to care what people think... But...\""
+    c "\"...I didn't realize it until now, but I think waiting to hear back about the whole thing was really starting to wear on me. I try not to care what people think...But...\""
     $ renpy.show(custom_show("erin", "sad"), [])
 
     c "\"It was really important to me that they liked my art. I guess I've been wondering if I really have what it takes to do game art professionally and landing this internship is so reassuring.\""
@@ -740,27 +740,30 @@ label event_bc:
 
 label kiss_erin:
     if C >= 9:
-        scene erin_kiss with fade
+        scene black with fade
 
         "I lean in."
         "And our lips meet."
         c "\"So, I'll see you in class?\""
         n "\"Yeah, I'll see you then.\""
-        scene black
+        scene erin_kiss with fade
         "She gets in her car and drives away."
         "And I can't wait until Tuesday when I get to see her again."
         $day = temp
         jump quick_calculations
 
     else:
+        scene black with fade
         $ C = C - 2
         "I lean in."
+        scene bg_night with fade
+
         $ renpy.show(custom_show("erin", "uncomf"), [])
         c "\"Uh, well, I gotta go.\""
         "She's leaning away, and I feel a wave of embarrassment wash over me."
         c "\"Thanks again.\""
         $ renpy.hide(custom_hide("erin"))
-        "Erin gets in her car and drives away. And I'm trueleft wondering what I did wrong."
+        "Erin gets in her car and drives away. And I'm left wondering what I did wrong."
     
         $day = temp
         jump quick_calculations
@@ -871,7 +874,7 @@ label event_cc:
 
 label erin_goodending:
     $ erin = True
-    n "\"Um, right. Okay, I guess I should just say it then. I really like you, Erin. I know we haven't known each other for very long, but I like you, and I was wondering if maybe... you felt the same way?\""
+    n "\"Um, right. Okay, I guess I should just say it then. I really like you, Erin. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\""
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("erin", "normal"), [])
     c "\"You're pretty great, you know that?\""
@@ -882,7 +885,7 @@ label erin_goodending:
     n "\"She smiles and takes my hand.\""
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return 
 
@@ -899,7 +902,7 @@ label erin_perfectending:
     "She smiles and takes my hand."
     "Then, we finish watching the sun disappear."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     $ day = temp
     jump epi_start
     return
@@ -907,12 +910,12 @@ label erin_perfectending:
 label erin_badending:
     $ d_ending_success = True
     $ renpy.show(custom_show("erin", "sad"), [])
-    c "\"Uh, sorry. I don't know how to say this. I'm happy we met, and you're a good friend. But... I don't like you in that way.\""
+    c "\"Uh, sorry. I don't know how to say this. I'm happy we met, and you're a good friend. But...I don't like you in that way.\""
     "It takes a moment before what she's saying sinks in."
-    n "\"Huh... I guess I misread things... I'll see you around.\""
+    n "\"Huh...I guess I misread things...I'll see you around.\""
     $ renpy.hide(custom_hide("erin"))
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     "I have nothing else to say, so I leave the roof and head back to my dorm."
     scene bg_room_dark
     show neko    
@@ -921,7 +924,7 @@ label erin_badending:
     "For now on, it's just going to be me and Neko-Chan."
     "And I guess I'm okay with that."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     $day = temp
     jump credits
     return 
@@ -988,7 +991,7 @@ label event_dc:
         n "\"Sure. What's up?\""
         "She pauses as she thinks."
         $ renpy.show(custom_show("erin", "uncomf"), [])
-        c "\"Uh, well, I don't know how to say this, but... I think I like you. I'm sorry, did I make things weird?\""
+        c "\"Uh, well, I don't know how to say this, but...I think I like you. I'm sorry, did I make things weird?\""
 
         menu:
             "I like you too": #CHANGE
@@ -1002,12 +1005,12 @@ label event_dc:
                 $ renpy.show(custom_show("erin", "flirty"), [])
                 c "\"Yeah! That'd be fun.\""
                 $ renpy.show(custom_show("erin", "angry"), [])
-                c "\"Oh but... I should let you rest then! Or you won't heal in time for our date.\""
+                c "\"Oh but...I should let you rest then! Or you won't heal in time for our date.\""
                 "While leaving my room, she hesitates by the doorway."
                 $ renpy.show(custom_show("erin", "normal"), [])
                 c "\"I'm glad we talked, Sam. Rest up, okay?\""
                 $ renpy.hide(custom_hide("erin"))
-                "Erin closes the door behind her, and I'm trueleft standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
+                "Erin closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Erin would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
                 "I dream of a life with Erin. And though I know realistically it's probably caused by the fever, I can't help but think it means something."
@@ -1020,7 +1023,7 @@ label event_dc:
                 c "\"Sam!\""
                 "Erin grabs me as I almost fall to the ground."
                 "I know I need to respond to her confession, but my head hurts so much..."
-                c "\"I'll head out... let's talk later okay?\""
+                c "\"I'll head out...let's talk later okay?\""
                 "She heads out, closing the door behind her before I have a chance to say anything else."
                 $ renpy.hide(custom_hide("erin"))
                 n "\"Erin...\""
@@ -1034,11 +1037,11 @@ label event_dc:
         $ renpy.hide(custom_hide("erin"))
         n "\"Alright. Talk to you later then.\""
         c "\"Bye, Sam.\""
-        "Erin leaves, closing the door behind her, and I'm trueleft standing in the middle of my dorm, alone."
-        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan... a perfect life."
+        "Erin leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
+        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
     $ day = temp
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump ch3_schoolday2
     return
 
@@ -1067,6 +1070,6 @@ label erin_confessed:
     "And we finish watching the sun disappear."
     $ day = temp
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return

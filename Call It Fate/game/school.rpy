@@ -68,7 +68,7 @@
     scene bg_class with fade
 
     $ renpy.show(custom_show("erin", "embarrassed"), [])
-    c "\"Uh... I guess just...\""
+    c "\"Uh...I guess just...\""
     $ renpy.show(custom_show("erin", "uncomf"), [])
     c "\"...seeing things through new perspectives? Learning how to look at life in ways that I hadn't thought of before.\""
     $ renpy.show(custom_show("erin", "happy"), [])
@@ -106,7 +106,7 @@
 
     p "\"Alright then. Now that we're all acquainted, let's get on with the lesson.\""
 
-    scene black with fade
+    scene black with longfade
     stop music fadeout 1.0
 
     "Dr. Paige lectures for the remainder of the class period and then dismisses us for the day."
@@ -125,11 +125,11 @@ label ch1_schoolday2:
     play music "audio/class.mp3"
 
     "On Thursday, I walk into class and find Dr. Paige, Maddie, Anna, and Erin already inside."
-    if 6 <= A <= 10:
+    if A_mid <= A <= A_mid3:
         show maddie_2 happy
         a "\"Hey, Sam!\""
         hide maddie_2
-    elif A > 10:
+    elif A >= A_high:
         show maddie_2 flirty
         a "\"Hey, Sam, sit with me!\""
         hide maddie_2
@@ -179,7 +179,7 @@ label ch1_schoolday2:
         "Sit back and wait for class to end":
             "I sit back in my chair and count down the hours to the end of class."
 
-    scene black with fade
+    scene black with longfade
     stop music fadeout 1.0
 
     "Eventually, Dr. Paige dismisses us for the day."
@@ -217,11 +217,11 @@ label ch2_schoolday1:
     play music "audio/class.mp3"
 
     "On Tuesday, I walk into class and find Dr. Paige, Maddie, Anna, and Erin already inside."
-    if 6 <= A <= 10:
+    if A_mid <= A <= A_mid3:
         show maddie_3 happy
         a "\"Hey, Sam!\""
         hide maddie_3
-    elif A > 10:
+    elif A >= A_high:
         show maddie_3 flirty
         a "\"Hey, Sam, sit with me!\""
         hide maddie_3
@@ -360,7 +360,7 @@ label ch2_schoolday1:
             "We spend the rest of the class period writing out a script, practicing our parts, and, finally, performing our skit for Dr. Paige."
             p "\"Well, that was lively! It was like Descartes, Aristotle, and Hobbes were right here in front of me. Good work!\""
     
-    scene black with fade
+    scene black with longfade
     stop music fadeout 1.0
     "Dr. Paige dismisses us for the day"
     scene bg_class_after with fade
@@ -375,11 +375,11 @@ label ch2_schoolday2:
     play music "audio/class.mp3"
 
     "On Thursday, I walk into class and find Dr. Paige, Maddie, Anna, and Erin already inside."
-    if 6 <= A <= 10:
+    if A_mid <= A <= A_mid3:
         show maddie_4 happy
         a "\"Hey, Sam!\""
         hide maddie_4
-    elif A > 10:
+    elif A >= A_high:
         show maddie_4 flirty
         a "\"Hey, Sam, sit with me!\""
         hide maddie_4
@@ -403,85 +403,130 @@ label ch2_schoolday2:
     "I take a seat and class begins."
     p "\"I wanted to start class off a little differently today. Since we've been talking about different philosophies and worldviews, I would like to hear about your personal perspectives.\""
     p "\"What are some values or codes that you follow? By what mindset do you navigate the world?\""
-    "The wall clock ticks as we think. Then, I raise my hand."
-    p "\"Sam?\""
 
-    menu:
-        "I believe in discipline and hard work":
-            $ A = A + 2
-            n "\"I believe in working hard in all that I do. It's important for me to approach hurdles in life with discipline and endurance.\""
-            p "\"That's a great answer, Sam. Anyone else?\""
-            "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I've changed over these past couple weeks."
+    $ max_amount = max(A,B,C)
+    if max_amount > 5:
 
-            "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
+        "The wall clock ticks as we think. Then, I raise my hand."
+        p "\"Sam?\""
 
-            "My perspective on life was fickle, easily changing, and not always for the best."
+        menu:
+            "I believe in discipline and hard work":
+                $ A = A + 2
+                n "\"I believe in working hard in all that I do. It's important for me to approach hurdles in life with discipline and endurance.\""
+                p "\"That's a great answer, Sam. Anyone else?\""
+                "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I've changed over these past couple weeks."
 
-            if A >= B and A >= C:
-                $girl = "Maddie"
-            if B >= A and B >= C:
-                $girl = "Anna"
-            if C >= A and C >= B:
-                $girl = "Erin"
+                "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
 
-            "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
+                "My perspective on life was fickle, easily changing, and not always for the best."
 
+                if A >= B and A >= C:
+                    $girl = "Maddie"
+                if B >= A and B >= C:
+                    $girl = "Anna"
+                if C >= A and C >= B:
+                    $girl = "Erin"
 
-        "I believe in staying curious":
-            $ B = B + 2
-            n "\"I believe in trying to navigate the world with discernment and wisdom. I want to stay curious, applying the lessons I learn to the life I live.\""
-            p "\"That's a great answer, Sam. Anyone else?\""
-            "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I've changed over these past couple weeks."
-
-            "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
-
-            "My perspective on life was fickle, easily changing, and not always for the best."
-
-            if A >= B and A >= C:
-                $girl = "Maddie"
-            if B >= A and B >= C:
-                $girl = "Anna"
-            if C >= A and C >= B:
-                $girl = "Erin"
-
-            "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
+                "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
 
 
-        "I believe in learning from one another":
-            $ C = C + 2
-            n "\"I believe in learning as much as I can from those who know more than me. And, hopefully, becoming someone that others can learn from as well. I think that's the best way to grow.\""
-            p "\"That's a great answer, Sam. Anyone else?\""
-            "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I've changed over these past couple weeks."
+            "I believe in staying curious":
+                $ B = B + 2
+                n "\"I believe in trying to navigate the world with discernment and wisdom. I want to stay curious, applying the lessons I learn to the life I live.\""
+                p "\"That's a great answer, Sam. Anyone else?\""
+                "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I've changed over these past couple weeks."
 
-            "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
+                "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
 
-            "My perspective on life was fickle, easily changing, and not always for the best."
+                "My perspective on life was fickle, easily changing, and not always for the best."
 
-            if A >= B && A >= C:
-                $girl = "Maddie"
-            if B >= A && B >= C:
-                $girl = "Anna"
-            if C >= A && C >= B:
-                $girl = "Erin"
+                if A >= B and A >= C:
+                    $girl = "Maddie"
+                if B >= A and B >= C:
+                    $girl = "Anna"
+                if C >= A and C >= B:
+                    $girl = "Erin"
 
-            "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
-
-
-        "I believe in doing whatever makes you happy":
-            n "\"I believe in living a life that makes you happy. Happiness and money are the only things worth pursuing in this world.\""
-            p "\"That's an…interesting thought, Sam. Anyone else?\""
-            "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how none of this really matters."
-
-            "Who cares about our outlooks or 'codes.'"
-
-            "The truth is, the world is unfair and adding rules for yourself isn't going to help you get ahead. No one else is going to look out for you."
-
-            "So do whatever you have to do to be happy."
+                "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
 
 
-    scene black with fade
-    stop music fadeout 1.0
-    "After he finishes going around the room, Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
+            "I believe in learning from one another":
+                $ C = C + 2
+                n "\"I believe in learning as much as I can from those who know more than me. And, hopefully, becoming someone that others can learn from as well. I think that's the best way to grow.\""
+                p "\"That's a great answer, Sam. Anyone else?\""
+                "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I've changed over these past couple weeks."
+
+                "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
+
+                "My perspective on life was fickle, easily changing, and not always for the best."
+
+                if A >= B && A >= C:
+                    $girl = "Maddie"
+                if B >= A && B >= C:
+                    $girl = "Anna"
+                if C >= A && C >= B:
+                    $girl = "Erin"
+
+                "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
+
+
+            "I believe in doing whatever makes you happy":
+                n "\"I believe in living a life that makes you happy. Happiness and money are the only things worth pursuing in this world.\""
+                p "\"That's an…interesting thought, Sam. Anyone else?\""
+                "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how none of this really matters."
+
+                "Who cares about our outlooks or 'codes.'"
+
+                "The truth is, the world is unfair and adding rules for yourself isn't going to help you get ahead. No one else is going to look out for you."
+
+                "So do whatever you have to do to be happy."
+
+
+        scene black with longfade
+        stop music fadeout 1.0
+        "After he finishes going around the room, Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
+
+    else:
+        
+        "The wall clock ticks as we think."
+        "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I haven't changed over these past couple weeks."
+
+        p "\"Sam?\""
+
+        "Snapping me out of my daydream, it was time for me to answer Dr. Paige's question. 'By what mindset do I navigate the world?'"
+
+        menu:
+            "I believe in discipline and hard work":
+                $ A = A + 2
+                n "\"I believe in working hard in all that I do. It's important for me to approach hurdles in life with discipline and endurance.\""
+                p "\"That's a great answer, Sam.\""
+
+            "I believe in staying curious":
+                $ B = B + 2
+                n "\"I believe in trying to navigate the world with discernment and wisdom. I want to stay curious, applying the lessons I learn to the life I live.\""
+                p "\"That's a great answer, Sam.\""
+
+            "I believe in learning from one another":
+                $ C = C + 2
+                n "\"I believe in learning as much as I can from those who know more than me. And, hopefully, becoming someone that others can learn from as well. I think that's the best way to grow.\""
+                p "\"That's a great answer, Sam. \""
+
+            "I believe in doing whatever makes you happy":
+                n "\"I believe in living a life that makes you happy. Happiness and money are the only things worth pursuing in this world.\""
+                p "\"That's an…interesting thought, Sam.\""
+                "As Dr. Paige starts lecturing, I can't help but think about how none of this really matters."
+
+                "Who cares about our outlooks or 'codes.'"
+
+                "The truth is, the world is unfair and adding rules for yourself isn't going to help you get ahead. No one else is going to look out for you."
+
+                "So do whatever you have to do to be happy."
+
+
+        scene black with longfade
+        stop music fadeout 1.0
+        "Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
 
     scene bg_class_after with fade
 
@@ -511,7 +556,7 @@ label ch2_weekend:
         "I can't believe it's already the weekend. I wish I had something to do…"
         "I laze around my dorm, playing games and watching TV, until the next school day."
         stop music fadeout 1.0
-        scene black with fade
+        scene black with longfade
         jump ch3_schoolday1
     return
 
@@ -522,7 +567,9 @@ label ch3_schoolday1:
 
     "I wake up and my head feels heavy. There's a pulse at the front of my skull, a stuffiness in my ears. It's Tuesday, but I don't think I'll be able to go to class."
     "I get out my phone and write an email to Dr. Paige explaining the situation, and shortly after pressing send, I drift back to sleep."
+    scene black with longfade
     "When I wake up again, it's 3:30pm."
+    scene bg_room with fade
     n "\"Man, I can't believe I slept through the afternoon...\""
     "I put a palm to my forehead--it's a little warm. All around me are laundry and dishes that need cleaning, and I wonder how my dorm got so out of hand. Lying there in bed, I feel equally like a part of the mess."
     "What should I do?"
@@ -535,7 +582,7 @@ label ch3_schoolday1:
             "I pick my dirty laundry off the floor and put it in the hamper. I take the scattered pieces of trash in my room and throw them away. I vacuum the carpet, wipe down my shelves, wash the dishes, and change my sheets."
             "Just as I've finished cleaning, I hear a knock at my door."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump event_d
     return
 
@@ -544,11 +591,11 @@ label ch3_schoolday2:
     play music "audio/class.mp3"
     $ day = day + 1
     "On Thursday, I walk into class where Dr. Paige, Maddie, Anna, and Erin are already inside."
-    if 6 <= A <= 10:
+    if A_mid <= A <= A_mid3:
         show maddie_1 happy
         a "\"Hey, Sam!\""
         hide maddie_1
-    elif A > 10:
+    elif A >= A_high:
         show maddie_1 flirty
         a "\"Hey, Sam, sit with me!\""
         hide maddie_1
@@ -577,7 +624,7 @@ label ch3_schoolday2:
         "Ha, no":
             $ A = A + 1
             n "\"Do I still have to take it if I'm not?\""
-            p "\"Haha... yes.\""
+            p "\"Haha...yes.\""
 
         "Definitely":
             $ B = B + 1
@@ -589,7 +636,7 @@ label ch3_schoolday2:
             n "\"Eh, I'm prepared to try my best.\""
             p "\"Let's hope your best is good enough then, hm?\""
 
-    "He returns to the front of the class and glances at the clock on the wall-- there's less than a minute until one."
+    "He returns to the front of the class and glances at the clock on the wall--there's less than a minute until one."
 
     p "\"Before we begin, I just want to say it's been a pleasure having you all in this class. I hope we'll get the opportunity to cross paths again during your collegiate career.\""
     p "\"Though, not in Intro to Philosophy.\""
@@ -598,13 +645,13 @@ label ch3_schoolday2:
     "Dr. Paige clears his throat."
     
     p "\"I digress. You may now open your exam books and flip over the papers on your desks. The instructions for your final are written there. Good luck.\""
-    scene black with fade
+    scene black with longfade
     stop music fadeout 1.0
 
     "We write in our booklets, racing against the ticking clock."
 
     "And by the time I finish the exam, I'm exhausted."
-    scene bg_class_after with fade
+    scene bg_class_afterclass with fade
 
     if grade >= 4:
         "Though I'm the last one to leave, I know it's just because I triple checked my answers."
@@ -640,7 +687,7 @@ label ch3_schoolday2:
                     char_string = "NONE"
 
     if char_string == "NONE":
-        scene black with fade
+        scene black with longfade
         stop music fadeout 1.0
         $ d_ending_success = True
         "I think some people might see my life and assume I'm lonely. But I'm actually okay."
@@ -681,7 +728,7 @@ label ch3_schoolday2:
     return
 
 label event_ending:
-    scene bg_room with fade
+    scene bg_room_afterclass with fade
     play music "audio/event.mp3"
 
     "I take a deep breath."

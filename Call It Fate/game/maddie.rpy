@@ -3,7 +3,7 @@
 
     $ a_number_flag = True
     n "\"Hey, Maddie, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\""
-    if A >= 2:
+    if A >= A_low:
         $ renpy.show(custom_show("maddie", "flirty"), [])        
         a "\"Or something?\""
         n "\"I didn't mean--\""
@@ -87,7 +87,7 @@ label gym:
         n "\"You win this time.\""
         $ renpy.show(custom_show("maddie", "flirty"), [])
         a "\"Is that a challenge for a rematch?\""
-        n "\"No thanks. I think I'll keep what little money I have trueleft.\""
+        n "\"No thanks. I think I'll keep what little money I have left.\""
         "I walk away to avoid any further gloating."
         $ renpy.hide(custom_hide("maddie"))
     else:
@@ -100,8 +100,14 @@ label gym:
 label gym_main_menu:
     menu:
         "Talk to Maddie":
-        # if not gym_choice_1_a:
-            jump gym_1_talk
+            if not gym_choice_1_a:
+                jump gym_1_talk
+            else:
+                "I say goodbye to Maddie before heading out."
+                $ A = A + 1
+                stop music fadeout 1.0
+                scene black with longfade
+                jump end_of_day
         "Work Out" if not gym_choice_1_b:
             jump gym_1_workout
         "Go Home":
@@ -110,13 +116,13 @@ label gym_main_menu:
         
 label gym_1_talk:
     $ gym_choice_1_a = True
-    if A < 0:
+    if A < A_bad:
         $ renpy.show(custom_show("maddie", "uncomf"), [])
         a "\"What do you want?\""
-    elif 0 <= A <= 5:
+    elif A_bad <= A <= A_mid:
         $ renpy.show(custom_show("maddie", "normal"), [])
         a "\"Hey, Sam. What's up?\""
-    elif 6 <= A <=10:
+    elif A_mid <= A <=A_mid3:
         $ renpy.show(custom_show("maddie", "happy"), [])
         a "\"Hey, Sam! Great day to hit the gym, huh?\""
     else:
@@ -155,7 +161,7 @@ label gym_choice_2_b:
     n "\"So, what're you up to these days?\""
     $ gym_choice_2_b = True
     $ j = day
-    if A > 0:
+    if A > A_bad:
         $ renpy.show(custom_show("maddie", "normal"), [])
         $ A = A + 1
         a "\"Oh, you know, the usual. Hiking, climbing, anything that gets me outside and moving. What about you? You still play games?\""
@@ -163,14 +169,14 @@ label gym_choice_2_b:
         $ renpy.show(custom_show("maddie", "happy"), [])
         a "\"It's cool that you're taking an interest in fitness.\""
     
-        if A >= special_A:
+        if A >= A_mid:
             a "\"It can be hard to get into, but it's definitely rewarding if you stick with it.\""
             n "\"Any tips on how to stay motivated?\""
             "Maddie takes a sip of her water as she thinks."
             $ renpy.show(custom_show("maddie", "happy"), [])
             a "\"Envision the person you want to be. And remember why working out will help you get there.\""
             $ renpy.show(custom_show("maddie", "angry"), [])
-            a "\"There are plenty of days I'd rather just stay at home in bed. It's tempting in the moment... but when I think about who I want to become, it isn't someone who takes the easy road just 'cause it's gratifying, you know?\""
+            a "\"There are plenty of days I'd rather just stay at home in bed. It's tempting in the moment...but when I think about who I want to become, it isn't someone who takes the easy road just 'cause it's gratifying, you know?\""
             n "\"You want to be someone who's willing to put in the work, even when it's hard.\""
             $ renpy.show(custom_show("maddie", "embarrassed"), [])
             a "\"Exactly. That's what a strong person does. I don't want to be seen as weak just because of my height or because I'm a girl.\""
@@ -196,7 +202,7 @@ label gym_choice_2_c:
     n "\"Hey, since we're both here, do you think you could spot me on the bench press?\""
     $ gym_choice_2_c = True
 
-    if A >=4:
+    if A >= A_mid:
         $ A = A + 2
         $ renpy.show(custom_show("maddie", "normal"), [])
         a "\"Yeah, of course!\""
@@ -249,7 +255,7 @@ label beauty_comp_maddie:
         "You're really cute":
 
             n "\"I know this is kind of out of nowhere, but I just wanted to say, I think you're really cute.\""
-            if A >= 4:
+            if A >= A_mid:
                 $A = A + 1
                 $ renpy.show(custom_show("maddie", "flirty"), [])
                 a "\"Haha, really? That just gave me a confidence boost. Thanks, Sam.\""
@@ -287,7 +293,7 @@ label strength_comp_maddie:
                 a "\"And you're pretty annoying. Get lost, weeb.\""
             else:
                 $ renpy.show(custom_show("maddie", "uncomf"), [])
-                a "\"You could've just trueleft off the 'for a girl' part...\""
+                a "\"You could've just left off the 'for a girl' part...\""
             $A = A - 4
             jump talking_to_maddie
 
@@ -315,36 +321,38 @@ label gym_1_workout:
     $ A = A + 1
 
     "I work my way through some of the gym equipment, doing three sets for every exercise and moving up in weight when it seems too easy."
-    "I catch Maddie looking in my direction."
-    $ renpy.show(custom_show("maddie", "normal"), [])
-    "What should I do?"
+    
+    if day%2 == 0:
+        "I catch Maddie looking in my direction."
+        $ renpy.show(custom_show("maddie", "normal"), [])
+        "What should I do?"
 
-    menu:
-        "Focus on working out":
-            if A < 4:
-                $ A = A + 1
-                "I continue with my workout, and when I glance back over at Maddie, she looks impressed."
-            else:
-                "I continue with my workout, and when I glance back over at Maddie, she seems disappointed."
-                if A > 8:
-                    $ A = A - 1
-
-        "Wave":
-            if A < 4:
-                $ A = A - 1
-                "I wave at Maddie."
-                $ renpy.show(custom_show("maddie", "uncomf"), [])
-                "She raises an eyebrow in confusion as she continues with her workout."
-
-            else:
-                $ renpy.show(custom_show("maddie", "normal"), [])
-                "I wave at Maddie."
-                $ renpy.show(custom_show("maddie", "happy"), [])
-                a "\"Hey, Sam!\""
-                if A >= 9: 
+        menu:
+            "Focus on working out":
+                if A < A_mid2:
                     $ A = A + 1
-    $ renpy.hide(custom_hide("maddie"))
-    $ renpy.with_statement(dissolve)
+                    "I continue with my workout, and when I glance back over at Maddie, she looks impressed."
+                else:
+                    "I continue with my workout, and when I glance back over at Maddie, she seems disappointed."
+                    if A > A_high:
+                        $ A = A - 1
+
+            "Wave":
+                if A < A_mid2:
+                    $ A = A - 1
+                    "I wave at Maddie."
+                    $ renpy.show(custom_show("maddie", "uncomf"), [])
+                    "She raises an eyebrow in confusion as she continues with her workout."
+
+                else:
+                    $ renpy.show(custom_show("maddie", "normal"), [])
+                    "I wave at Maddie."
+                    $ renpy.show(custom_show("maddie", "happy"), [])
+                    a "\"Hey, Sam!\""
+                    if A >= A_high: 
+                        $ A = A + 1
+        $ renpy.hide(custom_hide("maddie"))
+        $ renpy.with_statement(dissolve)
 
     scene bg_gym_night with fade
     "I finish a couple more sets before wiping down the equipment."
@@ -359,12 +367,12 @@ label gym_1_workout:
                 "I say goodbye to Maddie before heading out."
                 $ A = A + 1
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
             jump end_of_day
         "Go Home":
             "I've been out for a while. I think it's time to go home."
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
             jump end_of_day
     return 
 
@@ -397,7 +405,7 @@ label event_aa:
     show maddie_2 normal
     a "\"I was really surprised when I saw you here. I didn't take you as the gym type back in high school.\""
 
-    n "\"Well... I wasn't...\""
+    n "\"Well...I wasn't...\""
     n "\"The thing is, I realized recently that I never really push myself. I've always wanted to be stronger, but I had trouble taking that first step to start.\""
     n "\"I don't want to hold myself back anymore by not trying.\""
     show maddie_2 uncomf 
@@ -407,7 +415,7 @@ label event_aa:
     a "\"Go for it.\""
     n "\"I kind of thought you didn't like me. In high school, you were a little...intense.\""
     show maddie_2 sad 
-    a "\"Yeah... I know. I'm sorry. I was such a jerk.\""
+    a "\"Yeah...I know. I'm sorry. I was such a jerk.\""
     a "\"I wish I could explain myself, but there's no excuse for the way I acted…Can you forgive me?\""
     menu:
         "I forgive you.":
@@ -422,12 +430,12 @@ label test:
     show maddie_2 flirty
     "She takes my hand, and I pull her up."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump quick_calculations
     return 
 
 label test2:
-    n "\"I... don't know if I can yet.\""
+    n "\"I...don't know if I can yet.\""
     show maddie_2 uncomf
     a "\"You need time. I get it.\""
     "She stands up and extends her hand to me."
@@ -435,7 +443,7 @@ label test2:
     a "\"Until then, I'll try to prove that I mean it.\""
     "I take her hand, and she pulls me up."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump quick_calculations
     return 
 
@@ -486,6 +494,7 @@ label event_ba:
     a "\"Hey, I'd rather have a room full of plants than one full of Neko-Chan figurines.\""
     n "\"Wow.\""
     a "\"Haha, well, don't dish it out if you can't take it. Now, come on. Let's pick a trail. I'm ready to get moving.\""
+    show maddie_5 normal
     "I look at the two wooden trail signs in front of us, both written in debossed black lettering."
     "Which trail should we go on?"
 
@@ -517,7 +526,7 @@ label event_ba:
 
     "Maddie tenses up as Jennifer looks back and forth between us."
 
-    "Jennifer" "\"Oh, are you guys here... together?\""
+    "Jennifer" "\"Oh, are you guys here...together?\""
     show maddie_5 normal
     a "\"Uh, yup. We're kind of on a date right now.\""
 
@@ -536,8 +545,9 @@ label event_ba:
     a "\"You know what? I don't need your approval. Come on, Sam.\""
     hide jennifer with dissolve
     hide maddie_5 with dissolve
-
+    scene black with longfade
     "I feel Maddie's hand slip into mine as we push past Jennifer."
+    scene bg_gymdate with fade
 
     n "\"What was that about? I thought you guys were close.\""
     show maddie_5 angry 
@@ -551,7 +561,7 @@ label event_ba:
 
     a "\"And mean. Why would I want to be friends with someone like that?\""
 
-    n "\"But... hasn't she always been like that?\""
+    n "\"But...hasn't she always been like that?\""
     show maddie_5 sad
 
     "Maddie pauses before nodding her head."
@@ -583,7 +593,7 @@ label event_ba:
     a "\"And I'm not proud of it. I know it's not an excuse. But I am trying to be better...\""
     n "\"Hey, we all kind of sucked in high school, right? You can't beat yourself up about it forever.\""
     show maddie_5 normal
-    a "\"Yeah... I guess that's true...\""
+    a "\"Yeah...I guess that's true...\""
     hide maddie_5 with dissolve
     "Maddie wears a serious look on her face, her brows furrowed, her jaw clenched. I can tell she's sincere in wanting to change, but running into Jennifer seemed to resurface feelings of guilt and regret."
 
@@ -618,20 +628,24 @@ label event_ba:
     return
 
 label kiss_maddie:
-    if A >= 7:
-        scene maddie_kiss with fade
+    if A >= A_high:
+        scene black with fade
 
         $ A = A + 1
         "I lean in."
         "And our lips meet."
+        scene maddie_kiss with fade
+
         a "\"Bye, Sam.\""
-        scene black
         "She gets in her car and drives away."
         "And I can't wait until Tuesday when I get to see her again."
         jump quick_calculations
     else: 
+        scene black with fade
         $ A = A - 1
         "I lean in."
+        scene bg_night with fade
+
         show maddie_5 angry
         a "\"Oh, no. Let's not do that.\""
         show maddie_5 uncomf
@@ -640,19 +654,19 @@ label kiss_maddie:
         "She looks at me with pity."
         a "\"Don't worry about it, it's fine. Take care, okay?\""
         "She gets in her car and drives away."
-        "And I'm trueleft wondering what I did wrong."
+        "And I'm left wondering what I did wrong."
         jump quick_calculations
     return 
 
 label hug_maddie:
     "I lean in for a hug."
 
-    if A >= 7:
+    if A >= A_high:
         $A = A - 1
         "Maddie feels stiff as she hugs me, and I wonder if I've done something wrong."
         show maddie_5 sad 
         a "\"Alright, Sam. Well, take care I guess.\""
-        "She gets in her car and drives away. And I'm trueleft with the impression that she was a little disappointed."
+        "She gets in her car and drives away. And I'm left with the impression that she was a little disappointed."
         jump quick_calculations
     else:
         $A = A + 1
@@ -674,7 +688,7 @@ label hand_maddie:
     show maddie_5 normal
     a "\"Bye, Sam.\""
     "Maddie gets in her car and leaves."
-    "And I'm trueleft wondering if there was a better way I could've done that."
+    "And I'm left wondering if there was a better way I could've done that."
 
     jump quick_calculations
     return 
@@ -684,7 +698,9 @@ label send_text_a:
     "What should I say?"
 
     menu:
-        "Do you want to go on a date?" if not eventba_trigger and not date_a_sent:
+        "Make small talk about her day" if not small_a_sent:
+            jump text_small_a
+        "Do you want to go on a date?" if not eventba_trigger and not date_a_sent and eventaa_trigger and maddie_hang_over:
             jump text_go_out_a
         "Let's hang out soon" if not eventaa_trigger and not hang_b_sent:
             jump text_buddy_a
@@ -701,7 +717,7 @@ label text_go_out_a:
         "I already have a date this weekend. I shouldn't overbook myself."
     else: 
         "I send a text that reads, \"Hey, I was wondering, do you want to go out sometime?\""
-        if A >= 6:
+        if A >= A_mid3:
             $ date_this_weekend = True
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\"Sure! Sounds fun. Does this weekend work for you?\""
@@ -718,7 +734,7 @@ label text_go_out_a:
 label text_buddy_a:
     $ hang_a_sent = True
     "I send a text that reads, \"Hey, Maddie! I was thinking of hitting the gym tomorrow. You down?\""
-    if A >= 4:
+    if A >= A_mid:
         "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
         a "\"Totally! See you then!\""
         $ eventaa_trigger = True
@@ -753,13 +769,33 @@ label text_video_a:
             jump send_text_a
     return
 
+label text_small_a:
+    $ small_a_sent = True
+    "I ask Maddie about her day."
+
+    if small_a_sent2 == False:
+        $ small_a_sent2 = True
+        if A >= A_low:
+            $ A = A + 1
+            "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
+            "We chat for a short while before I change the topic."
+            jump send_text_a
+        else:
+            "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
+            a "\"I'm kind of busy right now.\""
+            jump send_text_a   
+    else:
+        "We chat for a short while before I decide to change the topic."
+        jump send_text_a 
+
+
 label text_night_a:
     $ gn_a_sent = True
     "I send a simple goodnight message."
 
     if gn_a_sent2 == False:
         $ gn_a_sent2 = True
-        if A >= 5:
+        if A >= A_low:
             $ A = A + 1
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\"A goodnight text? If I didn't know any better, I'd think you like me. Lol, goodnight, Sam.\""
@@ -841,9 +877,9 @@ label event_ca:
             if maddie_confessed:
                 jump maddie_confessed
 
-            if A == 20:
+            if A >= A_high3:
                 jump maddie_perfectending
-            elif A >= 12:
+            elif A >= A_high:
                 jump maddie_goodending
             else:
                 jump maddie_badending
@@ -862,7 +898,7 @@ label maddie_goodending:
     "She smiles, then takes my hand."
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return 
 
@@ -882,17 +918,17 @@ label maddie_greatending:
     "She smiles, then takes my hand."
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return 
 
 label maddie_badending:
     $ d_ending_success = True
     show maddie_1 sad
-    a "\"Oh... Sam, I'm so sorry.\""
+    a "\"Oh...Sam, I'm so sorry.\""
     "It takes a moment before what she's saying sinks in."
-    n "\"Huh... I guess I misread things... I'll see you around.\""
-    scene black with fade
+    n "\"Huh...I guess I misread things...I'll see you around.\""
+    scene black with longfade
     "I have nothing else to say, so I leave the roof and head back to my dorm."
     scene bg_room_dark with fade
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
@@ -948,14 +984,14 @@ label event_da:
     show maddie_2 uncomf
     a "\"I'm remembering why I picked on you in high school...\""
 
-    if A >= 12:
+    if A >= A_high:
         $ maddie_confessed = True
         show maddie_2 uncomf
         a "\"Listen, there's actually something I wanted to talk to you about.\""
         n "\"Yeah? What is it?\""
-        n "\"Maddie scratches the back of her head. She almost seems... nervous.\""
+        n "\"Maddie scratches the back of her head. She almost seems...nervous.\""
         show maddie_2 normal
-        a "\"Well... I know this might seem a bit sudden, but, I like you, Sam.\""
+        a "\"Well...I know this might seem a bit sudden, but, I like you, Sam.\""
         a "\"And the only reason I'm even saying this is because I'd rather know how you feel now than get my hopes up, you know?\""
         show maddie_2 uncomf
         a "\"So, what do you think?\""
@@ -972,7 +1008,7 @@ label event_da:
                 "While leaving my room, she hesitates by the doorway."
                 a "\"Call me later, okay? When you're feeling better.\""
                 hide maddie_2 with dissolve
-                "Maddie closes the door behind her, and I'm trueleft standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
+                "Maddie closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Maddie would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
                 "I dream of a life with Maddie. And though I know realistically it's probably just caused by the fever, I can't help but think it means something."
@@ -998,11 +1034,11 @@ label event_da:
         a "\"Yeah, you need to rest. We'll see each other on Thursday, if you're not still sick.\""
         n "\"Alright. Talk to you later then.\""
         hide maddie_2 with dissolve
-        "Maddie leaves, closing the door behind her, and I'm trueleft standing in the middle of my dorm, alone."
-        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan... a perfect life."
+        "Maddie leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
+        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
     
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump ch3_schoolday2
     return
 
@@ -1010,18 +1046,22 @@ label maddie_confessed:
     $ maddie = True
     show maddie_1 normal
     n "\"The other day, when I was sick, you said something to me.\""
+    show maddie_1 uncomf
 
     a "\"You mean that I like you?\""
 
     n "\"Yeah, that...\""
 
     n "\"I-I didn't get a chance to respond before, but...\""
+    show maddie_1 embarrassed
 
     n "\"I feel the same way.\""
 
     "Another breeze blows past us."
+    show maddie_1 happy
 
     "Then, she smiles."
+    show maddie_1 flirty
 
     a "\"Good.\""
 
@@ -1029,6 +1069,6 @@ label maddie_confessed:
 
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return

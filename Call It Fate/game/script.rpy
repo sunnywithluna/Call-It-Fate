@@ -5,6 +5,12 @@ define nc = Character("Neko-Chan", who_color = "#104010")
 define p = Character("Dr. Paige", who_color = "#104010")
 define n = Character("Sam", who_color = "#104010") 
 
+#persistent data, gallery and main menu
+define persistent.a_ending_success2 = False
+define persistent.b_ending_success2 = False
+define persistent.c_ending_success2 = False
+define persistent.score = 0
+
 init:
     image neko = Image("nekochan.png")
     image jennifer = Image("jennifer.PNG")    
@@ -153,6 +159,8 @@ init:
     image erin_4 embarrassed = Image("erin (40).png")
     image erin_4 surprised = Image("erin (41).png")    
 
+
+
 # Points
 default A = 0
 default B = 0
@@ -183,11 +191,17 @@ default special_C = 5
 default grade = 0
 default course_counter = 0
 default temp = 0
+default A_bad = 0
+default A_low = 5
+default A_mid = 10
+default A_mid2 = 15
+default A_mid3 = 20
+default A_high = 25
+default A_high2 = 30
+default A_high3 = 35
 
-default a_ending_success = False
-default b_ending_success = False
-default c_ending_success = False
-default d_ending_success = False
+default small_a_sent = False
+default small_a_sent2 = False
 default gn_a_sent2 = False
 default gn_b_sent2 = False
 default gn_c_sent2 = False
@@ -269,6 +283,10 @@ default maddie = False
 default erin_confessed = False
 default maddie_confessed = False
 default anna_confessed = False
+default a_ending_success = False
+default b_ending_success = False
+default c_ending_success = False
+default d_ending_success = False
 
 transform trueleft:
     xpos 300   
@@ -279,6 +297,10 @@ transform trueright:
     ypos 150
 
 init python:
+
+    longfade = Fade(2.0, 1.0, 2.0)
+
+
     def custom_show(person, emotion):
         if day == 0:
             str_out = person + "_1 " + emotion

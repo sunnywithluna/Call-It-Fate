@@ -141,11 +141,11 @@ label library_choice_2_b:
 
         $ renpy.show(custom_show("anna", "happy"), [])
 
-        b "\"You should try it sometime. Looking out into space really reminds you just how small we are-- it's incredibly humbling.\""
+        b "\"You should try it sometime. Looking out into space really reminds you just how small we are--it's incredibly humbling.\""
 
         $ renpy.show(custom_show("anna", "embarrassed"), [])
 
-        b "\"I guess that's my hobby... That and manga.\""
+        b "\"I guess that's my hobby...That and manga.\""
         $ renpy.show(custom_show("anna", "embarrassed2"), [])
 
         n "\"You read manga? We should exchange recommendation lists sometime.\""
@@ -161,7 +161,7 @@ label library_choice_2_b:
 
             $ renpy.show(custom_show("anna", "sad"), [])
 
-            b "\"Nothing, it's just-- nevermind.\""
+            b "\"Nothing, it's just--nevermind.\""
 
             n "\"What is it? You can talk to me.\""
 
@@ -317,7 +317,7 @@ label library_choice_compliment_b:
                 b "\"I'm guessing you weren't really paying that much attention to their brains.\""
                 n "\"What?\""
                 $ renpy.show(custom_show("anna", "uncomf"), [])
-                b "\"I'm saying maybe there were other... assets that kept you distracted.\""
+                b "\"I'm saying maybe there were other...assets that kept you distracted.\""
             $B = B - 4
             jump talking_to_anna
 
@@ -384,13 +384,13 @@ label library_1_workout:
                 $ B = B + 1
         
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
             jump end_of_day
         "Go Home":
             "I've been out for a while. I think it's time to go home."
             
             stop music fadeout 1.0
-            scene black with fade
+            scene black with longfade
             jump end_of_day
     return
 
@@ -557,7 +557,7 @@ label event_ab:
     "Anna's gaze falls to the table in front of her, a disappointed look in her eyes."
     #$ renpy.show(custom_show("anna", "sigh"), [])
 
-    b "\"I just... it's frustrating.\""
+    b "\"I just...it's frustrating.\""
     n "\"It's okay, you're still learning. If we knew all this stuff already, we wouldn't need to take the class.\""
     $ renpy.show(custom_show("anna", "uncomf"), [])
     b "\"...\""
@@ -568,7 +568,7 @@ label event_ab:
     $ renpy.show(custom_show("anna", "normal"), [])
     "We pick up where we trueleft off, and Anna no longer seems bothered by her mistakes."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     $ day = temp
     jump quick_calculations
     return
@@ -702,7 +702,7 @@ label event_bb:
 
     "Usually, when I'd see Anna around campus, she'd always be doing school work--reading, studying. Even in the cafeteria, she'd have a laptop or notebook out."
 
-    "So, seeing her outside of school and actually letting loose... It's almost a little weird."
+    "So, seeing her outside of school and actually letting loose...It's almost a little weird."
 
     "I'm taken by surprise at just how fun she is to hang around. How her eyes widen with wonder at all the gadgets and exhibits of the museum. How seeing something she doesn't understand and figuring out how it works seems to genuinely excite her."
     
@@ -737,26 +737,28 @@ label event_bb:
 
 label kiss_anna:
     if B >= 8:
-        scene anna_kiss with fade
+        scene black with fade
 
         $ B = B + 1
         "I lean in."
         "And our lips meet."
-        scene black
+        scene anna_kiss with fade
 
         "Smiling, she gets in her car and drives away."
         "And I can't wait until Tuesday when I get to see her again."
         $ day = temp
         jump quick_calculations
     else:
+        scene black with fade
         $ B = B - 1
         "I lean in."
+        scene bg_night with fade 
         $ renpy.show(custom_show("anna", "uncomf"), [])
         "And she leans away. I feel a wave of embarrassment wash over me."
         b "\"I should go. Bye, Sam.\""
         $ renpy.hide(custom_hide("anna"))
         "Anna gets in her car and drives away."
-        "And I'm trueleft wondering what I did wrong."
+        "And I'm left wondering what I did wrong."
         $ day = temp
         jump quick_calculations
     return 
@@ -764,7 +766,7 @@ label kiss_anna:
 label hug_anna:
     $ renpy.hide(custom_hide("anna"))
     "I give Anna a hug goodbye before she gets in her car and drives away."
-    "And I'm trueleft wondering if there was a better way I could've done that."
+    "And I'm left wondering if there was a better way I could've done that."
     $ day = temp
     jump quick_calculations
     return 
@@ -818,7 +820,7 @@ label event_cb:
     "The air grows cooler as we stare out into the horizon."
     n "\"What are you thinking about?\""
     $ renpy.show(custom_show("anna", "uncomf"), [])
-    b "\"I've never been up here before...I'll spend hours in the library. But I never once went on the roof... It's nice.\""
+    b "\"I've never been up here before...I'll spend hours in the library. But I never once went on the roof...It's nice.\""
     n "\"Well, I guess now you have a new spot for study breaks.\""
     $ renpy.show(custom_show("anna", "happy"), [])
     b "\"I guess so...Thank you, Sam.\""
@@ -848,7 +850,7 @@ label event_cb:
 
 label anna_goodending:
     $ anna = True
-    n "\"I really like you, Anna. I know we haven't known each other for very long, but I like you, and I was wondering if maybe... you felt the same way?\""
+    n "\"I really like you, Anna. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\""
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("anna", "happy"), [])
     b "\"I do.\""
@@ -862,7 +864,7 @@ label anna_goodending:
     "And we finish watching the sun disappear."
     $day = temp 
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return 
 
@@ -877,7 +879,7 @@ label anna_perfectending:
     "And we finish watching the sun disappear."
     $day = temp
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
     return 
 
@@ -886,11 +888,11 @@ label anna_badending:
     $ renpy.show(custom_show("anna", "angry"), [])
     b "\"You're a good guy, so I'm sorry if I've misled you. But I don't feel that way about you.\""
     "It takes a moment before what she's saying sinks in."
-    n "\"Huh... I guess I misread things... I'll see you around.\""
+    n "\"Huh...I guess I misread things...I'll see you around.\""
     "I have nothing else to say, so I leave the roof and head back to my dorm."
     $day = temp
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
 
     scene bg_room_dark
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
@@ -898,7 +900,7 @@ label anna_badending:
     "For now on, it's just going to be me and Neko-Chan."
     "And I guess I'm okay with that."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump credits
     return 
 
@@ -989,7 +991,7 @@ label event_db:
                 $ renpy.show(custom_show("anna", "embarrassed2"), [])
                 b "\"Goodbye, Sam. I hope you feel better in the morning.\""
                 $ renpy.hide(custom_hide("anna"))
-                "Anna closes the door behind her, and I'm trueleft lying in bed, wishing my headache away so I could go after her and ask her to stay a little longer."
+                "Anna closes the door behind her, and I'm left lying in bed, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Anna would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
                 "I dream of a life with Anna. And though I know realistically it's probably just caused by the fever, I can't help but think it means something."
@@ -1027,8 +1029,8 @@ label event_db:
         b "\"You're sick. It's not good for you to entertain guests right now. I'll see you in class.\""
         n "\"Alright. Talk to you later then.\""
         $ renpy.hide(custom_hide("anna"))
-        "Anna leaves, closing the door behind her, and I'm trueleft standing in the middle of my dorm, alone."
-        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan... a perfect life."
+        "Anna leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
+        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
         $ day = temp
         jump quick_calculations
     return
@@ -1044,7 +1046,7 @@ label anna_confessed:
     n "\"Why?\""
     $ renpy.show(custom_show("anna", "sad"), [])
 
-    b "\"Because... you don't feel the same.\""
+    b "\"Because...you don't feel the same.\""
 
     n "\"No, but I do! I didn't get a chance to respond before, but-\""
 
@@ -1055,7 +1057,7 @@ label anna_confessed:
     "And we finish watching the sun disappear."
     $day = temp
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
     jump epi_start
 
     return

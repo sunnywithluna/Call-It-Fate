@@ -244,11 +244,11 @@ label talk_nc:
         nc "\"...\""
 
     elif 0 < max_amount <= 3:
-        n "\"Hey, Neko-Chan. Today was alright, but I would've stayed home with you if I could. [max_string] is pretty cool. Not that she thinks of me in that way... Why don't girls ever like me...\""
+        n "\"Hey, Neko-Chan. Today was alright, but I would've stayed home with you if I could. [max_string] is pretty cool. Not that she thinks of me in that way...Why don't girls ever like me...\""
         nc "\"...\""
 
     elif 3 < max_amount <= 6:
-        n "\"Today wasn't so bad... I wonder what [max_string] is doing right now.\""
+        n "\"Today wasn't so bad...I wonder what [max_string] is doing right now.\""
         nc "\"...\""
 
     elif 6 < max_amount <= 9:
@@ -267,7 +267,7 @@ label talk_nc:
     else:
         n "\"I’m sorry, Neko-Chan, but if this thing with [max_string] and me is going to work, I think you and I should stop talking.\""
         nc "\"...\""
-        n "\"I’ve never felt this way about anyone before... And I want to give a real relationship a shot.\"" 
+        n "\"I’ve never felt this way about anyone before...And I want to give a real relationship a shot.\"" 
         nc "\"...\""
     hide neko
     jump end_of_day_menu 
@@ -309,7 +309,7 @@ label goodnight_sam:
 
 label quick_calculations:
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
 
     if day == 0:
         jump ch1_schoolday2
@@ -339,7 +339,7 @@ label quick_calculations:
 
 
 label event_c:
-    scene bg_room with fade
+    scene bg_room_afterclass with fade
     play music "audio/event.mp3"
 
     "I take a deep breath."
@@ -350,18 +350,18 @@ label event_c:
     menu:
         "A potted succulent":
             $ maddie_gift = True
-            scene black with fade
+            scene black with longfade
             "I swing by the local nursery and pick up a succulent before heading back to campus."
         "A venus fly trap":
             $ anna_gift = True
-            scene black with fade
+            scene black with longfade
             "I grab a venus fly trap at a pet shop before heading back to campus."
         "A bouquet of sunflowers":
             $ erin_gift = True
-            scene black with fade
+            scene black with longfade
             "I pick up a bouquet of sunflowers from a flower shop before heading back to campus."
         "A single rose":
-            scene black with fade
+            scene black with longfade
             "I buy a single rose from the grocery store before heading back to campus."
 
     if eventca_trigger:
@@ -394,7 +394,7 @@ label neko_ending:
     n "\"I'm so happy you feel the same.\""
     "I hold Neko-Chan in my arms and smile, knowing that for now on, it's just going to be me and her."
     "Forever."
-    scene black with fade
+    scene black with longfade
     jump credits
     return 
 
