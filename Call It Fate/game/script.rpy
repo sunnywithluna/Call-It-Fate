@@ -6,9 +6,9 @@ define p = Character("Dr. Paige", who_color = "#104010")
 define n = Character("Sam", who_color = "#104010") 
 
 #persistent data, gallery and main menu
-define persistent.a_ending_success2 = False
-define persistent.b_ending_success2 = False
-define persistent.c_ending_success2 = False
+define persistent.a_ending_success = False
+define persistent.b_ending_success = False
+define persistent.c_ending_success = False
 define persistent.score = 0
 
 init:
@@ -173,9 +173,6 @@ default art_counter = 0
 default workout_counter = 0
 default study_counter = 0
 default arting_counter = 0
-default avideo_counter = 0
-default mvideo_counter = 0
-default evideo_counter = 0
 default i = 0
 default j = 0
 default k = 0
@@ -199,11 +196,31 @@ default A_mid3 = 20
 default A_high = 25
 default A_high2 = 30
 default A_high3 = 35
-default girl_num = K
-default girl_string = Kim
+default B_bad = 0
+default B_low = 5
+default B_mid = 10
+default B_mid2 = 15
+default B_mid3 = 20
+default B_high = 25
+default B_high2 = 30
+default B_high3 = 35
+default C_bad = 0
+default C_low = 5
+default C_mid = 10
+default C_mid2 = 15
+default C_mid3 = 20
+default C_high = 25
+default C_high2 = 30
+default C_high3 = 35
+default girl_num = 'K'
+default girl_string = 'Kim'
 
 default small_a_sent = False
 default small_a_sent2 = False
+default small_b_sent = False
+default small_b_sent2 = False
+default small_c_sent = False
+default small_c_sent2 = False
 default gn_a_sent2 = False
 default gn_b_sent2 = False
 default gn_c_sent2 = False
@@ -230,18 +247,17 @@ default gn_a_sent = False
 default like_a_sent = False
 default gn_c_sent = False 
 default like_c_sent = False
-default anna_hang_over = False 
-default erin_hang_over = False
-default maddie_hang_over = False
-default maddie_date_over = False 
-default erin_date_over = False 
-default anna_date_over = False 
+default anna_hangout = False 
+default erin_hangout = False
+default maddie_hangout = False
+default maddie_date = False 
+default erin_date = False 
+default anna_date = False 
 default gym_compliment = False 
 default lib_compliment = False
 default art_compliment = False
-default bool_ch1_day1_getdressed = False
-default bool_ch1_day1_talktonc = False 
-default date = False
+default get_dressed = False
+default intro_nc = False 
 default eventaa_trigger = False
 default eventab_trigger = False 
 default eventac_trigger = False
@@ -288,7 +304,8 @@ default anna_confessed = False
 default a_ending_success = False
 default b_ending_success = False
 default c_ending_success = False
-default d_ending_success = False
+default nekochan = False
+default confide_nc = False
 
 transform trueleft:
     xpos 300   
@@ -298,10 +315,9 @@ transform trueright:
     xpos 1000
     ypos 150
 
+define longfade = Fade(2.0, 1.0, 2.0)
+
 init python:
-
-    longfade = Fade(2.0, 1.0, 2.0)
-
 
     def custom_show(person, emotion):
         if day == 0:
@@ -352,6 +368,11 @@ init python:
                             str_out = person + "_1 " 
                             return str_out
 
+label splashscreen:
+
+    $ renpy.movie_cutscene('intro.mpg')
+
+    return
 
 label start:
-    jump chapter01
+    jump intro

@@ -661,7 +661,7 @@ screen file_slots(title):
 
                 for i in range(gui.file_slot_cols * gui.file_slot_rows):
 
-                    $ slot = i + 1
+                    $slot = i + 1
 
                     button:
                         action FileAction(slot)
@@ -945,7 +945,7 @@ screen history():
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
 
-                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                $what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 text what:
                     substitute False
 

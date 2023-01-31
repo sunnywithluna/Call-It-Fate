@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/erin.rpy", line 621: expected 'image_name_component' not found.
-    scene "sunflower.png" with fade
-          ^
+File "game/school.rpy", line 62: invalid syntax
+    renpy.hide(custom_hide("anna")) with dissolve
+                                     ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Jan  8 23:48:17 2023
+Mon Jan 30 18:57:40 2023
