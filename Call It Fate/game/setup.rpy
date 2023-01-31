@@ -179,7 +179,7 @@ label check_course_website:
                 "Complete Homework":
                     "A pop-up appears on the page:"
 
-                    "John Locke was an English philosopher who once said, 'It is one thing to show a man that he is in error, and another to put him in possession of truth'"
+                    "John Locke was an English philosopher who once said, 'It is one thing to show a man that he is in error, and another to put him in possession of truth'."
                     "Pointing out a person's mistakes only exalts yourself."
 
                     "According to John Locke, what would be more important?"
@@ -227,7 +227,7 @@ label play_video_games:
     jump end_of_day_menu 
     return
 
-label talk_nc:
+label talk_nc1:
     $ body_flag = True
     $ max_amount = max(A,B,C)
     if max_amount == A:
@@ -269,6 +269,65 @@ label talk_nc:
         nc "\"...\""
         n "\"I’ve never felt this way about anyone before...And I want to give a real relationship a shot.\"" 
         nc "\"...\""
+    hide neko
+    jump end_of_day_menu 
+    return
+
+label talk_nc:
+    $ body_flag = True
+    "What should you talk about?"
+    show neko
+
+    menu:
+        "Maddie":
+            $girl_num = A
+            $girl_string = 'Maddie'
+        "Anna":
+            $girl_num = B
+            $girl_string = 'Anna'
+        "Erin":
+            $girl_num = C
+            $girl_string = 'Erin'
+        "The weather":
+            jump talk_nc_d 
+    
+    if girl_num <= 0:
+    n "\"I'm glad I get to come home to you, Neko-Chan. My day wasn't so great. I think [girl_string] really doesn't like me very much. I wonder what I did wrong...\""
+    nc "\"...\""
+
+    elif 0 < girl_num <= 3:
+        n "\"Hey, Neko-Chan. Today was alright, but I would've stayed home with you if I could. [girl_string] is pretty cool. Not that she thinks of me in that way...Why don't girls ever like me...\""
+        nc "\"...\""
+
+    elif 3 < girl_num <= 6:
+        n "\"Today wasn't so bad...I wonder what [girl_string] is doing right now.\""
+        nc "\"...\""
+
+    elif 6 < girl_num <= 9:
+        n "\"It was a pretty good day, Neko-Chan. [girl_string] and I are really hitting it off I think.\""
+        nc "\"...\""
+
+    elif 9 < girl_num <= 12:
+        n "\"I woke feeling kind of off this morning, but getting to see [girl_string] completely turned my day around.\""
+        nc "\"...\""
+
+    elif 12 < girl_num <= 15:
+        n "\"I had a great day, Neko-Chan! I think [girl_string] might even like me. Who knows? Maybe I'll finally get a girlfriend.\""
+        nc "\"...\""
+        n "\"Don't look at me like that. You knew what this was.\"" 
+
+    else:
+        n "\"I'm sorry, Neko-Chan, but if this thing with [girl_string] and me is going to work, I think you and I should stop talking.\""
+        nc "\"...\""
+        n "\"I've never felt this way about anyone before...And I want to give a real relationship a shot.\"" 
+        nc "\"...\""
+    hide neko
+    jump end_of_day_menu 
+    return
+
+
+label talk_nc_d:
+    "We had a lovely talk about the weather."
     hide neko
     jump end_of_day_menu 
     return

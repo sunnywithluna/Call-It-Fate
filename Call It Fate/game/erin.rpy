@@ -570,7 +570,7 @@ label event_ac:
         "Cool":
             $ C = C + 1
             $ renpy.show(custom_show("erin", "flirty"), [])
-            n "\"Neat!\""
+            n "\"Cool!\""
 
     n "\"What's that one supposed to be?\""
     "I point to a pizza that seems expressionless, just a normal slice."

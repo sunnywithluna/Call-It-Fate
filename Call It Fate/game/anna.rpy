@@ -296,7 +296,7 @@ label library_choice_compliment_a:
     return 
 
 label library_choice_compliment_b:
-    n "What should I say?"
+    "What should I say?"
 
     menu: 
         "You're so smart":
@@ -395,7 +395,7 @@ label library_1_workout:
     return
 
 label send_text_b:
-    n "What should I say?"
+    "What should I say?"
     menu:
         "Do you want to go on a date?" if not eventbb_trigger and not date_b_sent:
             jump text_go_out_b
@@ -635,7 +635,7 @@ label event_bb:
 
     "As we head inside the museum, I look around at all the interesting interactive exhibits around us. I hear sounds of awe and laughter, the big, open room overflowing with energy."
 
-    "It's much quieter in the planetarium though. The speakers play ethereal long tones to add to the space--like atmosphere as we stare up at a fake night sky and wait for the show to begin."
+    "It's much quieter in the planetarium though. The speakers play ethereal long tones to add to the space-like atmosphere as we stare up at a fake night sky and wait for the show to begin."
 
     "Soon the doors close, and the projected stars and planets start to move."
 
@@ -649,7 +649,7 @@ label event_bb:
     
     "I hold up the paper for Anna to see."
 
-    $ renpy.show(custom_show("anna", "uncomf", "trueleft"), [])
+    $ renpy.show(custom_show("anna", "uncomf"), [trueleft])
 
     b "\"I don't know if that's really for me...\""
 

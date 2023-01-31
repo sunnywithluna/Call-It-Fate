@@ -208,7 +208,7 @@ label ch1_weekend:
         "I can't believe it's already the weekend. I wish I had something to do…"
         "I laze around my dorm, playing games and watching TV, until the next school day."
         stop music fadeout 1.0
-        scene bg black with fade
+        scene  black with fade
         jump ch2_schoolday1
 
 label ch2_schoolday1:
@@ -405,8 +405,14 @@ label ch2_schoolday2:
     p "\"What are some values or codes that you follow? By what mindset do you navigate the world?\""
 
     $ max_amount = max(A,B,C)
-    if max_amount > 5:
+    if A == max_amount:
+        $ girl = "Maddie"
+    if B == max_amount:
+        $ girl = "Anna"
+    if C == max_amount:
+        $ girl = "Erin"
 
+    if max_amount > 5:
         "The wall clock ticks as we think. Then, I raise my hand."
         p "\"Sam?\""
 
@@ -421,13 +427,6 @@ label ch2_schoolday2:
 
                 "My perspective on life was fickle, easily changing, and not always for the best."
 
-                if A >= B and A >= C:
-                    $girl = "Maddie"
-                if B >= A and B >= C:
-                    $girl = "Anna"
-                if C >= A and C >= B:
-                    $girl = "Erin"
-
                 "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
 
 
@@ -441,13 +440,6 @@ label ch2_schoolday2:
 
                 "My perspective on life was fickle, easily changing, and not always for the best."
 
-                if A >= B and A >= C:
-                    $girl = "Maddie"
-                if B >= A and B >= C:
-                    $girl = "Anna"
-                if C >= A and C >= B:
-                    $girl = "Erin"
-
                 "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
 
 
@@ -460,13 +452,6 @@ label ch2_schoolday2:
                 "When I first started this class, I'm not sure I would've been able to clearly talk about my outlook or values."
 
                 "My perspective on life was fickle, easily changing, and not always for the best."
-
-                if A >= B && A >= C:
-                    $girl = "Maddie"
-                if B >= A && B >= C:
-                    $girl = "Anna"
-                if C >= A && C >= B:
-                    $girl = "Erin"
 
                 "I don't know why, maybe it's the class. Maybe it's [girl]. But I'm a lot happier with the person I've been lately."
 
@@ -486,9 +471,7 @@ label ch2_schoolday2:
         scene black with longfade
         stop music fadeout 1.0
         "After he finishes going around the room, Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
-
     else:
-        
         "The wall clock ticks as we think."
         "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I haven't changed over these past couple weeks."
 
@@ -690,7 +673,9 @@ label ch3_schoolday2:
         scene black with longfade
         stop music fadeout 1.0
         $ d_ending_success = True
-        "I think some people might see my life and assume I'm lonely. But I'm actually okay."
+        "I head back to my dorm, too drained to do anything else, and though I didn't get to know the girls in my class as much as I'd hoped, I feel content."
+        "I think some people might see my life and assume I'm lonely."
+        "But I'm actually okay."
         "As I look at Neko-Chan, I think about how she is the only girl in my life who could never hurt me."
         "Real girls are too complicated."
         "Too confusing."

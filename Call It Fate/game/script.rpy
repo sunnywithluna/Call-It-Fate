@@ -199,6 +199,8 @@ default A_mid3 = 20
 default A_high = 25
 default A_high2 = 30
 default A_high3 = 35
+default girl_num = K
+default girl_string = Kim
 
 default small_a_sent = False
 default small_a_sent2 = False

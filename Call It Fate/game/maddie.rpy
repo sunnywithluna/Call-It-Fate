@@ -276,7 +276,7 @@ label beauty_comp_maddie:
     return
 
 label strength_comp_maddie:
-    n "What should I say?"
+    "What should I say?"
 
     menu: 
         "You're really strong!":
