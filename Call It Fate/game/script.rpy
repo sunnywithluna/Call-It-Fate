@@ -370,7 +370,16 @@ init python:
 
 label splashscreen:
 
-    $ renpy.movie_cutscene('intro.mpg')
+    scene black
+    with Pause(1)
+
+    show logo with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    $ renpy.movie_cutscene('intro.ogg')
 
     return
 

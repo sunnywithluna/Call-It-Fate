@@ -1,6 +1,7 @@
 ﻿label school_day01:
     stop music fadeout 1.0
     scene black with dissolve
+    $ renpy.movie_cutscene('calendar01.ogg')
     scene bg_class with dissolve
 
     play music "audio/class.mp3" fadein 1.0
@@ -124,6 +125,8 @@
 
 label ch1_schoolday2:
     $day = day + 1
+    $ renpy.movie_cutscene('calendar02.ogg')
+
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
 
@@ -193,6 +196,8 @@ label ch1_schoolday2:
 
 label ch1_weekend:
     $day = day + 1
+    $ renpy.movie_cutscene('calendar03.ogg')
+
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
 
@@ -216,6 +221,8 @@ label ch1_weekend:
 
 label ch2_schoolday1:
     $day = day + 1
+    $ renpy.movie_cutscene('calendar03.ogg')
+
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
 
@@ -374,6 +381,7 @@ label ch2_schoolday1:
 
 label ch2_schoolday2:
     $day = day + 1
+    $ renpy.movie_cutscene('calendar05.ogg')
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
 
@@ -523,6 +531,8 @@ label ch2_schoolday2:
 
 label ch2_weekend:
     $day = day + 1
+    $ renpy.movie_cutscene('calendar06.ogg')
+
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
 
@@ -547,6 +557,8 @@ label ch2_weekend:
     return
 
 label ch3_schoolday1:
+    $ renpy.movie_cutscene('calendar07.ogg')
+
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
     $day = day + 1
@@ -573,6 +585,8 @@ label ch3_schoolday1:
     return
 
 label ch3_schoolday2:
+    $ renpy.movie_cutscene('calendar08.ogg')
+
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
     $day = day + 1
@@ -645,7 +659,8 @@ label ch3_schoolday2:
     else:
         "It's a little embarrassing that I'm the last one to leave, but I guess that's what I get for not studying enough."
         "I can only hope that I passed."
-    
+    scene school transition night with longfade
+
     scene bg_room_afterclass with dissolve
     play music "audio/free.mp3" fadein 1.0
 
