@@ -19,6 +19,7 @@ label intro_menu:
         "Talk to Neko-Chan." if not intro_nc:
             jump intro_nc
         "Head out." if get_dressed:
+            scene bg_room2 with dissolve
             show neko
             nc "\"...\""
             jump school_day01
@@ -43,6 +44,7 @@ label get_dressed:
     return
 
 label intro_nc:
+    scene bg_room2 with dissolve
     show neko
     "What should I talk to Neko-Chan about?"
     $intro_nc = True
@@ -80,7 +82,7 @@ label goodbye_nc:
                 $C = C + 1
             "Neko-Chan graphic tee with sweatpants and sandals":
                 "There's nothing like being comfortable. Now if only I could find my fedora, that would really complete this outfit."
-    
+    scene bg_room2 with dissolve
     show neko
     n "\"Well, I better get going. Wish me luck, Neko-Chan!\""
     nc "\"...\""
@@ -88,6 +90,8 @@ label goodbye_nc:
 
     
 label end_of_day:
+    scene school transition night with longfade
+
     play music "audio/dorm.mp3" fadein 1.0
     scene bg_room_afterclass with dissolve
 
@@ -287,7 +291,8 @@ label talk_nc1:
         $max_string = "Anna"
     else:
         $max_string = "Erin"
-    
+
+    scene bg_room_afterclass2 with dissolve
     show neko
     
     if max_amount <= 0:
@@ -327,6 +332,8 @@ label talk_nc1:
 label talk_nc:
     $body_flag = True
     "What should you talk about?"
+    scene bg_room_afterclass2 with dissolve
+
     show neko
 
     menu:
@@ -402,7 +409,7 @@ label text_someone:
     return
 
 label goodnight_sam:
-    scene bg_room_dark with dissolve
+    scene bg_room_night with dissolve
     "I microwave some ramen for dinner before turning in for the night."
     stop music fadeout 1.0
     if eventaa_trigger and not maddie_hangout:

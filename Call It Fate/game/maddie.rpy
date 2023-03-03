@@ -134,12 +134,17 @@ label maddie_date:
     show maddie_5 uncomf at trueleft
 
     "Maddie tenses up as Jennifer looks back and forth between us."
+    hide jennifer
+    show jennifer2 at trueright
 
     "Jennifer" "\"Oh, are you guys here...together?\""
     show maddie_5 normal
     a "\"Uh, yup. We're kind of on a date right now.\""
 
     "I try not to get offended as Jennifer's face scrunches up in disgust."
+    hide jennifer2
+
+    show jennifer at trueright
 
     "Jennifer" "\"Really, Maddie? Him?\""
     show maddie_5 angry at trueleft
@@ -147,12 +152,15 @@ label maddie_date:
     n "\"Ouch, okay, I'm right here.\""
 
     a "\"That's pretty rude, Jen.\""
+    hide jennifer
+
+    show jennifer2 at trueright
 
     "Jennifer" "\"What? I'm just surprised.\""
     show maddie_5 normal at trueleft
 
     a "\"You know what? I don't need your approval. Come on, Sam.\""
-    hide jennifer with dissolve
+    hide jennifer2 with dissolve
     hide maddie_5 with dissolve
     scene black with fade
     "I feel Maddie's hand slip into mine as we push past Jennifer."
@@ -353,9 +361,10 @@ label maddie_sickday:
                 a "\"Sam!\""
                 "Maddie grabs me as I almost fall to the ground."
                 a "\"I'm sorry. I should go so you can rest.\""
+                scene maddie_dorm2 with dissolve
                 "While leaving my room, she hesitates by the doorway."
                 a "\"Call me later, okay? When you're feeling better.\""
-                hide maddie_2 with dissolve
+                scene bg_room with dissolve
                 "Maddie closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Maddie would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
@@ -370,9 +379,10 @@ label maddie_sickday:
                 a "\"Sam!\""
                 "Maddie grabs me as I almost fall to the ground."
                 a "\"I'm sorry. I should go so you can rest.\""
+                scene maddie_dorm2 with dissolve
                 "While leaving my room, she hesitates by the doorway."
                 a "\"Call me later, okay? When you're feeling better.\""
-                hide maddie_2 with dissolve
+                scene bg_room with dissolve
                 "She rushes out, closing the door behind her before I have a chance to say anything else."
     else: 
         show maddie_2 uncomf
@@ -395,32 +405,31 @@ label maddie_roof:
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    show maddie_1 normal
+    scene maddie_roof with dissolve
     "Maddie is standing with her hands on her hips, staring out into the horizon, steady as always."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     
     n "\"Hey.\""
-    show maddie_1 happy
     a "\"Hey, Sam.\""
 
     "She glances down at the gift in my hand."
     if maddie_gift:
         scene maddie_hoya with dissolve
         $A = A + 1
-        show maddie_1 flirty at trueleft
         a "\"A hoya kerrii plant! Is that for me?\""
         n "\"Yeah! Do you like it?\""
         if eventba_trigger:
             n "\"It reminded me of the ones from our hike.\""
         "She takes the potted plant from me, looking at it with admiration."
         a "\"I love it, Sam. Thank you.\""
+        scene bg_roof with dissolve
     else:
         $A = A - 1
         n "\"Oh, this is for you.\""
+        scene bg_roof with dissolve
         show maddie_1 uncomf
         "I hold out her present, and she takes it slowly, looking a little confused."
         a "\"Oh. Thanks.\""
-    scene bg_roof with dissolve
     show maddie_1 normal
     "We watch the sun slowly fall."
     a "\"I'm glad we ended up in Intro to Philosophy together.\""

@@ -42,9 +42,11 @@ label maddie_badending:
     n "\"Huh...I guess I misread things...I'll see you around.\""
     scene black with fade
     "I have nothing else to say, so I leave the roof and head back to my dorm."
-    scene bg_room_dark with dissolve
+    scene bg_room_night with dissolve
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
     "I'm done putting myself out there just to get rejected."
+    scene bg_room_night2 with dissolve
+
     show neko
     "For now on, it's just going to be me and Neko-Chan."
     "And I guess I'm okay with that."
@@ -131,7 +133,7 @@ label anna_badending:
     stop music fadeout 1.0
     scene black with fade
 
-    scene bg_room_dark
+    scene bg_room_night
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
     "I'm done putting myself out there just to get rejected."
     "For now on, it's just going to be me and Neko-Chan."
@@ -214,8 +216,9 @@ label erin_badending:
     stop music fadeout 1.0
     scene black with fade
     "I have nothing else to say, so I leave the roof and head back to my dorm."
-    scene bg_room_dark
-    show neko    
+    scene bg_room_night2 with dissolve
+
+    show neko
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
     "I'm done putting myself out there just to get rejected."
     "For now on, it's just going to be me and Neko-Chan."
@@ -263,11 +266,13 @@ label neko_ending:
     "She isn't the girl I want to be with."
     n "\"Um...sorry...I have to go.\""
     
-    scene bg_room with dissolve
+    scene bg_room_night with dissolve
     play music "audio/event.mp3" fadein 1.0
 
     "I leave the roof and head back to my dorm where Neko-Chan sits on her usual spot on my bed."
     n "\"Oh thank God you're still here.\""
+    scene bg_room_night2 with dissolve
+
     show neko
     nc "\"...\""
     n "\"Listen, on the roof I realized something.\""

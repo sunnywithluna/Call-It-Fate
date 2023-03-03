@@ -23,12 +23,14 @@
         jump epi_erin
 
 label epi_maddie:
-    $renpy.show(custom_show("maddie", "flirty"), []) 
+    scene maddie_epi with dissolve
     "Standing outside is Maddie, holding up a large plastic bag in her hand."
 
     a "\"Ready for lunch?\""
 
     n "\"Oh, wow, you didn't have to do that.\""
+    scene bg_outside_dorm with dissolve
+
     $renpy.show(custom_show("maddie", "happy"), []) 
     a "\"I know, I wanted to.\""
 
