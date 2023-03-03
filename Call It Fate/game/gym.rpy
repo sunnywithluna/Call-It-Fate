@@ -93,6 +93,7 @@ label gym_main_menu:
     return
         
 label gym_1_talk:
+    $maddie_unlocked = True
     $gym_choice_1_a = True
     if A < A_bad:
         $renpy.show(custom_show("maddie", "uncomf"), [])

@@ -60,6 +60,7 @@ label library_main_menu:
     return 
 
 label library_1_talk:
+    $anna_unlocked = True
     $library_choice_1_a = True
     if B < 0:
         $renpy.show(custom_show("anna", "angry"), [])

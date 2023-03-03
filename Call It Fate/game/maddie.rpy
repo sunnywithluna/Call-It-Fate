@@ -4,11 +4,8 @@
     play music "audio/event.mp3" fadein 1.0
 
     "The next day, I head to the school gym where Maddie is waiting, tying her hair into the usual ponytail."
-    scene bg_gym with dissolve
-
-    show maddie_2 normal
     a "\"Hey, Sam. Ready for our workout?\""
-    hide maddie_2 with dissolve
+    scene bg_gym with dissolve
 
     "We walk over to the free weights and go through a few different exercises, Maddie talking me through my form for each of the movements."
     "I knew she played sports throughout high school, but I never realized just how knowledgeable she was about fitness."
@@ -302,17 +299,15 @@ label maddie_sickday:
     play music "audio/event.mp3" fadein 1.0
 
     "I open my door to find Maddie standing outside my room."
+    a "\"Hey, Sam. Feeling better?\""
+    n "\"A little. What're you doing here?\""
     scene bg_outside_dorm with dissolve
 
     show maddie_2 normal
-    a "\"Hey, Sam. Feeling better?\""
-    n "\"A little. What're you doing here?\""
-    show maddie_2 uncomf
     a "\"I came by to bring you some handouts from class.\""
     "She holds up a few pages."
     a "\"Dr. Paige wanted to make sure you got these.\""
     n "\"Oh, thanks. Do you want to come in?\""
-    show maddie_2 normal
     "I move to the side, and she walks into my dorm, handing me the papers as she looks around the room."
     scene bg_room with dissolve
 

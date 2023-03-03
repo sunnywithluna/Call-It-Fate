@@ -79,7 +79,7 @@ label epi_maddie:
 
     "She kisses me on the cheek, and I pick up a roll from the styrofoam box."
     $renpy.hide(custom_hide("maddie"))
-    scene maddie_epi with dissolve
+    scene epi with dissolve
 
     "As we eat our lunch, I think on Maddie's words and all the ways I've tried to work on myself this summer."
     "I'm exercising more, eating better."
@@ -176,7 +176,7 @@ label epi_anna:
 
     "I kiss her on her forehead before picking up a roll from the styrofoam box."
     $renpy.hide(custom_hide("anna"))
-    scene anna_epi with dissolve
+    scene epi with dissolve
 
     "As we eat our lunch, I think on Anna's words and all the ways I've tried to work on myself this summer."
     "I'm getting more organized and trying to learn something new every day."
@@ -237,7 +237,7 @@ label epi_erin:
 
     "She kisses me on the cheek, and I pick up a roll from the styrofoam box."
     $renpy.hide(custom_hide("erin"))
-    scene erin_epi with dissolve
+    scene epi with dissolve
 
     "As we eat our lunch, I think on Erin's words and all the ways I've tried to work on myself this summer."
     "I'm drawing more, and working on myself."
@@ -262,9 +262,11 @@ label credits_1:
     if maddie:
         $persistent.a_ending_success = True
         scene black with fade
-        play music "audio/end.mp3" fadein 1.0
-        "ended up with maddie with [A] points"
-        "Kim Jang Kris Gathman Nick Gathman Etc"
+        play movie 'credits_maddie.ogv'
+        $ renpy.pause()
+        hide movie with dissolve
+        stop movie
+
     elif anna:
         $persistent.b_ending_success = True
         scene black with fade

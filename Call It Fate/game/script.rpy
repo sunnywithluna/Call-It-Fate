@@ -306,6 +306,9 @@ default b_ending_success = False
 default c_ending_success = False
 default nekochan = False
 default confide_nc = False
+default maddie_unlocked = False
+default erin_unlocked = False
+default anna_unlocked = False
 
 transform trueleft:
     xpos 300   
@@ -379,7 +382,10 @@ label splashscreen:
     scene black with dissolve
     with Pause(1)
 
-    $ renpy.movie_cutscene('intro.ogg')
+    play movie 'intro.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     return
 

@@ -100,6 +100,7 @@ label art_main_menu:
     return 
             
 label art_1_talk:
+    $erin_unlocked = True
     $renpy.show(custom_show("erin", "normal"), [])
     $art_choice_1_a = True
     if C < 0:

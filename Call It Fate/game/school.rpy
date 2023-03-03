@@ -1,7 +1,10 @@
 ﻿label school_day01:
     stop music fadeout 1.0
     scene black with dissolve
-    $ renpy.movie_cutscene('calendar01.ogg')
+    play movie 'calendar01.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
     scene bg_class with dissolve
 
     play music "audio/class.mp3" fadein 1.0
@@ -125,7 +128,10 @@
 
 label ch1_schoolday2:
     $day = day + 1
-    $ renpy.movie_cutscene('calendar02.ogg')
+    play movie 'calendar02.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
@@ -196,7 +202,10 @@ label ch1_schoolday2:
 
 label ch1_weekend:
     $day = day + 1
-    $ renpy.movie_cutscene('calendar03.ogg')
+    play movie 'calendar03.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -221,7 +230,10 @@ label ch1_weekend:
 
 label ch2_schoolday1:
     $day = day + 1
-    $ renpy.movie_cutscene('calendar03.ogg')
+    play movie 'calendar04.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
@@ -381,7 +393,10 @@ label ch2_schoolday1:
 
 label ch2_schoolday2:
     $day = day + 1
-    $ renpy.movie_cutscene('calendar05.ogg')
+    play movie 'calendar05.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
 
@@ -531,7 +546,10 @@ label ch2_schoolday2:
 
 label ch2_weekend:
     $day = day + 1
-    $ renpy.movie_cutscene('calendar06.ogg')
+    play movie 'calendar06.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -557,7 +575,10 @@ label ch2_weekend:
     return
 
 label ch3_schoolday1:
-    $ renpy.movie_cutscene('calendar07.ogg')
+    play movie 'calendar07.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -585,7 +606,10 @@ label ch3_schoolday1:
     return
 
 label ch3_schoolday2:
-    $ renpy.movie_cutscene('calendar08.ogg')
+    play movie 'calendar08.ogv'
+    $ renpy.pause()
+    hide movie with dissolve
+    stop movie
 
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0

@@ -60,6 +60,7 @@ label intro_nc:
             n "\"You were drawn with proportions real women need surgery to achieve.\""
             nc "\"...\""
             hide neko
+            scene bg_room with dissolve
             jump intro_menu
         "Say goodbye to Neko-Chan.": 
             jump goodbye_nc
@@ -93,7 +94,7 @@ label end_of_day:
     scene school transition night with longfade
 
     play music "audio/dorm.mp3" fadein 1.0
-    scene bg_room_afterclass with dissolve
+    scene bg_room_afterclass with longfade
 
     "It's nice to be back at my dorm."
     "What should I do?"
@@ -326,6 +327,8 @@ label talk_nc1:
         n "\"I’ve never felt this way about anyone before...And I want to give a real relationship a shot.\"" 
         nc "\"...\""
     hide neko
+    scene bg_room_afterclass with dissolve
+
     jump end_of_day_menu 
     return
 
@@ -337,13 +340,13 @@ label talk_nc:
     show neko
 
     menu:
-        "Maddie":
+        "Maddie" if maddie_unlocked:
             $girl_num = A
             $girl_string = 'Maddie'
-        "Anna":
+        "Anna" if anna_unlocked:
             $girl_num = B
             $girl_string = 'Anna'
-        "Erin":
+        "Erin" if erin_unlocked:
             $girl_num = C
             $girl_string = 'Erin'
         "The weather":
@@ -380,12 +383,15 @@ label talk_nc:
         n "\"I've never felt this way about anyone before...And I want to give a real relationship a shot.\"" 
         nc "\"...\""
     hide neko
+    scene bg_room_afterclass with dissolve
     jump end_of_day_menu 
     return
 
 label talk_nc_d:
     "We had a lovely talk about the weather."
     hide neko
+    scene bg_room_afterclass with dissolve
+
     jump end_of_day_menu 
     return
 
@@ -425,7 +431,7 @@ label goodnight_sam:
 
 label quick_calculations:
     stop music fadeout 1.0
-    scene black with fade
+    scene black with longfade
 
     if day == 0:
         jump ch1_schoolday2
