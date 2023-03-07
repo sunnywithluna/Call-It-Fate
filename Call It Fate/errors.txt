@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/school.rpy", line 62: invalid syntax
-    renpy.hide(custom_hide("anna")) with dissolve
-                                     ^
-    
+File "game/school.rpy", line 5: expected statement.
+    Pause(6)
+            ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Jan 30 18:57:40 2023
+Mon Mar  6 18:49:19 2023

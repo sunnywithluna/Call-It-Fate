@@ -150,6 +150,7 @@ label gym_choice_2_b:
     
         if A >= A_mid:
             a "\"It can be hard to get into, but it's definitely rewarding if you stick with it.\""
+            $renpy.show(custom_show("maddie", "normal"), [])
             n "\"Any tips on how to stay motivated?\""
             "Maddie takes a sip of her water as she thinks."
             $renpy.show(custom_show("maddie", "happy"), [])
@@ -165,7 +166,7 @@ label gym_choice_2_b:
             $renpy.show(custom_show("maddie", "sad"), [])
             a "\"I don't know. But I'm a little closer every day.\""
             n "\"Well, I don't know if it means anything coming from me, but I've never thought of you as weak.\""
-            $renpy.show(custom_show("maddie", "flirty"), [])
+            $renpy.show(custom_show("maddie", "happy"), [])
             a "\"Thanks, Sam. Well, I guess I better keep at it then. So you don't change your mind about me.\""
 
         jump talking_to_maddie

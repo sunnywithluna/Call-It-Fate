@@ -212,6 +212,7 @@ default C_mid3 = 20
 default C_high = 25
 default C_high2 = 30
 default C_high3 = 35
+default neko_counter = 0
 default girl_num = 'K'
 default girl_string = 'Kim'
 
@@ -309,6 +310,7 @@ default confide_nc = False
 default maddie_unlocked = False
 default erin_unlocked = False
 default anna_unlocked = False
+default fluffy = False
 
 transform trueleft:
     xpos 300   
@@ -373,6 +375,8 @@ init python:
 
 label splashscreen:
 
+    play music "audio/end.mp3" fadein 1.0
+
     scene black
     with Pause(1)
 
@@ -382,10 +386,20 @@ label splashscreen:
     scene black with dissolve
     with Pause(1)
 
-    play movie 'intro.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    show intro1 with dissolve
+    with Pause(1)
+
+    show intro2 with dissolve
+    with Pause(1)
+
+    show intro3 with dissolve
+    with Pause(1)
+
+    show intro4 with dissolve
+    with Pause(1)
+
+    show intro5 with dissolve
+    with Pause(1)
 
     return
 

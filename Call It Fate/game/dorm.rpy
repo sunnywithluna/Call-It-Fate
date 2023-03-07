@@ -19,10 +19,7 @@ label intro_menu:
         "Talk to Neko-Chan." if not intro_nc:
             jump intro_nc
         "Head out." if get_dressed:
-            scene bg_room2 with dissolve
-            show neko
-            nc "\"...\""
-            jump school_day01
+            jump goodbye_nc
     return
 
 label get_dressed:
@@ -334,7 +331,7 @@ label talk_nc1:
 
 label talk_nc:
     $body_flag = True
-    "What should you talk about?"
+    "What should I talk to Neko-Chan about?"
     scene bg_room_afterclass2 with dissolve
 
     show neko
@@ -349,7 +346,7 @@ label talk_nc:
         "Erin" if erin_unlocked:
             $girl_num = C
             $girl_string = 'Erin'
-        "The weather":
+        "Neko-Chan":
             jump talk_nc_d 
     
     if girl_num <= 0:
@@ -388,7 +385,21 @@ label talk_nc:
     return
 
 label talk_nc_d:
-    "We had a lovely talk about the weather."
+    $neko_counter = neko_counter + 1
+    if neko_counter == 1:
+        n "It's crazy Mom wanted me to leave you at home. I couldn't imagine coming to college without you here."
+        nc "..."
+    elif neko_counter == 2:
+        n "I don't care what my family says. It's not weird to have a body pillow."
+        nc "..."
+    elif neko_counter == 3:
+        n "Plenty of people hold pillows when they fall asleep, but sure, it's 'concerning' when a pciture of a half girl, half cat in a bikini is on it. If anything, that's MORE normal."
+        nc "..."
+    elif neko_counter == 4:
+        n "Okay. FINE. So MOST people don't have anime body pillows. They're the ones missing out."
+        nc "..."
+    else:
+        "We had a lovely talk about the weather."
     hide neko
     scene bg_room_afterclass with dissolve
 

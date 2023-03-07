@@ -2,7 +2,7 @@ label send_text_a:
     "What should I say?"
 
     menu:
-        "Make small talk about her day" if not small_a_sent:
+        "How are you?" if not small_a_sent:
             jump text_small_a
         "Do you want to go on a date?" if not eventba_trigger and not date_a_sent and eventaa_trigger and maddie_hangout:
             jump text_go_out_a
@@ -73,22 +73,15 @@ label text_video_a:
 
 label text_small_a:
     $small_a_sent = True
-    "I ask Maddie about her day."
-
-    if small_a_sent2 == False:
-        $small_a_sent2 = True
-        if A >= A_low:
-            $A = A + 1
-            "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
-            "We chat for a short while before I change the topic."
-            jump send_text_a
-        else:
-            "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
-            a "\"I'm kind of busy right now.\""
-            jump send_text_a   
+    "I send a message asking about her night."
+    "After a few minutes, she replies and we text for a short while."
+    if A >= A_low:
+        $A = A + 1
+        "She seemed happy to hear from me."
+        jump send_text_a
     else:
-        "We chat for a short while before I decide to change the topic."
-        jump send_text_a 
+        "She seemed to be in a bad mood."
+        jump send_text_a   
 
 label text_small_b:
     $small_b_sent = True

@@ -1,10 +1,12 @@
 ﻿label school_day01:
     stop music fadeout 1.0
     scene black with dissolve
-    play movie 'calendar01.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
     scene bg_class with dissolve
 
     play music "audio/class.mp3" fadein 1.0
@@ -128,10 +130,12 @@
 
 label ch1_schoolday2:
     $day = day + 1
-    play movie 'calendar02.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
 
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
@@ -202,10 +206,12 @@ label ch1_schoolday2:
 
 label ch1_weekend:
     $day = day + 1
-    play movie 'calendar03.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
 
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -230,10 +236,12 @@ label ch1_weekend:
 
 label ch2_schoolday1:
     $day = day + 1
-    play movie 'calendar04.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
 
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
@@ -270,8 +278,11 @@ label ch2_schoolday1:
     p "\"You will be graded as a group on accuracy, creativity, and the extent of your collective knowledge. The project is due at the end of class.\""
     "Then, Dr. Paige sits down at his large wooden desk and starts a crossword."
     $renpy.show(custom_show("maddie", "uncomf"), [trueleft])
+    with dissolve
     $renpy.show(custom_show("anna", "uncomf"), [])
+    with dissolve
     $renpy.show(custom_show("erin", "uncomf"), [trueright])
+    with dissolve
 
     "Maddie, Anna, Erin, and I look around at one another in slight confusion, slowly realizing those vague instructions are all we're going to be given."
     "We gather our things and move closer together."
@@ -306,8 +317,11 @@ label ch2_schoolday1:
     $renpy.show(custom_show("erin", "flirty"), [trueright])
     c "\"Okay!\""
     $renpy.hide(custom_hide("anna"))
+    with dissolve
     $renpy.hide(custom_hide("erin"))
+    with dissolve
     $renpy.show(custom_show("maddie", "happy"), [])
+    with dissolve
     a "\"So what do you think? What kind of project should we do?\""
 
     menu: 
@@ -351,12 +365,15 @@ label ch2_schoolday1:
             $renpy.show(custom_show("erin", "flirty"), [])
             c "\"Really? Thanks, Sam.\""
             $renpy.hide(custom_hide("erin"))
+            with dissolve
             $renpy.show(custom_show("maddie", "sad"), [])
             a "\"Oh...\""
             $renpy.hide(custom_hide("maddie"))
+            with dissolve
             $renpy.show(custom_show("anna", "sad"), [])
             b "\"...\""
             $renpy.hide(custom_hide("anna"))
+            with dissolve
             "We spend the rest of the class period sketching out outlines for the mosaics, inking them, and then filling them in with words, phrases, and sayings associated with their respective philosophers."
             "We turn in the project just before four o'clock."
             p "\"How artistic! Beautifully done!\""
@@ -366,19 +383,23 @@ label ch2_schoolday1:
             $renpy.show(custom_show("maddie", "sad"), [])
             a "\"Yeah, I guess we can do that...\""
             $renpy.hide(custom_hide("maddie"))
+            with dissolve
             $renpy.show(custom_show("anna", "sad"), [])
             b "\"Okay...\""
             $renpy.hide(custom_hide("anna"))
+            with dissolve
             $renpy.show(custom_show("erin", "sad"), [])
             c "\"Awww\""
             $renpy.hide(custom_hide("erin"))
+            with dissolve
             "Maddie, Anna, and Erin all seem a little disappointed."
             "I write down \"diagram,\" \"mosaic,\" and \"skit\" on three separate sticky notes and fold them in half."
             "After shuffling the options, I select one."
             n "\"Looks like we're doing the skit.\""
             $renpy.show(custom_show("maddie", "normal"), [])
             a "\"Awesome! It's settled then.\""
-            $renpy.hide(custom_hide("maddie"))
+            $renpy.hide(custom_hide("maddie"))    
+            with dissolve
             "We spend the rest of the class period writing out a script, practicing our parts, and, finally, performing our skit for Dr. Paige."
             p "\"Well, that was lively! It was like Descartes, Aristotle, and Hobbes were right here in front of me. Good work!\""
     
@@ -393,10 +414,12 @@ label ch2_schoolday1:
 
 label ch2_schoolday2:
     $day = day + 1
-    play movie 'calendar05.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0
 
@@ -498,12 +521,11 @@ label ch2_schoolday2:
         stop music fadeout 1.0
         "After he finishes going around the room, Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
     else:
-        "The wall clock ticks as we think."
-        "As Dr. Paige moves his attention to Maddie, Anna, and Erin, listening to them each talk about their personal worldviews, I can't help but think about how much I haven't changed over these past couple weeks."
+        "As Dr. Paige makes his way around the room, Maddie, Anna, and Erin each talk about their personal worldviews while I rack my brain for something to say."
+        "What do I believe? What are the guiding values in my life?"
+        p "\"Alright, last one. What do you think, Sam?\""
 
-        p "\"Sam?\""
-
-        "Snapping me out of my daydream, it was time for me to answer Dr. Paige's question. 'By what mindset do I navigate the world?'"
+        "By what mindset do I navigate the world?"
 
         menu:
             "I believe in discipline and hard work":
@@ -546,10 +568,12 @@ label ch2_schoolday2:
 
 label ch2_weekend:
     $day = day + 1
-    play movie 'calendar06.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
 
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -575,10 +599,12 @@ label ch2_weekend:
     return
 
 label ch3_schoolday1:
-    play movie 'calendar07.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
 
     scene bg_room with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -606,10 +632,12 @@ label ch3_schoolday1:
     return
 
 label ch3_schoolday2:
-    play movie 'calendar08.ogv'
-    $ renpy.pause()
-    hide movie with dissolve
-    stop movie
+    scene school transition day with dissolve
+    with Pause(1)
+    show 1 with dissolve
+    with Pause (1)
+    show 1b with dissolve
+    with Pause (2)
 
     scene bg_class with dissolve
     play music "audio/class.mp3" fadein 1.0

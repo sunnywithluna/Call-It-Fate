@@ -315,6 +315,8 @@ label anna_sickday:
 
     if B >= 14:
         $anna_confessed = True
+        stop music fadeout 1.0
+
         "We stand there for a moment in silence."
         $renpy.show(custom_show("anna", "uncomf"), [])
         b "\"There's something I want to tell you. But I'm a little nervous...\""

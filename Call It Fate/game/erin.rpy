@@ -325,6 +325,8 @@ label erin_sickday:
 
     if C >= 16:
         $erin_confessed = True
+        stop music fadeout 1.0
+
         $renpy.show(custom_show("erin", "embarrassed"), [])
         c "\"Sam? Can I tell you something?\""
         n "\"Sure. What's up?\""

@@ -84,7 +84,7 @@ label maddie_date:
 
     n "\"Hey!\""
     "Maddie turns to face me."
-    scene bg_gymdate with dissolve
+    scene maddie_date_bg with dissolve
 
     show maddie_5 happy
     a "\"Hey, Sam!\""
@@ -111,13 +111,18 @@ label maddie_date:
             show maddie_5 happy
             a "\"Alright, a challenge! This should be fun.\""
             "We start down the path, and within minutes, I'm already certain I'll be sore the next day."
+            scene bg_gymdate with dissolve
+
 
         "Fluffy Bunny Hilltop":
+            $fluffy = True
             $A = A - 1
             n "\"Let's do Fluffy Bunny Hilltop.\""
             show maddie_5 angry 
             a "\"Really? Alright. I guess there's nothing wrong with taking it easy.\""
             "We start down the leisurely path, and after a few minutes, I feel just the slightest bit of embarrassment as an elderly couple passes us by."
+            scene easy_route with dissolve
+
     
     hide maddie_5 with dissolve
 
@@ -161,7 +166,10 @@ label maddie_date:
     hide maddie_5 with dissolve
     scene black with fade
     "I feel Maddie's hand slip into mine as we push past Jennifer."
-    scene bg_gymdate with dissolve
+    if fluffy:
+        scene easy_route with dissolve
+    else:
+        scene bg_gymdate with dissolve
 
     n "\"What was that about? I thought you guys were close.\""
     show maddie_5 angry 
@@ -336,6 +344,7 @@ label maddie_sickday:
     a "\"I'm remembering why I picked on you in high school...\""
 
     if A >= A_high2:
+        stop music fadeout 1.0
         $maddie_confessed = True
         show maddie_2 uncomf
         a "\"Listen, there's actually something I wanted to talk to you about.\""
