@@ -275,7 +275,7 @@ label anna_sickday:
     b "\"I brought you some papers from class and made you a copy of my notes.\""
     n "\"Really? Thanks. You didn't have to do all that.\""
     "She hands me a few pages, the passages already color-coded with highlighters."
-    scene bg_outside_dorm with dissolve
+    scene bg_outside_dorm2 with dissolve
     $renpy.show(custom_show("anna", "happy"), [])
     b "\"The final's on Thursday. I wanted to make sure you'd be prepared.\""
     n "\"Do you want to come in?\""

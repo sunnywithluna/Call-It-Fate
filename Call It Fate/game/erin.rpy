@@ -280,7 +280,7 @@ label erin_sickday:
     n "\"Eh, I'm okay, could always be worse though.\""
     c "\"That's the spirit. I'm here because Dr. Paige asked me to drop off some handouts. So you don't get behind.\""
     "I see a few papers in her hand."
-    scene bg_outside_dorm with dissolve
+    scene bg_outside_dorm2 with dissolve
     $renpy.show(custom_show("erin", "happy"), [])
 
     n "\"Oh, thanks. Do you want to come in?\""

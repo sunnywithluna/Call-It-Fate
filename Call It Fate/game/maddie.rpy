@@ -309,7 +309,7 @@ label maddie_sickday:
     "I open my door to find Maddie standing outside my room."
     a "\"Hey, Sam. Feeling better?\""
     n "\"A little. What're you doing here?\""
-    scene bg_outside_dorm with dissolve
+    scene bg_outside_dorm2 with dissolve
 
     show maddie_2 normal
     a "\"I came by to bring you some handouts from class.\""
