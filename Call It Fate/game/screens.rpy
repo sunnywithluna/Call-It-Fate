@@ -361,28 +361,28 @@ screen main_menu():
     #add gui.main_menu_background
     style_prefix "main_menu"
 
-    if persistent.score == 0:
+    if persistent.titleScreenCounter == 0:
         add gui.main_menu_background000
         add gui.game_menu_background000
-    elif persistent.score == 1:
+    elif persistent.titleScreenCounter == 1:
         add gui.main_menu_background001
         add gui.game_menu_background001
-    elif persistent.score == 2:
+    elif persistent.titleScreenCounter == 2:
         add gui.main_menu_background010
         add gui.game_menu_background010
-    elif persistent.score == 3:
+    elif persistent.titleScreenCounter == 3:
         add gui.main_menu_background011
         add gui.game_menu_background011
-    elif persistent.score == 4:
+    elif persistent.titleScreenCounter == 4:
         add gui.main_menu_background100
         add gui.game_menu_background100
-    elif persistent.score == 5:
+    elif persistent.titleScreenCounter == 5:
         add gui.main_menu_background101
         add gui.game_menu_background101
-    elif persistent.score == 6:
+    elif persistent.titleScreenCounter == 6:
         add gui.main_menu_background110
         add gui.game_menu_background110
-    elif persistent.score == 7:
+    elif persistent.titleScreenCounter == 7:
         add gui.main_menu_background111
         add gui.game_menu_background111
     else:

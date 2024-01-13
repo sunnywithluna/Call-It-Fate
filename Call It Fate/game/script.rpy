@@ -1,172 +1,170 @@
-﻿define a = Character("Maddie", who_color = "#104010")
-define b = Character("Anna", who_color = "#104010")
-define c = Character("Erin", who_color = "#104010")
-define nc = Character("Neko-Chan", who_color = "#104010")
-define p = Character("Dr. Paige", who_color = "#104010")
-define n = Character("Sam", who_color = "#104010") 
+﻿define a = Character('Maddie', who_color = '# 104010')
+define b = Character('Anna', who_color = '# 104010')
+define c = Character('Erin', who_color = '# 104010')
+define nc = Character('Neko-Chan', who_color = '# 104010')
+define p = Character('Dr. Paige', who_color = '# 104010')
+define n = Character('Sam', who_color = '# 104010') 
 
-#persistent data, gallery and main menu
-define persistent.a_ending_success = False
-define persistent.b_ending_success = False
-define persistent.c_ending_success = False
-define persistent.score = 0
+# persistent data, gallery and main menu
+define persistent.endingAFlag = False
+define persistent.endingBFlag = False
+define persistent.endingCFlag = False
+define persistent.titleScreenCounter = 0
 
 init:
-    image neko = Image("nekochan.png")
-    image jennifer = Image("jennifer.PNG")    
-    # maddie date outfit
-    image maddie_5 uncomf = Image("maddie_date_uncomf.png")
-    image maddie_5 flirty = Image("maddie_date_flirty.png")
-    image maddie_5 normal = Image("maddie_date_normal.png")
-    image maddie_5 happy = Image("maddie_date_happy.png")
-    image maddie_5 angry = Image("maddie_date_angry.png")
-    image maddie_5 sad = Image("maddie_date_sad.png")
-    image maddie_5 embarrassed = Image("maddie_date_embarrassed.png")
+    image neko = Image('nekochan.png')
+    image jennifer = Image('jennifer.PNG')    
+    #  maddie date outfit
+    image maddie_5 U = Image('emote_maddie_51.png')
+    image maddie_5 N = Image('emote_maddie_52.png')
+    image maddie_5 F = Image('emote_maddie_53.png')
+    image maddie_5 H = Image('emote_maddie_54.png')
+    image maddie_5 N = Image('emote_maddie_55.png')
+    image maddie_5 S = Image('emote_maddie_56.png')
+    image maddie_5 U = Image('emote_maddie_57.png')
 
-    # maddie outfit 1
-    image maddie_1 uncomf = Image("maddie_1_uncomf.png")
-    image maddie_1 flirty = Image("maddie_1_flirty.png")
-    image maddie_1 normal = Image("maddie_1_normal.png")
-    image maddie_1 happy = Image("maddie_1_happy.png")
-    image maddie_1 angry = Image("maddie_1_angry.png")
-    image maddie_1 sad = Image("maddie_1_sad.png")
-    image maddie_1 embarrassed = Image("maddie_1_embarrassed.png")
+    #  maddie outfit 1
+    image maddie_1 U = Image('emote_maddie_11.png')
+    image maddie_1 N = Image('emote_maddie_12.png')
+    image maddie_1 F = Image('emote_maddie_13.png')
+    image maddie_1 H = Image('emote_maddie_14.png')
+    image maddie_1 N = Image('emote_maddie_15.png')
+    image maddie_1 S = Image('emote_maddie_16.png')
+    image maddie_1 U = Image('emote_maddie_17.png')
 
-    # maddie outfit 2
-    image maddie_2 uncomf = Image("maddie_2_uncomf.png")
-    image maddie_2 flirty = Image("maddie_2_flirty.png")
-    image maddie_2 normal = Image("maddie_2_normal.png")
-    image maddie_2 happy = Image("maddie_2_happy.png")
-    image maddie_2 angry = Image("maddie_2_angry.png")
-    image maddie_2 sad = Image("maddie_2_sad.png")
-    image maddie_2 embarrassed = Image("maddie_2_embarrassed.png")
+    #  maddie outfit 2
+    image maddie_2 U = Image('emote_maddie_21.png')
+    image maddie_2 N = Image('emote_maddie_22.png')
+    image maddie_2 F = Image('emote_maddie_23.png')
+    image maddie_2 H = Image('emote_maddie_24.png')
+    image maddie_2 N = Image('emote_maddie_25.png')
+    image maddie_2 S = Image('emote_maddie_26.png')
+    image maddie_2 U = Image('emote_maddie_27.png')
 
-    # maddie outfit 3
-    image maddie_3 uncomf = Image("maddie_3_uncomf.png")
-    image maddie_3 flirty = Image("maddie_3_flirty.png")
-    image maddie_3 normal = Image("maddie_3_normal.png")
-    image maddie_3 happy = Image("maddie_3_happy.png")
-    image maddie_3 angry = Image("maddie_3_angry.png")
-    image maddie_3 sad = Image("maddie_3_sad.png")
-    image maddie_3 embarrassed = Image("maddie_3_embarrassed.png")
+    #  maddie outfit 3
+    image maddie_3 U = Image('emote_maddie_31.png')
+    image maddie_3 N = Image('emote_maddie_32.png')
+    image maddie_3 F = Image('emote_maddie_33.png')
+    image maddie_3 H = Image('emote_maddie_34.png')
+    image maddie_3 N = Image('emote_maddie_35.png')
+    image maddie_3 S = Image('emote_maddie_36.png')
+    image maddie_3 U = Image('emote_maddie_37.png')
 
-    # maddie outfit 4
-    image maddie_4 uncomf = Image("maddie_4_uncomf.png")
-    image maddie_4 flirty = Image("maddie_4_flirty.png")
-    image maddie_4 normal = Image("maddie_4_normal.png")
-    image maddie_4 happy = Image("maddie_4_happy.png")
-    image maddie_4 angry = Image("maddie_4_angry.png")
-    image maddie_4 sad = Image("maddie_4_sad.png")
-    image maddie_4 embarrassed = Image("maddie_4_embarrassed.png")
+    #  maddie outfit 4
+    image maddie_4 U = Image('emote_maddie_41.png')
+    image maddie_4 N = Image('emote_maddie_42.png')
+    image maddie_4 F = Image('emote_maddie_43.png')
+    image maddie_4 H = Image('emote_maddie_44.png')
+    image maddie_4 N = Image('emote_maddie_45.png')
+    image maddie_4 S = Image('emote_maddie_46.png')
+    image maddie_4 U = Image('emote_maddie_47.png')
 
-    # anna date outfit
-    image anna_5 uncomf = Image("anna (33).png")
-    image anna_5 flirty = Image("anna (34).png")
-    image anna_5 normal = Image("anna (35).png")
-    image anna_5 happy = Image("anna (36).png")
-    image anna_5 angry = Image("anna (37).png")
-    image anna_5 sad = Image("anna (38).png")
-    image anna_5 embarrassed = Image("anna (39).png")
-    image anna_5 embarrassed2 = Image("anna (40).png")
+    #  anna date outfit
+    image anna_5 U = Image('emote_anna_31.png')
+    image anna_5 F = Image('emote_anna_32.png')
+    image anna_5 N = Image('emote_anna_33.png')
+    image anna_5 N2 = Image('emote_anna_34.png')
+    image anna_5 H = Image('emote_anna_35.png')
+    image anna_5 A = Image('emote_anna_36.png')
+    image anna_5 E = Image('emote_anna_37.png')
+    image anna_5 E2 = Image('emote_anna_38.png')
 
-    # anna outfit 1
-    image anna_4 uncomf = Image("anna (25).png")
-    image anna_4 flirty = Image("anna (26).png")
-    image anna_4 normal = Image("anna (27).png")
-    image anna_4 happy = Image("anna (28).png")
-    image anna_4 angry = Image("anna (29).png")
-    image anna_4 sad = Image("anna (30).png")
-    image anna_4 embarrassed = Image("anna (31).png")
-    image anna_4 embarrassed2 = Image("anna (32).png")
+    #  anna outfit 1
+    image anna_1 U = Image('emote_anna_11.png')
+    image anna_1 F = Image('emote_anna_12.png')
+    image anna_1 N = Image('emote_anna_13.png')
+    image anna_1 N2 = Image('emote_anna_14.png')
+    image anna_1 H = Image('emote_anna_15.png')
+    image anna_1 A = Image('emote_anna_16.png')
+    image anna_1 E = Image('emote_anna_17.png')
+    image anna_1 E2 = Image('emote_anna_18.png')
 
-    # anna outfit 2
-    image anna_3 uncomf = Image("anna (17).png")
-    image anna_3 flirty = Image("anna (18).png")
-    image anna_3 normal = Image("anna (19).png")
-    image anna_3 happy = Image("anna (20).png")
-    image anna_3 angry = Image("anna (21).png")
-    image anna_3 sad = Image("anna (22).png")
-    image anna_3 embarrassed = Image("anna (23).png")
-    image anna_3 embarrassed2 = Image("anna (24).png")
+    #  anna outfit 2
+    image anna_2 U = Image('emote_anna_21.png')
+    image anna_2 F = Image('emote_anna_22.png')
+    image anna_2 N = Image('emote_anna_23.png')
+    image anna_2 N2 = Image('emote_anna_24.png')
+    image anna_2 H = Image('emote_anna_25.png')
+    image anna_2 A = Image('emote_anna_26.png')
+    image anna_2 E = Image('emote_anna_27.png')
+    image anna_2 E2 = Image('emote_anna_28.png')
 
-    # anna outfit 3
-    image anna_1 uncomf = Image("anna (9).png") #wrong
-    image anna_1 flirty = Image("anna (10).png") 
-    image anna_1 normal = Image("anna (11).png") #wrong
-    image anna_1 happy = Image("anna (12).png")
-    image anna_1 angry = Image("anna (13).png")
-    image anna_1 sad = Image("anna (14).png")
-    image anna_1 embarrassed = Image("anna (15).png")
-    image anna_1 embarrassed2 = Image("anna (16).png")
+    #  anna outfit 3
+    image anna_3 U = Image('emote_anna_11b.png')
+    image anna_3 F = Image('emote_anna_12b.png')
+    image anna_3 N = Image('emote_anna_13b.png')
+    image anna_3 N2 = Image('emote_anna_14b.png')
+    image anna_3 H = Image('emote_anna_15b.png')
+    image anna_3 A = Image('emote_anna_16b.png')
+    image anna_3 E = Image('emote_anna_17b.png')
+    image anna_3 E2 = Image('emote_anna_18b.png')
 
-    # anna outfit 4
-    image anna_2 uncomf = Image("anna (1).png")
-    image anna_2 flirty = Image("anna (2).png")
-    image anna_2 normal = Image("anna (3).png")
-    image anna_2 happy = Image("anna (4).png")
-    image anna_2 angry = Image("anna (5).png")
-    image anna_2 sad = Image("anna (6).png")
-    image anna_2 embarrassed = Image("anna (7).png")
-    image anna_2 embarrassed2 = Image("anna (8).png")
+    #  anna outfit 4
+    image anna_4 U = Image('emote_anna_21b.png')
+    image anna_4 F = Image('emote_anna_22b.png')
+    image anna_4 N = Image('emote_anna_23b.png')
+    image anna_4 N2 = Image('emote_anna_24b.png')
+    image anna_4 H = Image('emote_anna_25b.png')
+    image anna_4 A = Image('emote_anna_26b.png')
+    image anna_4 E = Image('emote_anna_27b.png')
+    image anna_4 E2 = Image('emote_anna_28b.png')
 
-    # erin date outfit
-    image erin_5 uncomf = Image("erin (9).png")
-    image erin_5 flirty = Image("erin (10).png")
-    image erin_5 normal = Image("erin (11).png")
-    image erin_5 happy = Image("erin (12).png")
-    image erin_5 angry = Image("erin (13)png")
-    image erin_5 sad = Image("erin (14).png")
-    image erin_5 embarrassed = Image("erin (15).png")
-    image erin_5 surprised = Image("erin (16).png")
+    #  erin date outfit
+    image erin_5 U = Image('emote_erin_51.png')
+    image erin_5 N = Image('emote_erin_52.png')
+    image erin_5 H = Image('emote_erin_53.png')
+    image erin_5 A = Image('emote_erin_54.png')
+    image erin_5 S = Image('emote_erin_55.png')
+    image erin_5 E = Image('emote_erin_56.png')
+    image erin_5 F = Image('emote_erin_57.png')
+    image erin_5 W = Image('emote_erin_58.png')
 
-    # erin outfit 1
-    image erin_1 uncomf = Image("erin (1).png")
-    image erin_1 flirty = Image("erin (7).png")
-    image erin_1 normal = Image("erin (2).png")
-    image erin_1 happy = Image("erin (3).png")
-    image erin_1 angry = Image("erin (4).png")
-    image erin_1 sad = Image("erin (5).png")
-    image erin_1 embarrassed = Image("erin (6).png")
-    image erin_1 surprised = Image("erin (8).png")
+    #  erin outfit 1
+    image erin_1 U = Image('emote_erin_11.png')
+    image erin_1 N = Image('emote_erin_12.png')
+    image erin_1 H = Image('emote_erin_13.png')
+    image erin_1 A = Image('emote_erin_14.png')
+    image erin_1 S = Image('emote_erin_15.png')
+    image erin_1 E = Image('emote_erin_16.png')
+    image erin_1 F = Image('emote_erin_17.png')
+    image erin_1 W = Image('emote_erin_18.png')
 
-    # erin outfit 2
-    image erin_2 uncomf = Image("erin (26).png")
-    image erin_2 flirty = Image("erin (27).png")
-    image erin_2 normal = Image("erin (28).png")
-    image erin_2 happy = Image("erin (29).png")
-    image erin_2 angry = Image("erin (30).png")
-    image erin_2 sad = Image("erin (31).png")
-    image erin_2 embarrassed = Image("erin (32).png")
-    image erin_2 surprised = Image("erin (33).png")
+    #  erin outfit 2
+    image erin_2 U = Image('emote_erin_21.png')
+    image erin_2 N = Image('emote_erin_22.png')
+    image erin_2 H = Image('emote_erin_23.png')
+    image erin_2 A = Image('emote_erin_24.png')
+    image erin_2 S = Image('emote_erin_25.png')
+    image erin_2 E = Image('emote_erin_26.png')
+    image erin_2 F = Image('emote_erin_27.png')
+    image erin_2 W = Image('emote_erin_28.png')
 
-    # erin outfit 3
-    image erin_3 uncomf = Image("erin (18).png")
-    image erin_3 flirty = Image("erin (19).png")
-    image erin_3 normal = Image("erin (20).png")
-    image erin_3 happy = Image("erin (21).png")
-    image erin_3 angry = Image("erin (22).png")
-    image erin_3 sad = Image("erin (23).png")
-    image erin_3 embarrassed = Image("erin (24).png")
-    image erin_3 surprised = Image("erin (25).png")
+    #  erin outfit 3
+    image erin_3 U = Image('emote_erin_31.png')
+    image erin_3 N = Image('emote_erin_32.png')
+    image erin_3 H = Image('emote_erin_33.png')
+    image erin_3 A = Image('emote_erin_34.png')
+    image erin_3 S = Image('emote_erin_35.png')
+    image erin_3 E = Image('emote_erin_36.png')
+    image erin_3 F = Image('emote_erin_37.png')
+    image erin_3 W = Image('emote_erin_38.png')
 
-    # erin outfit 3
-    image erin_4 uncomf = Image("erin (34).png")
-    image erin_4 flirty = Image("erin (35).png")
-    image erin_4 normal = Image("erin (36).png")
-    image erin_4 happy = Image("erin (37).png")
-    image erin_4 angry = Image("erin (38).png")
-    image erin_4 sad = Image("erin (39).png")
-    image erin_4 embarrassed = Image("erin (40).png")
-    image erin_4 surprised = Image("erin (41).png")    
+    #  erin outfit 4
+    image erin_4 U = Image('emote_erin_41.png')
+    image erin_4 N = Image('emote_erin_42.png')
+    image erin_4 H = Image('emote_erin_43.png')
+    image erin_4 A = Image('emote_erin_44.png')
+    image erin_4 S = Image('emote_erin_45.png')
+    image erin_4 E = Image('emote_erin_46.png')
+    image erin_4 F = Image('emote_erin_47.png')
+    image erin_4 W = Image('emote_erin_48.png')
 
-
-
-# Points
-default A = 0
+#  Points
+default U = 0
 default B = 0
 default C = 0
-default day = 0
-default game_counter = 0
+default day_counter = 0
+default end_of_act_menu1_flag2_counter = 0
 default gym_counter = 0
 default lib_counter = 0
 default art_counter = 0
@@ -185,8 +183,8 @@ default kkk = 0
 default special_A = 5
 default special_B = 5
 default special_C = 5
-default grade = 0
-default course_counter = 0
+default class_score = 0
+default end_of_act_menu1_flag1_counter = 0
 default temp = 0
 default A_bad = 0
 default A_low = 5
@@ -213,8 +211,8 @@ default C_high = 25
 default C_high2 = 30
 default C_high3 = 35
 default neko_counter = 0
-default girl_num = 'K'
-default girl_string = 'Kim'
+# DELETE default love_points = 'K'
+# DELETE default love_interest = 'Kim'
 
 default small_a_sent = False
 default small_a_sent2 = False
@@ -228,7 +226,7 @@ default gn_c_sent2 = False
 default a_ending = False 
 default b_ending = False
 default c_ending = False
-default course_flag = False
+default end_of_act_menu1_flag1 = False
 default date_this_weekend = False
 default believe_in_her = False
 default special_C_on = False
@@ -248,33 +246,33 @@ default gn_a_sent = False
 default like_a_sent = False
 default gn_c_sent = False 
 default like_c_sent = False
-default anna_hangout = False 
-default erin_hangout = False
-default maddie_hangout = False
-default maddie_date = False 
-default erin_date = False 
-default anna_date = False 
+default eventBHangCompletedFlag = False 
+default eventCHangCompletedFlag = False
+default eventAHangCompletedFlag = False
+default eventADateCompletedFlag = False 
+default eventCDateCompletedFlag = False 
+default eventBDateCompletedFlag = False 
 default gym_compliment = False 
 default lib_compliment = False
 default art_compliment = False
-default get_dressed = False
-default intro_nc = False 
-default eventaa_trigger = False
-default eventab_trigger = False 
-default eventac_trigger = False
-default eventba_trigger = False
-default eventbb_trigger = False 
-default eventbc_trigger = False
+default act1_scene1_menu1_option1 = False
+default act1_scene1_menu1_option2 = False 
+default eventAHangFlag = False
+default eventBHangFlag = False 
+default eventCHangFlag = False
+default eventADateFlag = False
+default eventBDateFlag = False 
+default eventCDateFlag = False
 default eventca_trigger = False
 default eventcb_trigger = False 
 default eventcc_trigger = False
 default clean = False
-default text_flag = False 
-default body_flag = False 
-default game_flag = False
-default a_number_obtained_flag = False 
-default b_number_obtained_flag = False 
-default c_number_obtained_flag = False
+default end_of_act_menu1_flag4 = False 
+default end_of_act_menu1_flag3 = False 
+default end_of_act_menu1_flag2 = False
+default phoneFlagA = False 
+default phoneFlagB = False 
+default phoneFlagC = False
 default gym_choice_1_a = False 
 default gym_choice_1_b = False 
 default gym_choice_2_a = False 
@@ -302,9 +300,9 @@ default maddie = False
 default erin_confessed = False
 default maddie_confessed = False
 default anna_confessed = False
-default a_ending_success = False
-default b_ending_success = False
-default c_ending_success = False
+default endingAFlag = False
+default endingBFlag = False
+default endingCFlag = False
 default nekochan = False
 default confide_nc = False
 default maddie_unlocked = False
@@ -325,57 +323,76 @@ define longfade = Fade(2.0, 1.0, 2.0)
 init python:
 
     def custom_show(person, emotion):
-        if day == 0:
-            str_out = person + "_1 " + emotion
+        if day_counter == 0:
+            str_out = person + '_1 ' + emotion
             return str_out
-        else:
-            if day == 1:
-                str_out = person + "_2 " + emotion
-                return str_out
-            else:
-                if day == 3:
-                    str_out = person + "_3 " + emotion
-                    return str_out
-                else:
-                    if day == 4:
-                        str_out = person + "_4 " + emotion
-                        return str_out
-                    else: 
-                        if day == 10:
-                            str_out = person + "_5 " + emotion
-                            return str_out
-                        else: 
-                            str_out = person + "_1 " + emotion
-                            return str_out
+        elif day_counter == 1:
+            str_out = person + '_2 ' + emotion
+            return str_out
+        elif day_counter == 3:
+            str_out = person + '_3 ' + emotion
+            return str_out
+        elif day_counter == 4:
+            str_out = person + '_4 ' + emotion
+            return str_out
+        elif day_counter == 10:
+            str_out = person + '_5 ' + emotion
+            return str_out
+        else: 
+            str_out = person + '_1 ' + emotion
+            return str_out
 
 
     def custom_hide(person):
-        if day == 0:
-            str_out = person + "_1 " 
+        if day_counter == 0:
+            str_out = person + '_1 '
             return str_out
-        else:
-            if day == 1:
-                str_out = person + "_2 " 
-                return str_out
-            else:
-                if day == 3:
-                    str_out = person + "_3 " 
-                    return str_out
-                else:
-                    if day == 4:
-                        str_out = person + "_4 "
-                        return str_out
-                    else: 
-                        if day == 10:
-                            str_out = person + "_5 " 
-                            return str_out
-                        else:
-                            str_out = person + "_1 " 
-                            return str_out
+        elif day_counter == 1:
+            str_out = person + '_2 '
+            return str_out
+        elif day_counter == 3:
+            str_out = person + '_3 '
+            return str_out
+        elif day_counter == 4:
+            str_out = person + '_4 '
+            return str_out
+        elif day_counter == 10:
+            str_out = person + '_5 '
+            return str_out
+        else: 
+            str_out = person + '_1 '
+            return str_out
+
+    def sayHi(A, B, C):
+        if A_mid <= A <= A_mid3:
+            $ renpy.show(custom_show("maddie", "H"), [])
+            a "\'Hey, Sam!\'"
+            $ renpy.hide(custom_hide("maddie"))
+        elif A >= A_high:
+            $ renpy.show(custom_show("maddie", "F"), [])
+            a "\'Hey, Sam, sit with me!\'"
+            $ renpy.hide(custom_hide("maddie"))
+        if B_mid <= B <= B_mid3:
+            $ renpy.show(custom_show("anna", "H"), [])
+            b "Anna smiles at me before returning to her book."
+            $ renpy.hide(custom_hide("anna"))
+        elif B > B_high:
+            show anna_2 flirty
+            b "Anna smiles at me."
+            $ renpy.hide(custom_hide("anna"))
+        if C_mid <= C <= C_mid3:
+            $ renpy.show(custom_show("erin", "H"), [])
+            c "Erin waves at me."
+            $ renpy.hide(custom_hide("erin"))
+        elif C > C_high:
+            $ renpy.show(custom_show("erin", "F"), [])
+            c "Erin waves at me, beaming."
+            $ renpy.hide(custom_hide("erin"))
+
 
 label splashscreen:
 
-    play music "audio/end.mp3" fadein 1.0
+    play music 'audio/end.mp3' fadein 1.0
 
     scene black
     with Pause(1)
@@ -403,5 +420,6 @@ label splashscreen:
 
     return
 
+
 label start:
-    jump intro
+    jump act1_scene1

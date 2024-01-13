@@ -1,26 +1,27 @@
-﻿label erin_hangout:
+﻿
+label eventCHang:
     scene erin_hang with dissolve
-    $erin_hangout = True
+    $ eventCHangCompletedFlag = True
     play music "audio/event.mp3" fadein 1.0
-    $temp = day 
-    $day = 1
+    $ temp = day_counter 
+    $ day_counter = 1
 
     "The next day, I head to the art room where Erin is waiting."
-    c "\"Hi, Sam! I brought the pizza--\""
-    scene bg_art with dissolve
-    $renpy.show(custom_show("erin", "surprised"), [])
+    c "\'Hi, Sam! I brought the pizza--\'"
+    scene bg_art_a with dissolve
+    $ renpy.show(custom_show("erin", "surprised"), [])
 
-    c "\"Oh.\""
+    c "\'Oh.\'"
     "I'm in the doorway with a pizza box in my hands, looking at Erin holding a cardboard box of her own."
-    n "\"I guess we should have coordinated this better.\""
-    $renpy.show(custom_show("erin", "angry"), [])
-    c "\"Oh well. I guess we'll just have to eat two whole pizzas.\""
-    n "\"Haha, or maybe just have leftovers?\""
+    n "\'I guess we should have coordinated this better.\'"
+    $ renpy.show(custom_show("erin", "A"), [])
+    c "\'Oh well. I guess we'll just have to eat two whole pizzas.\'"
+    n "\'Haha, or maybe just have leftovers?\'"
     "Erin feigns a dramatic sigh."
-    $renpy.show(custom_show("erin", "flirty"), [])
+    $ renpy.show(custom_show("erin", "F"), [])
 
-    c "\"I guess that's an option too.\""
-    $renpy.hide(custom_hide("erin"))
+    c "\'I guess that's an option too.\'"
+    $ renpy.hide(custom_hide("erin"))
     "We eat our pizza, barely making a dent in the two boxes, then, we start drawing."
     "It's oddly relaxing to work with Erin beside me."
 
@@ -31,94 +32,95 @@
     "I'm sketching a fake potted plant that's in the room, the smell of cheap cheese and crust still strong in the air, and when I look over at Erin's page, I see that it's completely covered in pizza illustrations."
 
     "At the top of the paper, she's written, 'Pizza Emotional Poses.'"
-    n "\"Are you drawing pizza with different expressions?\""
-    $renpy.show(custom_show("erin", "normal"), []) 
-    c "\"Oh, haha, yeah. I guess I got inspired.\""
+    n "\'Are you drawing pizza with different expressions?\'"
+    $ renpy.show(custom_show("erin", "N"), []) 
+    c "\'Oh, haha, yeah. I guess I got inspired.\'"
     "She holds up her sketchbook for me to see."
     "Oddly enough, it's easy to tell what emotion the delicious food is emitting in most of the mini sketches."
-    $renpy.show(custom_show("erin", "embarrassed"), [])
-    c "\"What do you think?\""
+    $ renpy.show(custom_show("erin", "E"), [])
+    c "\'What do you think?\'"
     "The drawings are..."
     menu:
         "Weird":
-            $renpy.show(custom_show("erin", "sad"), [])
-            n "\"A little strange maybe.\""
+            $ renpy.show(custom_show("erin", "S"), [])
+            n "\'A little strange maybe.\'"
         "Cool":
-            $C = C + 1
-            $renpy.show(custom_show("erin", "flirty"), [])
-            n "\"Cool!\""
+            $ C = C + 1
+            $ renpy.show(custom_show("erin", "F"), [])
+            n "\'Cool!\'"
 
-    n "\"What's that one supposed to be?\""
+    n "\'What's that one supposed to be?\'"
     "I point to a pizza that seems expressionless, just a normal slice."
-    $renpy.show(custom_show("erin", "angry"), [])
-    c "\"Despair.\""
-    n "\"Wow, so edgy.\""
-    $renpy.hide(custom_hide("erin"))
+    $ renpy.show(custom_show("erin", "A"), [])
+    c "\'Despair.\'"
+    n "\'Wow, so edgy.\'"
+    $ renpy.hide(custom_hide("erin"))
     "We soon move on to drawing other food items with various emotions, and I only get stuck once when trying to decide how a hamburger might look when in love."
     stop music fadeout 1.0
     scene black with fade
 
-    jump quick_calculations
+    jump event_calculation_1
 
-label erin_date:
-    $erin_date = True
-    $date_this_weekend = False
-    $temp = day 
-    $day = 10
+
+label eventCDate:
+    $ eventCDateCompletedFlag = True
+    $ date_this_weekend = False
+    $ temp = day_counter 
+    $ day_counter = 10
 
     "Because I have a date!"
     "My phone chimes, and when I check it, there's a new text from Erin."
-    c "\"So, where are we gonna go today?\""
+    c "\'So, where are we gonna go today?\'"
     menu: 
         "Hiking trail":
-            "In response, I write, \"I was thinking we could go on a hike. Is that okay?\""
-            a "\"Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\""
+            "In response, I write, \'I was thinking we could go on a hike. Is that okay?\'"
+            a "\'Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\'"
             "I like practicing art a lot more than I like looking at it, but studying other people's work will probably help me improve too."
         "Interactive science museum":
-            "In response, I write, \"I was thinking we could check out the science museum. Is that okay?\""
-            a "\"Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\""
+            "In response, I write, \'I was thinking we could check out the science museum. Is that okay?\'"
+            a "\'Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\'"
             "I like practicing art a lot more than I like looking at it, but studying other people's work will probably help me improve too."
         "Art gallery":
-            $C = C + 1
-            "In response, I write, \"I was thinking we could go to this art gallery. Is that okay?\""
-            c "\"Oo, that sounds really cool! Text me the address so I know where to meet you. :)\""
+            $ C = C + 1
+            "In response, I write, \'I was thinking we could go to this art gallery. Is that okay?\'"
+            c "\'Oo, that sounds really cool! Text me the address so I know where to meet you. :)\'"
         "Ramen shop":
-            "In response, I write, \"I was thinking we could grab some ramen. Is that okay?\""
-            a "\"Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\""
+            "In response, I write, \'I was thinking we could grab some ramen. Is that okay?\'"
+            a "\'Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\'"
             "I like practicing art a lot more than I like looking at it, but studying other people's work will probably help me improve too."
-    scene erin_date with dissolve
+    scene eventCDateCompletedFlag with dissolve
     "When I arrive, I find Erin already inside, staring at a painting."
     "I walk towards the colors of yellow, green, and blue on the canvas, my footsteps loud against the concrete floors, until I'm standing beside her."
-    scene bg_artdate with dissolve
-    $renpy.show(custom_show("erin", "normal"), [])
-    c "\"Hi, Sam.\""
+    scene bg_art_gallery with dissolve
+    $ renpy.show(custom_show("erin", "N"), [])
+    c "\'Hi, Sam.\'"
     "I see now that the painting depicts a sunflower field with all flowers but one facing the sun."
     scene sunflowers with dissolve
-    c "\"What do you think of it?\""
+    c "\'What do you think of it?\'"
 
     menu:
         "I think it's about paving your own path":
-            n "\"I think it's about finding your own way, even if everyone else doesn't get it.\""
-            $renpy.show(custom_show("erin", "flirty"), [trueleft])
-            c "\"That's nice. I like that.\""
+            n "\'I think it's about finding your own way, even if everyone else doesn't get it.\'"
+            $ renpy.show(custom_show("erin", "F"), [trueleft])
+            c "\'That's nice. I like that.\'"
         "I think it's about how it's better to follow what others are doing":
-            n "\"I think it's showing why it's important to pay attention to what others are doing and follow their example.\""
-            $renpy.show(custom_show("erin", "sad"), [trueleft])
-            c "\"Hm, you really think so?\""
-            n "\"Yeah, I mean, that sunflower isn't going to grow very well if it's not facing the sun. It needs to turn around.\""          
-            $renpy.show(custom_show("erin", "uncomf"), [trueleft])
-            c "\"That's an interesting interpretation.\""
+            n "\'I think it's showing why it's important to pay attention to what others are doing and follow their example.\'"
+            $ renpy.show(custom_show("erin", "S"), [trueleft])
+            c "\'Hm, you really think so?\'"
+            n "\'Yeah, I mean, that sunflower isn't going to grow very well if it's not facing the sun. It needs to turn around.\'"          
+            $ renpy.show(custom_show("erin", "U"), [trueleft])
+            c "\'That's an interesting interpretation.\'"
         "That sunflower isn't going to grow very well":
-            n "\"That's one dumb sunflower. Can't even find the sun.\""
-            $renpy.show(custom_show("erin", "sad"), [trueleft])
-            c "\"Maybe it doesn't want to face the sun.\""
+            n "\'That's one dumb sunflower. Can't even find the sun.\'"
+            $ renpy.show(custom_show("erin", "S"), [trueleft])
+            c "\'Maybe it doesn't want to face the sun.\'"
 
-    $renpy.show(custom_show("erin", "normal"), [trueleft])
+    $ renpy.show(custom_show("erin", "N"), [trueleft])
 
-    c "\"Come on, let's look at some others.\""
-    scene bg_artdate with dissolve
+    c "\'Come on, let's look at some others.\'"
+    scene bg_art_gallery with dissolve
 
-    $renpy.hide(custom_hide("erin"))
+    $ renpy.hide(custom_hide("erin"))
 
     "We move throughout the art gallery, admiring the different paintings displayed on the white walls and pondering on what the artists might've been trying to say with every brush stroke."
 
@@ -128,66 +130,66 @@ label erin_date:
 
     "Even the way she approaches each painting is intriguing, like she's truly trying to understand the artist through their work. Like she's getting to know a friend."
 
-    $renpy.show(custom_show("erin", "surprised"), [])
+    $ renpy.show(custom_show("erin", "surprised"), [])
 
     "Suddenly, Erin's phone rings, and everyone in the gallery turns to see who's guilty of causing the disturbance."
 
     "Her eyes grow wide as she checks the screen."
 
-    c "\"I'm sorry, I have to take this.\""
+    c "\'I'm sorry, I have to take this.\'"
 
-    $renpy.hide(custom_hide("erin"))
+    $ renpy.hide(custom_hide("erin"))
 
     "She walks off and out of the room, leaving me the sole victim of glares and headshakes from the art snobs."
 
     "I continue to move from painting to painting, but it's significantly less fun without Erin. Luckily, it isn't too long before she returns."
 
-    $renpy.show(custom_show("erin", "embarrassed"), [])
+    $ renpy.show(custom_show("erin", "E"), [])
 
     c "You'll never guess who that was."
 
-    n "\"Why? Was it...\""
+    n "\'Why? Was it...\'"
     menu:
         "Your mom?":
-            n "\"...your mom or something?\""
+            n "\'...your mom or something?\'"
             if special_C_on:
-                $renpy.show(custom_show("erin", "happy"), [])
-                c "\"Remember that internship I told you about? Well, I got it! I can't believe it!\""
+                $ renpy.show(custom_show("erin", "H"), [])
+                c "\'Remember that internship I told you about? Well, I got it! I can't believe it!\'"
             else:
-                $renpy.show(custom_show("erin", "happy"), [])
-                c "\"I applied for an internship at this local game company, and that was them. I got it! I can't believe it!\""
+                $ renpy.show(custom_show("erin", "H"), [])
+                c "\'I applied for an internship at this local game company, and that was them. I got it! I can't believe it!\'"
         "Your doctor?":
-            n "\"...your doctor or something?\""
+            n "\'...your doctor or something?\'"
             if special_C_on:
-                $renpy.show(custom_show("erin", "happy"), [])
-                c "\"Remember that internship I told you about? Well, I got it! I can't believe it!\""
+                $ renpy.show(custom_show("erin", "H"), [])
+                c "\'Remember that internship I told you about? Well, I got it! I can't believe it!\'"
             else:
-                $renpy.show(custom_show("erin", "happy"), [])
-                c "\"I applied for an internship at this local game company, and that was them. I got it! I can't believe it!\""
+                $ renpy.show(custom_show("erin", "H"), [])
+                c "\'I applied for an internship at this local game company, and that was them. I got it! I can't believe it!\'"
         "The game company?" if special_C_on:
-            $C = C + 1
-            $renpy.show(custom_show("erin", "flirty"), [])
-            n "\"...the internship?\""
-            c "\"Yes!! Sam, I got it! I can't believe it!\""
+            $ C = C + 1
+            $ renpy.show(custom_show("erin", "F"), [])
+            n "\'...the internship?\'"
+            c "\'Yes!! Sam, I got it! I can't believe it!\'"
 
-    n "\"Oh! Wow! Congratulations!\""
+    n "\'Oh! Wow! Congratulations!\'"
 
     if believe_in_her:
-        $renpy.show(custom_show("erin", "flirty"), [])
-        c "\"Thanks for believing in me, Sam.\""
+        $ renpy.show(custom_show("erin", "F"), [])
+        c "\'Thanks for believing in me, Sam.\'"
 
-    $renpy.show(custom_show("erin", "uncomf"), [])
-    c "\"...I didn't realize it until now, but I think waiting to hear back about the whole thing was really starting to wear on me. I try not to care what people think...But...\""
-    $renpy.show(custom_show("erin", "sad"), [])
+    $ renpy.show(custom_show("erin", "U"), [])
+    c "\'...I didn't realize it until now, but I think waiting to hear back about the whole thing was really starting to wear on me. I try not to care what people think...But...\'"
+    $ renpy.show(custom_show("erin", "S"), [])
 
-    c "\"It was really important to me that they liked my art. I guess I've been wondering if I really have what it takes to do game art professionally and landing this internship is so reassuring.\""
-    $renpy.show(custom_show("erin", "flirty"), [])
-    c "\"It makes me feel like I'm not crazy for picking this as a career path.\""
+    c "\'It was really important to me that they liked my art. I guess I've been wondering if I really have what it takes to do game art professionally and landing this internship is so reassuring.\'"
+    $ renpy.show(custom_show("erin", "F"), [])
+    c "\'It makes me feel like I'm not crazy for picking this as a career path.\'"
 
-    n "\"Choosing art as your career isn't crazy. What would be crazy is being as good as you are and not choosing it.\""
+    n "\'Choosing art as your career isn't crazy. What would be crazy is being as good as you are and not choosing it.\'"
 
     "She looks up at me with warmth, and I take her hand."
-    $renpy.hide(custom_hide("erin"))
+    $ renpy.hide(custom_hide("erin"))
 
     "We stop in front of each painting as we make our way through the gallery, but I'm no longer paying much attention to the art. All my focus is on Erin, her comforting presence and bright disposition."
 
@@ -195,13 +197,13 @@ label erin_date:
 
     "I walk Erin to her car."
 
-    scene bg_night with dissolve
+    scene bg_after_date with dissolve
     
-    $renpy.show(custom_show("erin", "flirty"), [])
-    c "\"Thanks for inviting me out today, Sam.\""
-    n "\"Of course. I'm glad you could make it.\""
+    $ renpy.show(custom_show("erin", "F"), [])
+    c "\'Thanks for inviting me out today, Sam.\'"
+    n "\'Of course. I'm glad you could make it.\'"
     "As I'm looking at her, I realize it's time to part ways."
-    n "\"How should I say goodbye?\""
+    n "\'How should I say goodbye?\'"
 
     menu:
         "Kiss her":
@@ -210,147 +212,148 @@ label erin_date:
 
                 "I lean in."
                 "And our lips meet."
-                c "\"So, I'll see you in class?\""
-                n "\"Yeah, I'll see you then.\""
+                c "\'So, I'll see you in class?\'"
+                n "\'Yeah, I'll see you then.\'"
                 scene erin_kiss with dissolve
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                $day = temp
-                jump quick_calculations
+                $ day_counter = temp
+                jump event_calculation_1
 
             else:
                 scene black with dissolve
-                $C = C - 2
+                $ C = C - 2
                 "I lean in."
-                scene bg_night with dissolve
+                scene bg_after_date with dissolve
 
-                $renpy.show(custom_show("erin", "uncomf"), [])
-                c "\"Uh, well, I gotta go.\""
+                $ renpy.show(custom_show("erin", "U"), [])
+                c "\'Uh, well, I gotta go.\'"
                 "She's leaning away, and I feel a wave of embarrassment wash over me."
-                c "\"Thanks again.\""
-                $renpy.hide(custom_hide("erin"))
+                c "\'Thanks again.\'"
+                $ renpy.hide(custom_hide("erin"))
                 "Erin gets in her car and drives away. And I'm left wondering what I did wrong."
             
-                $day = temp
-                jump quick_calculations
+                $ day_counter = temp
+                jump event_calculation_1
         "Hug her":
-            $renpy.show(custom_show("erin", "flirty"), [])
-            $C = C + 1
+            $ renpy.show(custom_show("erin", "F"), [])
+            $ C = C + 1
             "I give her a hug goodbye, and she holds me tightly."
-            c "\"This was a great day.\""
-            $renpy.hide(custom_hide("erin"))
+            c "\'This was a great day.\'"
+            $ renpy.hide(custom_hide("erin"))
             "She gets in her car and drives away."
             "And I can't wait until Tuesday when I get to see her again."
-            $day = temp
-            jump quick_calculations
+            $ day_counter = temp
+            jump event_calculation_1
         "Give her a high five":
             if C >= 9:
-                $C = C - 1
-                $renpy.show(custom_show("erin", "uncomf"), [])
+                $ C = C - 1
+                $ renpy.show(custom_show("erin", "U"), [])
                 "She cocks her head and slowly raises her hand to meet mine."
-                c "\"Uh, okay. See you then I guess.\""
-                $renpy.hide(custom_hide("erin"))
+                c "\'Uh, okay. See you then I guess.\'"
+                $ renpy.hide(custom_hide("erin"))
                 "Erin gets in her car and drives away."
                 "And I'm wondering if there was a better way I could've done that."
-                $day = temp
-                jump quick_calculations
+                $ day_counter = temp
+                jump event_calculation_1
 
             else:
-                $C = C + 1
+                $ C = C + 1
                 "I hold up my hand to give her a high five."
-                n "\"See you Tuesday.\""
+                n "\'See you Tuesday.\'"
                 "Her hand bounces off mine."
-                c "\"See ya!\""
-                $renpy.hide(custom_hide("erin"))
+                c "\'See ya!\'"
+                $ renpy.hide(custom_hide("erin"))
                 "She gets in her car and drives away."
                 "And I can't wait until I get to see her again."
-                $day = temp
-                jump quick_calculations
+                $ day_counter = temp
+                jump event_calculation_1
     return
     
-label erin_sickday:
+
+label actC_scene3:
     scene erin_dorm with dissolve
     play music "audio/event.mp3" fadein 1.0
-    $temp = day 
-    $day = 3
+    $ temp = day_counter 
+    $ day_counter = 3
 
 
     "I open my door to find Erin standing outside my room."
-    c "\"Hi, Sam. How're you feeling? I heard you were sick.\""
-    n "\"Eh, I'm okay, could always be worse though.\""
-    c "\"That's the spirit. I'm here because Dr. Paige asked me to drop off some handouts. So you don't get behind.\""
+    c "\'Hi, Sam. How're you feeling? I heard you were sick.\'"
+    n "\'Eh, I'm okay, could always be worse though.\'"
+    c "\'That's the spirit. I'm here because Dr. Paige asked me to drop off some handouts. So you don't get behind.\'"
     "I see a few papers in her hand."
-    scene bg_outside_dorm2 with dissolve
-    $renpy.show(custom_show("erin", "happy"), [])
+    scene bg_room_outside_b with dissolve
+    $ renpy.show(custom_show("erin", "H"), [])
 
-    n "\"Oh, thanks. Do you want to come in?\""
-    c "\"Sure!\""
+    n "\'Oh, thanks. Do you want to come in?\'"
+    c "\'Sure!\'"
     "I move to the side, and she walks into my dorm, handing me the papers as she looks around the room."
-    scene bg_room with dissolve
+    scene bg_room_b with dissolve
 
     if clean:
-        $renpy.show(custom_show("erin", "flirty"), [])
-        c "\"Whoa, your room is so clean!\""
-        n "\"Well, you know. I don't like clutter.\""
+        $ renpy.show(custom_show("erin", "F"), [])
+        c "\'Whoa, your room is so clean!\'"
+        n "\'Well, you know. I don't like clutter.\'"
         "While her back is turned, I kick a stray piece of trash under my bed."
         "She goes over to my desk and examines my PC, from my keyboard and mouse to my headset and dual monitors."
-        $renpy.show(custom_show("erin", "happy"), [])
-        c "\"Nice setup!\""
+        $ renpy.show(custom_show("erin", "H"), [])
+        c "\'Nice setup!\'"
 
     else:
-        $renpy.show(custom_show("erin", "uncomf"), [])
-        n "\"Sorry for the mess. I've been meaning to clean.\""
-        c "\"Eh, that's alright. You're sick, you get to be a little messy today.\""
+        $ renpy.show(custom_show("erin", "U"), [])
+        n "\'Sorry for the mess. I've been meaning to clean.\'"
+        c "\'Eh, that's alright. You're sick, you get to be a little messy today.\'"
         "Despite what she says, I can tell by her expression that she's at least a little grossed out by the state of my room."
 
     "I watch her eyes move across my shelves over every trinket on display."
 
-    $renpy.show(custom_show("erin", "normal"), [])
+    $ renpy.show(custom_show("erin", "N"), [])
 
-    c "\"You have quite the merch collection.\""
+    c "\'You have quite the merch collection.\'"
 
-    n "\"Yeah, most of them are from conventions. That's where you get the best deals.\""
-    $renpy.show(custom_show("erin", "surprised"), [])
+    n "\'Yeah, most of them are from conventions. That's where you get the best deals.\'"
+    $ renpy.show(custom_show("erin", "surprised"), [])
 
-    c "\"Really? I didn't know that. I've never been.\""
+    c "\'Really? I didn't know that. I've never been.\'"
 
-    n "\"Well, maybe I can take you sometime.\""
+    n "\'Well, maybe I can take you sometime.\'"
 
     if special_C:
-        $renpy.show(custom_show("erin", "flirty"), [])
+        $ renpy.show(custom_show("erin", "F"), [])
         "She smiles at me."
     else:
-        $renpy.show(custom_show("erin", "uncomf"), [])
+        $ renpy.show(custom_show("erin", "U"), [])
         "We stand there for a moment in awkward silence."
 
     if C >= 16:
-        $erin_confessed = True
+        $ erin_confessed = True
         stop music fadeout 1.0
 
-        $renpy.show(custom_show("erin", "embarrassed"), [])
-        c "\"Sam? Can I tell you something?\""
-        n "\"Sure. What's up?\""
+        $ renpy.show(custom_show("erin", "E"), [])
+        c "\'Sam? Can I tell you something?\'"
+        n "\'Sure. What's up?\'"
         "She pauses as she thinks."
-        $renpy.show(custom_show("erin", "uncomf"), [])
-        c "\"Uh, well, I don't know how to say this, but...I think I like you. I'm sorry, did I make things weird?\""
+        $ renpy.show(custom_show("erin", "U"), [])
+        c "\'Uh, well, I don't know how to say this, but...I think I like you. I'm sorry, did I make things weird?\'"
 
         menu:
             "I like you too": 
-                n "\"Erin, I--\""
+                n "\'Erin, I--\'"
                 "We stand there in a moment of content silence before I start getting dizzy."
-                $renpy.show(custom_show("erin", "sad"), [])
-                c "\"Sam!\""
+                $ renpy.show(custom_show("erin", "S"), [])
+                c "\'Sam!\'"
                 "Erin grabs me as I almost fall to the ground."
                 "I know I need to respond to her confession, but my head hurts so much..."
-                n "\"Let's go out this weekend. I should be feeling better by then.\""
-                $renpy.show(custom_show("erin", "flirty"), [])
-                c "\"Yeah! That'd be fun.\""
-                $renpy.show(custom_show("erin", "angry"), [])
-                c "\"Oh but...I should let you rest then! Or you won't heal in time for our date.\""
+                n "\'Let's go out this weekend. I should be feeling better by then.\'"
+                $ renpy.show(custom_show("erin", "F"), [])
+                c "\'Yeah! That'd be fun.\'"
+                $ renpy.show(custom_show("erin", "A"), [])
+                c "\'Oh but...I should let you rest then! Or you won't heal in time for our date.\'"
                 "While leaving my room, she hesitates by the doorway."
-                $renpy.show(custom_show("erin", "normal"), [])
-                c "\"I'm glad we talked, Sam. Rest up, okay?\""
-                $renpy.hide(custom_hide("erin"))
+                $ renpy.show(custom_show("erin", "N"), [])
+                c "\'I'm glad we talked, Sam. Rest up, okay?\'"
+                $ renpy.hide(custom_hide("erin"))
                 "Erin closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Erin would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
@@ -358,83 +361,85 @@ label erin_sickday:
                 "That these past two weeks are just the beginning."
 
             "I don't think of you like that":
-                n "\"Erin, I--\""
-                "We stand there in a moment of content silence before I start getting dizzy."
-                $renpy.show(custom_show("erin", "sad"), [])
-                c "\"Sam!\""
+                n "\'Erin, I--\'"
+                "A wave of dizziness overwhelms me."
+                $ renpy.show(custom_show("erin", "S"), [])
+                c "\'Sam!\'"
                 "Erin grabs me as I almost fall to the ground."
                 "I know I need to respond to her confession, but my head hurts so much..."
-                c "\"I'll head out...let's talk later okay?\""
+                c "\'I'll head out...let's talk later okay?\'"
                 "She heads out, closing the door behind her before I have a chance to say anything else."
-                $renpy.hide(custom_hide("erin"))
-                n "\"Erin...\""
+                $ renpy.hide(custom_hide("erin"))
+                n "\'Erin...\'"
     else: 
-        $renpy.show(custom_show("erin", "sad"), [])
-        c "\"Is it alright if I head out? I know I just got here, but I have some stuff I should probably take care of.\""
-        n "\"Are you sure?\""
-        $renpy.show(custom_show("erin", "uncomf"), [])
-        c "\"Yeah, I think it's for the best. Plus, you're not feeling well.\""
-        $renpy.hide(custom_hide("erin"))
-        n "\"Alright. Talk to you later then.\""
-        c "\"Bye, Sam.\""
+        $ renpy.show(custom_show("erin", "S"), [])
+        c "\'Is it alright if I head out? I know I just got here, but I have some stuff I should probably take care of.\'"
+        n "\'Are you sure?\'"
+        $ renpy.show(custom_show("erin", "U"), [])
+        c "\'Yeah, I think it's for the best. Plus, you're not feeling well.\'"
+        $ renpy.hide(custom_hide("erin"))
+        n "\'Alright. Talk to you later then.\'"
+        c "\'Bye, Sam.\'"
         "Erin leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
         "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
-    $day = temp
+    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
-    jump ch3_schoolday2
+    jump act3_scene2
     return
+
 
 label erin_roof:
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 
-    $temp = day 
-    $day = 0
+    $ temp = day_counter 
+    $ day_counter = 0
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    $renpy.show(custom_show("erin", "normal"), [])
+    $ renpy.show(custom_show("erin", "N"), [])
     "Erin sits cross legged as she stares up at the sky, the clouds drifting above. Her apparent contentment makes me wonder what she's thinking about.."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     
-    n "\"Hey.\""
-    c "\"Hi, Sam.\""
+    n "\'Hey.\'"
+    c "\'Hi, Sam.\'"
     "She glances down at the gift in my hand."
 
     if erin_gift:
-        $C = C + 1
+        $ C = C + 1
         scene sunflowers with dissolve
-        $renpy.show(custom_show("erin", "flirty"), [])
+        $ renpy.show(custom_show("erin", "F"), [])
         "Her eyebrows shoot up in excitement."
-        c "\"Hey! Sunflowers!\""
-        n "\"I brought them for you.\""
-        if eventbc_trigger:
-            n "\"They made me think of that painting we saw.\""
+        c "\'Hey! Sunflowers!\'"
+        n "\'I brought them for you.\'"
+        if eventCDateFlag:
+            n "\'They made me think of that painting we saw.\'"
         "When I hand her the bouquet, she closes her eyes and brings the flowers to her nose."
-        c "\"Thanks, Sam. This made my day.\""
+        c "\'Thanks, Sam. This made my day.\'"
+        scene bg_roof with dissolve
     else:
-        $C = C - 1
-        $renpy.show(custom_show("erin", "uncomf"), [])
-        c "\"Whatcha got there?\""
-        n "\"It's for you.\""
+        $ C = C - 1
+        $ renpy.show(custom_show("erin", "U"), [])
+        c "\'Whatcha got there?\'"
+        n "\'It's for you.\'"
         "As I hand Erin her present, she looks a little confused."
-        c "\"Uh, cool. Thanks.\""
+        c "\'Uh, cool. Thanks.\'"
 
-    $renpy.show(custom_show("erin", "normal"), [])
+    $ renpy.show(custom_show("erin", "N"), [])
     "We watch the sun slowly fall."
-    c "\"It's a great view, huh?\""
-    n "\"Yeah...\""
-    $renpy.show(custom_show("erin", "angry"), [])
-    c "\"No matter how many times I come up here, I never get tired of it...I want to find more things like that.\""
-    n "\"Things you won't get tired of?\""
-    $renpy.show(custom_show("erin", "flirty"), [])
-    c "\"Things that are always just as fun, exciting, and beautiful as the first time I experience them.\""
-    n "\"I'm not sure that's possible.\""
-    $renpy.show(custom_show("erin", "normal"), [])
-    c "\"Maybe for some people. It takes effort to notice beautiful things--not everyone pauses long enough to watch sunsets.\""
-    $renpy.show(custom_show("erin", "happy"), [])
-    c "\"Anyway, you wanted to talk about something?\""
+    c "\'It's a great view, huh?\'"
+    n "\'Yeah...\'"
+    $ renpy.show(custom_show("erin", "A"), [])
+    c "\'No matter how many times I come up here, I never get tired of it...I want to find more things like that.\'"
+    n "\'Things you won't get tired of?\'"
+    $ renpy.show(custom_show("erin", "F"), [])
+    c "\'Things that are always just as fun, exciting, and beautiful as the first time I experience them.\'"
+    n "\'I'm not sure that's possible.\'"
+    $ renpy.show(custom_show("erin", "N"), [])
+    c "\'Maybe for some people. It takes effort to notice beautiful things--not everyone pauses long enough to watch sunsets.\'"
+    $ renpy.show(custom_show("erin", "H"), [])
+    c "\'Anyway, you wanted to talk about something?\'"
 
     menu:
         "Confess my feelings":
