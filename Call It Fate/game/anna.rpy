@@ -5,7 +5,7 @@ label eventBHang:
     $ eventBHangCompletedFlag = True
     $ eventBHangToday = True
 
-    "The next day, I head to the library where Anna is waiting, her attention so focused on the book in front of her, she doesn't even notice when I arrive."
+    "I head to the library where Anna is waiting, her attention so focused on the book in front of her, she doesn't even notice when I arrive."
     n "\'Hey.\'"
     scene bg_lib_a with dissolve
 

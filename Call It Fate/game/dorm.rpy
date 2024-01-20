@@ -581,7 +581,18 @@ label event_ending:
 
 label event_calculation_a:
     # day_counter calculation for outfits
-    if eventADateCompletedFlag and eventADateToday:
+    if day_counter == 11:
+        if temp_usage:
+            $ day_counter = temp
+            $ temp_usage = False
+        if eventAHangToday:
+            $ eventAHangToday = False
+        elif eventBHangToday:
+            $ eventBHangToday = False
+        elif eventCHangToday:
+            $ eventCHangToday = False
+        $ calendar_days_skipped = 2
+    elif eventADateCompletedFlag and eventADateToday:
         scene bg_room_c with longfade
         play music "audio/dorm.mp3"
         "I get ready for bed after a long day."

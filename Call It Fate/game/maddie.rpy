@@ -4,7 +4,7 @@
     scene event_hang_a with dissolve 
     play music "audio/event.mp3" fadein 1.0
 
-    "The next day, I head to the school gym where Maddie is waiting, tying her hair into the usual ponytail."
+    "I head to the school gym where Maddie is waiting, tying her hair into the usual ponytail."
     a "\'Hey, Sam. Ready for our workout?\'"
     scene bg_gym_a with dissolve
 

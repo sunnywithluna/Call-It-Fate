@@ -5,7 +5,7 @@ label eventCHang:
     $ eventCHangToday = True
     play music "audio/event.mp3" fadein 1.0
 
-    "The next day, I head to the art room where Erin is waiting."
+    "I head to the art room where Erin is waiting."
     c "\'Hi, Sam! I brought the pizza--\'"
     scene bg_art_a with dissolve
     $ renpy.show(custom_show("erin", "surprised"), [])
