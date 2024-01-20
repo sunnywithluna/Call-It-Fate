@@ -1,4 +1,4 @@
-Fri Jan 19 22:50:17 2024
+Sat Jan 20 02:28:04 2024
 Windows-10-10.0.22621
 Ren'Py 8.1.3.23091805
  
@@ -6,35 +6,113 @@ Ren'Py 8.1.3.23091805
 Bootstrap to the start of init.init. took 0.03s
 Early init. took 0.01s
 Loader init. took 0.04s
-Loading error handling. took 0.06s
-Loading script. took 0.90s
-Loading save slot metadata. took 0.18s
+Loading error handling. took 0.02s
+Loading script. took 0.59s
+Loading save slot metadata. took 0.00s
 Loading persistent. took 0.00s
-Running init code. took 0.31s
+
+File "game/erin.rpy", line 432: reached end of line when expecting ':'.
+    if C >= C_high3
+                   ^
+
+File "game/erin.rpy", line 434: expected statement.
+    elif C >= C_high:
+           ^
+
+File "game/erin.rpy", line 436: expected statement.
+    else:
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.27s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Traceback (most recent call last):
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\editor.py", line 103, in open
+    os.startfile(filename) # type: ignore
+OSError: [WinError -2147221003] Application not found: 'C:\\Users\\Kim\\Documents\\GitHub\\Call-It-Fate\\Call It Fate\\game\\erin.rpy'
+Resetting cache.
+Bootstrap to the start of init.init. took 56.90s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.53s
+Loading save slot metadata. took 0.05s
+Loading persistent. took 0.00s
+Running init code. took 0.05s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.10s
+Reloading save slot metadata. took 0.03s
 Index archives took 0.00s
-Dump and make backups. took 0.04s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
 Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.26s
+Creating interface object. took 0.22s
 Cleaning stores took 0.00s
-Init translation took 0.05s
+Init translation took 0.04s
 Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.07s
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "game/script.rpy", line 251, in execute_default
+    default gnSentB = False
+Exception: store.gnSentB is being given a default a second time.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "game/script.rpy", line 251, in execute_default
+    default gnSentB = False
+Exception: store.gnSentB is being given a default a second time.
+Interface start. took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3440, 1440)
@@ -47,12 +125,170 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 427.76s
+Bootstrap to the start of init.init. took 89.40s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "game/screens.rpy", line 272, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "game/screens.rpy", line 272, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
+Resetting cache.
+Bootstrap to the start of init.init. took 128.68s
 Early init. took 0.00s
 Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.27s
-Loading save slot metadata. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "game/screens.rpy", line 272, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "game/screens.rpy", line 272, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
+Traceback (most recent call last):
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\execution.py", line 596, in run
+    node.execute()
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2622, in execute_default
+    raise Exception("{}.{} is being given a default a second time.".format(self.store, self.varname))
+Exception: store.quick_menu is being given a default a second time.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\editor.py", line 103, in open
+    os.startfile(filename) # type: ignore
+OSError: [WinError -2147221003] Application not found: 'C:\\Users\\Kim\\Documents\\renpy-8.1.3-sdk\\renpy\\common\\00start.rpy'
+Resetting cache.
+Bootstrap to the start of init.init. took 256.23s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
 Loading analysis data. took 0.01s
@@ -67,73 +303,19 @@ Initial gc. took 0.06s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.20s
+Creating interface object. took 0.22s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 719, in run
-    result = renpy.python.py_eval(code)
-  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'calendar_day_skipped' is not defined
-Resetting cache.
-Bootstrap to the start of init.init. took 492.05s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
+Save screen analysis took 0.01s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.04s
+Interface start. took 0.03s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3440, 1440)
@@ -145,12 +327,36 @@ Version: b'4.6.0 NVIDIA 531.29'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "renpy/common/00console.rpy", line 1132, in execute_default
+    default _console.traced_expressions = _console.TracedExpressionsList()
+Exception: store._console.traced_expressions is being given a default a second time.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "renpy/common/00console.rpy", line 1132, in execute_default
+    default _console.traced_expressions = _console.TracedExpressionsList()
+Exception: store._console.traced_expressions is being given a default a second time.
 Resetting cache.
-Bootstrap to the start of init.init. took 549.95s
+Bootstrap to the start of init.init. took 282.69s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.02s
-Loading script. took 0.22s
+Loading script. took 0.21s
 Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
@@ -162,18 +368,18 @@ Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call
 Dump and make backups. took 0.04s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.07s
+Initial gc. took 0.06s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.23s
+Creating interface object. took 0.21s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.04s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
@@ -190,325 +396,27 @@ Version: b'4.6.0 NVIDIA 531.29'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
 Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 621.65s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.09s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.26s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 722.44s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.19s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
+Full traceback:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "game/screens.rpy", line 272, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 761.18s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.08s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 811.41s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.26s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 823.26s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.21s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 719, in run
-    result = renpy.python.py_eval(code)
-  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'eventACompletedFlag' is not defined
-Resetting cache.
-Bootstrap to the start of init.init. took 1053.65s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1107.05s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3440, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 531.29'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
-Maximum texture size: 4096x4096
+While running game code:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "game/screens.rpy", line 272, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.

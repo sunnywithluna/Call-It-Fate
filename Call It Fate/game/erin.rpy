@@ -429,7 +429,7 @@ label eventRoofC:
         "Confess my feelings":
             if confessedFlagC:
                 jump endingC11
-            if C >= C_high3
+            if C >= C_high3:
                 jump endingC10
             elif C >= C_high:
                 jump endingC01
