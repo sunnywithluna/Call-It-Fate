@@ -263,7 +263,7 @@ label credits_1:
 
     if persistent.endingAFlag:
         scene black with fade
-        play music "audio/roof.mp3" fadein 1.0
+        play music "audio/rooftop.mp3" fadein 1.0
         
         scene credits_a_1 with dissolve
         with Pause(3)
@@ -289,19 +289,19 @@ label credits_1:
     elif anna:
         $ persistent.endingBFlag = True
         scene black with fade
-        play music "audio/end.mp3" fadein 1.0
+        play music "audio/rooftop.mp3" fadein 1.0
         "ended up with anna"
         "Kim Jang Kris Gathman Nick Gathman Etc"
     elif erin:
         $ persistent.endingCFlag = True
         scene black with fade
-        play music "audio/end.mp3" fadein 1.0
+        play music "audio/rooftop.mp3" fadein 1.0
         "ended up with erin"
         "Kim Jang Kris Gathman Nick Gathman Etc"
     elif nekochan:
         $ persistent.d_ending_success = True
         scene black with fade
-        play music "audio/end.mp3" fadein 1.0
+        play music "audio/rooftop.mp3" fadein 1.0
         "ended up with neko"
         "Kim Jang Kris Gathman Nick Gathman Etc"
     else:
