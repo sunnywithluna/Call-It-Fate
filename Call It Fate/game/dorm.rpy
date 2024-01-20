@@ -42,7 +42,7 @@ label act1_scene0_menu1_option1:
 
 label act1_scene0_menu1_option2:
     scene bg_room_aa with dissolve
-    show neko
+    show neko with dissolve
     "What should I talk to Neko-Chan about?"
     $ act1_scene0_menu1_option2 = True
     menu: 
@@ -266,7 +266,7 @@ label end_of_act_menu1_option3:
     $ end_of_act_menu1_flag3 = True
     "What should I talk to Neko-Chan about?"
     scene bg_room_bb with dissolve
-    show neko
+    show neko with dissolve
 
     menu:
         "Maddie" if maddie_unlocked:

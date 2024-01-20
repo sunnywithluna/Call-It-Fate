@@ -1,23 +1,21 @@
 ﻿
 label eventBHang:
-    scene anna_hang with dissolve
+    scene event_hang_ba with dissolve
     play music "audio/event.mp3"  fadein 1.0
     $ eventBHangCompletedFlag = True
     $ eventBHangToday = True
-
     "I head to the library where Anna is waiting, her books and notes already spread out in front of her."
     n "\'Hey.\'"
-    scene bg_lib_a with dissolve
-
-    $ renpy.show(custom_show("anna", "H"), [])
+    scene event_hang_bb with dissolve
     b "\'You made it.\'"
     "She looks up and puts her book away."
-    
+    scene bg_lib_a with dissolve
+    $ renpy.show(custom_show("anna", "H"), [])
     n "\'Of course.\'"
     menu:
         "I wanted to see you.":
             n "\'Any excuse to see you is worth it.\'"
-            if B >= 5:
+            if B >= B_mid2:
                 $ renpy.show(custom_show("anna", "E"), [])
                 $ B = B + 1
                 b "\'...\'"
@@ -89,7 +87,7 @@ label eventBDate:
             b "\'Actually, could we go to the Revelation Science Museum? They have some new exhibits that I've been meaning to check out.\'"
             "I usually avoid museums, thinking they'll be boring, but I still agree to go. Maybe this will be a chance for me to learn something new."
     
-    scene eventBDateCompletedFlag with dissolve
+    scene event_date_b with dissolve
 
     "When I arrive, I find Anna beside the ticket stand, thumbing through museum pamphlets."
     n "\'Hey!\'"
@@ -128,13 +126,14 @@ label eventBDate:
 
     "A deep, surrounding voice teaches us about the wonders of our galaxy, the mysteries of space, and I feel Anna's hand find mine."
 
-    scene stem_poster with dissolve
+    scene bg_stem_poster with dissolve
 
     "At the exit, we're handed flyers that read, \'GRANT OPPORTUNITIES FOR WOMEN IN STEM,\' followed by details on how to apply."
 
     n "\'Hey, I bet you'd qualify.\'"
     
     "I hold up the paper for Anna to see."
+    scene bg_museum with dissolve
 
     $ renpy.show(custom_show("anna", "U"), [trueleft])
 
@@ -197,7 +196,7 @@ label eventBDate:
     
     scene bg_after_date with dissolve 
 
-    $ renpy.show(custom_show("anna", "F"), [])
+    $ renpy.show(custom_show("anna", "H"), [])
     b "\'Today was nice.\'"
 
 
@@ -208,14 +207,14 @@ label eventBDate:
 
     b "\'I'm glad you invited me out.\'"
 
-    $ renpy.show(custom_show("anna", "F"), [])
+    $ renpy.show(custom_show("anna", "N"), [])
     n "\'Me too.\'"
     "As I'm looking at her, I realize it's time to part ways."
     "How should I say goodbye?"
 
     menu:
         "Kiss her":
-            if B >= 8:
+            if B >= B_high:
                 scene black with dissolve
 
                 $ B = B + 1
@@ -302,7 +301,7 @@ label actB_scene3:
     "She laughs."
 
 
-    if B >= 14:
+    if B >= B_high:
         $ confessedFlagB = True
         stop music fadeout 1.0
 
@@ -391,12 +390,11 @@ label eventRoofB:
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    $ renpy.show(custom_show("anna", "N"), [])
+    scene event_roof_b with dissolve
     "Anna stands at a distance from the edge of the roof, even with the fencing in place. She seems...at peace. Relaxed."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     n "\'Hey.\'"
     b "\'I was just admiring the view.\'"
-    $ renpy.show(custom_show("anna", "H"), [])
     "She looks back at the sunset, and I join her, watching the changing sky while I think of what to say."
 
     n "\'I got this for you.\'"
@@ -404,7 +402,7 @@ label eventRoofB:
     if anna_gift:
         scene event_gift_b with dissolve
         $ B = B + 1
-        $ renpy.show(custom_show("anna", "H"), [trueright])
+        $ renpy.show(custom_show("anna", "H"), [trueleft])
         "Anna looks down at the venus flytrap, and smiles."
         if eventBDateFlag:
             b "\'Like the ones at the museum.\'"
@@ -412,6 +410,7 @@ label eventRoofB:
         b "I'll take good care of it. Thank you."
         $ renpy.hide(custom_hide("anna"))
     else:
+        scene bg_roof with dissolve
         $ renpy.show(custom_show("anna", "U"), [])
         "Anna turns to face me and accepts the gift, the blank expression on her face only making me more nervous."
         n "\'Do you like it?\'"

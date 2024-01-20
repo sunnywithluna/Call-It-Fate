@@ -1,6 +1,6 @@
 ﻿
 label eventCHang:
-    scene erin_hang with dissolve
+    scene event_hang_c with dissolve
     $ eventCHangCompletedFlag = True
     $ eventCHangToday = True
     play music "audio/event.mp3" fadein 1.0
@@ -83,7 +83,7 @@ label eventCDate:
             "In response, I write, \'I was thinking we could grab some ramen. Is that okay?\'"
             a "\'Hm, I don't really feel like doing that. But I saw some flyers for an art gallery nearby, maybe we could go?\'"
             "I like practicing art a lot more than I like looking at it, but studying other people's work will probably help me improve too."
-    scene eventCDateCompletedFlag with dissolve
+    scene event_date_c with dissolve
     "When I arrive, I find Erin already inside, staring at a painting."
     "I walk towards the colors of yellow, green, and blue on the canvas, my footsteps loud against the concrete floors, until I'm standing beside her."
     scene bg_art_gallery with dissolve
@@ -202,7 +202,7 @@ label eventCDate:
 
     menu:
         "Kiss her":
-            if C >= 9:
+            if C >= C_high:
                 scene black with dissolve
 
                 "I lean in."
@@ -237,7 +237,7 @@ label eventCDate:
             "And I can't wait until Tuesday when I get to see her again."
             jump event_calculation_a
         "Give her a high five":
-            if C >= 9:
+            if C >= C_high:
                 $ C = C - 1
                 $ renpy.show(custom_show("erin", "U"), [])
                 "She cocks her head and slowly raises her hand to meet mine."
@@ -312,7 +312,7 @@ label actC_scene3:
         $ renpy.show(custom_show("erin", "U"), [])
         "We stand there for a moment in awkward silence."
 
-    if C >= 16:
+    if C >= C_high:
         $ confessedFlagC = True
         stop music fadeout 1.0
 
@@ -382,7 +382,7 @@ label eventRoofC:
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    $ renpy.show(custom_show("erin", "N"), [])
+    scene event_roof_c with dissolve
     "Erin sits cross legged as she stares up at the sky, the clouds drifting above. Her apparent contentment makes me wonder what she's thinking about.."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     

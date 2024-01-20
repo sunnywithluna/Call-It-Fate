@@ -6,6 +6,7 @@ label endingA01:
     a "\'I like you too.\'"
     "It takes a moment before what she's saying sinks in."
     n "\'Really?! I mean, that's great!\'"
+    $ renpy.show(custom_show("maddie", "H"), [])
     "She smiles, then takes my hand."
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
@@ -126,7 +127,9 @@ label endingB10:
 
 label endingB00:
     $ nekochan = True
-    $ renpy.show(custom_show("anna", "A"), [])
+    $ renpy.show(custom_show("anna", "E"), [])
+    b "\'...\'"
+    $ renpy.show(custom_show("anna", "E2"), [])
     b "\'You're a good guy, so I'm sorry if I've misled you. But I don't feel that way about you.\'"
     "It takes a moment before what she's saying sinks in."
     n "\'Huh...I guess I misread things...I'll see you around.\'"
@@ -154,13 +157,15 @@ label endingB11:
     $ renpy.show(custom_show("anna", "E2"), [])
 
     n "\'Why?\'"
-    $ renpy.show(custom_show("anna", "E2"), [])
+    $ renpy.show(custom_show("anna", "U"), [])
 
     b "\'Because...you don't feel the same.\'"
 
     n "\'No, but I do! I didn't get a chance to respond before, but-\'"
-
+    scene black with fade
     "Anna interrupts me with a kiss."
+    scene bg_roof with fade
+    $ renpy.show(custom_show("anna", "H"), [])
 
     "Despite the chilled air, I feel warm."
 

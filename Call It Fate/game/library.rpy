@@ -69,16 +69,16 @@ label library_main_menu:
 label library_1_talk:
     $ anna_unlocked = True
     $ library_choice_1_a = True
-    if B < 0:
+    if B < B_bad:
         $ renpy.show(custom_show("anna", "A"), [])
         b "\'I'm kind of in the middle of something...\'"
-    elif 0 <= B <= 5:
+    elif B_bad <= B <= B_low:
         $ renpy.show(custom_show("anna", "U"), [])
         b "\'...\'"
-    elif 6 <= B <=10:
+    elif B_low+1 <= B <=B_mid2:
         $ renpy.show(custom_show("anna", "N"), [])
         b "\'Good evening, Sam.\'"
-    elif B >= 10:
+    elif B >= B_mid2+1:
         $ renpy.show(custom_show("anna", "H"), [])
         b "\'Sam. It's good to see you.\'"
     jump talking_to_anna
@@ -117,7 +117,7 @@ label library_choice_2_a:
 label library_choice_2_b:
     n "\'Tell me about yourself, Anna.\'"
     $ library_choice_2_b = True
-    if B >= 5:
+    if B >= B_mid2:
         $ renpy.show(custom_show("anna", "E"), [])
         b "\'What do you want to know?\'"
         $ renpy.show(custom_show("anna", "E2"), [])
@@ -205,7 +205,7 @@ label library_choice_2_c:
     n "\'Hey, I have an idea. Why don't we study together? I mean, we're in the same class. It might be helpful.\'"
     $ library_choice_2_c = True
 
-    if B >= 4:
+    if B >= B_mid:
         $ renpy.show(custom_show("anna", "N"), [])
 
         b "\'Okay. That makes sense to me.\'"
@@ -262,7 +262,7 @@ label library_choice_compliment_a:
     menu: 
         "You're really pretty":
             n "\'Just throwing it out there, but I think you're really pretty.\'"
-            if B >= 7:
+            if B >= B_mid2:
                 $ renpy.show(custom_show("anna", "E"), [])
                 $ B = B + 1
                 b "\'I didn't realize I was being observed.\'"
@@ -363,7 +363,7 @@ label library_1_workout:
                 $ renpy.show(custom_show("anna", "N"), [])
                 "I continue studying, and when I glance back at Anna, she looks impressed."
             "Wave":
-                if B <= 4:
+                if B <= B_mid:
                     $ B = B - 1
                     "I wave at Anna."
                     $ renpy.show(custom_show("anna", "A"), [])
@@ -372,7 +372,7 @@ label library_1_workout:
                     "I wave at Anna."
                     $ renpy.show(custom_show("anna", "F"), [])
                     "She smiles at me before returning to her studies."
-                    if B >= 7:
+                    if B >= B_mid2:
                         $ B = B + 1
     $ renpy.hide(custom_hide("anna"))
 

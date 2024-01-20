@@ -98,10 +98,10 @@ label gym_1_talk:
     if A < A_bad:
         $ renpy.show(custom_show("maddie", "U"), [])
         a "\'What do you want?\'"
-    elif A_bad <= A <= A_mid:
+    elif A_bad+1 <= A <= A_mid:
         $ renpy.show(custom_show("maddie", "N"), [])
         a "\'Hey, Sam. What's up?\'"
-    elif A_mid <= A <=A_mid3:
+    elif A_mid+1 <= A <=A_mid3:
         $ renpy.show(custom_show("maddie", "H"), [])
         a "\'Hey, Sam! Great day to hit the gym, huh?\'"
     else:

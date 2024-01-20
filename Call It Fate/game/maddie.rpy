@@ -410,7 +410,7 @@ label eventRoofA:
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    scene eventRoofA with dissolve
+    scene event_roof_a with dissolve
     "Maddie stands close to the rooftop fence, staring out into the horizon, steady as always."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     
@@ -421,11 +421,13 @@ label eventRoofA:
     if maddie_gift:
         scene event_gift_a with dissolve
         $ A = A + 1
+        $ renpy.show(custom_show("maddie", "H"), [trueleft])
         a "\'A hoya kerrii plant! Is that for me?\'"
         n "\'Yeah! Do you like it?\'"
         if eventADateFlag:
             n "\'It reminded me of the ones from our hike.\'"
         "She takes the potted plant from me, looking at it with admiration."
+        $ renpy.show(custom_show("maddie", "F"), [trueleft])
         a "\'I love it, Sam. Thank you.\'"
         scene bg_roof with dissolve
     else:
@@ -446,7 +448,7 @@ label eventRoofA:
     a "\'Haha, definitely.\'"
     a "\'So why did you want to meet up?\'"
     n "\'Well...I actually had something I wanted to talk with you about.\'"
-    $ renpy.show(custom_show("maddie", "F"), [])
+    $ renpy.show(custom_show("maddie", "N"), [])
     a "\'Yeah, you mentioned that in your text. What's up?\'"
 
     menu:

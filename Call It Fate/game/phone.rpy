@@ -23,7 +23,7 @@ label a_number:
 label b_number:
     $ numberFlagB = True
     n "\'Hey, Anna, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\'"
-    if B >= 1:
+    if B >= B_low:
         $ renpy.show(custom_show("anna", "H"), [])
         b "\'Good thinking.\'"
         "We exchange phone numbers."
@@ -37,7 +37,7 @@ label b_number:
 label c_number:
     $ numberFlagC = True
     n "\'Hey, Erin, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\'"
-    if C >= 1:
+    if C >= C_low:
         $ renpy.show(custom_show("erin", "N"), [])
         c "\'Yeah okay! I could probably use the help.\'"
         "We exchange phone numbers."
@@ -173,7 +173,7 @@ label actA_sceneText_gn:
 
     if gnSentA == False:
         $ gnSentA = True
-        if A >= A_low:
+        if A >= A_mid:
             $ A = A + 1
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\'A goodnight text? If I didn't know any better, I'd think you like me. Lol, goodnight, Sam.\'"
@@ -188,7 +188,9 @@ label actA_sceneText_gn:
 label actB_sceneText:
     "What should I say?"
     menu:
-        "Do you want to go on a date?" if not eventBDateFlag and not dateSentFlagB:
+        "How are you?" if not smallTalkFlagB:
+            jump actB_sceneText_smallTalk
+        "Do you want to go on a date?" if not eventBDateFlag and not dateSentFlagB and eventBHangFlag and eventBHangCompletedFlag:
             jump actB_sceneText_date
         "Let's hang out soon" if not eventBHangFlag and not hangSentFlagB:
             jump actB_sceneText_hang
@@ -207,7 +209,7 @@ label actB_sceneText_date:
         "I already have a date this weekend. I shouldn't overbook myself."
     else:
         "I send a text that reads, \'Hey, I was wondering, do you want to go out sometime?\'"
-        if B >= 6:
+        if B >= B_mid:
             $ weekendDateFlag = True
             "After about thirty minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'I was hoping you'd ask. How's this weekend sound?\'"
@@ -222,7 +224,7 @@ label actB_sceneText_date:
 label actB_sceneText_hang:
     $ hangSentFlagB = True
     "I send a text that reads, \'Hey, Anna! I'm planning to study in the library tomorrow if you want to join.\'"
-    if B >= 4:
+    if B >= B_low:
         "After a few minutes, my phone chimes and a response from Anna shows on the screen."
         b "\'Good thinking. I'll be there.\'"
         $ eventBHangFlag = True
@@ -259,7 +261,7 @@ label actB_sceneText_gn:
 
     if gnSentB == False:
         $ gnSentB = True
-        if B >= 5:
+        if B >= B_mid:
             $ B = B + 1
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'I hope you had a good day, Sam. Sleep well.\'"
@@ -273,7 +275,9 @@ label actB_sceneText_gn:
 label actC_sceneText:
     "What should I say?"
     menu:
-        "Do you want to go on a date?" if not eventCDateFlag and not dateSentFlagC:
+        "How are you?" if not smallTalkFlagC:
+            jump actC_sceneText_smallTalk
+        "Do you want to go on a date?" if not eventCDateFlag and not dateSentFlagC and eventCHangFlag and eventCHangCompletedFlag:
             jump actC_sceneText_date
         "Let's hang out soon" if not eventCHangFlag and not hangSentFlagC:
             jump actC_sceneText_hang
@@ -291,7 +295,7 @@ label actC_sceneText_date:
         "I already have a date this weekend. I shouldn't overbook myself."
     else:
         "I send a text that reads, \'Hey, I was wondering, do you want to go out sometime?\'"
-        if C >= 6:
+        if C >= C_mid:
             $ weekendDateFlag = True
             "After a few minutes, my phone chimes and a response from Erin shows on the screen:"
             c "\'Hi, Sam! I'd love to go out! Are you free this weekend?\'"
@@ -307,7 +311,7 @@ label actC_sceneText_date:
 label actC_sceneText_hang:
     $ hangSentFlagC = True
     "I send a text that reads, \'Hey, Erin! I'm going to the art room tomorrow to draw. Do you want to join me? We could order pizza or something while we're there.\'"
-    if C >= 4:
+    if C >= C_mid:
         "After a few minutes, my phone chimes and a response from Erin shows on the screen."
         c "\'Yeah! I'm down! See you tomorrow. :)\'"
         $ eventCHangFlag = True
@@ -343,7 +347,7 @@ label actC_sceneText_gn:
     
     if gnSentC == False:
         $ gnSentC = True
-        if C >= 5:
+        if C >= C_mid:
             $ C = C + 1
             "After a few minutes, my phone chimes and a response from Erin shows on the screen."
             c "\'Goodnight!! :)\'"

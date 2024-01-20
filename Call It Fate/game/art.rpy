@@ -109,16 +109,16 @@ label art_1_talk:
     $ erin_unlocked = True
     $ renpy.show(custom_show("erin", "N"), [])
     $ art_choice_1_a = True
-    if C < 0:
+    if C < C_low:
         $ renpy.show(custom_show("erin", "U"), [])
         c "\'Oh, did you need something?\'"
-    elif 0 <= C <= 5:
+    elif C_low+1 <= C <= C_mid:
         $ renpy.show(custom_show("erin", "N"), [])
         c "\'Hi, Sam.\'"
-    elif 6 <= C <=10:
+    elif C_mid+1 <= C <=C_mid3:
         $ renpy.show(custom_show("erin", "H"), [])
         c "\'Hi, Sam! What can I do for you?\'"
-    elif C >= 10:
+    elif C >= C_mid3+1:
         $ renpy.show(custom_show("erin", "F"), [])
         c "\'Hi, Sam! Let me know if you need anything, okay?\'"
     
@@ -285,7 +285,7 @@ label art_choice_compliment_a:
         "That's a cool outfit":
             n "\'You have such a cool style, Erin.\'"
 
-            if C >= 2:
+            if C >= C_low:
                 $ C = C + 1
                 $ renpy.show(custom_show("erin", "F"), [])
                 c "\'You like my style?\'"
@@ -373,7 +373,7 @@ label art_1_workout:
                 "I continue drawing, and when I glance back at Erin, her attention has already returned to her tablet."
 
             "Wave":
-                if C < 0:
+                if C < C_low:
                     $ renpy.show(custom_show("erin", "N"), [])
                     $ C = C - 2
                     "I wave at Erin."
@@ -384,7 +384,7 @@ label art_1_workout:
                     $ renpy.show(custom_show("erin", "H"), [])
                     "She waves back at me before returning to her drawing."
                     $ renpy.hide(custom_hide("erin"))
-                    if C >=2:
+                    if C >=C_mid:
                         $ C = C + 1
         
     scene bg_art_b with dissolve

@@ -319,25 +319,25 @@ label credits_1:
 
 label persistent_check:
     if persistent.endingAFlag == True:
-        if persistent.endingBFlag == True:
-            if persistent.endingCFlag == True:
-                $ persistent.titleScreenCounter = 7 #  111
+        if persistent.endingCFlag == True:
+            if persistent.endingBFlag == True:
+                $ persistent.titleScreenCounter = 7 #  111 - all
             else:
-                $ persistent.titleScreenCounter = 6 #  110
+                $ persistent.titleScreenCounter = 6 #  110 -- no anna
         else:
             if persistent.endingCFlag == True:
-                $ persistent.titleScreenCounter = 5 #  101
+                $ persistent.titleScreenCounter = 5 #  101 -- no erin
             else:
-                $ persistent.titleScreenCounter = 4 #  100
+                $ persistent.titleScreenCounter = 4 #  100 -- only maddie
     else:
         if persistent.endingBFlag == True:
             if persistent.endingCFlag == True:
-                $ persistent.titleScreenCounter = 3 #  011
+                $ persistent.titleScreenCounter = 3 #  011 -- no maddie
             else:
-                $ persistent.titleScreenCounter = 2 #  010
+                $ persistent.titleScreenCounter = 2 #  010 -- only anna
         else:
             if persistent.endingCFlag == True:
-                $ persistent.titleScreenCounter = 1 #  001
+                $ persistent.titleScreenCounter = 1 #  001 -- only erin
             else:
-                $ persistent.titleScreenCounter = 0 #  000
+                $ persistent.titleScreenCounter = 0 #  000 -- no one
     return
