@@ -25,7 +25,7 @@ label a_number:
 label b_number:
     $ b_number_flag = True
     n "\'Hey, Anna, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\'"
-    if D >= 1:
+    if B >= 1:
         $ renpy.show(custom_show("anna", "H"), [])
         b "\'Good thinking.\'"
         "We exchange phone numbers."

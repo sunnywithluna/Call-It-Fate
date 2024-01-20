@@ -56,9 +56,6 @@ label eventCHang:
     n "\'Wow, so edgy.\'"
     $ renpy.hide(custom_hide("erin"))
     "We soon move on to drawing other food items with various emotions, and I only get stuck once when trying to decide how a hamburger might look when in love."
-    stop music fadeout 1.0
-    scene black with fade
-
     jump event_calculation_1
 
 
@@ -214,10 +211,9 @@ label eventCDate:
                 "And our lips meet."
                 c "\'So, I'll see you in class?\'"
                 n "\'Yeah, I'll see you then.\'"
-                scene erin_kiss with dissolve
+                scene event_kiss_c with dissolve
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                $ day_counter = temp
                 jump event_calculation_1
 
             else:
@@ -232,8 +228,6 @@ label eventCDate:
                 c "\'Thanks again.\'"
                 $ renpy.hide(custom_hide("erin"))
                 "Erin gets in her car and drives away. And I'm left wondering what I did wrong."
-            
-                $ day_counter = temp
                 jump event_calculation_1
         "Hug her":
             $ renpy.show(custom_show("erin", "F"), [])
@@ -243,7 +237,6 @@ label eventCDate:
             $ renpy.hide(custom_hide("erin"))
             "She gets in her car and drives away."
             "And I can't wait until Tuesday when I get to see her again."
-            $ day_counter = temp
             jump event_calculation_1
         "Give her a high five":
             if C >= 9:
@@ -254,7 +247,6 @@ label eventCDate:
                 $ renpy.hide(custom_hide("erin"))
                 "Erin gets in her car and drives away."
                 "And I'm wondering if there was a better way I could've done that."
-                $ day_counter = temp
                 jump event_calculation_1
 
             else:
@@ -266,7 +258,6 @@ label eventCDate:
                 $ renpy.hide(custom_hide("erin"))
                 "She gets in her car and drives away."
                 "And I can't wait until I get to see her again."
-                $ day_counter = temp
                 jump event_calculation_1
     return
     
@@ -389,7 +380,7 @@ label actC_scene3:
     return
 
 
-label erin_roof:
+label event_roof_c:
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 

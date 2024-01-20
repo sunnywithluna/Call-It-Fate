@@ -18,7 +18,7 @@ label eventBHang:
     menu:
         "I wanted to see you.":
             n "\'Any excuse to see you is worth it.\'"
-            if D >= 5:
+            if B >= 5:
                 $ renpy.show(custom_show("anna", "E"), [])
                 $ A = A + 1
                 b "\'...\'"
@@ -46,7 +46,7 @@ label eventBHang:
     "When we finish the assignment, Anna hands me her nearly perfect notes, which I use to quiz her on the class material."
 
     "As I go through the questions, I start to notice that every time she gets an answer wrong, Anna will bite her lip or sigh."
-    $ renpy.show(custom_show("anna", "S"), [])
+    $ renpy.show(custom_show("anna", "E2"), [])
     n "\'It's okay not to know all the answers. That's why we're studying.\'"
     "Anna's gaze falls to the table in front of her, a disappointed look in her eyes."
     # $ renpy.show(custom_show("anna", "sigh"), [])
@@ -61,9 +61,6 @@ label eventBHang:
     b "\'Ask me another question, I'll be okay.\'"
     $ renpy.show(custom_show("anna", "N"), [])
     "We pick up where we trueleft off, and Anna no longer seems bothered by her mistakes."
-    stop music fadeout 1.0
-    scene black with fade
-    $ day_counter = temp
     jump event_calculation_1
     return
 
@@ -150,7 +147,7 @@ label eventBDate:
     menu:
         "...Chemistry?":
             n "\'Sure it is, you're a chemistry student, right?\'"
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
             b "\'Engineering actually. But that's not what I mean.\'"
 
         "...Engineering?":
@@ -160,7 +157,7 @@ label eventBDate:
 
         "...Medicine?":
             n "\'Sure it is, you're a pre-med student, right?\'"
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
             b "\'Engineering actually. But that's not what I mean.\'"
 
     $ renpy.show(custom_show("anna", "U"), [])
@@ -221,17 +218,16 @@ label eventBDate:
 
     menu:
         "Kiss her":
-            if D >= 8:
+            if B >= 8:
                 scene black with dissolve
 
                 $ A = A + 1
                 "I lean in."
                 "And our lips meet."
-                scene anna_kiss with dissolve
+                scene event_kiss_b with dissolve
 
                 "Smiling, she gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                $ day_counter = temp
                 jump event_calculation_1
             else:
                 scene black with dissolve
@@ -244,13 +240,11 @@ label eventBDate:
                 $ renpy.hide(custom_hide("anna"))
                 "Anna gets in her car and drives away."
                 "And I'm left wondering what I did wrong."
-                $ day_counter = temp
                 jump event_calculation_1
         "Hug her":
             $ renpy.hide(custom_hide("anna"))
             "I give Anna a hug goodbye before she gets in her car and drives away."
             "And I'm left wondering if there was a better way I could've done that."
-            $ day_counter = temp
             jump event_calculation_1
         "Give her a high five":
             "I hold up my hand to give her a high five."
@@ -261,11 +255,10 @@ label eventBDate:
             $ renpy.hide(custom_hide("anna"))
             "She gets in her car and drives away."
             "And I awkwardly lower my hand, feeling a little embarrassed by the situation."
-            $ day_counter = temp
             jump event_calculation_1
     return
 
-label actA_scene3:
+label actB_scene3:
     scene anna_dorm with dissolve
     play music "audio/event.mp3" fadein 1.0
     $ temp = day_counter 
@@ -314,7 +307,7 @@ label actA_scene3:
     "She laughs."
 
 
-    if D >= 14:
+    if B >= 14:
         $ anna_confessed = True
         stop music fadeout 1.0
 
@@ -359,12 +352,11 @@ label actA_scene3:
                 "The second I lie down in my bed, I'm already drifting back to sleep."
                 "I dream of a life with Anna. And though I know realistically it's probably just caused by the fever, I can't help but think it means something."
                 "That these past two weeks are just the beginning."
-                $ day_counter = temp
                 jump event_calculation_1
             "I don't think of you like that":
                 n "\'Anna, I--\'"
                 "A wave of dizziness overwhelms me."
-                $ renpy.show(custom_show("anna", "S"), [])
+                $ renpy.show(custom_show("anna", "E2"), [])
                 b "\'Sam!\'"
                 "Anna grabs me as I almost fall to the ground. Anna helps me get into bed as I become too dizzy to stand"
                 b "\'I'm glad I came by.\'"
@@ -381,7 +373,6 @@ label actA_scene3:
                 n "\'Anna...\'"
                 $ renpy.hide(custom_hide("anna"))
                 "She leaves the room, closing the door behind her before I have a chance to say anything else."
-                $ day_counter = temp
                 jump event_calculation_1
 
     else: 
@@ -393,11 +384,10 @@ label actA_scene3:
         $ renpy.hide(custom_hide("anna"))
         "Anna leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
         "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
-        $ day_counter = temp
         jump event_calculation_1
     return
 
-label anna_roof:
+label event_roof_b:
     $ temp = day_counter 
     $ day_counter = 0
     scene bg_roof with dissolve
@@ -451,7 +441,7 @@ label anna_roof:
         "Confess my feelings":
             if anna_confessed:
                 jump anna_confessedending
-            if D == 20:
+            if B == 20:
                 jump anna_perfectending
             elif B >= 14:
                 jump anna_goodending

@@ -1,0 +1,1 @@
+afterschool & morning & night & door need to be replaced with something original

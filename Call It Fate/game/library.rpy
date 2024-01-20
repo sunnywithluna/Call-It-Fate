@@ -65,7 +65,7 @@ label library_main_menu:
 label library_1_talk:
     $ anna_unlocked = True
     $ library_choice_1_a = True
-    if D < 0:
+    if B < 0:
         $ renpy.show(custom_show("anna", "A"), [])
         b "\'I'm kind of in the middle of something...\'"
     elif 0 <= B <= 5:
@@ -114,7 +114,7 @@ label library_choice_2_a:
 label library_choice_2_b:
     n "\'Tell me about yourself, Anna.\'"
     $ library_choice_2_b = True
-    if D >= 5:
+    if B >= 5:
         $ renpy.show(custom_show("anna", "E"), [])
         b "\'What do you want to know?\'"
         $ renpy.show(custom_show("anna", "embarrassed2"), [])
@@ -142,7 +142,7 @@ label library_choice_2_b:
 
         n "\'You read manga? We should exchange recommendation lists sometime.\'"
 
-        if D >= special_B:
+        if B >= special_B:
             $ special_B_on = True
 
             $ renpy.show(custom_show("anna", "A"), [])
@@ -151,7 +151,7 @@ label library_choice_2_b:
 
             n "\'Is everything okay? It looks like something's on your mind.\'"
 
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
 
             b "\'Nothing, it's just--nevermind.\'"
 
@@ -164,7 +164,7 @@ label library_choice_2_b:
 
             n "\'Well, why don't you do those things more then? It sounds like you miss them.\'"
 
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
 
             b "\'I just don't have the time. I'm here on an engineering scholarship, I can't afford to let my grades drop.\'"
             b "\'That's why I'm always studying.\'"
@@ -202,7 +202,7 @@ label library_choice_2_c:
     n "\'Hey, I have an idea. Why don't we study together? I mean, we're in the same class. It might be helpful.\'"
     $ library_choice_2_c = True
 
-    if D >= 4:
+    if B >= 4:
         $ renpy.show(custom_show("anna", "N"), [])
 
         b "\'Okay. That makes sense to me.\'"
@@ -259,7 +259,7 @@ label library_choice_compliment_a:
     menu: 
         "You're really pretty":
             n "\'Just throwing it out there, but I think you're really pretty.\'"
-            if D >= 7:
+            if B >= 7:
                 $ renpy.show(custom_show("anna", "E"), [])
                 $ A = A + 1
                 b "\'I didn't realize I was being observed.\'"
@@ -353,7 +353,7 @@ label library_1_workout:
             $ renpy.show(custom_show("anna", "N"), [])
             "I continue studying, and when I glance back at Anna, she looks impressed."
         "Wave":
-            if D <= 4:
+            if B <= 4:
                 $ B = B - 1
                 "I wave at Anna."
                 $ renpy.show(custom_show("anna", "A"), [])
@@ -362,7 +362,7 @@ label library_1_workout:
                 "I wave at Anna."
                 $ renpy.show(custom_show("anna", "F"), [])
                 "She smiles at me before returning to her studies."
-                if D >= 7:
+                if B >= 7:
                     $ A = A + 1
     $ renpy.hide(custom_hide("anna"))
 

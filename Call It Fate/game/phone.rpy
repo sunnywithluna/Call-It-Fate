@@ -95,7 +95,7 @@ label text_small_b:
 
     if small_b_sent2 == False:
         $ small_b_sent2 = True
-        if D >= B_low:
+        if B >= B_low:
             $ A = A + 1
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             "We chat for a short while before I change the topic."
@@ -171,7 +171,7 @@ label text_go_out_b:
         "I already have a date this weekend. I shouldn't overbook myself."
     else:
         "I send a text that reads, \'Hey, I was wondering, do you want to go out sometime?\'"
-        if D >= 6:
+        if B >= 6:
             $ date_this_weekend = True
             "After about thirty minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'I was hoping you'd ask. How's this weekend sound?\'"
@@ -188,7 +188,7 @@ label text_go_out_b:
 label text_buddy_b:
     $ hang_b_sent = True
     "I send a text that reads, \'Hey, Anna! I'm planning to study in the library tomorrow if you want to join\'"
-    if D >= 4:
+    if B >= 4:
         "After a few minutes, my phone chimes and a response from Anna shows on the screen."
         b "\'Good thinking. I'll be there.\'"
         $ eventBHangFlag = True
@@ -231,7 +231,7 @@ label text_night_b:
 
     if gn_b_sent2 == False:
         $ gn_b_sent2 = True
-        if D >= 5:
+        if B >= 5:
             $ A = A + 1
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'I hope you had a good day, Sam. Sleep well.\'"
@@ -251,7 +251,7 @@ label text_roof_b:
     "So I write and send a message that reads:"
     n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
 
-    if D >= 100:
+    if B >= 100:
         "After a few minutes, my phone chimes and a response from Anna shows on the screen."
         b "\'We can do that. Give me a time and place, and I'll be there.\'"
         "I type \'Meet me on top of the library, at sunset\' and hit send."

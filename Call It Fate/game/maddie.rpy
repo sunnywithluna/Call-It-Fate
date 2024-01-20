@@ -1,7 +1,6 @@
-﻿
-label eventAHang:
+﻿label eventAHang:
     $ eventAHangCompletedFlag = True
-    scene maddie_hang with dissolve 
+    scene event_hang_a with dissolve 
     play music "audio/event.mp3" fadein 1.0
 
     "The next day, I head to the school gym where Maddie is waiting, tying her hair into the usual ponytail."
@@ -19,7 +18,7 @@ label eventAHang:
     "Every time she praises my progress or seems impressed by my ability, I'm only more motivated to keep pushing myself. And with her beside me, the minutes spent in exertion pass quickly."
 
     "By the end of our workout, we're blotting the sweat off our faces and sitting on the gym floor. I know my muscles will be sore tomorrow."
-    show maddie_2 uncomf 
+    $ renpy.show(custom_show("maddie", "U"), [])
     a "\'Can I be honest with you for a second?\'"
     "I look over at her, wiping the sweat from my brow."
     $ renpy.show(custom_show("maddie", "N"), [])
@@ -28,13 +27,13 @@ label eventAHang:
     n "\'Well...I wasn't...\'"
     n "\'The thing is, I realized recently that I never really push myself. I've always wanted to be stronger, but I had trouble taking that first step to start.\'"
     n "\'I don't want to hold myself back anymore by not trying.\'"
-    show maddie_2 uncomf 
+    $ renpy.show(custom_show("maddie", "U"), [])
     a "\'It's definitely scary to take on a new challenge. Even when it's good for you.\'"
     n "\'Can I say something too?\'"
     $ renpy.show(custom_show("maddie", "H"), [])
     a "\'Go for it.\'"
     n "\'I kind of thought you didn't like me. In high school, you were a little...intense.\'"
-    show maddie_2 sad 
+    $ renpy.show(custom_show("maddie", "S"), [])
     a "\'Yeah...I know. I'm sorry. I was such a jerk.\'"
     a "\'I wish I could explain myself, but there's no excuse for the way I acted…Can you forgive me?\'"
     menu:
@@ -45,16 +44,13 @@ label eventAHang:
             "She takes my hand, and I pull her up."
         "I don't forgive you.":
             n "\'I...don't know if I can yet.\'"
-            show maddie_2 uncomf
+            $ renpy.show(custom_show("maddie", "U"), [])
             a "\'You need time. I get it.\'"
             "She stands up and extends her hand to me."
             $ renpy.show(custom_show("maddie", "N"), [])
             a "\'Until then, I'll try to prove that I mean it.\'"
             "I take her hand, and she pulls me up."
-    stop music fadeout 1.0
-    scene black with fade
     jump event_calculation_1
-    return 
 
 
 label eventADate:
@@ -80,7 +76,7 @@ label eventADate:
             "In response, I write, \'I was thinking we could grab some ramen. Is that okay?\'"
             a "\'Eh, to be honest, I'd rather do something different. Would you be up for a hike? I know a cool place.\'"
             "Just the idea of hiking is already making my body feel heavy and tired, but I still agree to go. Besides, I probably need the exercise."
-    scene eventADateCompletedFlag with dissolve
+    scene event_date_a with dissolve
 
     "When I arrive, I find Maddie taking pictures of succulents planted at the entrance of the trail. It's a nice shaded area, full of greenery that dampens the sound of traffic in the distance."
 
@@ -94,7 +90,7 @@ label eventADate:
     $ renpy.show(custom_show("maddie", "N"), [])
     a "\'I was just checking out the plants. I have a couple at home that look similar.\'"
     n "\'Oh no, you're one of those plant-obsessed girls, aren't you?\'"
-    show maddie_5 embarrassed
+    $ renpy.show(custom_show("maddie", "E"), [])
     a "\'What's wrong with liking plants?\'"
     "Maddie starts to head towards the trail signs, and I follow behind her, the sound of gravel crunching with every step."
     n "\'It's not just 'liking plants.' It's filling your room with plants to the point where you might as well just be outside.\'"
@@ -120,13 +116,14 @@ label eventADate:
             $ fluffy = True
             $ A = A - 1
             n "\'Let's do Fluffy Bunny Hilltop.\'"
-            show maddie_5 angry 
+            $ renpy.show(custom_show("maddie", "A"), [])
             a "\'Really? Alright. I guess there's nothing wrong with taking it easy.\'"
             "We start down the leisurely path, and after a few minutes, I feel just the slightest bit of embarrassment as an elderly couple passes us by."
             scene bg_hike_c with dissolve
 
     
-$ renpy.hide(custom_hide("maddie"))
+    $ renpy.hide(custom_hide("maddie"))
+
     "But as we continue walking, I begin to really enjoy the hike. The light rustling of leaves in the wind accompanies the trickling of a nearby stream. The whole experience is surprisingly serene."
 
     "Then, I see a familiar figure approaching us."
@@ -134,14 +131,14 @@ $ renpy.hide(custom_hide("maddie"))
 
     "Jennifer" "\'Maddie? I haven't seen you since graduation! How've you been?\'"
 
-    show maddie_5 uncomf at trueleft
+    $ renpy.show(custom_show("maddie", "U"), [trueleft])
 
     "Maddie tenses up as Jennifer looks back and forth between us."
     hide jennifer
     show jennifer2 at trueright
 
     "Jennifer" "\'Oh, are you guys here...together?\'"
-    $ renpy.show(custom_show("maddie", "N"), [])
+    $ renpy.show(custom_show("maddie", "N"), [trueleft])
     a "\'Uh, yup. We're kind of on a date right now.\'"
 
     "I try not to get offended as Jennifer's face scrunches up in disgust."
@@ -150,7 +147,7 @@ $ renpy.hide(custom_hide("maddie"))
     show jennifer at trueright
 
     "Jennifer" "\'Really, Maddie? Him?\'"
-    show maddie_5 angry at trueleft
+    $ renpy.show(custom_show("maddie", "A"), [trueleft])
 
     n "\'Ouch, okay, I'm right here.\'"
 
@@ -160,7 +157,7 @@ $ renpy.hide(custom_hide("maddie"))
     show jennifer2 at trueright
 
     "Jennifer" "\'What? I'm just surprised.\'"
-    $ renpy.show(custom_show("maddie", "N"), []) at trueleft
+    $ renpy.show(custom_show("maddie", "N"), [trueleft])
 
     a "\'You know what? I don't need your approval. Come on, Sam.\'"
     hide jennifer2 with dissolve
@@ -173,25 +170,25 @@ $ renpy.hide(custom_hide("maddie"))
         scene bg_hike_b with dissolve
 
     n "\'What was that about? I thought you guys were close.\'"
-    show maddie_5 angry 
+    $ renpy.show(custom_show("maddie", "A"), [])
 
     a "\'Not anymore. You saw how she was back there. Telling me who I should and shouldn't hang around.\'"
     $ renpy.show(custom_show("maddie", "N"), []) 
     a "\'She's a total control freak.\'"
-    show maddie_5 uncomf 
+    $ renpy.show(custom_show("maddie", "U"), [])
     a "\'And judgemental.\'"
-    show maddie_5 sad
+    $ renpy.show(custom_show("maddie", "S"), [])
 
     a "\'And mean. Why would I want to be friends with someone like that?\'"
 
     n "\'But...hasn't she always been like that?\'"
-    show maddie_5 sad
+    $ renpy.show(custom_show("maddie", "S"), [])
 
     "Maddie pauses before nodding her head."
 
 
     a "\'And I used to be just as bad.\'"
-    show maddie_5 uncomf 
+    $ renpy.show(custom_show("maddie", "U"), [])
 
     a "\'I hate who I was back then. It's just...\'"
 
@@ -204,15 +201,15 @@ $ renpy.hide(custom_hide("maddie"))
 
         "You wanted to belong":
             n "\'You wanted to fit in.\'"
-            show maddie_5 angry
+            $ renpy.show(custom_show("maddie", "A"), [])
             a "\'No, I just didn't want to seem weak.\'"
 
         "You enjoyed hurting others":
             $ A = A - 1
             n "\'You liked hurting people?\'"
-            show maddie_5 angry
+            $ renpy.show(custom_show("maddie", "A"), [])
             a "\'No! I just didn't want to seem weak.\'"
-    show maddie_5 uncomf
+    $ renpy.show(custom_show("maddie", "U"), [])
     a "\'And I'm not proud of it. I know it's not an excuse. But I am trying to be better...\'"
     n "\'Hey, we all kind of sucked in high school, right? You can't beat yourself up about it forever.\'"
     $ renpy.show(custom_show("maddie", "N"), [])
@@ -249,7 +246,7 @@ $ renpy.hide(custom_hide("maddie"))
                 $ B = B + 1
                 "I lean in."
                 "And our lips meet."
-                scene maddie_kiss with dissolve
+                scene event_kiss_a with dissolve
 
                 a "\'Bye, Sam.\'"
                 "She gets in her car and drives away."
@@ -261,9 +258,9 @@ $ renpy.hide(custom_hide("maddie"))
                 "I lean in."
                 scene bg_after_date with dissolve
 
-                show maddie_5 angry
+                $ renpy.show(custom_show("maddie", "A"), [])
                 a "\'Oh, no. Let's not do that.\'"
-                show maddie_5 uncomf
+                $ renpy.show(custom_show("maddie", "U"), [])
                 "She's leaning away, and I feel a wave of embarrassment wash over me."
                 n "\'Sorry...\'"
                 "She looks at me with pity."
@@ -277,7 +274,7 @@ $ renpy.hide(custom_hide("maddie"))
             if A >= A_mid3:
                 $ A = A - 1
                 "Maddie feels stiff as she hugs me, and I wonder if I've done something wrong."
-                show maddie_5 sad 
+                $ renpy.show(custom_show("maddie", "S"), [])
                 a "\'Alright, Sam. Well, take care I guess.\'"
                 "She gets in her car and drives away. And I'm left with the impression that she was a little disappointed."
                 jump event_calculation_1
@@ -293,7 +290,7 @@ $ renpy.hide(custom_hide("maddie"))
             $ A = A - 1
             "I hold up my hand to give her a high five."
             n "\'See you Tuesday.\'"
-            show maddie_5 uncomf
+            $ renpy.show(custom_show("maddie", "U"), [])
             a "\'Okay...\'"
             "She high fives me and laughs."
             $ renpy.show(custom_show("maddie", "N"), [])
@@ -304,7 +301,7 @@ $ renpy.hide(custom_hide("maddie"))
     return
 
 
-label actB_scene3:
+label actA_scene3:
     scene maddie_dorm with dissolve
     play music "audio/event.mp3" fadein 1.0
 
@@ -325,10 +322,10 @@ label actB_scene3:
         $ renpy.show(custom_show("maddie", "H"), [])
         a "\'Wow, Sam. Your dorm is so clean. So much nicer than most guys' rooms.\'"
         n "\'How many guys' dorms have you been in?\'"
-        show maddie_2 embarrassed
+        $ renpy.show(custom_show("maddie", "E"), [])
         a "\'Uh, forget I said that.\'"
     else:
-        show maddie_2 angry
+        $ renpy.show(custom_show("maddie", "A"), [])
         a "\'Did a tornado come through here? This place is a mess.\'"
         n "\'Hey, you have to be nice to me. I'm sick.\'"
         a "\'Fine, fine. I'll cut you some slack.\'"
@@ -337,25 +334,25 @@ label actB_scene3:
     "She gestures to Neko-Chan on my bed."
     a "\'Still a fan of 2D girls, huh?\'"
     n "\'2D girls don't talk so much.\'"
-    show maddie_2 embarrassed
+    $ renpy.show(custom_show("maddie", "E"), [])
     "Maddie's jaw drops in jest."
     $ renpy.show(custom_show("maddie", "H"), [])
     a "\'She's not even fully human!\'"
     n "\'Fifty-percent woman, fifty-percent cat. One hundred percent my type.\'"
-    show maddie_2 uncomf
+    $ renpy.show(custom_show("maddie", " U"), [])
     a "\'I'm remembering why I picked on you in high school...\'"
 
     if A >= A_high2:
         stop music fadeout 1.0
         $ maddie_confessed = True
-        show maddie_2 uncomf
+        $ renpy.show(custom_show("maddie", "U"), [])
         a "\'Listen, there's actually something I wanted to talk to you about.\'"
         n "\'Yeah? What is it?\'"
         n "Maddie scratches the back of her head. She almost seems...nervous."
         $ renpy.show(custom_show("maddie", "N"), [])
         a "\'Well...I know this might seem a bit sudden, but, I like you, Sam.\'"
         a "\'And the only reason I'm even saying this is because I'd rather know how you feel now than get my hopes up, you know?\'"
-        show maddie_2 uncomf
+        $ renpy.show(custom_show("maddie", "U"), [])
         a "\'So, what do you think?\'"
 
         menu:
@@ -363,7 +360,7 @@ label actB_scene3:
                 $ renpy.show(custom_show("maddie", "N"), [])
                 n "\'Maddie, I--\'"
                 "A wave of dizziness overwhelms me."
-                show maddie_2 sad
+                $ renpy.show(custom_show("maddie", "S"), [])
                 a "\'Sam!\'"
                 "Maddie grabs me as I almost fall to the ground."
                 a "\'I'm sorry. I should go so you can rest.\'"
@@ -381,7 +378,7 @@ label actB_scene3:
                 $ renpy.show(custom_show("maddie", "N"), [])
                 n "\'Maddie, I--\'"
                 "A wave of dizziness overwhelms me."
-                show maddie_2 sad
+                $ renpy.show(custom_show("maddie", "S"), [])
                 a "\'Sam!\'"
                 "Maddie grabs me as I almost fall to the ground."
                 a "\'I'm sorry. I should go so you can rest.\'"
@@ -391,7 +388,7 @@ label actB_scene3:
                 scene bg_room_b with dissolve
                 "She rushes out, closing the door behind her before I have a chance to say anything else."
     else: 
-        show maddie_2 uncomf
+        $ renpy.show(custom_show("maddie", "U"), [])
         a "\'I should probably go.\'"
         n "\'Are you sure?\'"
         a "\'Yeah, you need to rest. We'll see each other on Thursday, if you're not still sick.\'"
@@ -406,13 +403,13 @@ label actB_scene3:
     return
 
 
-label maddie_roof: 
+label event_roof_a: 
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    scene maddie_roof with dissolve
+    scene event_roof_a with dissolve
     "Maddie is standing with her hands on her hips, staring out into the horizon, steady as always."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     
@@ -434,7 +431,7 @@ label maddie_roof:
         $ A = A - 1
         n "\'Oh, this is for you.\'"
         scene bg_roof with dissolve
-        show maddie_1 uncomf
+        $ renpy.show(custom_show("maddie", "U"), [])
         "I hold out her present, and she takes it slowly, looking a little confused."
         a "\'Oh. Thanks.\'"
     $ renpy.show(custom_show("maddie", "N"), [])

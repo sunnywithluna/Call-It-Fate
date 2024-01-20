@@ -1,8 +1,9 @@
 ﻿
-label act1_scene2:
+label act1_scene1:
     stop music fadeout 1.0
     scene black with dissolve
     scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
     with Pause(1)
     show calendar_01a with dissolve
     with Pause (1)
@@ -35,7 +36,7 @@ label act1_scene2:
     "Maddie turns back to me, causing her ponytail to sway."
 
     scene bg_class_a with dissolve
-    $ renpy.show(custom_show("maddie", "F"), []) with dissolve
+    $ renpy.show(custom_show("maddie", "F"), [])
     a "\'It's great to see you, Sam. Maybe we can catch up later.\'"
 
     $ renpy.hide(custom_hide("maddie")) 
@@ -50,21 +51,21 @@ label act1_scene2:
     "Dr. Paige nods to Maddie."
     p "\'Why don't you start us off?\'"
 
-    $ renpy.show(custom_show("maddie", "N"), []) with dissolve
+    $ renpy.show(custom_show("maddie", "N"), [])
     a "\'Sure. My name is Maddie, and what I'm looking forward to most in this class is...\'"
     "She scratches the back of her head while she thinks."
 
-    $ renpy.show(custom_show("maddie", "U"), []) with dissolve
+    $ renpy.show(custom_show("maddie", "U"), [])
     a "\'...the challenge of learning about a topic I don't know much about.\'"
 
     $ renpy.hide(custom_hide("maddie")) 
-    $ renpy.show(custom_show("anna", "U"), []) with dissolve
+    $ renpy.show(custom_show("anna", "U"), [])
     "The girl who was reading before class sits up tall in her chair with her book now closed on her desk."
     
     $ renpy.show(custom_show("anna", "H"), [])
     b "\'I'm Anna. I look forward to hearing about the great philosophers in history and what observations they made about our world.\'"
     
-    $ renpy.hide(custom_hide("anna")) with dissolve
+    $ renpy.hide(custom_hide("anna"))
 
     scene event_intro_c with dissolve
     "The classroom door swings open to reveal a girl who is clearly out of breath."
@@ -130,12 +131,37 @@ label act1_scene2:
 label act1_scene2:
     $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
     with Pause (2)
     scene bg_class_a with dissolve
     play music "audio/class.mp3" fadein 1.0
     "On Thursday, I walk into class and find Dr. Paige, Maddie, Anna, and Erin already inside."
 
-    $ sayHi(A,B,C)
+    if A_mid <= A <= A_mid3:
+        $ renpy.show(custom_show("maddie", "H"), [])
+        a "\'Hey, Sam!\'"
+        $ renpy.hide(custom_hide("maddie"))
+    elif A >= A_high:
+        $ renpy.show(custom_show("maddie", "F"), [])
+        a "\'Hey, Sam, sit with me!\'"
+        $ renpy.hide(custom_hide("maddie"))
+    if B_mid <= B <= B_mid3:
+        $ renpy.show(custom_show("anna", "H"), [])
+        b "Anna smiles at me before returning to her book."
+        $ renpy.hide(custom_hide("anna"))
+    elif B > B_high:
+        show anna_2 flirty
+        b "Anna smiles at me."
+        $ renpy.hide(custom_hide("anna"))
+    if C_mid <= C <= C_mid3:
+        $ renpy.show(custom_show("erin", "H"), [])
+        c "Erin waves at me."
+        $ renpy.hide(custom_hide("erin"))
+    elif C > C_high:
+        $ renpy.show(custom_show("erin", "F"), [])
+        c "Erin waves at me, beaming."
+        $ renpy.hide(custom_hide("erin"))
+
     "I take a seat and class begins."
     "Dr. Paige stands at the front of the room while he lectures, using grand hand movements to emphasize his words and occasionally writing key terms on the board."
     "What should I do?"
@@ -145,7 +171,6 @@ label act1_scene2:
         "Get out my grip strengthener":
             "If I have to sit here for a few hours, I might as well multitask."
             "I retrieve my grip strengthener from my backpack and practice squeezing the handles together, switching hands periodically."
-            $  randnotice = renpy.random.choice(['notice', 'or not'])
             if randnotice == 'notice':
                 $ renpy.show(custom_show("maddie", "N"), [])
                 $ A = A+1
@@ -187,6 +212,7 @@ label act1_scene2:
 label act1_scene3:
     $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
     with Pause (2)
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -215,13 +241,36 @@ label act1_scene3:
 label act2_scene1:
     $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
     with Pause (2)
-
     scene bg_class_a with dissolve
     play music "audio/class.mp3" fadein 1.0
 
     "On Tuesday, I walk into class and find Dr. Paige, Maddie, Anna, and Erin already inside."
-    $ sayHi(A,B,C)
+    if A_mid <= A <= A_mid3:
+        $ renpy.show(custom_show("maddie", "H"), [])
+        a "\'Hey, Sam!\'"
+        $ renpy.hide(custom_hide("maddie"))
+    elif A >= A_high:
+        $ renpy.show(custom_show("maddie", "F"), [])
+        a "\'Hey, Sam, sit with me!\'"
+        $ renpy.hide(custom_hide("maddie"))
+    if B_mid <= B <= B_mid3:
+        $ renpy.show(custom_show("anna", "H"), [])
+        b "Anna smiles at me before returning to her book."
+        $ renpy.hide(custom_hide("anna"))
+    elif B > B_high:
+        show anna_2 flirty
+        b "Anna smiles at me."
+        $ renpy.hide(custom_hide("anna"))
+    if C_mid <= C <= C_mid3:
+        $ renpy.show(custom_show("erin", "H"), [])
+        c "Erin waves at me."
+        $ renpy.hide(custom_hide("erin"))
+    elif C > C_high:
+        $ renpy.show(custom_show("erin", "F"), [])
+        c "Erin waves at me, beaming."
+        $ renpy.hide(custom_hide("erin"))
 
     "I take a seat and class begins."
     p "\'Alright, everyone. Today you'll be working on a group project. The assignment is simple. All you have to do is present information on three philosophers that we've learned about so far.\'"
@@ -256,7 +305,7 @@ label act2_scene1:
     c "\'Oh, I have stage fright. Maybe we can do something else?\'"
     $ renpy.show(custom_show("maddie", "A"), [])
     a "\'It'd only be in front of Dr. Paige.\'"
-    $ renpy.show(custom_show("erin", "surprised"), [trueright])
+    $ renpy.show(custom_show("erin", "E"), [trueright])
     c "\'Yeah, I guess...\'"
     $ renpy.show(custom_show("anna", "A"), [trueleft])
     b "\'...\'"
@@ -267,11 +316,8 @@ label act2_scene1:
     $ renpy.show(custom_show("erin", "F"), [trueright])
     c "\'Okay!\'"
     $ renpy.hide(custom_hide("anna"))
-    with dissolve
     $ renpy.hide(custom_hide("erin"))
-    with dissolve
     $ renpy.show(custom_show("maddie", "H"), [])
-    with dissolve
     a "\'So what do you think? What kind of project should we do?\'"
 
     menu: 
@@ -283,7 +329,7 @@ label act2_scene1:
             $ renpy.show(custom_show("maddie", "F"), [])
             a "\'Awesome! It's settled then.\'"
             $ renpy.hide(custom_hide("maddie"))
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
             b "\'...\'"
             $ renpy.hide(custom_hide("anna"))
             $ renpy.show(custom_show("erin", "S"), [])
@@ -302,7 +348,7 @@ label act2_scene1:
             $ renpy.show(custom_show("erin", "S"), [])
             c "\'Aww...\'"
             $ renpy.hide(custom_hide("erin"))
-            show maddie_3 sad
+            $ renpy.show(custom_show("maddie", "S"), [])
             a "\'Oh...\'"
             $ renpy.hide(custom_hide("maddie"))
             "We spend the rest of the class period working on the diagrams before finally turning them in."
@@ -315,15 +361,12 @@ label act2_scene1:
             $ renpy.show(custom_show("erin", "F"), [])
             c "\'Really? Thanks, Sam.\'"
             $ renpy.hide(custom_hide("erin"))
-            with dissolve
             $ renpy.show(custom_show("maddie", "S"), [])
             a "\'Oh...\'"
             $ renpy.hide(custom_hide("maddie"))
-            with dissolve
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
             b "\'...\'"
             $ renpy.hide(custom_hide("anna"))
-            with dissolve
             "We spend the rest of the class period sketching out outlines for the mosaics, inking them, and then filling them in with words, phrases, and sayings associated with their respective philosophers."
             "We turn in the project just before four o'clock."
             p "\'How artistic! Beautifully done!\'"
@@ -333,15 +376,12 @@ label act2_scene1:
             $ renpy.show(custom_show("maddie", "S"), [])
             a "\'Yeah, I guess we can do that...\'"
             $ renpy.hide(custom_hide("maddie"))
-            with dissolve
-            $ renpy.show(custom_show("anna", "S"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
             b "\'Okay...\'"
             $ renpy.hide(custom_hide("anna"))
-            with dissolve
             $ renpy.show(custom_show("erin", "S"), [])
             c "\'Awww\'"
             $ renpy.hide(custom_hide("erin"))
-            with dissolve
             "Maddie, Anna, and Erin all seem a little disappointed."
             "I write down \'diagram,\' \'mosaic,\' and \'skit\' on three separate sticky notes and fold them in half."
             "After shuffling the options, I select one."
@@ -349,7 +389,6 @@ label act2_scene1:
             $ renpy.show(custom_show("maddie", "N"), [])
             a "\'Awesome! It's settled then.\'"
             $ renpy.hide(custom_hide("maddie"))    
-            with dissolve
             "We spend the rest of the class period writing out a script, practicing our parts, and, finally, performing our skit for Dr. Paige."
             p "\'Well, that was lively! It was like Descartes, Aristotle, and Hobbes were right here in front of me. Good work!\'"
     
@@ -365,6 +404,7 @@ label act2_scene1:
 label act2_scene2:
     $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
     with Pause (2)
     scene bg_class_a with dissolve
     play music "audio/class.mp3" fadein 1.0
@@ -378,7 +418,7 @@ label act2_scene2:
     $ max_amount = max(A,B,C)
     if A == max_amount:
         $ girl = "Maddie"
-    if D == max_amount:
+    if B == max_amount:
         $ girl = "Anna"
     if C == max_amount:
         $ girl = "Erin"
@@ -488,72 +528,39 @@ label act2_scene2:
     jump after_class
 
 
-label act2_scene3:
-    $ day_counter = day_counter + 1
-    scene bg_school_transition_a with dissolve
-    with Pause (2)
-
-    scene bg_room_a with dissolve
-    play music "audio/dorm.mp3" fadein 1.0
-
-    if date_this_weekend:
-        "Finally, the week's over."
-        "Usually, I'd just stay home--sleep in, watch TV, play some games, talk to Neko-Chan. But I actually have a reason to go out this weekend."
-        stop music fadeout 1.0
-        play music "audio/event.mp3" fadein 1.0
-        if eventADateFlag:
-            jump eventADate
-        elif eventBDateFlag:
-            jump eventBDate 
-        elif eventCDateFlag:
-            jump eventCDate
-
-    else: 
-        "I can't believe it's already the weekend. I wish I had something to do…"
-        "I laze around my dorm, playing games and watching TV, until the next school day."
-        stop music fadeout 1.0
-        scene black with fade
-        jump act3_scene1
-
-
-label act3_scene1:
-    scene bg_school_transition_a with dissolve
-    with Pause (2)
-
-    scene bg_room_a with dissolve
-    play music "audio/dorm.mp3" fadein 1.0
-    $ day_counter = day_counter + 1
-
-    "I wake up and my head feels heavy. There's a pulse at the front of my skull, a stuffiness in my ears. It's Tuesday, but I don't think I'll be able to go to class."
-    "I get out my phone and write an email to Dr. Paige explaining the situation, and shortly after pressing send, I drift back to sleep."
-    scene black with fade
-    "When I wake up again, it's 3:30pm."
-    scene bg_room_b with dissolve
-    n "\'Man, I can't believe I slept through the afternoon...\'"
-    "I put a palm to my forehead--it's a little warm. All around me are laundry and dishes that need cleaning, and I wonder how my dorm got so out of hand. Lying there in bed, I feel equally like a part of the mess."
-    "What should I do?"
-    menu: 
-        "Go back to sleep, I need the rest":
-            "I close my eyes again and feel the clutter around me grow increasingly distant until I've succumbed to my tired mind and fallen back asleep."
-            "I wake up to the sound of knocking at my door, the time on my phone now reading 4:12pm."
-        "Clean my room, it needs to be done":
-            $ clean = True
-            "I pick my dirty laundry off the floor and put it in the hamper. I take the scattered pieces of trash in my room and throw them away. I vacuum the carpet, wipe down my shelves, wash the dishes, and change my sheets."
-            "Just as I've finished cleaning, I hear a knock at my door."
-    stop music fadeout 1.0
-    scene black with fade
-    jump event_calculation_2
-
-
 label act3_scene2:
     scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
     with Pause (2)
-
     scene bg_class_a with dissolve
     play music "audio/class.mp3" fadein 1.0
     $ day_counter = day_counter + 1
     "On Thursday, I walk into class where Dr. Paige, Maddie, Anna, and Erin are already inside."
-    $ sayHi(A,B,C)        
+    if A_mid <= A <= A_mid3:
+        $ renpy.show(custom_show("maddie", "H"), [])
+        a "\'Hey, Sam!\'"
+        $ renpy.hide(custom_hide("maddie"))
+    elif A >= A_high:
+        $ renpy.show(custom_show("maddie", "F"), [])
+        a "\'Hey, Sam, sit with me!\'"
+        $ renpy.hide(custom_hide("maddie"))
+    if B_mid <= B <= B_mid3:
+        $ renpy.show(custom_show("anna", "H"), [])
+        b "Anna smiles at me before returning to her book."
+        $ renpy.hide(custom_hide("anna"))
+    elif B > B_high:
+        show anna_2 flirty
+        b "Anna smiles at me."
+        $ renpy.hide(custom_hide("anna"))
+    if C_mid <= C <= C_mid3:
+        $ renpy.show(custom_show("erin", "H"), [])
+        c "Erin waves at me."
+        $ renpy.hide(custom_hide("erin"))
+    elif C > C_high:
+        $ renpy.show(custom_show("erin", "F"), [])
+        c "Erin waves at me, beaming."
+        $ renpy.hide(custom_hide("erin"))
+
     "I take a seat and class begins."
     "Dr. Paige moves around the room, placing papers face down on our desks, and when he reaches me, he offers a nod."
     p "\'I'm glad to see you're feeling better, Sam. Ready for the final?\'"
@@ -598,6 +605,8 @@ label act3_scene2:
         "It's a little embarrassing that I'm the last one to leave, but I guess that's what I get for not studying enough."
         "I can only hope that I passed."
     scene bg_school_transition_b with longfade
+    play sound "audio/door.mp3"
+    with Pause (1)
 
     scene bg_room_b with dissolve
     play music "audio/free.mp3" fadein 1.0
@@ -665,36 +674,6 @@ label act3_scene2:
             jump credits_1
 
     stop music fadeout 1.0
-
-
-label event_ending:
-    scene bg_room_b with dissolve
-    play music "audio/event.mp3" fadein 1.0
-
-    "I take a deep breath."
-    "I don't know much about this kind of thing, but if I'm really going to do this, I feel like I should bring a gift. Luckily, I have a couple hours before dusk to get something."
-    scene options with dissolve
-    "What should I give her?"
-
-    menu:
-        "A potted succulent":
-            $ maddie_gift = True
-            "I swing by the local nursery and pick up a succulent before heading back to campus."
-        "A venus fly trap":
-            $ anna_gift = True
-            "I grab a venus fly trap at a pet shop before heading back to campus."
-        "A bouquet of sunflowers":
-            $ erin_gift = True
-            "I pick up a bouquet of sunflowers from a flower shop before heading back to campus."
-        "A single rose":
-            "I buy a single rose from the grocery store before heading back to campus."
-    
-    if a_ending:
-        jump maddie_roof
-    elif b_ending:
-        jump anna_roof
-    else:
-        jump erin_roof
 
 
 label after_class:

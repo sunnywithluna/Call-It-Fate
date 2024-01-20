@@ -1,9 +1,9 @@
-﻿define a = Character('Maddie', who_color = '# 104010')
-define b = Character('Anna', who_color = '# 104010')
-define c = Character('Erin', who_color = '# 104010')
-define nc = Character('Neko-Chan', who_color = '# 104010')
-define p = Character('Dr. Paige', who_color = '# 104010')
-define n = Character('Sam', who_color = '# 104010') 
+﻿define a = Character('Maddie', who_color = '#104010')
+define b = Character('Anna', who_color = '#104010')
+define c = Character('Erin', who_color = '#104010')
+define nc = Character('Neko-Chan', who_color = '#104010')
+define p = Character('Dr. Paige', who_color = '#104010')
+define n = Character('Sam', who_color = '#104010') 
 
 # persistent data, gallery and main menu
 define persistent.endingAFlag = False
@@ -12,11 +12,13 @@ define persistent.endingCFlag = False
 define persistent.titleScreenCounter = 0
 
 init:
-    image neko = Image('nekochan.png')
-    image jennifer = Image('jennifer.PNG')    
+    image neko = Image('emote_neko_11.png')
+    image jennifer = Image('emote_jenn_11.PNG')    
+    image jennifer2 = Image('emote_jenn_12.PNG')    
+    
     #  maddie date outfit
-    image maddie_5 U = Image('emote_maddie_51.png')
-    image maddie_5 N = Image('emote_maddie_52.png')
+    image maddie_5 A = Image('emote_maddie_51.png')
+    image maddie_5 E = Image('emote_maddie_52.png')
     image maddie_5 F = Image('emote_maddie_53.png')
     image maddie_5 H = Image('emote_maddie_54.png')
     image maddie_5 N = Image('emote_maddie_55.png')
@@ -24,8 +26,8 @@ init:
     image maddie_5 U = Image('emote_maddie_57.png')
 
     #  maddie outfit 1
-    image maddie_1 U = Image('emote_maddie_11.png')
-    image maddie_1 N = Image('emote_maddie_12.png')
+    image maddie_1 A = Image('emote_maddie_11.png')
+    image maddie_1 E = Image('emote_maddie_12.png')
     image maddie_1 F = Image('emote_maddie_13.png')
     image maddie_1 H = Image('emote_maddie_14.png')
     image maddie_1 N = Image('emote_maddie_15.png')
@@ -33,8 +35,8 @@ init:
     image maddie_1 U = Image('emote_maddie_17.png')
 
     #  maddie outfit 2
-    image maddie_2 U = Image('emote_maddie_21.png')
-    image maddie_2 N = Image('emote_maddie_22.png')
+    image maddie_2 A = Image('emote_maddie_21.png')
+    image maddie_2 E = Image('emote_maddie_22.png')
     image maddie_2 F = Image('emote_maddie_23.png')
     image maddie_2 H = Image('emote_maddie_24.png')
     image maddie_2 N = Image('emote_maddie_25.png')
@@ -42,8 +44,8 @@ init:
     image maddie_2 U = Image('emote_maddie_27.png')
 
     #  maddie outfit 3
-    image maddie_3 U = Image('emote_maddie_31.png')
-    image maddie_3 N = Image('emote_maddie_32.png')
+    image maddie_3 A = Image('emote_maddie_31.png')
+    image maddie_3 E = Image('emote_maddie_32.png')
     image maddie_3 F = Image('emote_maddie_33.png')
     image maddie_3 H = Image('emote_maddie_34.png')
     image maddie_3 N = Image('emote_maddie_35.png')
@@ -51,8 +53,8 @@ init:
     image maddie_3 U = Image('emote_maddie_37.png')
 
     #  maddie outfit 4
-    image maddie_4 U = Image('emote_maddie_41.png')
-    image maddie_4 N = Image('emote_maddie_42.png')
+    image maddie_4 A = Image('emote_maddie_41.png')
+    image maddie_4 E = Image('emote_maddie_42.png')
     image maddie_4 F = Image('emote_maddie_43.png')
     image maddie_4 H = Image('emote_maddie_44.png')
     image maddie_4 N = Image('emote_maddie_45.png')
@@ -160,7 +162,7 @@ init:
     image erin_4 W = Image('emote_erin_48.png')
 
 #  Points
-default U = 0
+default A = 0
 default B = 0
 default C = 0
 default day_counter = 0
@@ -255,8 +257,8 @@ default eventBDateCompletedFlag = False
 default gym_compliment = False 
 default lib_compliment = False
 default art_compliment = False
-default act1_scene1_menu1_option1 = False
-default act1_scene1_menu1_option2 = False 
+default act1_scene0_menu1_option1 = False
+default act1_scene0_menu1_option2 = False 
 default eventAHangFlag = False
 default eventBHangFlag = False 
 default eventCHangFlag = False
@@ -363,32 +365,6 @@ init python:
             str_out = person + '_1 '
             return str_out
 
-    def sayHi(A, B, C):
-        if A_mid <= A <= A_mid3:
-            $ renpy.show(custom_show("maddie", "H"), [])
-            a "\'Hey, Sam!\'"
-            $ renpy.hide(custom_hide("maddie"))
-        elif A >= A_high:
-            $ renpy.show(custom_show("maddie", "F"), [])
-            a "\'Hey, Sam, sit with me!\'"
-            $ renpy.hide(custom_hide("maddie"))
-        if B_mid <= B <= B_mid3:
-            $ renpy.show(custom_show("anna", "H"), [])
-            b "Anna smiles at me before returning to her book."
-            $ renpy.hide(custom_hide("anna"))
-        elif B > B_high:
-            show anna_2 flirty
-            b "Anna smiles at me."
-            $ renpy.hide(custom_hide("anna"))
-        if C_mid <= C <= C_mid3:
-            $ renpy.show(custom_show("erin", "H"), [])
-            c "Erin waves at me."
-            $ renpy.hide(custom_hide("erin"))
-        elif C > C_high:
-            $ renpy.show(custom_show("erin", "F"), [])
-            c "Erin waves at me, beaming."
-            $ renpy.hide(custom_hide("erin"))
-
 
 label splashscreen:
 
@@ -397,29 +373,29 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show logo with dissolve
+    show intro_0 with dissolve
     with Pause(2)
 
     scene black with dissolve
     with Pause(1)
 
-    show intro1 with dissolve
+    show intro_1 with dissolve
     with Pause(1)
 
-    show intro2 with dissolve
+    show intro_2 with dissolve
     with Pause(1)
 
-    show intro3 with dissolve
+    show intro_3 with dissolve
     with Pause(1)
 
-    show intro4 with dissolve
+    show intro_4 with dissolve
     with Pause(1)
 
-    show intro5 with dissolve
+    scene black with dissolve
     with Pause(1)
 
     return
 
 
 label start:
-    jump act1_scene1
+    jump act1_scene0

@@ -1,4 +1,3 @@
-
 label gym:
     scene bg_gym_a with dissolve
     play music "audio/free.mp3" fadein 1.0
@@ -79,20 +78,19 @@ label gym:
 
 label gym_main_menu:
     menu:
-        "Talk to Maddie":
-            if not gym_choice_1_a:
+        "Talk to Maddie" if not gym_choice_1_a:
                 jump gym_1_talk
-            else:
-                "I say goodbye to Maddie before heading out."
-                $ A = A + 1
-                stop music fadeout 1.0
-                scene black with fade
-                jump end_of_act
         "Work Out" if not gym_choice_1_b:
             jump gym_1_workout
+        "Say bye":
+            $ renpy.show(custom_show("maddie", "N"), [])
+            "I say goodbye to Maddie before heading out."
+            $ A = A + 1
+            stop music fadeout 1.0
+            scene black with fade
+            jump end_of_act
         "Go Home":
             jump end_of_act
-    return
         
 
 label gym_1_talk:
@@ -312,8 +310,8 @@ label gym_1_workout:
     $ A = A + 1
 
     "I work my way through some of the gym equipment, doing three sets for every exercise and moving up in weight when it seems too easy."
-    
-    if day_counter%2 == 0:
+    $  randnotice = renpy.random.choice(['notice', 'or not'])
+    if randnotice == 'notice':
         "I catch Maddie looking in my direction."
         $ renpy.show(custom_show("maddie", "N"), [])
         "What should I do?"
@@ -348,21 +346,5 @@ label gym_1_workout:
     scene bg_gym_b with dissolve
     "I finish a couple more sets before wiping down the equipment."
     "That was tiring, but I'm glad I pushed myself."
-    
-    menu: 
-        "Talk to Maddie":
-            if not gym_choice_1_a:
-                jump gym_1_talk
-            if gym_choice_1_a:
-                $ renpy.show(custom_show("maddie", "N"), [])
-                "I say goodbye to Maddie before heading out."
-                $ A = A + 1
-            stop music fadeout 1.0
-            scene black with fade
-            jump end_of_act
-        "Go Home":
-            "I've been out for a while. I think it's time to go home."
-            stop music fadeout 1.0
-            scene black with fade
-            jump end_of_act
-    return 
+
+    jump gym_main_menu

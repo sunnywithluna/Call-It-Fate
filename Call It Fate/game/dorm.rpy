@@ -1,4 +1,4 @@
-﻿label act1_scene1:
+﻿label act1_scene0:
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
 
@@ -9,25 +9,25 @@
     "The place is a mess. The bed isn't made, the trash is overflowing, and the only cared-for items in the room are my GS5 and desktop."
     "Well, no time to clean now. I better get to class."
     
-    jump act1_scene1_menu1
+    jump act1_scene0_menu1
     return
 
 
-label act1_scene1_menu1:
+label act1_scene0_menu1:
     "What should I do before I go?"
     menu:
-        "Get dressed." if not act1_scene1_menu1_option1:
-            jump act1_scene1_menu1_option1
-        "Talk to Neko-Chan." if not act1_scene1_menu1_option2:
-            jump act1_scene1_menu1_option2
-        "Head out." if act1_scene1_menu1_option1:
-            jump act1_scene1_menu1_option3
+        "Get dressed." if not act1_scene0_menu1_option1:
+            jump act1_scene0_menu1_option1
+        "Talk to Neko-Chan." if not act1_scene0_menu1_option2:
+            jump act1_scene0_menu1_option2
+        "Head out." if act1_scene0_menu1_option1:
+            jump act1_scene0_menu1_option3
     return
 
 
-label act1_scene1_menu1_option1:
+label act1_scene0_menu1_option1:
     "What should I wear?"
-    $ act1_scene1_menu1_option1 = True
+    $ act1_scene0_menu1_option1 = True
     menu:
         "Sleek hoodie with joggers and white sneakers":
             "I bought these when I thought I'd start working out. It's ironic how well these clothes hide my lack of muscle definition."
@@ -40,14 +40,14 @@ label act1_scene1_menu1_option1:
             $ C = C + 1
         "Neko-Chan graphic tee with sweatpants and sandals":
             "There's nothing like being comfortable. Now if only I could find my fedora, that would really complete this outfit."
-    jump act1_scene1_menu1
+    jump act1_scene0_menu1
 
 
-label act1_scene1_menu1_option2:
+label act1_scene0_menu1_option2:
     scene bg_room_aa with dissolve
     show neko
     "What should I talk to Neko-Chan about?"
-    $ act1_scene1_menu1_option2 = True
+    $ act1_scene0_menu1_option2 = True
     menu: 
         "Confide in Neko-Chan.":
             n "\'Hey, Neko-Chan. I'm kind of nervous about this class.\'"
@@ -60,26 +60,27 @@ label act1_scene1_menu1_option2:
             nc "\'...\'"
             hide neko
             scene bg_room_a with dissolve
-            jump act1_scene1_menu1
+            jump act1_scene0_menu1
         "Say goodbye to Neko-Chan.": 
-            if not act1_scene1_menu1_option1:
+            if not act1_scene0_menu1_option1:
                 "I should get dressed first..."
-                jump act1_scene1_menu1_option1
+                jump act1_scene0_menu1_option1
             else:
-                jump act1_scene1_menu1_option3
+                jump act1_scene0_menu1_option3
 
 
-label act1_scene1_menu1_option3:
+label act1_scene0_menu1_option3:
     scene bg_room_aa with dissolve
     show neko
     n "\'Well, I better get going. Wish me luck, Neko-Chan!\'"
     nc "\'...\'"
-    jump act1_scene2
+    jump act1_scene1
 
 
 label end_of_act:
     scene bg_school_transition_b with longfade
-
+    play sound "audio/door.mp3"
+    with Pause (1)
     play music "audio/dorm.mp3" fadein 1.0
     scene bg_room_b with longfade
 
@@ -271,57 +272,6 @@ label end_of_act_menu1_option2:
 
 label end_of_act_menu1_option3:
     $ end_of_act_menu1_flag3 = True
-
-    #  Calculating string for below
-    $ max_amount = max(A,B,C)
-    if max_amount == A:
-        $ max_string = "Maddie"
-    elif max_amount == B:
-        $ max_string = "Anna"
-    else:
-        $ max_string = "Erin"
-
-    scene bg_room_bb with dissolve
-    show neko
-    
-    if max_amount <= 0:
-        n "\'I'm glad I get to come home to you, Neko-Chan. My day wasn't so great. I think [max_string] really doesn't like me very much. I wonder what I did wrong...\'"
-        nc "\'...\'"
-
-    elif 0 < max_amount <= 3:
-        n "\'Hey, Neko-Chan. Today was alright, but I would've stayed home with you if I could. [max_string] is pretty cool. Not that she thinks of me in that way...Why don't girls ever like me...\'"
-        nc "\'...\'"
-
-    elif 3 < max_amount <= 6:
-        n "\'Today wasn't so bad...I wonder what [max_string] is doing right now.\'"
-        nc "\'...\'"
-
-    elif 6 < max_amount <= 9:
-        n "\'It was a pretty good day, Neko-Chan. [max_string] and I are really hitting it off I think.\'"
-        nc "\'...\'"
-
-    elif 9 < max_amount <= 12:
-        n "\'I woke feeling kind of off this morning, but getting to see [max_string] completely turned my day around.\'"
-        nc "\'...\'"
-
-    elif 12 < max_amount <= 15:
-        n "\'I had a great day, Neko-Chan! I think [max_string] might even like me. Who knows? Maybe I'll finally get a girlfriend.\'"
-        nc "\'...\'"
-        n "\'Don't look at me like that. You knew what this was.\'" 
-
-    else:
-        n "\'I'm sorry, Neko-Chan, but if this thing with [max_string] and me is going to work, I think you and I should stop talking.\'"
-        nc "\'...\'"
-        n "\'I've never felt this way about anyone before...And I want to give a real relationship a shot.\'" 
-        nc "\'...\'"
-    hide neko
-    scene bg_room_b with dissolve
-
-    jump end_of_act_menu1 
-
-
-label end_of_act_menu1_option3:
-    $ end_of_act_menu1_flag3 = True
     "What should I talk to Neko-Chan about?"
     scene bg_room_bb with dissolve
     show neko
@@ -424,15 +374,103 @@ label end_of_act_menu1_option5:
     else:
         jump event_calculation_1
 
+label act2_scene3:
+    $ day_counter = day_counter + 1
+    scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
+    with Pause (2)
+    scene bg_room_a with dissolve
+    play music "audio/dorm.mp3" fadein 1.0
+
+    if date_this_weekend:
+        "Finally, the week's over."
+        "Usually, I'd just stay home--sleep in, watch TV, play some games, talk to Neko-Chan. But I actually have a reason to go out this weekend."
+        stop music fadeout 1.0
+        play music "audio/event.mp3" fadein 1.0
+        if eventADateFlag:
+            jump eventADate
+        elif eventBDateFlag:
+            jump eventBDate 
+        elif eventCDateFlag:
+            jump eventCDate
+
+    else: 
+        "I can't believe it's already the weekend. I wish I had something to do…"
+        "I laze around my dorm, playing games and watching TV, until the next school day."
+        stop music fadeout 1.0
+        scene black with fade
+        jump event_calculation_1
+
+
+label act3_scene1:
+    scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
+    with Pause (2)
+    scene bg_room_a with dissolve
+    play music "audio/dorm.mp3" fadein 1.0
+    $ day_counter = day_counter + 1
+
+    "I wake up and my head feels heavy. There's a pulse at the front of my skull, a stuffiness in my ears. It's Tuesday, but I don't think I'll be able to go to class."
+    "I get out my phone and write an email to Dr. Paige explaining the situation, and shortly after pressing send, I drift back to sleep."
+    scene black with fade
+    "When I wake up again, it's 3:30pm."
+    scene bg_room_b with dissolve
+    n "\'Man, I can't believe I slept through the afternoon...\'"
+    "I put a palm to my forehead--it's a little warm. All around me are laundry and dishes that need cleaning, and I wonder how my dorm got so out of hand. Lying there in bed, I feel equally like a part of the mess."
+    "What should I do?"
+    menu: 
+        "Go back to sleep, I need the rest":
+            "I close my eyes again and feel the clutter around me grow increasingly distant until I've succumbed to my tired mind and fallen back asleep."
+            "I wake up to the sound of knocking at my door, the time on my phone now reading 4:12pm."
+        "Clean my room, it needs to be done":
+            $ clean = True
+            "I pick my dirty laundry off the floor and put it in the hamper. I take the scattered pieces of trash in my room and throw them away. I vacuum the carpet, wipe down my shelves, wash the dishes, and change my sheets."
+            "Just as I've finished cleaning, I hear a knock at my door."
+    stop music fadeout 1.0
+    scene black with fade
+    jump event_calculation_2
+
+
+label event_ending:
+    scene bg_room_b with dissolve
+    play music "audio/event.mp3" fadein 1.0
+
+    "I take a deep breath."
+    "I don't know much about this kind of thing, but if I'm really going to do this, I feel like I should bring a gift. Luckily, I have a couple hours before dusk to get something."
+    scene bg_gift with dissolve
+    "What should I give her?"
+
+    menu:
+        "A potted succulent":
+            $ maddie_gift = True
+            "I swing by the local nursery and pick up a succulent before heading back to campus."
+        "A venus fly trap":
+            $ anna_gift = True
+            "I grab a venus fly trap at a pet shop before heading back to campus."
+        "A bouquet of sunflowers":
+            $ erin_gift = True
+            "I pick up a bouquet of sunflowers from a flower shop before heading back to campus."
+        "A single rose":
+            "I buy a single rose from the grocery store before heading back to campus."
+    
+    if a_ending:
+        jump event_roof_a
+    elif b_ending:
+        jump event_roof_b
+    else:
+        jump event_roof_c
+
 
 label event_calculation_1:
     # day_counter calculation for outfits
-
+    $ day_counter = temp
     stop music fadeout 1.0
+    play sound "audio/night.mp3"
+    scene black with fade
+    scene black with longfade
+    with Pause(1)
 
     if day_counter == 0:
-        scene black with longfade
-        with Pause(1)
         show calendar_02 with dissolve
         with Pause (1)
         show calendar_03 with dissolve
@@ -440,8 +478,6 @@ label event_calculation_1:
         scene black with longfade
         jump act1_scene2
     elif day_counter == 1:
-        scene black with longfade
-        with Pause(1)
         show calendar_04 with dissolve
         with Pause (1)
         show calendar_05 with dissolve
@@ -449,8 +485,6 @@ label event_calculation_1:
         scene black with longfade
         jump act1_scene3
     elif day_counter == 2:
-        scene black with longfade
-        with Pause(1)
         show calendar_06 with dissolve
         with Pause (1)
         show calendar_07 with dissolve
@@ -460,8 +494,6 @@ label event_calculation_1:
         with Pause (1)
         jump act2_scene1
     elif day_counter == 3:
-        scene black with longfade
-        with Pause(1)
         show calendar_09 with dissolve
         with Pause (1)
         show calendar_10 with dissolve
@@ -469,8 +501,6 @@ label event_calculation_1:
         scene black with longfade
         jump act2_scene2
     elif day_counter == 4:
-        scene black with longfade
-        with Pause(1)
         show calendar_11 with dissolve
         with Pause (1)
         show calendar_12 with dissolve
@@ -478,8 +508,6 @@ label event_calculation_1:
         scene black with longfade
         jump act2_scene3
     elif day_counter == 5:
-        scene black with longfade
-        with Pause(1)
         show calendar_13 with dissolve
         with Pause (1)
         show calendar_14 with dissolve
@@ -489,8 +517,6 @@ label event_calculation_1:
         scene black with longfade
         jump act3_scene1
     elif day_counter == 6:
-        scene black with longfade
-        with Pause(1)
         show calendar_16 with dissolve
         with Pause (1)
         show calendar_17 with dissolve
@@ -498,11 +524,11 @@ label event_calculation_1:
         scene black with longfade
         jump act3_scene2
     else:
-        scene black with longfade
-        with Pause(1)
         show calendar_16 with dissolve
         with Pause (1)
         show calendar_17 with dissolve
+        with Pause (1)
+        show calendar_18 with dissolve
         with Pause (1)
         scene black with longfade
         jump act3_scene2

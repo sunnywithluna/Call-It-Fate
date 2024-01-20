@@ -18,7 +18,7 @@ label maddie_goodending:
 
 label maddie_greatending:
     $ maddie = True
-    show maddie_1 angry
+    $ renpy.show(custom_show("maddie", "A"), [])
     a "\'Are you serious, Sam?\'"
     n "\'Sorry, nevermind, forget I said anything.\'"
     a "\'No! That's not what I mean.\'"
@@ -39,7 +39,7 @@ label maddie_greatending:
 
 label maddie_badending:
     $ nekochan = True
-    show maddie_1 sad
+    $ renpy.show(custom_show("maddie", "S"), [])
     a "\'Oh...Sam, I'm so sorry.\'"
     "It takes a moment before what she's saying sinks in."
     n "\'Huh...I guess I misread things...I'll see you around.\'"
@@ -63,14 +63,14 @@ label maddie_confessedending:
     $ maddie = True
     $ renpy.show(custom_show("maddie", "N"), [])
     n "\'The other day, when I was sick, you said something to me.\'"
-    show maddie_1 uncomf
+    $ renpy.show(custom_show("maddie", "U"), [])
 
     a "\'You mean that I like you?\'"
 
     n "\'Yeah, that...\'"
 
     n "\'I-I didn't get a chance to respond before, but...\'"
-    show maddie_1 embarrassed
+    $ renpy.show(custom_show("maddie", "E"), [])
 
     n "\'I feel the same way.\'"
 
@@ -160,7 +160,7 @@ label anna_confessedending:
     $ renpy.show(custom_show("anna", "embarrassed2"), [])
 
     n "\'Why?\'"
-    $ renpy.show(custom_show("anna", "S"), [])
+    $ renpy.show(custom_show("anna", "E2"), [])
 
     b "\'Because...you don't feel the same.\'"
 
@@ -327,9 +327,9 @@ label confession:
             "I buy a single rose from the grocery store before heading back to campus."
 
     if eventca_trigger:
-        jump maddie_roof
+        jump event_roof_a
     elif eventcb_trigger:
-        jump anna_roof 
+        jump event_roof_b 
     elif eventcc_trigger:
-        jump erin_roof 
+        jump event_roof_c 
     return
