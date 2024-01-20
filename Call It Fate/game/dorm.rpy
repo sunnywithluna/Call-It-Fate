@@ -556,64 +556,64 @@ label event_calculation_1:
     # with Pause(1)
 
     if day_counter == 0:
-        show calendar_02 with dissolve
+        show calendar_01a with dissolve
         with Pause (1)
-        show calendar_03 with dissolve
+        show calendar_02 with dissolve
         with Pause (1)
         scene black with longfade
         jump act1_scene2
     elif day_counter == 1:
-        show calendar_04 with dissolve
+        show calendar_03 with dissolve
         with Pause (1)
-        show calendar_05 with dissolve
+        show calendar_04 with dissolve
         with Pause (1)
         scene black with longfade
         jump act1_scene3
     elif day_counter == 2:
+        show calendar_05 with dissolve
+        with Pause (1)
         show calendar_06 with dissolve
         with Pause (1)
         show calendar_07 with dissolve
-        with Pause (1)
-        show calendar_08 with dissolve
         scene black with longfade
         with Pause (1)
         jump act2_scene1
     elif day_counter == 3:
-        show calendar_09 with dissolve
+        show calendar_08 with dissolve
         with Pause (1)
-        show calendar_10 with dissolve
+        show calendar_09 with dissolve
         with Pause (1)
         scene black with longfade
         jump act2_scene2
     elif day_counter == 4:
-        show calendar_11 with dissolve
+        show calendar_10 with dissolve
         with Pause (1)
-        show calendar_12 with dissolve
+        show calendar_11 with dissolve
         with Pause (1)
         scene black with longfade
         jump act2_scene3
     elif day_counter == 5:
+        show calendar_12 with dissolve
+        with Pause (1)
         show calendar_13 with dissolve
         with Pause (1)
         show calendar_14 with dissolve
         with Pause (1)
-        show calendar_15 with dissolve
-        with Pause (1)
         scene black with longfade
         jump act3_scene1
     elif day_counter == 6:
-        show calendar_16 with dissolve
+        show calendar_15 with dissolve
         with Pause (1)
-        show calendar_17 with dissolve
+        show calendar_16 with dissolve
         with Pause (1)
         scene black with longfade
         jump act3_scene2
     else:
-        show calendar_16 with dissolve
-        with Pause (1)
         show calendar_17 with dissolve
         with Pause (1)
         show calendar_18 with dissolve
+        with Pause (1)
+        show calendar_19 with dissolve
         with Pause (1)
         scene black with longfade
         jump act3_scene2
