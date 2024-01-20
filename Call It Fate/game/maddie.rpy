@@ -304,7 +304,7 @@ label eventADate:
 
 
 label actA_scene3:
-    scene maddie_dorm with dissolve
+    scene event_dorm_a with dissolve
     play music "audio/event.mp3" fadein 1.0
 
     "I open my door to find Maddie standing outside my room."
@@ -366,7 +366,7 @@ label actA_scene3:
                 a "\'Sam!\'"
                 "Maddie grabs me as I almost fall to the ground."
                 a "\'I'm sorry. I should go so you can rest.\'"
-                scene maddie_sickdayevent2 with dissolve
+                scene event_sick_a with dissolve
                 "While leaving my room, she hesitates by the doorway."
                 a "\'Call me later, okay? When you're feeling better.\'"
                 scene bg_room_b with dissolve
@@ -384,7 +384,7 @@ label actA_scene3:
                 a "\'Sam!\'"
                 "Maddie grabs me as I almost fall to the ground."
                 a "\'I'm sorry. I should go so you can rest.\'"
-                scene maddie_dorm2 with dissolve
+                scene event_sick_a with dissolve
                 "While leaving my room, she hesitates by the doorway."
                 a "\'Call me later, okay? When you're feeling better.\'"
                 scene bg_room_b with dissolve
@@ -402,8 +402,7 @@ label actA_scene3:
     stop music fadeout 1.0
     scene black with fade
     jump event_calculation_a
-    return
-
+ 
 
 label event_roof_a: 
     scene bg_roof with dissolve
