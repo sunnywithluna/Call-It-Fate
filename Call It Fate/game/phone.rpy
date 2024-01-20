@@ -57,7 +57,7 @@ label text_video_a:
 
     menu:
         "A guy bounces a ping pong ball off five surfaces before landing it perfectly in a cup":
-            $ B = B + 1
+            $ A = A + 1
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\'Whoa! I wonder how many tries it takes to make those trickshots.\'"
             jump actA_sceneText
@@ -81,7 +81,7 @@ label text_small_a:
     "I send a message asking about her night."
     "After a few minutes, she replies and we text for a short while."
     if A >= A_low:
-        $ B = B + 1
+        $ A = A + 1
         "She seemed happy to hear from me."
         jump actA_sceneText
     else:
@@ -96,7 +96,7 @@ label text_small_b:
     if small_b_sent2 == False:
         $ small_b_sent2 = True
         if B >= B_low:
-            $ A = A + 1
+            $ B = B + 1
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             "We chat for a short while before I change the topic."
             jump actB_sceneText
@@ -136,7 +136,7 @@ label text_night_a:
     if gn_a_sent2 == False:
         $ gn_a_sent2 = True
         if A >= A_low:
-            $ B = B + 1
+            $ A = A + 1
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\'A goodnight text? If I didn't know any better, I'd think you like me. Lol, goodnight, Sam.\'"
             jump end_of_act_menu1
@@ -212,7 +212,7 @@ label text_video_b:
         "A man on a podcast talks about dark matter":
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'Neat video.\'"
-            $ A = A + 1
+            $ B = B + 1
             jump actB_sceneText
         "Test animation that features characters from a recently released, popular kid's film":
             "After about thirty minutes, my phone chimes and a response from Anna shows on the screen."
@@ -232,7 +232,7 @@ label text_night_b:
     if gn_b_sent2 == False:
         $ gn_b_sent2 = True
         if B >= 5:
-            $ A = A + 1
+            $ B = B + 1
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'I hope you had a good day, Sam. Sleep well.\'"
             jump end_of_act_menu1
@@ -243,24 +243,6 @@ label text_night_b:
         b "\'Goodnight\'"
         jump end_of_act_menu1        
     return
-
-
-label text_roof_b:
-    $ like_b_sent = True
-    "I can't just tell her something like that over text. It should be in person."
-    "So I write and send a message that reads:"
-    n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
-
-    if B >= 100:
-        "After a few minutes, my phone chimes and a response from Anna shows on the screen."
-        b "\'We can do that. Give me a time and place, and I'll be there.\'"
-        "I type \'Meet me on top of the library, at sunset\' and hit send."
-        $ eventcb_trigger = True
-        jump confession
-    else:
-        "After about thirty minutes, my phone chimes and a response from Anna shows on the screen."
-        b "\'Now's not a great time. Raincheck?\'"
-        jump actB_sceneText
 
 
 label actC_sceneText:

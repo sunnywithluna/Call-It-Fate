@@ -82,7 +82,7 @@ label library_1_talk:
 
 label talking_to_anna:
     menu:
-        "Ask for her number" if not b_number_flag and not phoneFlagB:
+        "Ask for her number" if not numberFlagB and not phoneFlagB:
             jump b_number
         "Small Talk" if not library_choice_2_a:
             jump library_choice_2_a
@@ -105,7 +105,7 @@ label library_choice_2_a:
     $ renpy.show(custom_show("anna", "embarrassed2"), [])
     n "\'Well, yeah. But, you know, more than usual.\'"
     $ library_choice_2_a = True
-    $ A = A + 1
+    $ B = B + 1
     $ ii = day_counter
     jump talking_to_anna
     return
@@ -261,7 +261,7 @@ label library_choice_compliment_a:
             n "\'Just throwing it out there, but I think you're really pretty.\'"
             if B >= 7:
                 $ renpy.show(custom_show("anna", "E"), [])
-                $ A = A + 1
+                $ B = B + 1
                 b "\'I didn't realize I was being observed.\'"
                 $ renpy.show(custom_show("anna", "embarrassed2"), [])
 
@@ -326,7 +326,7 @@ label library_choice_compliment_b:
 
             if 4 <= B:
                 $ renpy.show(custom_show("anna", "N"), [])
-                $ A = A + 1
+                $ B = B + 1
                 b "\'I bet you could.\'"
 
             else:
@@ -349,7 +349,7 @@ label library_1_workout:
 
     menu:
         "Focus on studying":
-            $ A = A + 1
+            $ B = B + 1
             $ renpy.show(custom_show("anna", "N"), [])
             "I continue studying, and when I glance back at Anna, she looks impressed."
         "Wave":
@@ -363,7 +363,7 @@ label library_1_workout:
                 $ renpy.show(custom_show("anna", "F"), [])
                 "She smiles at me before returning to her studies."
                 if B >= 7:
-                    $ A = A + 1
+                    $ B = B + 1
     $ renpy.hide(custom_hide("anna"))
 
     "After I finish reading, I stretch my neck from side to side."
@@ -378,7 +378,7 @@ label library_1_workout:
                 jump library_1_talk
             if library_choice_1_a:
                 "I say goodbye to Anna before heading out."
-                $ A = A + 1
+                $ B = B + 1
         
             stop music fadeout 1.0
             scene black with fade

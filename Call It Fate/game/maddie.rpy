@@ -61,7 +61,7 @@ label eventADate:
     a "\'Hey, Sam! Where were you thinking of going for our date?\'"
     menu: 
         "Hiking trail":
-            $ B = B + 1
+            $ A = A + 1
             "In response, I write, \'I was thinking we could go on a hike. Is that okay?\'"
             a "\'Yeah! That sounds fun! Send me the address, and I'll meet you there. :)\'"
         "Interactive science museum":
@@ -194,7 +194,7 @@ label eventADate:
 
     menu:
         "You were afraid of seeming weak":
-            $ B = B + 1
+            $ A = A + 1
             n "\'You didn't want to seem weak.\'"
             $ renpy.show(custom_show("maddie", "N"), [])
             a "\'Yeah...\'"
@@ -243,7 +243,7 @@ label eventADate:
             if A >= A_mid3:
                 scene black with dissolve
 
-                $ B = B + 1
+                $ A = A + 1
                 "I lean in."
                 "And our lips meet."
                 scene event_kiss_a with dissolve
@@ -279,7 +279,7 @@ label eventADate:
                 "She gets in her car and drives away. And I'm left with the impression that she was a little disappointed."
                 jump event_calculation_1
             else:
-                $ B = B + 1
+                $ A = A + 1
                 $ renpy.show(custom_show("maddie", "N"), [])
                 "As she hugs me back, I'm reminded how much shorter she is than me. But even with our height difference, it's nice to just hold her."
                 a "\'Bye, Sam.\'"
@@ -419,7 +419,7 @@ label event_roof_a:
     "She glances down at the gift in my hand."
     if maddie_gift:
         scene maddie_hoya with dissolve
-        $ B = B + 1
+        $ A = A + 1
         a "\'A hoya kerrii plant! Is that for me?\'"
         n "\'Yeah! Do you like it?\'"
         if eventADateFlag:

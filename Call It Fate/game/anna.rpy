@@ -20,7 +20,7 @@ label eventBHang:
             n "\'Any excuse to see you is worth it.\'"
             if B >= 5:
                 $ renpy.show(custom_show("anna", "E"), [])
-                $ A = A + 1
+                $ B = B + 1
                 b "\'...\'"
                 $ renpy.show(custom_show("anna", "embarrassed2"), [])
             else:
@@ -80,7 +80,7 @@ label eventBDate:
             b "\Actually, could we go to the Revelation Science Museum? They have some new exhibits that I've been meaning to check out.\'"
             "I usually avoid museums, thinking they'll be boring, but I still agree to go. Maybe this will be a chance for me to learn something new."
         "Interactive science museum":
-            $ A = A + 1
+            $ B = B + 1
             "In response, I write, \'I was thinking we could check out the science museum. Is that okay?\'"
             b "\'That's perfect. Let's meet there at 11am.\'"
         "Art gallery":
@@ -221,7 +221,7 @@ label eventBDate:
             if B >= 8:
                 scene black with dissolve
 
-                $ A = A + 1
+                $ B = B + 1
                 "I lean in."
                 "And our lips meet."
                 scene event_kiss_b with dissolve
@@ -407,7 +407,7 @@ label event_roof_b:
 
     if anna_gift:
         scene anna_venus_flytraps with dissolve
-        $ A = A + 1
+        $ B = B + 1
         "Anna looks down at the venus flytrap, and smiles."
         if eventBDateFlag:
             b "\'Like the ones at the museum.\'"

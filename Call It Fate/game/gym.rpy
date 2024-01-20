@@ -73,16 +73,15 @@ label gym:
 
     "What should I do?"
     jump gym_main_menu
-    return
 
 
 label gym_main_menu:
     menu:
         "Talk to Maddie" if not gym_choice_1_a:
-                jump gym_1_talk
+            jump gym_1_talk
         "Work Out" if not gym_choice_1_b:
             jump gym_1_workout
-        "Say bye":
+        "Say Bye":
             $ renpy.show(custom_show("maddie", "N"), [])
             "I say goodbye to Maddie before heading out."
             $ A = A + 1
@@ -108,13 +107,12 @@ label gym_1_talk:
     else:
         $ renpy.show(custom_show("maddie", "F"), [])
         a "\'Hey, Sam! I was hoping you'd show up today.\'"
-    
     jump talking_to_maddie
 
 
 label talking_to_maddie:
     menu:
-        "Ask for number" if not a_number_flag and not phoneFlagA:
+        "Ask for number" if not numberFlagA and not phoneFlagA:
             jump a_number
         "Engage in small talk" if not gym_choice_2_a:
             jump gym_choice_2_a
@@ -126,7 +124,6 @@ label talking_to_maddie:
             jump gym_choice_2_d
         "Back":
             jump gym_main_menu
-    return 
 
 
 label gym_choice_2_a:
@@ -137,7 +134,6 @@ label gym_choice_2_a:
     $ A = A + 1
     $ i = day_counter
     jump talking_to_maddie
-    return
 
 
 label gym_choice_2_b:
@@ -179,7 +175,6 @@ label gym_choice_2_b:
         $ A = A - 1
         a "\'I'm not really here to make conversation. I just want to focus on my workout, okay?\'"
         jump talking_to_maddie
-    return
 
 
 label gym_choice_2_c:
@@ -232,7 +227,6 @@ label gym_choice_2_d:
                 jump gym_choice_compliment_a
             "Strength":
                 jump gym_choice_compliment_b
-        return
     
 
 label gym_choice_compliment_a:
@@ -260,7 +254,6 @@ label gym_choice_compliment_a:
             $ renpy.show(custom_show("maddie", "A"), [])
             a "\'Sam, that's so weird. Don't say stuff like that, okay?\'"
             jump talking_to_maddie
-    return
 
 
 label gym_choice_compliment_b:
@@ -298,7 +291,6 @@ label gym_choice_compliment_b:
                 $ renpy.show(custom_show("maddie", "U"), [])
                 a "\'Oh, maybe you just need to work out more then? I don't know what you want me to say...\'"
             jump talking_to_maddie 
-    return
 
 
 label gym_1_workout:

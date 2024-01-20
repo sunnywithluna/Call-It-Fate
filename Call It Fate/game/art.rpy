@@ -124,7 +124,7 @@ label art_1_talk:
 
 label talking_to_erin:
     menu:
-        "Ask for her number" if not c_number_flag and not phoneFlagC:
+        "Ask for her number" if not numberFlagC and not phoneFlagC:
             jump c_number
         "Small Talk" if not art_choice_2_a:
             jump art_choice_2_a

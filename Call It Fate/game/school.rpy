@@ -478,7 +478,6 @@ label act2_scene2:
 
                 "So do whatever you have to do to be happy."
 
-
         scene black with fade
         stop music fadeout 1.0
         "After he finishes going around the room, Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
@@ -516,7 +515,6 @@ label act2_scene2:
 
                 "So do whatever you have to do to be happy."
 
-
         scene black with fade
         stop music fadeout 1.0
         "Dr. Paige continues on with the day's lesson, dismissing us, as always, at four o'clock."
@@ -549,7 +547,7 @@ label act3_scene2:
         b "Anna smiles at me before returning to her book."
         $ renpy.hide(custom_hide("anna"))
     elif B > B_high:
-        show anna_2 flirty
+        $ renpy.show(custom_show("anna", "F"), [])
         b "Anna smiles at me."
         $ renpy.hide(custom_hide("anna"))
     if C_mid <= C <= C_mid3:
@@ -567,12 +565,12 @@ label act3_scene2:
     
     menu:
         "Ha, no":
-            $ B = B + 1
+            $ A = A + 1
             n "\'Do I still have to take it if I'm not?\'"
             p "\'Haha...yes.\'"
 
         "Definitely":
-            $ A = A + 1
+            $ B = B + 1
             n "\'I wouldn't be here if I wasn't.\'"
             p "\'That's what I like to hear.\'"
 
@@ -604,82 +602,15 @@ label act3_scene2:
     else:
         "It's a little embarrassing that I'm the last one to leave, but I guess that's what I get for not studying enough."
         "I can only hope that I passed."
-    scene bg_school_transition_b with longfade
-    play sound "audio/door.mp3"
-    with Pause (1)
-
-    scene bg_room_b with dissolve
-    play music "audio/free.mp3" fadein 1.0
-
+    scene black with dissolve
     "I head back to my dorm, too drained to do anything else, and though I know I should be relieved that I'm done with Intro to Philosophy, I'm left with a bittersweet sentiment."
-
-    python:
-        if phoneFlagA:
-            if phoneFlagB:
-                if phoneFlagC:
-                    char_string = "Maddie, Anna, or Erin"
-                else:
-                    char_string = "Maddie or Anna"
-            else:
-                char_string = "Maddie"
-        else:
-            if phoneFlagB:
-                if phoneFlagC:
-                    char_string = "Anna or Erin"
-                else:
-                    char_string = "Anna"
-            else:
-                if phoneFlagC:
-                    char_string = "Erin"
-                else:
-                    char_string = "NONE"
-
-    if char_string == "NONE":
-        scene black with fade
-        stop music fadeout 1.0
-        $ nekochan = True
-        "I head back to my dorm, too drained to do anything else, and though I didn't get to know the girls in my class as much as I'd hoped, I feel content."
-        "I think some people might see my life and assume I'm lonely."
-        "But I'm actually okay."
-        "As I look at Neko-Chan, I think about how she is the only girl in my life who could never hurt me."
-        "Real girls are too complicated."
-        "Too confusing."
-        "They expect too much."
-        "Neko-Chan doesn't expect anything. She accepts me the way I am."
-        "And that's enough for me."
-        jump credits_1
-    else:
-        "The LU campus is pretty big. There's no guarantee that I'll get a chance to see [char_string] again."
-        "If there's something I need to say, I should say it now."
-    
-    menu:
-        "Confess feelings to Maddie" if phoneFlagA:
-            $ a_ending = True
-            jump event_ending
-        "Confess feelings to Anna" if phoneFlagB:
-            $ b_ending = True
-            jump event_ending
-        "Confess feelings to Erin" if phoneFlagC:
-            $ c_ending = True
-            jump event_ending
-        "I have nothing to say":
-            "I think some people might see my life and assume I'm lonely. But I'm actually okay."
-            "As I look at Neko-Chan, I think about how she is the only girl in my life who could never hurt me."
-            "Real girls are too complicated."
-            "Too confusing."
-            "They expect too much."
-            "Neko-Chan doesn't expect anything. She accepts me the way I am."
-            "And that's enough for me."
-            $ nekochan = True
-            jump credits_1
-
-    stop music fadeout 1.0
+    jump event_ending_decision
 
 
 label after_class:
-    $ a_number_flag = False 
-    $ b_number_flag = False 
-    $ c_number_flag = False 
+    $ numberFlagA = False 
+    $ numberFlagB = False 
+    $ numberFlagC = False 
     $ gym_choice_1_a = False
     $ gym_choice_1_b = False 
     $ library_choice_1_a = False 
@@ -694,16 +625,19 @@ label after_class:
         "Go to the gym.":
             "I'll go to the gym. It's important that I prioritize my health."
             $ gym_counter = gym_counter + 1
+            stop music fadeout 1.0
             jump gym
         "Go to the library.":
             "I'll go to the library. If I want to do well in this class, I better study."
             $ lib_counter = lib_counter + 1
+            stop music fadeout 1.0
             jump library
         "Go to the art room.":
             "I'll go to the art room. I have to practice if I want to improve."
             $ art_counter = art_counter + 1
+            stop music fadeout 1.0
             jump art
         "Go to my dorm.":
             "I'm feeling pretty tired. I think I'll just head home."
+            stop music fadeout 1.0
             jump end_of_act
-    stop music fadeout 1.0

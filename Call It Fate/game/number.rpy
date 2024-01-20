@@ -2,7 +2,7 @@
 label a_number:
     $ renpy.show(custom_show("maddie", "N"), [])
 
-    $ a_number_flag = True
+    $ numberFlagA = True
     n "\'Hey, Maddie, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\'"
     if A >= A_low:
         $ renpy.show(custom_show("maddie", "F"), [])        
@@ -23,7 +23,7 @@ label a_number:
         
 
 label b_number:
-    $ b_number_flag = True
+    $ numberFlagB = True
     n "\'Hey, Anna, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\'"
     if B >= 1:
         $ renpy.show(custom_show("anna", "H"), [])
@@ -39,7 +39,7 @@ label b_number:
 
 
 label c_number:
-    $ c_number_flag = True
+    $ numberFlagC = True
     n "\'Hey, Erin, we should exchange numbers. You know, in case either of us needs help with a Philosophy assignment or something.\'"
     if C >= 1:
         $ renpy.show(custom_show("erin", "N"), [])

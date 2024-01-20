@@ -95,9 +95,6 @@ label end_of_act:
     $ gn_a_sent = False
     $ gn_b_sent = False 
     $ gn_c_sent = False
-    $ like_a_sent = False 
-    $ like_b_sent = False 
-    $ like_c_sent = False 
     $ date_b_sent = False
     $ hang_b_sent = False 
     $ date_c_sent = False
@@ -431,6 +428,95 @@ label act3_scene1:
     jump event_calculation_2
 
 
+label event_ending_decision:
+    scene bg_school_transition_b with longfade
+    play sound "audio/door.mp3"
+    with Pause (1)
+
+    scene bg_room_b with dissolve
+    play music "audio/free.mp3" fadein 1.0
+
+    python:
+        if phoneFlagA:
+            if phoneFlagB:
+                if phoneFlagC:
+                    char_string = "Maddie, Anna, or Erin"
+                else:
+                    char_string = "Maddie or Anna"
+            else:
+                char_string = "Maddie"
+        else:
+            if phoneFlagB:
+                if phoneFlagC:
+                    char_string = "Anna or Erin"
+                else:
+                    char_string = "Anna"
+            else:
+                if phoneFlagC:
+                    char_string = "Erin"
+                else:
+                    char_string = "NONE"
+
+    if char_string == "NONE":
+        scene black with fade
+        stop music fadeout 1.0
+        $ nekochan = True
+        "I head back to my dorm, too drained to do anything else, and though I didn't get to know the girls in my class as much as I'd hoped, I feel content."
+        "I think some people might see my life and assume I'm lonely."
+        "But I'm actually okay."
+        "As I look at Neko-Chan, I think about how she is the only girl in my life who could never hurt me."
+        "Real girls are too complicated."
+        "Too confusing."
+        "They expect too much."
+        "Neko-Chan doesn't expect anything. She accepts me the way I am."
+        "And that's enough for me."
+        jump credits_1
+    else:
+        "The LU campus is pretty big. There's no guarantee that I'll get a chance to see [char_string] again."
+        "If there's something I need to say, I should say it now."
+    
+    menu:
+        "Confess feelings to Maddie" if phoneFlagA:
+            $ a_ending = True
+            "I can't just tell her something like that over text. It should be in person."
+            "So I write and send a message that reads:"
+            n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
+            "After a few minutes, my phone chimes and a response from Anna shows on the screen."
+            a "\'Sounds serious. :o When did you want to meet?\'"
+            "I type \'Meet me on top of the library, at sunset\' and hit send."
+            jump event_ending
+        "Confess feelings to Anna" if phoneFlagB:
+            $ b_ending = True
+            "I can't just tell her something like that over text. It should be in person."
+            "So I write and send a message that reads:"
+            n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
+            "After a few minutes, my phone chimes and a response from Anna shows on the screen."
+            b "\'We can do that. Give me a time and place, and I'll be there.\'"
+            "I type \'Meet me on top of the library, at sunset\' and hit send."
+            jump event_ending
+        "Confess feelings to Erin" if phoneFlagC:
+            $ c_ending = True
+            "I can't just tell her something like that over text. It should be in person."
+            "So I write and send a message that reads:"
+            n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
+            "After a few minutes, my phone chimes and a response from Anna shows on the screen."
+            c "\'Is everything okay?? We can talk. Where should I meet you?\'"
+            "I type \'Meet me on top of the library, at sunset\' and hit send."
+            jump event_ending
+        "I have nothing to say":
+            "I think some people might see my life and assume I'm lonely. But I'm actually okay."
+            "As I look at Neko-Chan, I think about how she is the only girl in my life who could never hurt me."
+            "Real girls are too complicated."
+            "Too confusing."
+            "They expect too much."
+            "Neko-Chan doesn't expect anything. She accepts me the way I am."
+            "And that's enough for me."
+            $ nekochan = True
+            jump credits_1
+
+    stop music fadeout 1.0
+
+
 label event_ending:
     scene bg_room_b with dissolve
     play music "audio/event.mp3" fadein 1.0
@@ -465,10 +551,9 @@ label event_calculation_1:
     # day_counter calculation for outfits
     $ day_counter = temp
     stop music fadeout 1.0
-    play sound "audio/night.mp3"
-    scene black with fade
     scene black with longfade
-    with Pause(1)
+    play sound "audio/night.mp3"
+    # with Pause(1)
 
     if day_counter == 0:
         show calendar_02 with dissolve
