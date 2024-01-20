@@ -165,7 +165,7 @@ init:
 default A = 0
 default B = 0
 default C = 0
-default day_counter = 0
+default day_counter = 1
 default end_of_act_menu1_flag2_counter = 0
 default gym_counter = 0
 default lib_counter = 0
@@ -213,6 +213,7 @@ default C_high = 25
 default C_high2 = 30
 default C_high3 = 35
 default neko_counter = 0
+default calendar_days_skipped = 0
 # DELETE default love_points = 'K'
 # DELETE default love_interest = 'Kim'
 
@@ -308,6 +309,10 @@ default maddie_unlocked = False
 default erin_unlocked = False
 default anna_unlocked = False
 default fluffy = False
+default temp_usage = False
+default eventAHangToday = False
+default eventBHangToday = False 
+default eventCHangToday = False
 
 transform trueleft:
     xpos 300   
@@ -322,10 +327,10 @@ define longfade = Fade(2.0, 1.0, 2.0)
 init python:
 
     def custom_show(person, emotion):
-        if day_counter == 0:
+        if day_counter == 1:
             str_out = person + '_1 ' + emotion
             return str_out
-        elif day_counter == 1:
+        elif day_counter == 2:
             str_out = person + '_2 ' + emotion
             return str_out
         elif day_counter == 3:
@@ -343,10 +348,10 @@ init python:
 
 
     def custom_hide(person):
-        if day_counter == 0:
+        if day_counter == 1:
             str_out = person + '_1 '
             return str_out
-        elif day_counter == 1:
+        elif day_counter == 2:
             str_out = person + '_2 '
             return str_out
         elif day_counter == 3:

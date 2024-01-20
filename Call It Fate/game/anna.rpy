@@ -3,8 +3,7 @@ label eventBHang:
     scene anna_hang with dissolve
     play music "audio/event.mp3"  fadein 1.0
     $ eventBHangCompletedFlag = True
-    $ temp = day_counter
-    $ day_counter = 1
+    $ eventBHangToday = True
 
     "The next day, I head to the library where Anna is waiting, her attention so focused on the book in front of her, she doesn't even notice when I arrive."
     n "\'Hey.\'"
@@ -61,16 +60,14 @@ label eventBHang:
     b "\'Ask me another question, I'll be okay.\'"
     $ renpy.show(custom_show("anna", "N"), [])
     "We pick up where we trueleft off, and Anna no longer seems bothered by her mistakes."
-    jump event_calculation_1
-    return
+    jump event_calculation_a
+    
 
 label eventBDate:
     $ eventBDateCompletedFlag = True
     $ date_this_weekend = False
+    $ eventBDateToday = True
     
-    $ temp = day_counter 
-    $ day_counter = 10
-
     "Because I have a date!"
     "My phone chimes, and when I check it, there's a new text from Anna."
     b "\'Did you have any ideas on where we should go today?\'"
@@ -228,7 +225,7 @@ label eventBDate:
 
                 "Smiling, she gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                jump event_calculation_1
+                jump event_calculation_a
             else:
                 scene black with dissolve
                 $ B = B - 1
@@ -240,12 +237,12 @@ label eventBDate:
                 $ renpy.hide(custom_hide("anna"))
                 "Anna gets in her car and drives away."
                 "And I'm left wondering what I did wrong."
-                jump event_calculation_1
+                jump event_calculation_a
         "Hug her":
             $ renpy.hide(custom_hide("anna"))
             "I give Anna a hug goodbye before she gets in her car and drives away."
             "And I'm left wondering if there was a better way I could've done that."
-            jump event_calculation_1
+            jump event_calculation_a
         "Give her a high five":
             "I hold up my hand to give her a high five."
             $ renpy.show(custom_show("anna", "A"), [])
@@ -255,14 +252,12 @@ label eventBDate:
             $ renpy.hide(custom_hide("anna"))
             "She gets in her car and drives away."
             "And I awkwardly lower my hand, feeling a little embarrassed by the situation."
-            jump event_calculation_1
-    return
+            jump event_calculation_a
+
 
 label actB_scene3:
     scene anna_dorm with dissolve
     play music "audio/event.mp3" fadein 1.0
-    $ temp = day_counter 
-    $ day_counter = 3
 
     "I open my door to find Anna standing outside my room."
     n "\'Anna! What are you doing here?\'"
@@ -352,7 +347,7 @@ label actB_scene3:
                 "The second I lie down in my bed, I'm already drifting back to sleep."
                 "I dream of a life with Anna. And though I know realistically it's probably just caused by the fever, I can't help but think it means something."
                 "That these past two weeks are just the beginning."
-                jump event_calculation_1
+                jump event_calculation_a
             "I don't think of you like that":
                 n "\'Anna, I--\'"
                 "A wave of dizziness overwhelms me."
@@ -373,7 +368,7 @@ label actB_scene3:
                 n "\'Anna...\'"
                 $ renpy.hide(custom_hide("anna"))
                 "She leaves the room, closing the door behind her before I have a chance to say anything else."
-                jump event_calculation_1
+                jump event_calculation_a
 
     else: 
         $ renpy.show(custom_show("anna", "U"), [])
@@ -384,12 +379,10 @@ label actB_scene3:
         $ renpy.hide(custom_hide("anna"))
         "Anna leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
         "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
-        jump event_calculation_1
+        jump event_calculation_a
     return
 
 label event_roof_b:
-    $ temp = day_counter 
-    $ day_counter = 0
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 
@@ -440,13 +433,13 @@ label event_roof_b:
     menu:
         "Confess my feelings":
             if anna_confessed:
-                jump anna_confessedending
+                jump endingB11
             if B == 20:
-                jump anna_perfectending
+                jump endingB10
             elif B >= 14:
-                jump anna_goodending
+                jump endingB01
             else:
-                jump anna_badending
+                jump endingB00
         "I've changed my mind":
             jump neko_ending
     return

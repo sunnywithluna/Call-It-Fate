@@ -28,7 +28,7 @@ label text_go_out_a:
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\'Sure! Sounds fun. Does this weekend work for you?\'"
             "As if I ever have plans."
-            n "\'This weekend sounds great,\' I reply, beaming, though I doubt she can tell over text."
+            "\'This weekend sounds great,\' I reply, beaming, though I doubt she can tell over text."
             $ eventADateFlag = True
             jump actA_sceneText
         else:
@@ -176,7 +176,7 @@ label text_go_out_b:
             "After about thirty minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'I was hoping you'd ask. How's this weekend sound?\'"
             "As if I ever have plans."
-            n "\'This weekend sounds great,\' I reply, beaming, though I doubt she can tell over text."
+            "\'This weekend sounds great,\' I reply, beaming, though I doubt she can tell over text."
             $ eventBDateFlag = True
             jump actB_sceneText
         else:
@@ -272,7 +272,7 @@ label text_go_out_c:
             "After a few minutes, my phone chimes and a response from Erin shows on the screen:"
             c "\'Hi, Sam! I'd love to go out! Are you free this weekend?\'"
             "As if I ever have plans."
-            n "\'This weekend sounds great,\' I reply, beaming, though I doubt she can tell over text."
+            "\'This weekend sounds great,\' I reply, beaming, though I doubt she can tell over text."
             $ eventCDateFlag = True
             jump actC_sceneText
         else:

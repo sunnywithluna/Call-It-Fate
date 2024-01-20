@@ -1,5 +1,4 @@
-﻿
-label act1_scene1:
+﻿label act1_scene1:
     stop music fadeout 1.0
     scene black with dissolve
     scene bg_school_transition_a with dissolve
@@ -129,7 +128,6 @@ label act1_scene1:
     
 
 label act1_scene2:
-    $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
     play sound "audio/morning.mp3"
     with Pause (2)
@@ -208,37 +206,7 @@ label act1_scene2:
     jump after_class
 
 
-label act1_scene3:
-    $ day_counter = day_counter + 1
-    scene bg_school_transition_a with dissolve
-    play sound "audio/morning.mp3"
-    with Pause (2)
-    scene bg_room_a with dissolve
-    play music "audio/dorm.mp3" fadein 1.0
-    if date_this_weekend:
-        stop music fadeout 1.0
-        "Finally, the week's over."
-        "Usually, I'd just stay home--sleep in, watch TV, play some games, talk to Neko-Chan. But I actually have a reason to go out this weekend."
-        
-        play music "audio/event.mp3" fadein 1.0
-        if eventADateFlag and not eventADateCompletedFlag:
-            jump eventADate
-        elif eventBDateFlag and not eventBDateCompletedFlag:
-            jump eventBDate 
-        elif eventCDateFlag and not eventCDateCompletedFlag:
-            jump eventCDate
-    
-    else: 
-        "I can't believe it's already the weekend. I wish I had something to do…"
-        "I laze around my dorm, playing games and watching TV, until the next school day."
-        stop music fadeout 1.0
-        scene  black with dissolve
-
-        jump act2_scene1
-
-
 label act2_scene1:
-    $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
     play sound "audio/morning.mp3"
     with Pause (2)
@@ -401,7 +369,6 @@ label act2_scene1:
 
 
 label act2_scene2:
-    $ day_counter = day_counter + 1
     scene bg_school_transition_a with dissolve
     play sound "audio/morning.mp3"
     with Pause (2)
@@ -526,12 +493,8 @@ label act2_scene2:
 
 
 label act3_scene2:
-    scene bg_school_transition_a with dissolve
-    play sound "audio/morning.mp3"
-    with Pause (2)
     scene bg_class_a with dissolve
     play music "audio/class.mp3" fadein 1.0
-    $ day_counter = day_counter + 1
     "On Thursday, I walk into class where Dr. Paige, Maddie, Anna, and Erin are already inside."
     if A_mid <= A <= A_mid3:
         $ renpy.show(custom_show("maddie", "H"), [])

@@ -1,5 +1,6 @@
 ﻿label eventAHang:
     $ eventAHangCompletedFlag = True
+    $ eventAHangToday = True
     scene event_hang_a with dissolve 
     play music "audio/event.mp3" fadein 1.0
 
@@ -50,12 +51,14 @@
             $ renpy.show(custom_show("maddie", "N"), [])
             a "\'Until then, I'll try to prove that I mean it.\'"
             "I take her hand, and she pulls me up."
-    jump event_calculation_1
+    jump event_calculation_a
 
 
 label eventADate:
     $ eventADateCompletedFlag = True
+    $ eventADateToday = True
     $ date_this_weekend = False
+    
     "Because I have a date!"
     "My phone chimes, and when I check it, there's a new text from Maddie."
     a "\'Hey, Sam! Where were you thinking of going for our date?\'"
@@ -82,7 +85,7 @@ label eventADate:
 
     n "\'Hey!\'"
     "Maddie turns to face me."
-    scene eventADateCompletedFlag_bg with dissolve
+    scene bg_hike_a with dissolve
 
     $ renpy.show(custom_show("maddie", "H"), [])
     a "\'Hey, Sam!\'"
@@ -251,7 +254,7 @@ label eventADate:
                 a "\'Bye, Sam.\'"
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                jump event_calculation_1
+                jump event_calculation_a
             else: 
                 scene black with dissolve
                 $ A = A - 1
@@ -267,7 +270,7 @@ label eventADate:
                 a "\'Don't worry about it, it's fine. Take care, okay?\'"
                 "She gets in her car and drives away."
                 "And I'm left wondering what I did wrong."
-                jump event_calculation_1
+                jump event_calculation_a
         "Hug her":
             "I lean in for a hug."
 
@@ -277,7 +280,7 @@ label eventADate:
                 $ renpy.show(custom_show("maddie", "S"), [])
                 a "\'Alright, Sam. Well, take care I guess.\'"
                 "She gets in her car and drives away. And I'm left with the impression that she was a little disappointed."
-                jump event_calculation_1
+                jump event_calculation_a
             else:
                 $ A = A + 1
                 $ renpy.show(custom_show("maddie", "N"), [])
@@ -285,7 +288,7 @@ label eventADate:
                 a "\'Bye, Sam.\'"
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                jump event_calculation_1
+                jump event_calculation_a
         "Give her a high five":
             $ A = A - 1
             "I hold up my hand to give her a high five."
@@ -297,8 +300,7 @@ label eventADate:
             a "\'Bye, Sam.\'"
             "Maddie gets in her car and leaves."
             "And I'm left wondering if there was a better way I could've done that."
-            jump event_calculation_1
-    return
+            jump event_calculation_a
 
 
 label actA_scene3:
@@ -399,7 +401,7 @@ label actA_scene3:
     
     stop music fadeout 1.0
     scene black with fade
-    jump act3_scene2
+    jump event_calculation_a
     return
 
 
@@ -451,13 +453,13 @@ label event_roof_a:
     menu:
         "Confess my feelings":
             if maddie_confessed:
-                jump maddie_confessedending
+                jump endingA11
             if A >= A_high3:
                 jump maddie_perfectending
             elif A >= A_high:
-                jump endingA0
+                jump endingA01
             else:
-                jump maddie_badending
+                jump endingA010
         "I've changed my mind":
             jump neko_ending
     return

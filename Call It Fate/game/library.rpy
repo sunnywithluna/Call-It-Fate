@@ -2,7 +2,6 @@
 label library:
     scene bg_lib_a with dissolve
     play music "audio/free.mp3" fadein 1.0
-    $ temp = day_counter
     $ lib_compliment = False
     if lib_counter == 1:
         "The high ceiling of the library is lined with fluorescent lights, half of them off, presumably to save energy during the break."
@@ -283,10 +282,12 @@ label library_choice_compliment_a:
                 "Anna takes a sweater out of her backpack and puts it on over her dress."
                 $ temp = 1
                 $ day_counter = 3
+                $ temp_usage = True
             if day_counter == 2:
                 "Anna takes a sweater out of her backpack and puts it on over her dress."
                 $ temp = 2
                 $ day_counter = 4
+                $ temp_usage = True
             jump talking_to_anna
     return 
 
@@ -370,7 +371,6 @@ label library_1_workout:
     scene bg_lib_b with dissolve
 
     "That's enough studying for now. I'm mentally exhausted, but I know I'm learning a lot."
-    $ day_counter = temp
     menu: 
         "Talk to Anna":
             if not library_choice_1_a:
@@ -385,8 +385,6 @@ label library_1_workout:
             jump end_of_act
         "Go Home":
             "I've been out for a while. I think it's time to go home."
-            
             stop music fadeout 1.0
             scene black with fade
             jump end_of_act
-    return

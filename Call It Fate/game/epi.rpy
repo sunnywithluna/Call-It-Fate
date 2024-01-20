@@ -16,7 +16,7 @@ label epi_start:
     "A knock at my door pulls me away from my computer."
     scene bg_room_outside_a with dissolve
 
-    if maddie:
+    if persistent.endingAFlag:
         jump epi_maddie
     if anna:
         jump epi_anna
@@ -261,8 +261,7 @@ label epi_erin:
 
 label credits_1:
 
-    if maddie:
-        $ persistent.endingAFlag = True
+    if persistent.endingAFlag:
         scene black with fade
         play music "audio/roof.mp3" fadein 1.0
         

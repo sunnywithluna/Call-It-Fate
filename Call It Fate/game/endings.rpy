@@ -1,5 +1,5 @@
-label endingA0:
-    $ maddie = True
+label endingA01:
+    $ persistent.endingAFlag = True
     n "\'Alright, well, I guess I'll just say it. I know we only just started hanging out, but…I really like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("maddie", "F"), [])
@@ -14,8 +14,8 @@ label endingA0:
     return 
 
 
-label endingA1:
-    $ maddie = True
+label endingA10:
+    $ persistent.endingAFlag = True
     $ renpy.show(custom_show("maddie", "A"), [])
     a "\'Are you serious, Sam?\'"
     n "\'Sorry, nevermind, forget I said anything.\'"
@@ -35,7 +35,7 @@ label endingA1:
     return 
 
 
-label maddie_badending:
+label endingA00:
     $ nekochan = True
     $ renpy.show(custom_show("maddie", "S"), [])
     a "\'Oh...Sam, I'm so sorry.\'"
@@ -57,8 +57,8 @@ label maddie_badending:
     return
 
 
-label maddie_confessedending:
-    $ maddie = True
+label endingA11:
+    $ persistent.endingAFlag = True
     $ renpy.show(custom_show("maddie", "N"), [])
     n "\'The other day, when I was sick, you said something to me.\'"
     $ renpy.show(custom_show("maddie", "U"), [])
@@ -90,7 +90,7 @@ label maddie_confessedending:
 
 
 
-label anna_goodending:
+label endingB01:
     $ anna = True
     n "\'I really like you, Anna. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
@@ -104,14 +104,13 @@ label anna_goodending:
     "Despite the chilled air, I feel warm."
     "She takes my hand."
     "And we finish watching the sun disappear."
-    $ day_counter = temp 
     stop music fadeout 1.0
     scene black with fade
     jump epi_start
     return 
 
 
-label anna_perfectending:
+label endingB10:
     $ anna = True
     $ renpy.show(custom_show("anna", "F"), [])
     b "\'Of course I feel the same way.\'"
@@ -120,21 +119,19 @@ label anna_perfectending:
 
     "Despite the chilled air, I feel warm."
     "And we finish watching the sun disappear."
-    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
     jump epi_start
     return 
 
 
-label anna_badending:
+label endingB00:
     $ nekochan = True
     $ renpy.show(custom_show("anna", "A"), [])
     b "\'You're a good guy, so I'm sorry if I've misled you. But I don't feel that way about you.\'"
     "It takes a moment before what she's saying sinks in."
     n "\'Huh...I guess I misread things...I'll see you around.\'"
     "I have nothing else to say, so I leave the roof and head back to my dorm."
-    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
 
@@ -149,7 +146,7 @@ label anna_badending:
     return 
 
 
-label anna_confessedending:
+label endingB11:
     $ anna = True
     n "\'The other day, when I was sick, you said something to me.\'"
     $ renpy.show(custom_show("anna", "E"), [])
@@ -169,16 +166,12 @@ label anna_confessedending:
     "Despite the chilled air, I feel warm."
 
     "And we finish watching the sun disappear."
-    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
     jump epi_start
 
-    return
 
-
-
-label erin_goodending:
+label endingC01:
     $ erin = True
     n "\'Um, right. Okay, I guess I should just say it then. I really like you, Erin. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
@@ -196,7 +189,7 @@ label erin_goodending:
     return 
 
 
-label erin_perfectending:
+label endingC10:
     $ erin = True
     $ renpy.show(custom_show("erin", "F"), [])
     c "\'I'm surprised you don't already know.\'"
@@ -210,12 +203,11 @@ label erin_perfectending:
     "Then, we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    $ day_counter = temp
     jump epi_start
     return
 
 
-label erin_badending:
+label endingC00:
     $ nekochan = True
     $ renpy.show(custom_show("erin", "S"), [])
     c "\'Uh, sorry. I don't know how to say this. I'm happy we met, and you're a good friend. But...I don't like you in that way.\'"
@@ -234,12 +226,11 @@ label erin_badending:
     "And I guess I'm okay with that."
     stop music fadeout 1.0
     scene black with fade
-    $ day_counter = temp
     jump credits_1
     return 
 
 
-label erin_confessedending:
+label endingC11:
     $ erin = True
     $ renpy.show(custom_show("erin", "N"), [])
     n "\'The other day, when I was sick, you said you liked me?\'"
@@ -262,11 +253,9 @@ label erin_confessedending:
     "She smiles as I take her hand."
 
     "And we finish watching the sun disappear."
-    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
     jump epi_start
-    return
 
 
 label neko_ending:

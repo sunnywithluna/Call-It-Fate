@@ -2,9 +2,8 @@
 label eventCHang:
     scene erin_hang with dissolve
     $ eventCHangCompletedFlag = True
+    $ eventCHangToday = True
     play music "audio/event.mp3" fadein 1.0
-    $ temp = day_counter 
-    $ day_counter = 1
 
     "The next day, I head to the art room where Erin is waiting."
     c "\'Hi, Sam! I brought the pizza--\'"
@@ -56,15 +55,14 @@ label eventCHang:
     n "\'Wow, so edgy.\'"
     $ renpy.hide(custom_hide("erin"))
     "We soon move on to drawing other food items with various emotions, and I only get stuck once when trying to decide how a hamburger might look when in love."
-    jump event_calculation_1
+    jump event_calculation_a
 
 
 label eventCDate:
     $ eventCDateCompletedFlag = True
     $ date_this_weekend = False
-    $ temp = day_counter 
-    $ day_counter = 10
-
+    $ eventCDateToday = True
+    
     "Because I have a date!"
     "My phone chimes, and when I check it, there's a new text from Erin."
     c "\'So, where are we gonna go today?\'"
@@ -214,7 +212,7 @@ label eventCDate:
                 scene event_kiss_c with dissolve
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
-                jump event_calculation_1
+                jump event_calculation_a
 
             else:
                 scene black with dissolve
@@ -228,7 +226,7 @@ label eventCDate:
                 c "\'Thanks again.\'"
                 $ renpy.hide(custom_hide("erin"))
                 "Erin gets in her car and drives away. And I'm left wondering what I did wrong."
-                jump event_calculation_1
+                jump event_calculation_a
         "Hug her":
             $ renpy.show(custom_show("erin", "F"), [])
             $ C = C + 1
@@ -237,7 +235,7 @@ label eventCDate:
             $ renpy.hide(custom_hide("erin"))
             "She gets in her car and drives away."
             "And I can't wait until Tuesday when I get to see her again."
-            jump event_calculation_1
+            jump event_calculation_a
         "Give her a high five":
             if C >= 9:
                 $ C = C - 1
@@ -247,7 +245,7 @@ label eventCDate:
                 $ renpy.hide(custom_hide("erin"))
                 "Erin gets in her car and drives away."
                 "And I'm wondering if there was a better way I could've done that."
-                jump event_calculation_1
+                jump event_calculation_a
 
             else:
                 $ C = C + 1
@@ -258,16 +256,13 @@ label eventCDate:
                 $ renpy.hide(custom_hide("erin"))
                 "She gets in her car and drives away."
                 "And I can't wait until I get to see her again."
-                jump event_calculation_1
+                jump event_calculation_a
     return
     
 
 label actC_scene3:
     scene erin_dorm with dissolve
     play music "audio/event.mp3" fadein 1.0
-    $ temp = day_counter 
-    $ day_counter = 3
-
 
     "I open my door to find Erin standing outside my room."
     c "\'Hi, Sam. How're you feeling? I heard you were sick.\'"
@@ -373,19 +368,14 @@ label actC_scene3:
         c "\'Bye, Sam.\'"
         "Erin leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
         "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
-    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
-    jump act3_scene2
-    return
+    jump event_calculation_a
 
 
 label event_roof_c:
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
-
-    $ temp = day_counter 
-    $ day_counter = 0
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
@@ -435,13 +425,13 @@ label event_roof_c:
     menu:
         "Confess my feelings":
             if erin_confessed:
-                jump erin_confessedending
+                jump endingC11
             if C == 20:
-                jump erin_perfectending
+                jump endingC10
             elif C >= 16:
-                jump erin_goodending
+                jump endingC01
             else:
-                jump erin_badending
+                jump endingC00
         "I've changed my mind":
             jump neko_ending
     return

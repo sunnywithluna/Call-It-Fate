@@ -120,7 +120,6 @@ label end_of_act_menu1:
 
 label end_of_act_menu1_option1:
     $ end_of_act_menu1_flag1 = True
-    # DELETE if day_counter == 0 or day_counter == 1 or day_counter == 3 or day_counter == 4:
     $ end_of_act_menu1_flag1_counter = end_of_act_menu1_flag1_counter + 1
     if end_of_act_menu1_flag1_counter == 1:
         "It looks like Dr. Paige posted an assignment."
@@ -356,19 +355,9 @@ label end_of_act_menu1_option4:
 label end_of_act_menu1_option5:
     scene bg_room_c with dissolve
     "I microwave some ramen for dinner before turning in for the night."
-    
-    stop music fadeout 1.0
-    if eventAHangFlag and not eventAHangCompletedFlag:
-        jump eventAHang
-    elif eventBHangFlag and not eventBHangCompletedFlag:
-        jump eventBHang
-    elif eventCHangFlag and not eventCHangCompletedFlag:
-        jump eventCHang
-    else:
-        jump event_calculation_1
+    jump event_calculation_a
 
-label act2_scene3:
-    $ day_counter = day_counter + 1
+label act1_scene3:
     scene bg_school_transition_a with dissolve
     play sound "audio/morning.mp3"
     with Pause (2)
@@ -381,18 +370,59 @@ label act2_scene3:
         stop music fadeout 1.0
         play music "audio/event.mp3" fadein 1.0
         if eventADateFlag:
+            $ temp = day_counter
+            $ temp_usage = True
+            $ day_counter = 10
             jump eventADate
         elif eventBDateFlag:
+            $ temp = day_counter
+            $ temp_usage = True
+            $ day_counter = 10
             jump eventBDate 
         elif eventCDateFlag:
+            $ temp = day_counter
+            $ temp_usage = True
+            $ day_counter = 10
             jump eventCDate
 
     else: 
-        "I can't believe it's already the weekend. I wish I had something to do…"
+        "I can't believe the weekend is almost over. I wish I had something to do…"
         "I laze around my dorm, playing games and watching TV, until the next school day."
+        jump event_calculation_a
+
+
+label act2_scene3:
+    scene bg_school_transition_a with dissolve
+    play sound "audio/morning.mp3"
+    with Pause (2)
+    scene bg_room_a with dissolve
+    play music "audio/dorm.mp3" fadein 1.0
+
+    if date_this_weekend:
+        "Finally, the week's over."
+        "Usually, I'd just stay home--sleep in, watch TV, play some games, talk to Neko-Chan. But I actually have a reason to go out this weekend."
         stop music fadeout 1.0
-        scene black with fade
-        jump event_calculation_1
+        play music "audio/event.mp3" fadein 1.0
+        if eventADateFlag:
+            $ temp = day_counter
+            $ temp_usage = True
+            $ day_counter = 10
+            jump eventADate
+        elif eventBDateFlag:
+            $ temp = day_counter
+            $ temp_usage = True
+            $ day_counter = 10
+            jump eventBDate 
+        elif eventCDateFlag:
+            $ temp = day_counter
+            $ temp_usage = True
+            $ day_counter = 10
+            jump eventCDate
+
+    else: 
+        "I can't believe the weekend is almost over. I wish I had something to do…"
+        "I laze around my dorm, playing games and watching TV, until the next school day."
+        jump event_calculation_a
 
 
 label act3_scene1:
@@ -401,7 +431,6 @@ label act3_scene1:
     with Pause (2)
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
-    $ day_counter = day_counter + 1
 
     "I wake up and my head feels heavy. There's a pulse at the front of my skull, a stuffiness in my ears. It's Tuesday, but I don't think I'll be able to go to class."
     "I get out my phone and write an email to Dr. Paige explaining the situation, and shortly after pressing send, I drift back to sleep."
@@ -421,7 +450,14 @@ label act3_scene1:
             "Just as I've finished cleaning, I hear a knock at my door."
     stop music fadeout 1.0
     scene black with fade
-    jump event_calculation_2
+    # Calculating whose event is triggered
+    $ max_amount = max(A,B,C)
+    if max_amount == A:
+        jump actA_scene3
+    elif max_amount == B:
+        jump actB_scene3 
+    else:
+        jump actC_scene3 
 
 
 label event_ending_decision:
@@ -543,85 +579,684 @@ label event_ending:
         jump event_roof_c
 
 
-label event_calculation_1:
+label event_calculation_a:
     # day_counter calculation for outfits
-    $ day_counter = temp
+    if eventADateCompletedFlag and eventADateToday:
+        scene bg_room_c with longfade
+        play music "audio/dorm.mp3"
+        "I get ready for bed after a long day."
+        $ day_counter = temp
+        $ temp_usage = False
+        $ eventADateToday = False
+        $ calendar_days_skipped = 2
+    elif eventBDateCompletedFlag and eventBDateToday:
+        scene bg_room_c with longfade
+        play music "audio/dorm.mp3"
+        "I get ready for bed after a long day."
+        $ day_counter = temp
+        $ temp_usage = False
+        $ eventBDateToday = False
+        $ calendar_days_skipped = 2
+    elif eventCDateCompletedFlag and eventCDateToday:
+        scene bg_room_c with longfade
+        play music "audio/dorm.mp3"
+        "I get ready for bed after a long day."
+        $ day_counter = temp
+        $ temp_usage = False
+        $ eventCDateToday = False
+        $ calendar_days_skipped = 2
+    elif eventAHangCompletedFlag and eventAHangToday:
+        scene bg_room_c with longfade
+        play music "audio/dorm.mp3"
+        "I get ready for bed after a long day."
+        $ day_counter = temp
+        $ temp_usage = False
+        $ eventAHangToday = False
+        $ calendar_days_skipped = 1
+    elif eventBHangCompletedFlag and eventBHangToday:
+        scene bg_room_c with longfade
+        play music "audio/dorm.mp3"
+        "I get ready for bed after a long day."
+        $ day_counter = temp
+        $ temp_usage = False
+        $ eventBHangToday = False
+        $ calendar_days_skipped = 1
+    elif eventCHangCompletedFlag and eventCHangToday:
+        scene bg_room_c with longfade
+        play music "audio/dorm.mp3"
+        "I get ready for bed after a long day."
+        $ day_counter = temp
+        $ temp_usage = False
+        $ eventCHangToday = False
+        $ calendar_days_skipped = 1
+    elif not eventAHangCompletedFlag and eventAHangFlag:
+        $ calendar_days_skipped = 1
+    elif not eventBHangCompletedFlag and eventBHangFlag:
+        $ calendar_days_skipped = 1
+    elif not eventCHangCompletedFlag and eventCHangFlag:
+        $ calendar_days_skipped = 1
+    elif day_counter == 3 or day_counter == 10:
+        $ calendar_days_skipped = 3
+    else:
+        $ calendar_days_skipped = 2
+
     stop music fadeout 1.0
     scene black with longfade
     play sound "audio/night.mp3"
-    # with Pause(1)
 
-    if day_counter == 0:
-        show calendar_01a with dissolve
-        with Pause (1)
-        show calendar_02 with dissolve
-        with Pause (1)
-        scene black with longfade
+    jump calendarAnimation_1
+
+
+label calendarAnimation_1:
+    if day_counter == 1: # Tuesday first day of class
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_01a with dissolve
+            with Pause (1)
+            show calendar_02 with dissolve
+            with Pause (1)
+            $ day_counter = 2
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_01a with dissolve
+            with Pause (1)
+            show calendar_02 with dissolve
+            with Pause (1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            $ day_counter = 3
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_01a with dissolve
+            with Pause (1)
+            show calendar_02 with dissolve
+            with Pause (1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            $ day_counter = 4
+    elif day_counter == 2: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_02 with dissolve
+            with Pause (1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            $ day_counter = 3
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_02 with dissolve
+            with Pause (1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            $ day_counter = 4
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_02 with dissolve
+            with Pause (1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            $ day_counter = 5
+    elif day_counter == 3: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            $ day_counter = 4
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            $ day_counter = 5
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_03 with dissolve
+            with Pause (1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            $ day_counter = 6
+    elif day_counter == 4: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            $ day_counter = 5
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            $ day_counter = 6
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_04 with dissolve
+            with Pause (1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            $ day_counter = 7
+    elif day_counter == 5: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            $ day_counter = 6
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            $ day_counter = 7
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_05 with dissolve
+            with Pause (1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            $ day_counter = 8
+    elif day_counter == 6: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            $ day_counter = 7
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            $ day_counter = 8
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_06 with dissolve
+            with Pause (1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            $ day_counter = 9
+    elif day_counter == 7: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            $ day_counter = 8
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            $ day_counter = 9
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_07 with dissolve
+            with Pause (1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            $ day_counter = 10
+    elif day_counter == 8: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            $ day_counter = 9
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            $ day_counter = 10
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_08 with dissolve
+            with Pause (1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            $ day_counter = 11
+    elif day_counter == 9: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            $ day_counter = 10
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            $ day_counter = 11
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_09 with dissolve
+            with Pause (1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            $ day_counter = 12
+    elif day_counter == 10: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            $ day_counter = 11
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            $ day_counter = 12
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_10 with dissolve
+            with Pause (1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            $ day_counter = 13
+    elif day_counter == 11: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            $ day_counter = 12
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            $ day_counter = 13
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_11 with dissolve
+            with Pause (1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            $ day_counter = 14
+    elif day_counter == 12: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            $ day_counter = 13
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            $ day_counter = 14
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_12 with dissolve
+            with Pause (1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            $ day_counter = 15
+    elif day_counter == 13: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            $ day_counter = 14
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            $ day_counter = 15
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_13 with dissolve
+            with Pause (1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            $ day_counter = 16
+    elif day_counter == 14: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            $ day_counter = 15
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            $ day_counter = 16
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_14 with dissolve
+            with Pause (1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            show calendar_17 with dissolve
+            with Pause (1)
+            show calendar_18 with dissolve
+            with Pause (1)
+            $ day_counter = 17
+    elif day_counter == 15: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            $ day_counter = 16
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            show calendar_17 with dissolve
+            with Pause (1)
+            show calendar_18 with dissolve
+            with Pause (1)
+            $ day_counter = 17
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_15 with dissolve
+            with Pause (1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            show calendar_17 with dissolve
+            with Pause (1)
+            show calendar_18 with dissolve
+            with Pause (1)
+            $ day_counter = 18
+    elif day_counter == 16: 
+        if calendar_days_skipped == 1:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            show calendar_17 with dissolve
+            with Pause (1)
+            show calendar_18 with dissolve
+            with Pause (1)
+            $ day_counter = 17
+        elif calendar_days_skipped == 2:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            show calendar_17 with dissolve
+            with Pause (1)
+            show calendar_18 with dissolve
+            with Pause (1)
+            $ day_counter = 18
+        elif calendar_days_skipped == 3:
+            scene bg_school_transition_a with dissolve
+            play sound "audio/morning.mp3"
+            with Pause(1)
+            show calendar_16 with dissolve
+            with Pause (1)
+            show calendar_17 with dissolve
+            with Pause (1)
+            show calendar_18 with dissolve
+            with Pause (1)
+            $ day_counter = 19
+    jump event_calculation_b
+
+
+label event_calculation_b:
+    # day_counter calculation for outfits    
+    if eventAHangFlag and not eventAHangCompletedFlag:
+        scene bg_room_a with longfade
+        play music "audio/dorm.mp3"
+        "I get ready to see Maddie."
+        $ temp = day_counter
+        $ temp_usage = True
+        $ day_counter = 1
+        jump eventAHang
+    elif eventBHangFlag and not eventBHangCompletedFlag:
+        scene bg_room_a with longfade
+        play music "audio/dorm.mp3"
+        "I get ready to see Anna."
+        $ temp = day_counter
+        $ temp_usage = True
+        $ day_counter = 1
+        jump eventBHang
+    elif eventCHangFlag and not eventCHangCompletedFlag:
+        scene bg_room_a with longfade
+        play music "audio/dorm.mp3"
+        "I get ready to see Erin."
+        $ temp = day_counter
+        $ temp_usage = True
+        $ day_counter = 1
+        jump eventCHang
+
+    if day_counter == 0: # Tuesday first day of class
         jump act1_scene2
-    elif day_counter == 1:
-        show calendar_03 with dissolve
-        with Pause (1)
-        show calendar_04 with dissolve
-        with Pause (1)
-        scene black with longfade
+    elif day_counter == 1: 
+        jump act1_scene2
+    elif day_counter == 2: 
+        jump act1_scene2
+    elif day_counter == 3: 
+        jump act1_scene2
+    elif day_counter == 4: 
         jump act1_scene3
-    elif day_counter == 2:
-        show calendar_05 with dissolve
-        with Pause (1)
-        show calendar_06 with dissolve
-        with Pause (1)
-        show calendar_07 with dissolve
-        scene black with longfade
-        with Pause (1)
+    elif day_counter == 5: 
+        jump act1_scene3
+    elif day_counter == 6: 
+        jump act1_scene3
+    elif day_counter == 7: 
+        jump act1_scene3
+    elif day_counter == 8: 
         jump act2_scene1
-    elif day_counter == 3:
-        show calendar_08 with dissolve
-        with Pause (1)
-        show calendar_09 with dissolve
-        with Pause (1)
-        scene black with longfade
+    elif day_counter == 9: 
         jump act2_scene2
-    elif day_counter == 4:
-        show calendar_10 with dissolve
-        with Pause (1)
-        show calendar_11 with dissolve
-        with Pause (1)
-        scene black with longfade
+    elif day_counter == 10: 
+        jump act2_scene2
+    elif day_counter == 11: 
         jump act2_scene3
-    elif day_counter == 5:
-        show calendar_12 with dissolve
-        with Pause (1)
-        show calendar_13 with dissolve
-        with Pause (1)
-        show calendar_14 with dissolve
-        with Pause (1)
-        scene black with longfade
+    elif day_counter == 12: 
+        jump act2_scene3
+    elif day_counter == 13: 
+        jump act2_scene3
+    elif day_counter == 14:
+        jump act2_scene3
+    elif day_counter == 15: 
         jump act3_scene1
-    elif day_counter == 6:
-        show calendar_15 with dissolve
-        with Pause (1)
-        show calendar_16 with dissolve
-        with Pause (1)
-        scene black with longfade
-        jump act3_scene2
+    elif day_counter == 16: 
+        jump act3_scene1
     else:
-        show calendar_17 with dissolve
-        with Pause (1)
-        show calendar_18 with dissolve
-        with Pause (1)
-        show calendar_19 with dissolve
-        with Pause (1)
-        scene black with longfade
         jump act3_scene2
-
-
-label event_calculation_2:
-    # Calculating whose event is triggered
-    $ day_counter = day_counter + 1
-    $ max_amount = max(A,B,C)
-    if max_amount == A:
-        jump actA_scene3
-    elif max_amount == B:
-        jump actB_scene3 
-    else:
-        jump actC_scene3 
