@@ -581,18 +581,7 @@ label event_ending:
 
 label event_calculation_a:
     # day_counter calculation for outfits
-    if day_counter == 11:
-        if temp_usage:
-            $ day_counter = temp
-            $ temp_usage = False
-        if eventAHangToday:
-            $ eventAHangToday = False
-        elif eventBHangToday:
-            $ eventBHangToday = False
-        elif eventCHangToday:
-            $ eventCHangToday = False
-        $ calendar_days_skipped = 2
-    elif eventADateCompletedFlag and eventADateToday:
+    if eventADateCompletedFlag and eventADateToday:
         scene bg_room_c with longfade
         play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
@@ -623,7 +612,10 @@ label event_calculation_a:
         $ day_counter = temp
         $ temp_usage = False
         $ eventAHangToday = False
-        $ calendar_days_skipped = 1
+        if day_counter == 11 or day_counter == 4:
+            $ calendar_days_skipped = 2
+        else:
+            $ calendar_days_skipped = 1
     elif eventBHangCompletedFlag and eventBHangToday:
         scene bg_room_c with longfade
         play music "audio/dorm.mp3"
@@ -631,7 +623,10 @@ label event_calculation_a:
         $ day_counter = temp
         $ temp_usage = False
         $ eventBHangToday = False
-        $ calendar_days_skipped = 1
+        if day_counter == 11 or day_counter == 4:
+            $ calendar_days_skipped = 2
+        else:
+            $ calendar_days_skipped = 1
     elif eventCHangCompletedFlag and eventCHangToday:
         scene bg_room_c with longfade
         play music "audio/dorm.mp3"
@@ -639,7 +634,10 @@ label event_calculation_a:
         $ day_counter = temp
         $ temp_usage = False
         $ eventCHangToday = False
-        $ calendar_days_skipped = 1
+        if day_counter == 11 or day_counter == 4:
+            $ calendar_days_skipped = 2
+        else:
+            $ calendar_days_skipped = 1
     elif not eventAHangCompletedFlag and eventAHangFlag:
         $ calendar_days_skipped = 1
     elif not eventBHangCompletedFlag and eventBHangFlag:
