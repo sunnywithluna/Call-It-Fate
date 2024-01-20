@@ -79,16 +79,16 @@ label gym_main_menu:
     menu:
         "Talk to Maddie" if not gym_choice_1_a:
             jump gym_1_talk
-        "Work Out" if not gym_choice_1_b:
+        "Work out" if not gym_choice_1_b:
             jump gym_1_workout
-        "Say Bye":
+        "Say bye":
             $ renpy.show(custom_show("maddie", "N"), [])
             "I say goodbye to Maddie before heading out."
             $ A = A + 1
             stop music fadeout 1.0
             scene black with fade
             jump end_of_act
-        "Go Home":
+        "Go home":
             jump end_of_act
         
 
@@ -112,7 +112,7 @@ label gym_1_talk:
 
 label talking_to_maddie:
     menu:
-        "Ask for number" if not numberFlagA and not phoneFlagA:
+        "Ask for her number" if not numberFlagA and not phoneFlagA:
             jump a_number
         "Engage in small talk" if not gym_choice_2_a:
             jump gym_choice_2_a
@@ -120,7 +120,7 @@ label talking_to_maddie:
             jump gym_choice_2_b
         "Ask her to spot you" if gym_choice_2_a and gym_choice_2_b and not gym_choice_2_c and j < day_counter:
             jump gym_choice_2_c
-        "Compliment" if not gym_compliment:
+        "Compliment her" if not gym_compliment:
             jump gym_choice_2_d
         "Back":
             jump gym_main_menu

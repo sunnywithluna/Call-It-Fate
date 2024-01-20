@@ -106,7 +106,7 @@ label end_of_act:
 
 label end_of_act_menu1:
     menu:
-        "Check Course Website" if not end_of_act_menu1_flag1:
+        "Check course website" if not end_of_act_menu1_flag1:
             jump end_of_act_menu1_option1
         "Play video games" if not end_of_act_menu1_flag2:
             jump end_of_act_menu1_option2
@@ -124,7 +124,7 @@ label end_of_act_menu1_option1:
     if end_of_act_menu1_flag1_counter == 1:
         "It looks like Dr. Paige posted an assignment."
         menu:
-            "Complete Homework":
+            "Complete homework":
                 "A pop-up appears on the page:"
 
                 "Aristotle, the Greek philosopher, once said, 'Through discipline comes freedom.'"
@@ -147,14 +147,14 @@ label end_of_act_menu1_option1:
                         "There's nothing else to do on the class website, so I close out of the page."
                         jump end_of_act_menu1
 
-            "Skip Homework":
+            "Skip homework":
                 "I don't really feel like doing work right now..."
                 jump end_of_act_menu1
 
     elif end_of_act_menu1_flag1_counter == 2:
         "It looks like Dr. Paige posted an assignment."
         menu:
-            "Complete Homework":
+            "Complete homework":
                 "A pop-up appears on the page:"
 
                 "The philosopher and theologian St. Augustine once said, 'We are too weak to discover the truth by reason alone.'"
@@ -177,14 +177,14 @@ label end_of_act_menu1_option1:
                         "There's nothing else to do on the class website, so I close out of the page."
                         jump end_of_act_menu1
 
-            "Skip Homework":
+            "Skip homework":
                 "I don't really feel like doing work right now..."
                 jump end_of_act_menu1
     
     elif end_of_act_menu1_flag1_counter == 3:
         "It looks like Dr. Paige posted an assignment."
         menu:
-            "Complete Homework":
+            "Complete homework":
                 "A pop-up appears on the page:"
 
                 "The Greek philosopher Socrates once said, 'There is only one good, knowledge, and one evil, ignorance.'"
@@ -207,14 +207,14 @@ label end_of_act_menu1_option1:
                         "There's nothing else to do on the class website, so I close out of the page."
                         jump end_of_act_menu1
                     
-            "Skip Homework":
+            "Skip homework":
                 "I don't really feel like doing work right now..."
                 jump end_of_act_menu1
 
     elif end_of_act_menu1_flag1_counter == 4:
         "It looks like Dr. Paige posted an assignment."
         menu:
-            "Complete Homework":
+            "Complete homework":
                 "A pop-up appears on the page:"
 
                 "John Locke was an English philosopher who once said, 'It is one thing to show a man that he is in error, and another to put him in possession of truth.'"
@@ -233,7 +233,7 @@ label end_of_act_menu1_option1:
                         "There's nothing else to do on the class website, so I close out of the page."
                         jump end_of_act_menu1
 
-            "Skip Homework":
+            "Skip homework":
                 "I don't really feel like doing work right now..."
                 jump end_of_act_menu1
     else:
@@ -1205,7 +1205,7 @@ label event_calculation_b:
         "I get ready to see Maddie."
         $ temp = day_counter
         $ temp_usage = True
-        $ day_counter = 1
+        $ day_counter = 2
         jump eventAHang
     elif eventBHangFlag and not eventBHangCompletedFlag:
         scene bg_room_a with longfade
@@ -1221,7 +1221,7 @@ label event_calculation_b:
         "I get ready to see Erin."
         $ temp = day_counter
         $ temp_usage = True
-        $ day_counter = 1
+        $ day_counter = 4
         jump eventCHang
 
     if day_counter == 0: # Tuesday first day of class

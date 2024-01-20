@@ -83,13 +83,13 @@ label talking_to_anna:
     menu:
         "Ask for her number" if not numberFlagB and not phoneFlagB:
             jump b_number
-        "Small Talk" if not library_choice_2_a:
+        "Engage in small talk" if not library_choice_2_a:
             jump library_choice_2_a
-        "Ask her about herself" if library_choice_2_a and not library_choice_2_b and ii < day_counter:
+        "Get to know her" if library_choice_2_a and not library_choice_2_b and ii < day_counter:
             jump library_choice_2_b
         "Ask to study together" if library_choice_2_a and library_choice_2_b and not library_choice_2_c and jj < day_counter:
             jump library_choice_2_c
-        "Compliment Her" if not lib_compliment:
+        "Compliment her" if not lib_compliment:
             jump library_choice_2_d
         "Back":
             jump library_main_menu

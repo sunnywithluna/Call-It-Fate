@@ -97,7 +97,7 @@ label art_main_menu:
             jump art_1_talk
         "Draw" if not art_choice_1_b:
             jump art_1_workout
-        "Go Home":
+        "Go home":
             jump end_of_act
     return 
             
@@ -126,13 +126,13 @@ label talking_to_erin:
     menu:
         "Ask for her number" if not numberFlagC and not phoneFlagC:
             jump c_number
-        "Small Talk" if not art_choice_2_a:
+        "Engage in small talk" if not art_choice_2_a:
             jump art_choice_2_a
-        "Ask her about herself" if art_choice_2_a and not art_choice_2_b and iii < day_counter:
+        "Get to know her" if art_choice_2_a and not art_choice_2_b and iii < day_counter:
             jump art_choice_2_b
         "Ask for feedback on your art" if art_choice_2_a and art_choice_2_b and not art_choice_2_c and jjj < day_counter:
             jump art_choice_2_c
-        "Compliment Her" if not art_compliment:
+        "Compliment her" if not art_compliment:
             jump art_choice_2_d
         "Back":
             jump art_main_menu
@@ -398,7 +398,7 @@ label art_1_workout:
             scene black with fade
 
             jump end_of_act
-        "Go Home":
+        "Go home":
             "I've been out for a while. I think it's time to go home."
             stop music fadeout 1.0
             scene black with fade
