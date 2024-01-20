@@ -8,9 +8,7 @@
     "I'm sitting in my dorm that has the distinct smell only dingy laundry in a poorly ventilated room could cause."
     "The place is a mess. The bed isn't made, the trash is overflowing, and the only cared-for items in the room are my GS5 and desktop."
     "Well, no time to clean now. I better get to class."
-    
     jump act1_scene0_menu1
-    return
 
 
 label act1_scene0_menu1:
@@ -22,7 +20,6 @@ label act1_scene0_menu1:
             jump act1_scene0_menu1_option2
         "Head out." if act1_scene0_menu1_option1:
             jump act1_scene0_menu1_option3
-    return
 
 
 label act1_scene0_menu1_option1:
@@ -119,7 +116,6 @@ label end_of_act_menu1:
             jump end_of_act_menu1_option4
         "Go to bed":
             jump end_of_act_menu1_option5
-    return
 
 
 label end_of_act_menu1_option1:

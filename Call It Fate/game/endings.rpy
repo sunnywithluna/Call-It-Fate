@@ -1,6 +1,4 @@
-
-
-label maddie_goodending:
+label endingA0:
     $ maddie = True
     n "\'Alright, well, I guess I'll just say it. I know we only just started hanging out, but…I really like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
@@ -16,7 +14,7 @@ label maddie_goodending:
     return 
 
 
-label maddie_greatending:
+label endingA1:
     $ maddie = True
     $ renpy.show(custom_show("maddie", "A"), [])
     a "\'Are you serious, Sam?\'"

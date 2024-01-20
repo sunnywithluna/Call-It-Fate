@@ -455,7 +455,7 @@ label event_roof_a:
             if A >= A_high3:
                 jump maddie_perfectending
             elif A >= A_high:
-                jump maddie_goodending
+                jump endingA0
             else:
                 jump maddie_badending
         "I've changed my mind":

@@ -166,16 +166,13 @@ label act1_scene2:
     "Dr. Paige stands at the front of the room while he lectures, using grand hand movements to emphasize his words and occasionally writing key terms on the board."
     "What should I do?"
 
-    $  randnotice = renpy.random.choice(['notice', 'or not'])
+    # $  randnotice = renpy.random.choice(['notice', 'or not'])
     menu:
         "Get out my grip strengthener":
+            $ A = A+1
             "If I have to sit here for a few hours, I might as well multitask."
             "I retrieve my grip strengthener from my backpack and practice squeezing the handles together, switching hands periodically."
-            if randnotice == 'notice':
-                $ renpy.show(custom_show("maddie", "N"), [])
-                $ A = A+1
-                "Out of the corner of my eye, I catch Maddie looking my way."
-                $ renpy.hide(custom_hide("maddie"))
+            # if randnotice == 'notice':
             $ renpy.show(custom_show("maddie", "N"), [])
             "Out of the corner of my eye, I catch Maddie looking my way."
             $ renpy.hide(custom_hide("maddie"))
@@ -184,6 +181,7 @@ label act1_scene2:
             $ B = B+1
             "What Dr. Paige is saying seems important. I should pay close attention."
             "I open my notebook and take down his main points."
+            # if randnotice == 'notice':
             $ renpy.show(custom_show("anna", "N"), [])
             "Out of the corner of my eye, I catch Anna looking my way."
             $ renpy.hide(custom_hide("anna"))
@@ -192,6 +190,7 @@ label act1_scene2:
             $ C = C+1
             "While listening to Dr. Paige, I start sketching in my notebook."
             "Before I know it, a page intended for philosophy notes is covered in drawings."
+            # if randnotice == 'notice':
             $ renpy.show(custom_show("erin", "N"), [])
             "Out of the corner of my eye, I catch Erin looking my way."
             $ renpy.hide(custom_hide("erin"))
