@@ -284,39 +284,3 @@ label neko_ending:
     "Forever."
     scene black with fade
     jump credits_1
-    return 
-
-
-label confession:
-    scene bg_room_b with dissolve
-    play music "audio/event.mp3" fadein 1.0
-
-    "I take a deep breath."
-    "I don't know much about this kind of thing, but if I'm really going to do this, I feel like I should bring a gift."
-    "Luckily, I have a couple hours before dusk to get something."
-    "What should I give her?"
-
-    menu:
-        "A potted succulent":
-            $ maddie_gift = True
-            scene black with fade
-            "I swing by the local nursery and pick up a succulent before heading back to campus."
-        "A venus fly trap":
-            $ anna_gift = True
-            scene black with fade
-            "I grab a venus fly trap at a pet shop before heading back to campus."
-        "A bouquet of sunflowers":
-            $ erin_gift = True
-            scene black with fade
-            "I pick up a bouquet of sunflowers from a flower shop before heading back to campus."
-        "A single rose":
-            scene black with fade
-            "I buy a single rose from the grocery store before heading back to campus."
-
-    if eventca_trigger:
-        jump event_roof_a
-    elif eventcb_trigger:
-        jump event_roof_b 
-    elif eventcc_trigger:
-        jump event_roof_c 
-    return

@@ -361,7 +361,7 @@ label act2_scene1:
     
     scene black with fade
     stop music fadeout 1.0
-    "Dr. Paige dismisses us for the day"
+    "Dr. Paige dismisses us for the day."
     scene bg_class_b with dissolve
     "I have some time to kill before dinner. What should I do?"
 

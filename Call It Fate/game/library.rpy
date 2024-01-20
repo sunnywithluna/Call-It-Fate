@@ -51,14 +51,19 @@ label library_main_menu:
     "What should I do?"
     $ renpy.hide(custom_hide("anna"))
     menu:
-        "Talk to Anna":
-            # if not library_choice_1_a:
+        "Talk to Anna" if not library_choice_1_a:
             jump library_1_talk
         "Study" if not library_choice_1_b:
             jump library_1_workout
-        "Go Home":
+        "Say bye":
+            $ renpy.show(custom_show("anna", "N"), [])
+            "I say goodbye to Anna before heading out."
+            $ B = B + 1
+            stop music fadeout 1.0
+            scene black with fade
             jump end_of_act
-    return 
+        "Go home":
+            jump end_of_act
 
 
 label library_1_talk:
@@ -344,47 +349,35 @@ label library_1_workout:
     $ B = B+1
 
     "I take out my philosophy book and start to read today's assigned pages, highlighting any sections that seem important."
-    $ renpy.show(custom_show("anna", "N"), [])
-    "I catch Anna looking in my direction."
-    "What should I do?"
+    
+    $  randnotice = renpy.random.choice(['notice', 'or not'])
+    if randnotice == 'notice':
+        $ renpy.show(custom_show("anna", "N"), [])
+        "I catch Anna looking in my direction."
+        "What should I do?"
 
-    menu:
-        "Focus on studying":
-            $ B = B + 1
-            $ renpy.show(custom_show("anna", "N"), [])
-            "I continue studying, and when I glance back at Anna, she looks impressed."
-        "Wave":
-            if B <= 4:
-                $ B = B - 1
-                "I wave at Anna."
-                $ renpy.show(custom_show("anna", "A"), [])
-                "She gives me a blank stare before returning to her studies."
-            else:
-                "I wave at Anna."
-                $ renpy.show(custom_show("anna", "F"), [])
-                "She smiles at me before returning to her studies."
-                if B >= 7:
-                    $ B = B + 1
+        menu:
+            "Focus on studying":
+                $ B = B + 1
+                $ renpy.show(custom_show("anna", "N"), [])
+                "I continue studying, and when I glance back at Anna, she looks impressed."
+            "Wave":
+                if B <= 4:
+                    $ B = B - 1
+                    "I wave at Anna."
+                    $ renpy.show(custom_show("anna", "A"), [])
+                    "She gives me a blank stare before returning to her studies."
+                else:
+                    "I wave at Anna."
+                    $ renpy.show(custom_show("anna", "F"), [])
+                    "She smiles at me before returning to her studies."
+                    if B >= 7:
+                        $ B = B + 1
     $ renpy.hide(custom_hide("anna"))
 
     "After I finish reading, I stretch my neck from side to side."
     scene bg_lib_b with dissolve
 
     "That's enough studying for now. I'm mentally exhausted, but I know I'm learning a lot."
-    menu: 
-        "Talk to Anna":
-            if not library_choice_1_a:
-                $ renpy.show(custom_show("anna", "N"), [])
-                jump library_1_talk
-            if library_choice_1_a:
-                "I say goodbye to Anna before heading out."
-                $ B = B + 1
-        
-            stop music fadeout 1.0
-            scene black with fade
-            jump end_of_act
-        "Go Home":
-            "I've been out for a while. I think it's time to go home."
-            stop music fadeout 1.0
-            scene black with fade
-            jump end_of_act
+
+    jump library_main_menu

@@ -92,15 +92,20 @@ label art_main_menu:
     hide girl C
     "What should I do?"
     menu:
-        "Talk to Erin":
-            # if not art_choice_1_a:
+        "Talk to Erin" if not art_choice_1_a:
             jump art_1_talk
         "Draw" if not art_choice_1_b:
             jump art_1_workout
+        "Say bye":
+            $ renpy.show(custom_show("Erin", "N"), [])
+            "I say goodbye to Erin before heading out."
+            $ C = C + 1
+            stop music fadeout 1.0
+            scene black with fade
+            jump end_of_act
         "Go home":
             jump end_of_act
-    return 
-            
+
 
 label art_1_talk:
     $ erin_unlocked = True
@@ -358,51 +363,34 @@ label art_1_workout:
     $ arting_counter = arting_counter + 1
     $ C = C + 1
     "The pencil scratches against the page of my sketchbook, the lines light in case they'll need erasing."
-    $ renpy.show(custom_show("erin", "N"), []) 
-    "I catch Erin looking in my direction."
-    "What should I do?"
-
-    menu:
-        "Focus on drawing":
-            "I continue drawing, and when I glance back at Erin, her attention has already returned to her tablet."
-
-        "Wave":
-            if C < 0:
-                $ renpy.show(custom_show("erin", "N"), [])
-                $ C = C - 2
-                "I wave at Erin."
-                "She looks away."
-                $ renpy.hide(custom_hide("erin"))
-            else: 
-                "I wave at Erin."
-                $ renpy.show(custom_show("erin", "H"), [])
-                "She waves back at me before returning to her drawing."
-                $ renpy.hide(custom_hide("erin"))
-                if C >=2:
-                    $ C = C + 1
     
+    $  randnotice = renpy.random.choice(['notice', 'or not'])
+    if randnotice == 'notice':
+        $ renpy.show(custom_show("erin", "N"), []) 
+        "I catch Erin looking in my direction."
+        "What should I do?"
+
+        menu:
+            "Focus on drawing":
+                "I continue drawing, and when I glance back at Erin, her attention has already returned to her tablet."
+
+            "Wave":
+                if C < 0:
+                    $ renpy.show(custom_show("erin", "N"), [])
+                    $ C = C - 2
+                    "I wave at Erin."
+                    "She looks away."
+                    $ renpy.hide(custom_hide("erin"))
+                else: 
+                    "I wave at Erin."
+                    $ renpy.show(custom_show("erin", "H"), [])
+                    "She waves back at me before returning to her drawing."
+                    $ renpy.hide(custom_hide("erin"))
+                    if C >=2:
+                        $ C = C + 1
+        
     scene bg_art_b with dissolve
     "After I've filled the page, I close the sketchbook and stretch my wrist."
     "That's enough drawing for now. My hand's a little tired, but the sketches turned out great."
     
-    menu: 
-        "Talk to Erin":
-            if not art_choice_1_a:
-                $ renpy.show(custom_show("erin", "N"), [])
-                jump art_1_talk
-            if art_choice_1_a:
-                $ renpy.show(custom_show("erin", "N"), [])
-                "I say goodbye to Erin before heading out."
-                $ C = C + 1
-            stop music fadeout 1.0
-            scene black with fade
-
-            jump end_of_act
-        "Go home":
-            "I've been out for a while. I think it's time to go home."
-            stop music fadeout 1.0
-            scene black with fade
-
-            jump end_of_act
-    stop music fadeout 1.0
-    return
+    jump art_main_menu
