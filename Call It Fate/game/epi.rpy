@@ -114,7 +114,7 @@ label epi_anna:
     $ renpy.show(custom_show("anna", "E"), [])
 
     b "\'Did you already eat?\'"
-    $ renpy.show(custom_show("anna", "embarrassed2"), [])
+    $ renpy.show(custom_show("anna", "E2"), [])
 
     n "\'No, it's just--I didn't expect it.\'"
 
@@ -149,7 +149,7 @@ label epi_anna:
     $ renpy.show(custom_show("anna", "E"), [])
 
     b "\'Well, bad for me at least. I used to get mostly “B”s, a few “C”s.\'"
-    $ renpy.show(custom_show("anna", "embarrassed2"), [])
+    $ renpy.show(custom_show("anna", "E2"), [])
 
     "I gasp and she laughs as I sit next to her on the bed, grabbing chopsticks from the bag."
     $ renpy.show(custom_show("anna", "H"), [])

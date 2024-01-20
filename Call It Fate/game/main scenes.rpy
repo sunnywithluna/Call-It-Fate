@@ -148,7 +148,7 @@ label act1_scene2:
         b "Anna smiles at me before returning to her book."
         $ renpy.hide(custom_hide("anna"))
     elif B > B_high:
-        show anna_2 flirty
+        $ renpy.show(custom_show("anna", "H"), [])
         b "Anna smiles at me."
         $ renpy.hide(custom_hide("anna"))
     if C_mid <= C <= C_mid3:
@@ -227,7 +227,7 @@ label act2_scene1:
         b "Anna smiles at me before returning to her book."
         $ renpy.hide(custom_hide("anna"))
     elif B > B_high:
-        show anna_2 flirty
+        $ renpy.show(custom_show("anna", "H"), [])
         b "Anna smiles at me."
         $ renpy.hide(custom_hide("anna"))
     if C_mid <= C <= C_mid3:

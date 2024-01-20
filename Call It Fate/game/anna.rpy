@@ -21,7 +21,7 @@ label eventBHang:
                 $ renpy.show(custom_show("anna", "E"), [])
                 $ B = B + 1
                 b "\'...\'"
-                $ renpy.show(custom_show("anna", "embarrassed2"), [])
+                $ renpy.show(custom_show("anna", "E2"), [])
             else:
                 $ renpy.show(custom_show("anna", "U"), [])
                 b "\'...\'"
@@ -111,7 +111,7 @@ label eventBDate:
             n "\'Let's go to the planetarium.\'"
             $ renpy.show(custom_show("anna", "E"), [])
             b "\'I was thinking the same thing.\'"
-            $ renpy.show(custom_show("anna", "embarrassed2"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
         "Bed of needles":
             $ B = B - 1
             n "\'Let's go to the bed of needles.\'"
@@ -313,7 +313,7 @@ label actB_scene3:
         "Anna shakes her head"
         $ renpy.show(custom_show("anna", "E"), [])
         b "\'No, nothing bad. It's just hard to say.\'"
-        $ renpy.show(custom_show("anna", "embarrassed2"), [])
+        $ renpy.show(custom_show("anna", "E2"), [])
         "She looks away from me, and I wait, wondering what it could be."
         b "\'I have feelings for you. I thought I should tell you, even if you might not feel the same.\'"
         "Then, she looks up at me, and I know she's waiting for a response."

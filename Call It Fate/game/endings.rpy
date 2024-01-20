@@ -152,7 +152,7 @@ label endingB11:
     $ renpy.show(custom_show("anna", "E"), [])
 
     b "\'I was hoping you'd forgotten that...\'"
-    $ renpy.show(custom_show("anna", "embarrassed2"), [])
+    $ renpy.show(custom_show("anna", "E2"), [])
 
     n "\'Why?\'"
     $ renpy.show(custom_show("anna", "E2"), [])

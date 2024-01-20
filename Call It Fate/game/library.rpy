@@ -106,7 +106,7 @@ label library_choice_2_a:
     n "\'It's so quiet in here.\'"
     $ renpy.show(custom_show("anna", "E"), [])
     b "\'Shouldn't it be?\'"
-    $ renpy.show(custom_show("anna", "embarrassed2"), [])
+    $ renpy.show(custom_show("anna", "E2"), [])
     n "\'Well, yeah. But, you know, more than usual.\'"
     $ library_choice_2_a = True
     $ B = B + 1
@@ -121,7 +121,7 @@ label library_choice_2_b:
     if B >= 5:
         $ renpy.show(custom_show("anna", "E"), [])
         b "\'What do you want to know?\'"
-        $ renpy.show(custom_show("anna", "embarrassed2"), [])
+        $ renpy.show(custom_show("anna", "E2"), [])
 
         n "\'Well, do you have any hobbies?\'"
 
@@ -142,7 +142,7 @@ label library_choice_2_b:
         $ renpy.show(custom_show("anna", "E"), [])
 
         b "\'I guess that's my hobby...That and manga.\'"
-        $ renpy.show(custom_show("anna", "embarrassed2"), [])
+        $ renpy.show(custom_show("anna", "E2"), [])
 
         n "\'You read manga? We should exchange recommendation lists sometime.\'"
 
@@ -244,7 +244,7 @@ label library_choice_2_d:
         n "\'You look nice today!\'"
         $ renpy.show(custom_show("anna", "E"), [])
         b "\'...\'"
-        $ renpy.show(custom_show("anna", "embarrassed2"), [])
+        $ renpy.show(custom_show("anna", "E2"), [])
 
         jump talking_to_anna
     else:
@@ -267,7 +267,7 @@ label library_choice_compliment_a:
                 $ renpy.show(custom_show("anna", "E"), [])
                 $ B = B + 1
                 b "\'I didn't realize I was being observed.\'"
-                $ renpy.show(custom_show("anna", "embarrassed2"), [])
+                $ renpy.show(custom_show("anna", "E2"), [])
 
                 n "\'Well, it's hard not to notice.\'"
                 jump talking_to_anna
@@ -327,7 +327,7 @@ label library_choice_compliment_b:
             n "\'Are your notes color coded?\'"
             $ renpy.show(custom_show("anna", "E"), [])
             b "\'It makes it easier to study.\'"
-            $ renpy.show(custom_show("anna", "embarrassed2"), [])
+            $ renpy.show(custom_show("anna", "E2"), [])
             n "\'Wow. I can't keep up with you.\'"
 
             if 4 <= B:
