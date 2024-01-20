@@ -402,7 +402,7 @@ label event_roof_b:
     n "\'I got this for you.\'"
 
     if anna_gift:
-        scene anna_venus_flytraps with dissolve
+        scene event_gift_b with dissolve
         $ B = B + 1
         "Anna looks down at the venus flytrap, and smiles."
         if eventBDateFlag:

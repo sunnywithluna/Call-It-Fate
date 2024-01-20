@@ -394,7 +394,7 @@ label event_roof_c:
 
     if erin_gift:
         $ C = C + 1
-        scene sunflowers with dissolve
+        scene event_gift_c with dissolve
         $ renpy.show(custom_show("erin", "F"), [])
         "Her eyebrows shoot up in excitement."
         c "\'Hey! Sunflowers!\'"

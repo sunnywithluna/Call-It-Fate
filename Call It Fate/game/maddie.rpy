@@ -413,7 +413,7 @@ label event_roof_a:
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
     scene event_roof_a with dissolve
-    "Maddie is standing with her hands on her hips, staring out into the horizon, steady as always."
+    "Maddie stands close to the rooftop fence, staring out into the horizon, steady as always."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     
     n "\'Hey.\'"
@@ -421,7 +421,7 @@ label event_roof_a:
 
     "She glances down at the gift in my hand."
     if maddie_gift:
-        scene maddie_hoya with dissolve
+        scene event_gift_a with dissolve
         $ A = A + 1
         a "\'A hoya kerrii plant! Is that for me?\'"
         n "\'Yeah! Do you like it?\'"
