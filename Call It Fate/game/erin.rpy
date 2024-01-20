@@ -60,7 +60,7 @@ label eventCHang:
 
 label eventCDate:
     $ eventCDateCompletedFlag = True
-    $ date_this_weekend = False
+    $ weekendDateFlag = False
     $ eventCDateToday = True
     
     "Because I have a date!"
@@ -313,7 +313,7 @@ label actC_scene3:
         "We stand there for a moment in awkward silence."
 
     if C >= 16:
-        $ erin_confessed = True
+        $ confessedFlagC = True
         stop music fadeout 1.0
 
         $ renpy.show(custom_show("erin", "E"), [])
@@ -326,7 +326,7 @@ label actC_scene3:
         menu:
             "I like you too": 
                 n "\'Erin, I--\'"
-                "We stand there in a moment of content silence before I start getting dizzy."
+                "A wave of dizziness overwhelms me."
                 $ renpy.show(custom_show("erin", "S"), [])
                 c "\'Sam!\'"
                 "Erin grabs me as I almost fall to the ground."
@@ -372,13 +372,11 @@ label actC_scene3:
         n "\'Alright. Talk to you later then.\'"
         c "\'Bye, Sam.\'"
         "Erin leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
-        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
-    stop music fadeout 1.0
-    scene black with fade
+        "I go to sleep with my fever-induced headache and dream of a life with Neko-Chan...a perfect life."
     jump event_calculation_a
 
 
-label event_roof_c:
+label eventRoofC:
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 
@@ -429,14 +427,13 @@ label event_roof_c:
 
     menu:
         "Confess my feelings":
-            if erin_confessed:
+            if confessedFlagC:
                 jump endingC11
-            if C == 20:
+            if C >= C_high3
                 jump endingC10
-            elif C >= 16:
+            elif C >= C_high:
                 jump endingC01
             else:
                 jump endingC00
         "I've changed my mind":
             jump neko_ending
-    return

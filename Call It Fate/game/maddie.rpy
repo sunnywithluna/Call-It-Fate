@@ -57,7 +57,7 @@
 label eventADate:
     $ eventADateCompletedFlag = True
     $ eventADateToday = True
-    $ date_this_weekend = False
+    $ weekendDateFlag = False
     
     "Because I have a date!"
     "My phone chimes, and when I check it, there's a new text from Maddie."
@@ -348,7 +348,7 @@ label actA_scene3:
 
     if A >= A_high2:
         stop music fadeout 1.0
-        $ maddie_confessed = True
+        $ confessedFlagA = True
         $ renpy.show(custom_show("maddie", "U"), [])
         a "\'Listen, there's actually something I wanted to talk to you about.\'"
         n "\'Yeah? What is it?\'"
@@ -399,20 +399,18 @@ label actA_scene3:
         n "\'Alright. Talk to you later then.\'"
         $ renpy.hide(custom_hide("maddie"))
         "Maddie leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
-        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
+        "I go to sleep with my fever-induced headache and dream of a life with Neko-Chan...a perfect life."
     $ day_counter = temp
-    stop music fadeout 1.0
-    scene black with fade
     jump event_calculation_a
  
 
-label event_roof_a: 
+label eventRoofA: 
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 
     "The sky is just beginning to turn a faded orange as I climb onto the roof of the library. A cool breeze rushes through my hair."
     "As my heart picks up pace, I realize just how nervous I am."
-    scene event_roof_a with dissolve
+    scene eventRoofA with dissolve
     "Maddie stands close to the rooftop fence, staring out into the horizon, steady as always."
     "When I walk towards her, the sound of my footsteps gives me away, and she turns around."
     
@@ -453,7 +451,7 @@ label event_roof_a:
 
     menu:
         "Confess my feelings":
-            if maddie_confessed:
+            if confessedFlagA:
                 jump endingA11
             if A >= A_high3:
                 jump endingA10
@@ -463,4 +461,3 @@ label event_roof_a:
                 jump endingA00
         "I've changed my mind":
             jump neko_ending
-    return

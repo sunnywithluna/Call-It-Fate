@@ -1,5 +1,5 @@
 label endingA01:
-    $ persistent.endingAFlag = True
+    $ endingAFlag = True
     n "\'Alright, well, I guess I'll just say it. I know we only just started hanging out, but…I really like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("maddie", "F"), [])
@@ -10,12 +10,12 @@ label endingA01:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
     return 
 
 
 label endingA10:
-    $ persistent.endingAFlag = True
+    $ endingAFlag = True
     $ renpy.show(custom_show("maddie", "A"), [])
     a "\'Are you serious, Sam?\'"
     n "\'Sorry, nevermind, forget I said anything.\'"
@@ -31,7 +31,7 @@ label endingA10:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
     return 
 
 
@@ -58,7 +58,7 @@ label endingA00:
 
 
 label endingA11:
-    $ persistent.endingAFlag = True
+    $ endingAFlag = True
     $ renpy.show(custom_show("maddie", "N"), [])
     n "\'The other day, when I was sick, you said something to me.\'"
     $ renpy.show(custom_show("maddie", "U"), [])
@@ -85,13 +85,12 @@ label endingA11:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
-    return
+    jump epilogueScene
 
 
 
 label endingB01:
-    $ anna = True
+    $ endingBFlag = True
     n "\'I really like you, Anna. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("anna", "H"), [])
@@ -106,12 +105,12 @@ label endingB01:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
     return 
 
 
 label endingB10:
-    $ anna = True
+    $ endingBFlag = True
     $ renpy.show(custom_show("anna", "F"), [])
     b "\'Of course I feel the same way.\'"
     n "\'Really?! I mean, that's great!\'"
@@ -121,7 +120,7 @@ label endingB10:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
     return 
 
 
@@ -147,7 +146,7 @@ label endingB00:
 
 
 label endingB11:
-    $ anna = True
+    $ endingBFlag = True
     n "\'The other day, when I was sick, you said something to me.\'"
     $ renpy.show(custom_show("anna", "E"), [])
 
@@ -168,11 +167,11 @@ label endingB11:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
 
 
 label endingC01:
-    $ erin = True
+    $ endingCFlag = True
     n "\'Um, right. Okay, I guess I should just say it then. I really like you, Erin. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\'"
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("erin", "N"), [])
@@ -185,12 +184,12 @@ label endingC01:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
     return 
 
 
 label endingC10:
-    $ erin = True
+    $ endingCFlag = True
     $ renpy.show(custom_show("erin", "F"), [])
     c "\'I'm surprised you don't already know.\'"
     n "\'Does that mean...?\'"
@@ -203,7 +202,7 @@ label endingC10:
     "Then, we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
     return
 
 
@@ -231,7 +230,7 @@ label endingC00:
 
 
 label endingC11:
-    $ erin = True
+    $ endingCFlag = True
     $ renpy.show(custom_show("erin", "N"), [])
     n "\'The other day, when I was sick, you said you liked me?\'"
     $ renpy.show(custom_show("erin", "E"), [])
@@ -255,7 +254,7 @@ label endingC11:
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
-    jump epi_start
+    jump epilogueScene
 
 
 label neko_ending:

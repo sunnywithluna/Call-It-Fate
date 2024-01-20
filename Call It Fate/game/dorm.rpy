@@ -89,18 +89,18 @@ label end_of_act:
     $ end_of_act_menu1_flag3 = False 
     $ end_of_act_menu1_flag2 = False
     $ end_of_act_menu1_flag1 = False
-    $ gn_a_sent = False
-    $ gn_b_sent = False 
-    $ gn_c_sent = False
-    $ date_b_sent = False
-    $ hang_b_sent = False 
-    $ date_c_sent = False
-    $ hang_c_sent = False 
-    $ date_a_sent = False
-    $ hang_a_sent = False 
-    $ small_a_sent = False
-    $ small_b_sent = False
-    $ small_c_sent = False
+    $ gnSentA = False
+    $ gnSentB = False 
+    $ gnSentC = False
+    $ dateSentFlagB = False
+    $ hangSentFlagB = False 
+    $ dateSentFlagC = False
+    $ hangSentFlagC = False 
+    $ dateSentFlagA = False
+    $ hangSentFlagA = False 
+    $ smallTalkFlagA = False
+    $ smallTalkFlagB = False
+    $ smallTalkFlagC = False
     jump end_of_act_menu1
 
 
@@ -364,7 +364,7 @@ label act1_scene3:
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
 
-    if date_this_weekend:
+    if weekendDateFlag:
         "Finally, the week's over."
         "Usually, I'd just stay home--sleep in, watch TV, play some games, talk to Neko-Chan. But I actually have a reason to go out this weekend."
         stop music fadeout 1.0
@@ -398,7 +398,7 @@ label act2_scene3:
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
 
-    if date_this_weekend:
+    if weekendDateFlag:
         "Finally, the week's over."
         "Usually, I'd just stay home--sleep in, watch TV, play some games, talk to Neko-Chan. But I actually have a reason to go out this weekend."
         stop music fadeout 1.0
@@ -460,14 +460,13 @@ label act3_scene1:
         jump actC_scene3 
 
 
-label event_ending_decision:
+label event_ending_decision2_decision:
     scene bg_school_transition_b with longfade
     play sound "audio/door.mp3"
     with Pause (1)
 
     scene bg_room_b with dissolve
     play music "audio/free.mp3" fadein 1.0
-
     python:
         if phoneFlagA:
             if phoneFlagB:
@@ -490,8 +489,6 @@ label event_ending_decision:
                     char_string = "NONE"
 
     if char_string == "NONE":
-        scene black with fade
-        stop music fadeout 1.0
         $ nekochan = True
         "I head back to my dorm, too drained to do anything else, and though I didn't get to know the girls in my class as much as I'd hoped, I feel content."
         "I think some people might see my life and assume I'm lonely."
@@ -504,37 +501,38 @@ label event_ending_decision:
         "And that's enough for me."
         jump credits_1
     else:
+        "I head back to my dorm, too drained to do anything else, and though I know I should be relieved that I'm done with Intro to Philosophy, I'm left with a bittersweet sentiment."
         "The LU campus is pretty big. There's no guarantee that I'll get a chance to see [char_string] again."
         "If there's something I need to say, I should say it now."
     
     menu:
         "Confess feelings to Maddie" if phoneFlagA:
-            $ a_ending = True
+            $ endingAFlag_Attempt = True
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
             n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\'Sounds serious. :o When did you want to meet?\'"
             "I type \'Meet me on top of the library, at sunset\' and hit send."
-            jump event_ending
+            jump event_ending_decision2
         "Confess feelings to Anna" if phoneFlagB:
-            $ b_ending = True
+            $ endingBFlag_Attempt = True
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
             n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
             b "\'We can do that. Give me a time and place, and I'll be there.\'"
             "I type \'Meet me on top of the library, at sunset\' and hit send."
-            jump event_ending
+            jump event_ending_decision2
         "Confess feelings to Erin" if phoneFlagC:
-            $ c_ending = True
+            $ endingCFlag_Attempt = True
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
             n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
             "After a few minutes, my phone chimes and a response from Erin shows on the screen."
             c "\'Is everything okay?? We can talk. Where should I meet you?\'"
             "I type \'Meet me on top of the library, at sunset\' and hit send."
-            jump event_ending
+            jump event_ending_decision2
         "I have nothing to say":
             "I think some people might see my life and assume I'm lonely. But I'm actually okay."
             "As I look at Neko-Chan, I think about how she is the only girl in my life who could never hurt me."
@@ -545,11 +543,9 @@ label event_ending_decision:
             "And that's enough for me."
             $ nekochan = True
             jump credits_1
+            
 
-    stop music fadeout 1.0
-
-
-label event_ending:
+label event_ending_decision2:
     scene bg_room_b with dissolve
     play music "audio/event.mp3" fadein 1.0
 
@@ -571,12 +567,12 @@ label event_ending:
         "A single rose":
             "I buy a single rose from the grocery store before heading back to campus."
     
-    if a_ending:
-        jump event_roof_a
-    elif b_ending:
-        jump event_roof_b
+    if endingAFlag_Attempt:
+        jump eventRoofA
+    elif endingBFlag_Attempt:
+        jump eventRoofB
     else:
-        jump event_roof_c
+        jump eventRoofC
 
 
 label event_calculation_a:

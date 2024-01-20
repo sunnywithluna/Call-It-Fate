@@ -1,12 +1,15 @@
 ﻿
-label epi_start:
+label epilogueScene:
     scene bg_room_a with dissolve
     play music "audio/event.mp3" fadein 1.0
 
     "It's been three weeks since my Intro to Philosophy class ended, and Dr. Paige is only now updating the final grades."
     "He sent out an email last night, saying they'd be posted at noon today, so I wait and watch the 11:59 AM on my computer turn into 12:00 PM and hit refresh on my student portal."
 
-    if class_score >= 4:
+    if class_score >= 4 and study_counter >= 3:
+        "I got an A+!"
+        "I let out a sigh of relief."
+    elif class_score >= 4:
         "I passed!"
         "I let out a sigh of relief."
     else:
@@ -16,11 +19,11 @@ label epi_start:
     "A knock at my door pulls me away from my computer."
     scene bg_room_outside_a with dissolve
 
-    if persistent.endingAFlag:
+    if endingAFlag:
         jump epi_maddie
-    if anna:
+    if endingBFlag:
         jump epi_anna
-    if erin:
+    if endingCFlag:
         jump epi_erin
 
 
@@ -261,7 +264,8 @@ label epi_erin:
 
 label credits_1:
 
-    if persistent.endingAFlag:
+    if endingAFlag:
+        $ persistent.endingAFlag = True
         scene black with fade
         play music "audio/rooftop.mp3" fadein 1.0
         
@@ -286,13 +290,13 @@ label credits_1:
         show credits_a_7 with dissolve
         with Pause(4)
 
-    elif anna:
+    elif endingBFlag:
         $ persistent.endingBFlag = True
         scene black with fade
         play music "audio/rooftop.mp3" fadein 1.0
         "ended up with anna"
         "Kim Jang Kris Gathman Nick Gathman Etc"
-    elif erin:
+    elif endingCFlag:
         $ persistent.endingCFlag = True
         scene black with fade
         play music "audio/rooftop.mp3" fadein 1.0

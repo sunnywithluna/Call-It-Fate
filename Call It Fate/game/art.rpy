@@ -100,8 +100,6 @@ label art_main_menu:
             $ renpy.show(custom_show("Erin", "N"), [])
             "I say goodbye to Erin before heading out."
             $ C = C + 1
-            stop music fadeout 1.0
-            scene black with fade
             jump end_of_act
         "Go home":
             jump end_of_act
@@ -344,7 +342,7 @@ label art_choice_compliment_b:
                 c "\'Of course! What do you need help with?\'"
                 n "\'I feel like my drawings kind of lack...depth?\'"
                 $ renpy.show(custom_show("erin", "H"), [])
-                c "\'Ah, I had that issue early on too. Try paying more attention to the values on a subject-where light's coming from and where shadows are being cast. It'll look a lot better than just focusing on the outline of whatever you're drawing. Does that make sense?\'"
+                c "\'Ah, I had that issue early on too. Try paying more attention to the values on a subject--where light's coming from and where shadows are being cast. It'll look a lot better than just focusing on the outline of whatever you're drawing. Does that make sense?\'"
                 n "\'Yeah! That makes a lot of sense. Thanks!\'"
                 $ renpy.show(custom_show("erin", "N"), [])
 

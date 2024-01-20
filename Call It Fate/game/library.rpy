@@ -5,7 +5,7 @@ label library:
     $ lib_compliment = False
     if lib_counter == 1:
         "The high ceiling of the library is lined with fluorescent lights, half of them off, presumably to save energy during the break."
-        "I skim the philosophy section, the age of each book easy to tell from the wear on the bindings. Below one of the books, 'J + K' has been scratched into the wood with a heart around it."
+        "I skim the philosophy section, the age of each book is easy to guess from the wear on the bindings. Below one of the books, 'J + K' has been scratched into the wood with a heart around it."
 
         "Though the library is always pretty quiet, I can usually at least hear the sounds of typing on laptop keys or the printer spitting out essay pages or even the occasional stress-induced sob during finals week."
 
@@ -98,7 +98,6 @@ label talking_to_anna:
             jump library_choice_2_d
         "Back":
             jump library_main_menu
-    return 
 
 
 label library_choice_2_a:
@@ -284,15 +283,17 @@ label library_choice_compliment_a:
             $ renpy.show(custom_show("anna", "A"), [])
             b "\'...\'"
             if day_counter == 1:
-                "Anna takes a sweater out of her backpack and puts it on over her dress."
                 $ temp = 1
                 $ day_counter = 3
                 $ temp_usage = True
-            if day_counter == 2:
+                $ renpy.show(custom_show("anna", "A"), [])
                 "Anna takes a sweater out of her backpack and puts it on over her dress."
+            if day_counter == 2:
                 $ temp = 2
                 $ day_counter = 4
                 $ temp_usage = True
+                $ renpy.show(custom_show("anna", "A"), [])
+                "Anna takes a sweater out of her backpack and puts it on over her dress."
             jump talking_to_anna
     return 
 

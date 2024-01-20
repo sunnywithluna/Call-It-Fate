@@ -565,8 +565,7 @@ label act3_scene2:
         "It's a little embarrassing that I'm the last one to leave, but I guess that's what I get for not studying enough."
         "I can only hope that I passed."
     scene black with dissolve
-    "I head back to my dorm, too drained to do anything else, and though I know I should be relieved that I'm done with Intro to Philosophy, I'm left with a bittersweet sentiment."
-    jump event_ending_decision
+    jump event_ending_decision2_decision
 
 
 label after_class:

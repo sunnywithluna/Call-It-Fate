@@ -5,7 +5,7 @@ label eventBHang:
     $ eventBHangCompletedFlag = True
     $ eventBHangToday = True
 
-    "I head to the library where Anna is waiting, her attention so focused on the book in front of her, she doesn't even notice when I arrive."
+    "I head to the library where Anna is waiting, her books and notes already spread out in front of her."
     n "\'Hey.\'"
     scene bg_lib_a with dissolve
 
@@ -59,13 +59,13 @@ label eventBHang:
     b "\'...Thank you, Sam...\'"
     b "\'Ask me another question, I'll be okay.\'"
     $ renpy.show(custom_show("anna", "N"), [])
-    "We pick up where we trueleft off, and Anna no longer seems bothered by her mistakes."
+    "We pick up where we left off, and Anna no longer seems bothered by her mistakes."
     jump event_calculation_a
     
 
 label eventBDate:
     $ eventBDateCompletedFlag = True
-    $ date_this_weekend = False
+    $ weekendDateFlag = False
     $ eventBDateToday = True
     
     "Because I have a date!"
@@ -104,7 +104,7 @@ label eventBDate:
     $ renpy.show(custom_show("anna", "N"), [])
     b "\'So was there anything you really wanted to see? I have a map if you want to look.\'"
     "She pulls out the map and hands it to me. As I examine the creased, colorful illustration of the museum, I notice a couple exhibits that pique my interest."
-    n "\'What should we check out?\'"
+    "What should we check out?"
     menu: 
         "Planetarium":
             $ B = B + 2
@@ -303,7 +303,7 @@ label actB_scene3:
 
 
     if B >= 14:
-        $ anna_confessed = True
+        $ confessedFlagB = True
         stop music fadeout 1.0
 
         "We stand there for a moment in silence."
@@ -354,7 +354,7 @@ label actB_scene3:
                 "A wave of dizziness overwhelms me."
                 $ renpy.show(custom_show("anna", "E2"), [])
                 b "\'Sam!\'"
-                "Anna grabs me as I almost fall to the ground. Anna helps me get into bed as I become too dizzy to stand"
+                "Anna grabs me as I almost fall to the ground."
                 b "\'I'm glad I came by.\'"
                 n "\'Me too.\'"
                 "I knew I had to reply to her confession, but I felt so weak."
@@ -381,11 +381,11 @@ label actB_scene3:
         n "\'Alright. Talk to you later then.\'"
         $ renpy.hide(custom_hide("anna"))
         "Anna leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
-        "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
+        "I go to sleep with my fever-induced headache and dream of a life with Neko-Chan...a perfect life."
         jump event_calculation_a
     return
 
-label event_roof_b:
+label eventRoofB:
     scene bg_roof with dissolve
     play music "audio/rooftop.mp3" fadein 1.0
 
@@ -404,11 +404,13 @@ label event_roof_b:
     if anna_gift:
         scene event_gift_b with dissolve
         $ B = B + 1
+        $ renpy.show(custom_show("anna", "H"), [trueright])
         "Anna looks down at the venus flytrap, and smiles."
         if eventBDateFlag:
             b "\'Like the ones at the museum.\'"
         "I hand it to her."
         b "I'll take good care of it. Thank you."
+        $ renpy.hide(custom_hide("anna"))
     else:
         $ renpy.show(custom_show("anna", "U"), [])
         "Anna turns to face me and accepts the gift, the blank expression on her face only making me more nervous."
@@ -435,14 +437,13 @@ label event_roof_b:
 
     menu:
         "Confess my feelings":
-            if anna_confessed:
+            if confessedFlagB:
                 jump endingB11
-            if B == 20:
+            if B >= B_high3:
                 jump endingB10
-            elif B >= 14:
+            elif B >= B_high:
                 jump endingB01
             else:
                 jump endingB00
         "I've changed my mind":
             jump neko_ending
-    return
