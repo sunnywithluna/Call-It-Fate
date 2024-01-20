@@ -456,11 +456,11 @@ label event_roof_a:
             if maddie_confessed:
                 jump endingA11
             if A >= A_high3:
-                jump maddie_perfectending
+                jump endingA10
             elif A >= A_high:
                 jump endingA01
             else:
-                jump endingA010
+                jump endingA00
         "I've changed my mind":
             jump neko_ending
     return
