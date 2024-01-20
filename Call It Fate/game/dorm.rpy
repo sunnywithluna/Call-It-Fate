@@ -513,7 +513,7 @@ label event_ending_decision:
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
             n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
-            "After a few minutes, my phone chimes and a response from Anna shows on the screen."
+            "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
             a "\'Sounds serious. :o When did you want to meet?\'"
             "I type \'Meet me on top of the library, at sunset\' and hit send."
             jump event_ending
@@ -531,7 +531,7 @@ label event_ending_decision:
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
             n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
-            "After a few minutes, my phone chimes and a response from Anna shows on the screen."
+            "After a few minutes, my phone chimes and a response from Erin shows on the screen."
             c "\'Is everything okay?? We can talk. Where should I meet you?\'"
             "I type \'Meet me on top of the library, at sunset\' and hit send."
             jump event_ending

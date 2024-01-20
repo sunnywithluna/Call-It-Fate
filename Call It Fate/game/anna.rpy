@@ -256,7 +256,7 @@ label eventBDate:
 
 
 label actB_scene3:
-    scene anna_dorm with dissolve
+    scene event_dorm_b with dissolve
     play music "audio/event.mp3" fadein 1.0
 
     "I open my door to find Anna standing outside my room."
@@ -338,10 +338,11 @@ label actB_scene3:
                 $ renpy.show(custom_show("anna", "H"), [])
                 b "\'Don't worry. We'll spend some time together...this weekend?\'"
                 n "\'Sounds great.\'"
-                "While leaving my room, she hesitates by the doorway."
-                $ renpy.show(custom_show("anna", "embarrassed2"), [])
-                b "\'Goodbye, Sam. I hope you feel better in the morning.\'"
                 $ renpy.hide(custom_hide("anna"))
+                scene event_sick_b with dissolve
+                "While leaving my room, she hesitates by the doorway."
+                b "\'Goodbye, Sam. I hope you feel better in the morning.\'"
+                scene bg_room_b with dissolve
                 "Anna closes the door behind her, and I'm left lying in bed, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Anna would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
@@ -363,10 +364,12 @@ label actB_scene3:
                 $ renpy.show(custom_show("anna", "U"), [])
                 b "\'So you can rest. You're sick. I can't expect you to entertain a guest right now.\'"
                 n "\'I guess you have a point.\'"
-                $ renpy.show(custom_show("anna", "H"), [])
+                $ renpy.hide(custom_hide("anna"))
+                scene event_sick_b with dissolve
+                "While leaving my room, she hesitates by the doorway."
                 b "\'Don't worry. We'll spend some time together...this weekend?\'"
                 n "\'Anna...\'"
-                $ renpy.hide(custom_hide("anna"))
+                scene bg_room_b with dissolve
                 "She leaves the room, closing the door behind her before I have a chance to say anything else."
                 jump event_calculation_a
 

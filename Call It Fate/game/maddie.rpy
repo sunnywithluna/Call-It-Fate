@@ -304,6 +304,8 @@ label eventADate:
 
 
 label actA_scene3:
+    $ temp = day_counter
+    $ day_counter = 2
     scene event_dorm_a with dissolve
     play music "audio/event.mp3" fadein 1.0
 
@@ -350,7 +352,7 @@ label actA_scene3:
         $ renpy.show(custom_show("maddie", "U"), [])
         a "\'Listen, there's actually something I wanted to talk to you about.\'"
         n "\'Yeah? What is it?\'"
-        n "Maddie scratches the back of her head. She almost seems...nervous."
+        "Maddie scratches the back of her head. She almost seems...nervous."
         $ renpy.show(custom_show("maddie", "N"), [])
         a "\'Well...I know this might seem a bit sudden, but, I like you, Sam.\'"
         a "\'And the only reason I'm even saying this is because I'd rather know how you feel now than get my hopes up, you know?\'"
@@ -398,7 +400,7 @@ label actA_scene3:
         $ renpy.hide(custom_hide("maddie"))
         "Maddie leaves, closing the door behind her, and I'm left standing in the middle of my dorm, alone."
         "I go to sleep with my fever induced headache and dream up a life with Neko-Chan...a perfect life."
-    
+    $ day_counter = temp
     stop music fadeout 1.0
     scene black with fade
     jump event_calculation_a

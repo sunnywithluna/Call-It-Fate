@@ -261,7 +261,7 @@ label eventCDate:
     
 
 label actC_scene3:
-    scene erin_dorm with dissolve
+    scene event_dorm_c with dissolve
     play music "audio/event.mp3" fadein 1.0
 
     "I open my door to find Erin standing outside my room."
@@ -336,10 +336,11 @@ label actC_scene3:
                 c "\'Yeah! That'd be fun.\'"
                 $ renpy.show(custom_show("erin", "A"), [])
                 c "\'Oh but...I should let you rest then! Or you won't heal in time for our date.\'"
-                "While leaving my room, she hesitates by the doorway."
-                $ renpy.show(custom_show("erin", "N"), [])
-                c "\'I'm glad we talked, Sam. Rest up, okay?\'"
                 $ renpy.hide(custom_hide("erin"))
+                scene event_sick_c with dissolve
+                "While leaving my room, she hesitates by the doorway."
+                c "\'I'm glad we talked, Sam. Rest up, okay?\'"
+                scene bg_room_b with dissolve
                 "Erin closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Erin would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
@@ -353,7 +354,11 @@ label actC_scene3:
                 c "\'Sam!\'"
                 "Erin grabs me as I almost fall to the ground."
                 "I know I need to respond to her confession, but my head hurts so much..."
+                $ renpy.hide(custom_hide("erin"))
+                scene event_sick_c with dissolve
+                "While leaving my room, she hesitates by the doorway."
                 c "\'I'll head out...let's talk later okay?\'"
+                scene bg_room_b with dissolve
                 "She heads out, closing the door behind her before I have a chance to say anything else."
                 $ renpy.hide(custom_hide("erin"))
                 n "\'Erin...\'"
