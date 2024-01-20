@@ -25,7 +25,7 @@ label epi_start:
 
 
 label epi_maddie:
-    scene maddie_epi with dissolve
+    scene event_epi_a with dissolve
     "Standing outside is Maddie, holding up a large plastic bag in her hand."
 
     a "\'Ready for lunch?\'"
@@ -265,25 +265,25 @@ label credits_1:
         scene black with fade
         play music "audio/roof.mp3" fadein 1.0
         
-        scene perfectm1 with dissolve
+        scene credits_a_1 with dissolve
         with Pause(3)
 
-        show perfectm2 with dissolve
+        show credits_a_2 with dissolve
         with Pause(3)
 
-        show perfectm3 with dissolve
+        show credits_a_3 with dissolve
         with Pause(3)
 
-        show perfectm4 with dissolve
+        show credits_a_4 with dissolve
         with Pause(3)
 
-        show perfectm5 with dissolve
+        show credits_a_5 with dissolve
         with Pause(3)
 
-        show perfectm6 with dissolve
+        show credits_a_6 with dissolve
         with Pause(3)
 
-        show perfectm7 with dissolve
+        show credits_a_7 with dissolve
         with Pause(4)
 
     elif anna:
