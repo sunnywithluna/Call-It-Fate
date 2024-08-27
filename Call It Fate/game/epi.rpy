@@ -151,7 +151,7 @@ label epi_anna:
     n "\'I can't imagine that.\'"
     $ renpy.show(custom_show("anna", "E"), [])
 
-    b "\'Well, bad for me at least. I used to get mostly “B”s, a few “C”s.\'"
+    b "\'Well, bad for me at least. I used to get mostly \"B\"s, a few \"C\"s.\'"
     $ renpy.show(custom_show("anna", "E2"), [])
 
     "I gasp and she laughs as I sit next to her on the bed, grabbing chopsticks from the bag."
@@ -174,7 +174,7 @@ label epi_anna:
 
     b "\'I want to take the time to reflect on how much more I know now than I did before taking the class. Then, I can check my grade.\'"
 
-    n "\'You probably got an 'A' though, right?\'"
+    n "\'You probably got an \"A\" though, right?\'"
     $ renpy.show(custom_show("anna", "N"), [])
 
     b "\'Probably. Are you not hungry?\'"

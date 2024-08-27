@@ -225,6 +225,7 @@ default calendar_days_skipped = 0
 # DELETE default love_points = 'K'
 # DELETE default love_interest = 'Kim'
 
+default act1_scene0_menu1_option2b = False
 default smallTalkFlagA = False
 default smallTalkFlagB = False
 default smallTalkFlagC = False
@@ -395,11 +396,23 @@ label splashscreen:
     show intro_4 with dissolve
     with Pause(1)
 
-    scene black with dissolve
+    show intro_5 with dissolve
     with Pause(1)
+
+    # scene black with dissolve
+    # with Pause(1)
 
     return
 
 
 label start:
-    jump act1_scene0
+    scene bg_room_a
+    play sound "audio/morning.mp3"
+    play music "audio/dorm.mp3" fadein 1.0
+    "It's the first day of my summer session class, and I'm only now looking at the syllabus."
+    "My professor sent it a few weeks back before the spring semester had ended, but now is the first time I'm realizing what three months of work looks like crammed into three weeks."
+    "This is going to suck."
+    "I'm sitting in my dorm that has the distinct smell only dingy laundry in a poorly ventilated room could cause."
+    "The place is a mess. The bed isn't made, the trash is overflowing, and the only cared-for items in the room are my GS5 and desktop."
+    "Well, no time to clean now. I better get to class."
+    jump act1_scene0_menu1
