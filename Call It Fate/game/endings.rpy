@@ -1,11 +1,11 @@
 label endingA01:
     $ endingAFlag = True
-    n "\'Alright, well, I guess I'll just say it. I know we only just started hanging out, but…I really like you, and I was wondering if maybe...you felt the same way?\'"
+    n "\"Alright, well, I guess I'll just say it. I know we only just started hanging out, but…I really like you, and I was wondering if maybe...you felt the same way?\""
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("maddie", "F"), [])
-    a "\'I like you too.\'"
+    a "\"I like you too.\""
     "It takes a moment before what she's saying sinks in."
-    n "\'Really?! I mean, that's great!\'"
+    n "\"Really?! I mean, that's great!\""
     $ renpy.show(custom_show("maddie", "H"), [])
     "She smiles, then takes my hand."
     "And we finish watching the sun disappear."
@@ -18,16 +18,16 @@ label endingA01:
 label endingA10:
     $ endingAFlag = True
     $ renpy.show(custom_show("maddie", "A"), [])
-    a "\'Are you serious, Sam?\'"
-    n "\'Sorry, nevermind, forget I said anything.\'"
-    a "\'No! That's not what I mean.\'"
-    n "\'What?\'"
+    a "\"Are you serious, Sam?\""
+    n "\"Sorry, nevermind, forget I said anything.\""
+    a "\"No! That's not what I mean.\""
+    n "\"What?\""
     $ renpy.show(custom_show("maddie", "H"), [])
-    a "\'Of course I like you! I wasn't trying to be subtle, could you really not tell?\'"
-    n "\'I had no idea.\'"
+    a "\"Of course I like you! I wasn't trying to be subtle, could you really not tell?\""
+    n "\"I had no idea.\""
     "Maddie sighs dramatically, jokingly."
     $ renpy.show(custom_show("maddie", "F"), [])
-    a "\'Well, now you do.\'"
+    a "\"Well, now you do.\""
     "She smiles, then takes my hand."
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
@@ -39,12 +39,15 @@ label endingA10:
 label endingA00:
     $ nekochan = True
     $ renpy.show(custom_show("maddie", "S"), [])
-    a "\'Oh...Sam, I'm so sorry.\'"
+    a "\"Oh...Sam, I'm so sorry.\""
     "It takes a moment before what she's saying sinks in."
-    n "\'Huh...I guess I misread things...I'll see you around.\'"
-    scene black with fade
+    n "\"Huh...I guess I misread things...I'll see you around.\""
+    stop music fadeout 1.0
+    scene black with Dissolve(2.0)
     "I have nothing else to say, so I leave the roof and head back to my dorm."
-    scene bg_room_c with dissolve
+
+    scene bg_room_c
+    with fade
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
     "I'm done putting myself out there just to get rejected."
     scene bg_room_cc with dissolve
@@ -61,17 +64,17 @@ label endingA00:
 label endingA11:
     $ endingAFlag = True
     $ renpy.show(custom_show("maddie", "N"), [])
-    n "\'The other day, when I was sick, you said something to me.\'"
+    n "\"The other day, when I was sick, you said something to me.\""
     $ renpy.show(custom_show("maddie", "U"), [])
 
-    a "\'You mean that I like you?\'"
+    a "\"You mean that I like you?\""
 
-    n "\'Yeah, that...\'"
+    n "\"Yeah, that...\""
 
-    n "\'I-I didn't get a chance to respond before, but...\'"
+    n "\"I-I didn't get a chance to respond before, but...\""
     $ renpy.show(custom_show("maddie", "E"), [])
 
-    n "\'I feel the same way.\'"
+    n "\"I feel the same way.\""
 
     "Another breeze blows past us."
     $ renpy.show(custom_show("maddie", "H"), [])
@@ -79,9 +82,9 @@ label endingA11:
     "Then, she smiles."
     $ renpy.show(custom_show("maddie", "F"), [])
 
-    a "\'Good.\'"
+    a "\"Good.\""
 
-    "She takes my hand, and leans on my shoulder."
+    "She takes my hand and leans on my shoulder."
 
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
@@ -92,15 +95,15 @@ label endingA11:
 
 label endingB01:
     $ endingBFlag = True
-    n "\'I really like you, Anna. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\'"
+    n "\"I really like you, Anna. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\""
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("anna", "H"), [])
-    b "\'I do.\'"
+    b "\"I do.\""
     "It takes a moment before what she's saying sinks in."
-    n "\'You...feel the same?\'"
+    n "\"You...feel the same?\""
     $ renpy.show(custom_show("anna", "N"), [])
     "She nods."
-    n "\'Really?! I mean, that's great!\'"
+    n "\"Really?! I mean, that's great!\""
     "Despite the chilled air, I feel warm."
     "She takes my hand."
     "And we finish watching the sun disappear."
@@ -113,8 +116,8 @@ label endingB01:
 label endingB10:
     $ endingBFlag = True
     $ renpy.show(custom_show("anna", "F"), [])
-    b "\'Of course I feel the same way.\'"
-    n "\'Really?! I mean, that's great!\'"
+    b "\"Of course I feel the same way.\""
+    n "\"Really?! I mean, that's great!\""
     $ renpy.show(custom_show("anna", "N"), [])
 
     "Despite the chilled air, I feel warm."
@@ -128,16 +131,17 @@ label endingB10:
 label endingB00:
     $ nekochan = True
     $ renpy.show(custom_show("anna", "E"), [])
-    b "\'...\'"
+    b "\"...\""
     $ renpy.show(custom_show("anna", "E2"), [])
-    b "\'You're a good guy, so I'm sorry if I've misled you. But I don't feel that way about you.\'"
+    b "\"You're a good guy, so I'm sorry if I've misled you. But I don't feel that way about you.\""
     "It takes a moment before what she's saying sinks in."
-    n "\'Huh...I guess I misread things...I'll see you around.\'"
+    n "\"Huh...I guess I misread things...I'll see you around.\""
     "I have nothing else to say, so I leave the roof and head back to my dorm."
     stop music fadeout 1.0
-    scene black with fade
+    scene black with Dissolve(2.0)
 
     scene bg_room_c
+    with fade
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
     "I'm done putting myself out there just to get rejected."
     "For now on, it's just going to be me and Neko-Chan."
@@ -150,18 +154,18 @@ label endingB00:
 
 label endingB11:
     $ endingBFlag = True
-    n "\'The other day, when I was sick, you said something to me.\'"
+    n "\"The other day, when I was sick, you said something to me.\""
     $ renpy.show(custom_show("anna", "E"), [])
 
-    b "\'I was hoping you'd forgotten that...\'"
+    b "\"I was hoping you'd forgotten that...\""
     $ renpy.show(custom_show("anna", "E2"), [])
 
-    n "\'Why?\'"
+    n "\"Why?\""
     $ renpy.show(custom_show("anna", "U"), [])
 
-    b "\'Because...you don't feel the same.\'"
+    b "\"Because...you don't feel the same.\""
 
-    n "\'No, but I do! I didn't get a chance to respond before, but-\'"
+    n "\"No, but I do! I didn't get a chance to respond before, but-\""
     scene black with fade
     "Anna interrupts me with a kiss."
     scene bg_roof with fade
@@ -177,15 +181,15 @@ label endingB11:
 
 label endingC01:
     $ endingCFlag = True
-    n "\'Um, right. Okay, I guess I should just say it then. I really like you, Erin. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\'"
+    n "\"Um, right. Okay, I guess I should just say it then. I really like you, Erin. I know we haven't known each other for very long, but I like you, and I was wondering if maybe...you felt the same way?\""
     "Another breeze blows past us as I wait for her to respond."
     $ renpy.show(custom_show("erin", "N"), [])
-    c "\'You're pretty great, you know that?\'"
-    n "\'Does that mean...?\'"
+    c "\"You're pretty great, you know that?\""
+    n "\"Does that mean...?\""
     $ renpy.show(custom_show("erin", "F"), [])
-    c "\'I like you too.\'"
-    n "\'Really?! I mean, that's great!\'"
-    n "\'She smiles and takes my hand.\'"
+    c "\"I like you too.\""
+    n "\"Really?! I mean, that's great!\""
+    n "\"She smiles and takes my hand.\""
     "And we finish watching the sun disappear."
     stop music fadeout 1.0
     scene black with fade
@@ -196,13 +200,13 @@ label endingC01:
 label endingC10:
     $ endingCFlag = True
     $ renpy.show(custom_show("erin", "F"), [])
-    c "\'I'm surprised you don't already know.\'"
-    n "\'Does that mean...?\'"
+    c "\"I'm surprised you don't already know.\""
+    n "\"Does that mean...?\""
     $ renpy.show(custom_show("erin", "H"), [])
-    c "\'I feel the same. I like you too.\'"
-    n "\'Really?\'"
+    c "\"I feel the same. I like you too.\""
+    n "\"Really?\""
     $ renpy.show(custom_show("erin", "N"), [])
-    c "\'Really.\'"
+    c "\"Really.\""
     "She smiles and takes my hand."
     "Then, we finish watching the sun disappear."
     stop music fadeout 1.0
@@ -214,14 +218,16 @@ label endingC10:
 label endingC00:
     $ nekochan = True
     $ renpy.show(custom_show("erin", "S"), [])
-    c "\'Uh, sorry. I don't know how to say this. I'm happy we met, and you're a good friend. But...I don't like you in that way.\'"
+    c "\"Uh, sorry. I don't know how to say this. I'm happy we met, and you're a good friend. But...I don't like you in that way.\""
     "It takes a moment before what she's saying sinks in."
-    n "\'Huh...I guess I misread things...I'll see you around.\'"
+    n "\"Huh...I guess I misread things...I'll see you around.\""
     $ renpy.hide(custom_hide("erin"))
     stop music fadeout 1.0
-    scene black with fade
+    scene black with Dissolve(2.0)
     "I have nothing else to say, so I leave the roof and head back to my dorm."
-    scene bg_room_cc with dissolve
+
+    scene bg_room_c
+    with fade
 
     show neko
     "Neko-Chan sits on her usual spot on my bed, and I realize, looking at her, that she is the only girl in my life who could never hurt me."
@@ -237,22 +243,22 @@ label endingC00:
 label endingC11:
     $ endingCFlag = True
     $ renpy.show(custom_show("erin", "N"), [])
-    n "\'The other day, when I was sick, you said you liked me?\'"
+    n "\"The other day, when I was sick, you said you liked me?\""
     $ renpy.show(custom_show("erin", "E"), [])
-    c "\'Ahh! That was so embarrassing. Can you just forget I said anything?\'"
+    c "\"Ahh! That was so embarrassing. Can you just forget I said anything?\""
 
-    n "\'No, you don't understand!\'"
+    n "\"No, you don't understand!\""
     $ renpy.show(custom_show("erin", "surprised"), [])
 
-    n "\'I-I didn't get a chance to respond before, but...\'"
-    n "\'I feel the same way.\'"
+    n "\"I-I didn't get a chance to respond before, but...\""
+    n "\"I feel the same way.\""
 
     
     "Another breeze blows past us."
     $ renpy.show(custom_show("erin", "H"), [])
-    c "\'Really?\'"
+    c "\"Really?\""
 
-    n "\'Really.\'"
+    n "\"Really.\""
     $ renpy.show(custom_show("erin", "F"), [])
     "She smiles as I take her hand."
 
@@ -268,22 +274,22 @@ label neko_ending:
     "I've made the wrong choice."
     "I shouldn't be here."
     "She isn't the girl I want to be with."
-    n "\'Um...sorry...I have to go.\'"
+    n "\"Um...sorry...I have to go.\""
     
     scene bg_room_c with dissolve
     play music "audio/event.mp3" fadein 1.0
 
     "I leave the roof and head back to my dorm where Neko-Chan sits on her usual spot on my bed."
-    n "\'Oh thank God you're still here.\'"
+    n "\"Oh thank God you're still here.\""
     scene bg_room_cc with dissolve
 
     show neko
-    nc "\'...\'"
-    n "\'Listen, on the roof I realized something.\'"
-    n "I realized that you're the only girl who's always been there for me. The only one who liked me the way I was and never expected me to change...\'"
-    n "\'I'm sorry I didn't realize it sooner, Neko-Chan, but I want to be with you. What do you say?\'"
-    nc "\'...\'"
-    n "\'I'm so happy you feel the same.\'"
+    nc "\"...\""
+    n "\"Listen, on the roof I realized something.\""
+    n "I realized that you're the only girl who's always been there for me. The only one who liked me the way I was and never expected me to change...\""
+    n "\"I'm sorry I didn't realize it sooner, Neko-Chan, but I want to be with you. What do you say?\""
+    nc "\"...\""
+    n "\"I'm so happy you feel the same.\""
     "I hold Neko-Chan in my arms and smile, knowing that for now on, it's just going to be me and her."
     "Forever."
     scene black with fade

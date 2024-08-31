@@ -1552,3 +1552,6 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+style button:
+    activate_sound "click.mp3"

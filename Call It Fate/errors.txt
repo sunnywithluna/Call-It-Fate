@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 305: 'with' is not a keyword argument or valid child of the textbutton statement.
-    textbutton _("Start") action Start() with pixellate
-                                             ^
+File "game/anna.rpy", line 419: invalid syntax
+    renpy.show(custom_show("anna", "H"), [trueleft]) with dissolve
+                                                      ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Wed Aug 21 09:58:13 2024
+Fri Aug 30 16:30:16 2024

@@ -2,7 +2,7 @@ label gym:
     scene bg_gym_a with dissolve
     play music "audio/free.mp3" fadein 1.0
     $ gym_compliment = False
-
+    $ A = A + 1
     if gym_counter == 1:
         "With most students home for the summer, the school gym is practically empty."
 
@@ -15,7 +15,7 @@ label gym:
         "Maddie's filling up a water bottle that looks comically large next to her short frame."
         "It's the same one she'd bring to high school every day that she and Jennifer would stick stickers to as they whispered in the back of class."
 
-        "Only now, the stickers were gone and the white residue of the paper was all that remained."
+        "Only now, the stickers were gone, and the white residue of the paper was all that remained."
 
         "When Maddie turns from the five-gallon dispenser, I look away, not wanting her to think I was staring."
         "Luckily, she doesn't seem to notice me as she heads for the leg press machine."
@@ -30,25 +30,25 @@ label gym:
     elif gym_counter == 3:
         "I walk into an empty gym, and to my surprise, feel a slight sense of disappointment. I thought I'd see Maddie here again, but it seems she's taking the day off."
         $ renpy.show(custom_show("maddie", "N"), [])
-        a "\'Hey.\'"
+        a "\"Hey.\""
         "I turn to face Maddie who stands behind me at the entrance of the gym, taking a sip out of her ridiculous water bottle."
         $ renpy.show(custom_show("maddie", "F"), [])
-        a "\'You beat me to the gym today. I guess I'll have to be faster next time.\'"
-        n "\'I didn't know it was a race.\'"
+        a "\"You beat me to the gym today. I guess I'll have to be faster next time.\""
+        n "\"I didn't know it was a race.\""
         $ renpy.show(custom_show("maddie", "H"), [])
-        a "\'Sure it is, a little healthy competition can be a great motivator.\'"
-        n "\'Then, what do I get if I win?\'"
+        a "\"Sure it is, a little healthy competition can be a great motivator.\""
+        n "\"Then, what do I get if I win?\""
         $ renpy.show(custom_show("maddie", "U"), [])
-        a "\'The satisfaction of victory isn't enough? How about...\'"
+        a "\"The satisfaction of victory isn't enough? How about...\""
         if eventADateFlag:
-            n "\'Another date?\'"
+            n "\"Another date?\""
         else:
-            n "\'A date?\'"
+            n "\"A date?\""
         $ renpy.show(custom_show("maddie", "F"), [])
-        a "\'So forward! I was thinking more like...five bucks?\'"
-        n "\'That works. After our next class, the first one here wins. Deal?\'"
+        a "\"So forward! I was thinking more like...five bucks?\""
+        n "\"That works. After our next class, the first one here wins. Deal?\""
         $ renpy.show(custom_show("maddie", "H"), [])
-        a "\'Deal.\'"
+        a "\"Deal.\""
         "Maddie heads towards the machines to start her workout."
         $ renpy.hide(custom_hide("maddie"))
     elif gym_counter == 4:
@@ -56,20 +56,20 @@ label gym:
         $ renpy.show(custom_show("maddie", "N"), [])
         "But as soon as I open the door, there she is, already at the leg press machine."
         $ renpy.show(custom_show("maddie", "F"), [])
-        a "\'Took you long enough.\'"
-        n "\'What?! But I ran over here!\'"
+        a "\"Took you long enough.\""
+        n "\"What?! But I ran over here!\""
         $ renpy.show(custom_show("maddie", "H"), [])
-        a "\'I guess I'm just faster than you then.\'"
-        n "\'Aagh, fine.\'"
-        "I pull out my wallet to hand her a five dollar bill."
-        n "\'You win this time.\'"
+        a "\"I guess I'm just faster than you then.\""
+        n "\"Aagh, fine.\""
+        "I pull out my wallet to hand her a five-dollar bill."
+        n "\"You win this time.\""
         $ renpy.show(custom_show("maddie", "F"), [])
-        a "\'Is that a challenge for a rematch?\'"
-        n "\'No thanks. I think I'll keep what little money I have left.\'"
+        a "\"Is that a challenge for a rematch?\""
+        n "\"No thanks. I think I'll keep what little money I have left.\""
         "I walk away to avoid any further gloating."
         $ renpy.hide(custom_hide("maddie"))
     else:
-        n "\'...\'"
+        n "\"...\""
 
     "What should I do?"
     jump gym_main_menu
@@ -97,16 +97,16 @@ label gym_1_talk:
     $ gym_choice_1_a = True
     if A < A_bad:
         $ renpy.show(custom_show("maddie", "U"), [])
-        a "\'What do you want?\'"
+        a "\"What do you want?\""
     elif A_bad+1 <= A <= A_mid:
         $ renpy.show(custom_show("maddie", "N"), [])
-        a "\'Hey, Sam. What's up?\'"
+        a "\"Hey, Sam. What's up?\""
     elif A_mid+1 <= A <=A_mid3:
         $ renpy.show(custom_show("maddie", "H"), [])
-        a "\'Hey, Sam! Great day to hit the gym, huh?\'"
+        a "\"Hey, Sam! Great day to hit the gym, huh?\""
     else:
         $ renpy.show(custom_show("maddie", "F"), [])
-        a "\'Hey, Sam! I was hoping you'd show up today.\'"
+        a "\"Hey, Sam! I was hoping you'd show up today.\""
     jump talking_to_maddie
 
 
@@ -127,9 +127,9 @@ label talking_to_maddie:
 
 
 label gym_choice_2_a:
-    n "\'It's so quiet in here.\'"
+    n "\"It's so quiet in here.\""
     $ renpy.show(custom_show("maddie", "H"), [])
-    a "\'Yeah, the gym's always packed during the school year. It's kind of nice having the place to ourselves though.\'"
+    a "\"Yeah, the gym's always packed during the school year. It's kind of nice having the place to ourselves though.\""
     $ gym_choice_2_a = True
     $ A = A + 1
     $ i = day_counter
@@ -137,75 +137,75 @@ label gym_choice_2_a:
 
 
 label gym_choice_2_b:
-    n "\'So, what're you up to these days?\'"
+    n "\"So, what're you up to these days?\""
     $ gym_choice_2_b = True
     $ j = day_counter
     if A > A_bad:
         $ renpy.show(custom_show("maddie", "N"), [])
         $ A = A + 1
-        a "\'Oh, you know, the usual. Hiking, climbing, anything that gets me outside and moving. What about you? You still play games?\'"
-        n "\'Yeah, I do. I'm trying some new things though. That's why I'm here instead of my dorm.\'"
+        a "\"Oh, you know, the usual. Hiking, climbing, anything that gets me outside and moving. What about you? You still play games?\""
+        n "\"Yeah, I do. I'm trying some new things though. That's why I'm here instead of my dorm.\""
         $ renpy.show(custom_show("maddie", "H"), [])
-        a "\'It's cool that you're taking an interest in fitness.\'"
+        a "\"It's cool that you're taking an interest in fitness.\""
     
         if A >= A_mid:
-            a "\'It can be hard to get into, but it's definitely rewarding if you stick with it.\'"
+            a "\"It can be hard to get into, but it's definitely rewarding if you stick with it.\""
             $ renpy.show(custom_show("maddie", "N"), [])
-            n "\'Any tips on how to stay motivated?\'"
+            n "\"Any tips on how to stay motivated?\""
             "Maddie takes a sip of her water as she thinks."
             $ renpy.show(custom_show("maddie", "H"), [])
-            a "\'Envision the person you want to be. And remember why working out will help you get there.\'"
+            a "\"Envision the person you want to be. And remember why working out will help you get there.\""
             $ renpy.show(custom_show("maddie", "A"), [])
-            a "\'There are plenty of days I'd rather just stay at home in bed. It's tempting in the moment...but when I think about who I want to become, it isn't someone who takes the easy road just 'cause it's gratifying, you know?\'"
-            n "\'You want to be someone who's willing to put in the work, even when it's hard.\'"
+            a "\"There are plenty of days I'd rather just stay at home in bed. It's tempting in the moment...but when I think about who I want to become, it isn't someone who takes the easy road just 'cause it's gratifying, you know?\""
+            n "\"You want to be someone who's willing to put in the work, even when it's hard.\""
             $ renpy.show(custom_show("maddie", "E"), [])
-            a "\'Exactly. That's what a strong person does. I don't want to be seen as weak just because of my height or because I'm a girl.\'"
+            a "\"Exactly. That's what a strong person does. I don't want to be seen as weak just because of my height or because I'm a girl.\""
             $ renpy.show(custom_show("maddie", "U"), [])
-            a "\'I want to be strong.\'"
-            n "\'So are you almost the person you want to be?\'"
+            a "\"I want to be strong.\""
+            n "\"So are you almost the person you want to be?\""
             $ renpy.show(custom_show("maddie", "S"), [])
-            a "\'I don't know. But I'm a little closer every day.\'"
-            n "\'Well, I don't know if it means anything coming from me, but I've never thought of you as weak.\'"
+            a "\"I don't know. But I'm a little closer every day.\""
+            n "\"Well, I don't know if it means anything coming from me, but I've never thought of you as weak.\""
             $ renpy.show(custom_show("maddie", "H"), [])
-            a "\'Thanks, Sam. Well, I guess I better keep at it then. So you don't change your mind about me.\'"
+            a "\"Thanks, Sam. Well, I guess I better keep at it then. So you don't change your mind about me.\""
 
         jump talking_to_maddie
     else:
         $ renpy.show(custom_show("maddie", "A"), [])
         $ A = A - 1
-        a "\'I'm not really here to make conversation. I just want to focus on my workout, okay?\'"
+        a "\"I'm not really here to make conversation. I just want to focus on my workout, okay?\""
         jump talking_to_maddie
 
 
 label gym_choice_2_c:
     $ k = day_counter
-    n "\'Hey, since we're both here, do you think you could spot me on the bench press?\'"
+    n "\"Hey, since we're both here, do you think you could spot me on the bench press?\""
     $ gym_choice_2_c = True
 
     if A >= A_mid:
         $ A = A + 2
         $ renpy.show(custom_show("maddie", "N"), [])
-        a "\'Yeah, of course!\'"
+        a "\"Yeah, of course!\""
         if workout_counter >= 3:
             "I do three sets, eight reps each." 
             $ renpy.show(custom_show("maddie", "F"), [])
-            a "\'That's really impressive, Sam! Keep it up!\'"
+            a "\"That's really impressive, Sam! Keep it up!\""
             $ A = A + 1 # extra point
 
         elif workout_counter >= 1:
             "I do three sets, five reps each."
             $ renpy.show(custom_show("maddie", "H"), [])
-            a "\'Not bad. Keep it up, Sam!\'" 
+            a "\"Not bad. Keep it up, Sam!\"" 
 
         else:
             $ A = A - 3
             "I do three sets, three reps each."
             $ renpy.show(custom_show("maddie", "U"), [])
-            n "\'You okay? You seem a bit out of breath...\'"
+            n "\"You okay? You seem a bit out of breath...\""
     else:
         $ A = A - 2
         $ renpy.show(custom_show("maddie", "U"), [])
-        a "\'Eh, I think I'll pass. Sorry.\'"
+        a "\"Eh, I think I'll pass. Sorry.\""
     jump talking_to_maddie
 
 
@@ -214,9 +214,9 @@ label gym_choice_2_d:
     $ gym_compliment = True
 
     if gym_comp: 
-        n "\'You look nice today!\'"
+        n "\"You look nice today!\""
         $ renpy.show(custom_show("maddie", "H"), [])
-        a "\'Thanks, Sam!\'"
+        a "\"Thanks, Sam!\""
         jump talking_to_maddie
     else:
         $ gym_comp = True
@@ -235,24 +235,24 @@ label gym_choice_compliment_a:
     menu: 
         "You're really cute":
 
-            n "\'I know this is kind of out of nowhere, but I just wanted to say, I think you're really cute.\'"
+            n "\"I know this is kind of out of nowhere, but I just wanted to say, I think you're really cute.\""
             if A >= A_mid:
                 $ A = A + 1
                 $ renpy.show(custom_show("maddie", "F"), [])
-                a "\'Haha, really? That just gave me a confidence boost. Thanks, Sam.\'"
+                a "\"Haha, really? That just gave me a confidence boost. Thanks, Sam.\""
                 jump talking_to_maddie
             else:
                 $ A = A - 1
                 $ renpy.show(custom_show("maddie", "U"), [])
-                a "\'Um...Okay? Thanks, I guess?\'"
+                a "\"Um...Okay? Thanks, I guess?\""
                 jump talking_to_maddie
 
         "You have a great body":
 
-            n "\'All this working out is really paying off. Your body looks great!\'"
+            n "\"All this working out is really paying off. Your body looks great!\""
             $ A = A - 3
             $ renpy.show(custom_show("maddie", "A"), [])
-            a "\'Sam, that's so weird. Don't say stuff like that, okay?\'"
+            a "\"Sam, that's so weird. Don't say stuff like that, okay?\""
             jump talking_to_maddie
 
 
@@ -262,34 +262,34 @@ label gym_choice_compliment_b:
     menu: 
         "You're really strong!":
             $ A = A + 2
-            n "\'You've nearly maxed out the machine! That's crazy!\'"
+            n "\"You've nearly maxed out the machine! That's crazy!\""
             $ renpy.show(custom_show("maddie", "H"), [])
-            a "\'Really? I guess it is. I sometimes forget how far I've come.\'"
+            a "\"Really? I guess it is. I sometimes forget how far I've come.\""
             jump talking_to_maddie
 
         "I didn't know a girl could lift that much":
-            n "\'Hey, you're pretty strong for a girl.\'"
+            n "\"Hey, you're pretty strong for a girl.\""
             if 3 <= A:
                 $ renpy.show(custom_show("maddie", "A"), [])
-                a "\'And you're pretty annoying. Get lost, weeb.\'"
+                a "\"And you're pretty annoying. Get lost, weeb.\""
             else:
                 $ renpy.show(custom_show("maddie", "U"), [])
-                a "\'You could've just left off the 'for a girl' part...\'"
+                a "\"You could've just left off the 'for a girl' part...\""
             $ A = A - 4
             jump talking_to_maddie
 
         "You're a lot stronger than me":
-            n "\'Oh wow, that's impressive.\'"
+            n "\"Oh wow, that's impressive.\""
             $ renpy.show(custom_show("maddie", "E"), [])
-            a "\'Really?\'"
-            n "\'Yeah!  I can't handle nearly that much weight!\'"
+            a "\"Really?\""
+            n "\"Yeah!  I can't handle nearly that much weight!\""
             if 2 <= A:
                 $ A = A + 1
                 $ renpy.show(custom_show("maddie", "F"), [])
-                a "\'Haha, well, I couldn't always press this much! If you work at it, I bet you could do it too.\'"
+                a "\"Haha, well, I couldn't always press this much! If you work at it, I bet you could do it too.\""
             else:
                 $ renpy.show(custom_show("maddie", "U"), [])
-                a "\'Oh, maybe you just need to work out more then? I don't know what you want me to say...\'"
+                a "\"Oh, maybe you just need to work out more then? I don't know what you want me to say...\""
             jump talking_to_maddie 
 
 
@@ -302,7 +302,7 @@ label gym_1_workout:
     $ A = A + 1
 
     "I work my way through some of the gym equipment, doing three sets for every exercise and moving up in weight when it seems too easy."
-    $  randnotice = renpy.random.choice(['notice', 'or not'])
+    $  randnotice = renpy.random.choice(['notice', 'notice', 'or not'])
     if randnotice == 'notice':
         "I catch Maddie looking in my direction."
         $ renpy.show(custom_show("maddie", "N"), [])
@@ -329,7 +329,7 @@ label gym_1_workout:
                     $ renpy.show(custom_show("maddie", "N"), [])
                     "I wave at Maddie."
                     $ renpy.show(custom_show("maddie", "H"), [])
-                    a "\'Hey, Sam!\'"
+                    a "\"Hey, Sam!\""
                     if A >= A_high: 
                         $ A = A + 1
         $ renpy.hide(custom_hide("maddie"))

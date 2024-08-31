@@ -10,7 +10,10 @@ init offset = -2
 ## width and height of the game.
 init python:
     gui.init(1920, 1080)
-
+    # KIM
+    config.context_fadeout_music = 5
+    config.context_fadein_music = 5
+    config.fadeout_audio = 0.016
 
 
 ################################################################################

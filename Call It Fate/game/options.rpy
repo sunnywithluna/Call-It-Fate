@@ -29,14 +29,21 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""Version 1.0
-Written by Kris Gathman
-Composed by Nick Gathman
-Art by sunnywithluna
-Created by sunnywithluna
-Made with Ren'Py
+define gui.about = _p("""
+Lonely, awkward, and a slave to his impulses, Sam seems to be set on a path of sloth-like destruction. Though discontent with his circumstances, he can never seem to improve the areas of his life that most need it.
+
+But opportunities for growth soon arise when he takes a philosophy course and meets three girls who could play a part in altering the trajectory of his life.
+
+And who knows? Maybe he'll find love along the way.
 """)
 
+# Jang Jang Productions
+
+# Writer: Kris Gathman
+
+# Programmer & Artist: Kim Jang
+
+# Composer: Nicholas Gathman
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
@@ -76,15 +83,21 @@ define config.main_menu_music = "audio/free.mp3"
 ## Each variable should be set to a transition, or None to indicate that no
 ## transition should be used.
 
+## Used when entering the game menu from the main menu.
+define config.main_game_transition = Dissolve(0.5)
+
+## Used when returning to the main menu from the game.
+define config.game_main_transition = Dissolve(0.5)
+
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define config.enter_transition = Dissolve(0.5)
+define config.exit_transition = Dissolve(0.5)
 
 
 ## Between screens of the game menu.
 
-define config.intra_transition = dissolve
+define config.intra_transition = pixellate
 
 
 ## A transition that is used after a game has been loaded.
@@ -94,10 +107,10 @@ define config.after_load_transition = pixellate
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = dissolve
+define config.end_game_transition = Dissolve(2.0)
 
 ## Used when entering main menu after splash screen
-define config.end_splash_transition = dissolve
+define config.end_splash_transition = Dissolve(1.0)
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
@@ -120,7 +133,6 @@ define config.window = "auto"
 
 define config.window_show_transition = Dissolve(.2)
 define config.window_hide_transition = Dissolve(.2)
-
 
 ## Preference defaults #########################################################
 

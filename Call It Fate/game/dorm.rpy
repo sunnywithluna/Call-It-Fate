@@ -19,7 +19,11 @@ label act1_scene0_menu1:
         "Talk to Neko-Chan." if not act1_scene0_menu1_option2:
             jump act1_scene0_menu1_option2
         "Head out." if act1_scene0_menu1_option1:
-            jump act1_scene0_menu1_option3
+            scene bg_room_aa with dissolve
+            show neko
+            n "\"Well, I better get going. Wish me luck, Neko-Chan!\""
+            nc "\"...\""
+            jump act1_scene1
 
 
 label act1_scene0_menu1_option1:
@@ -29,16 +33,20 @@ label act1_scene0_menu1_option1:
         "Sleek hoodie with joggers and white sneakers":
             "I bought these when I thought I'd start working out. It's ironic how well these clothes hide my lack of muscle definition."
             $ A = A + 1
-        "Short-sleeved button down shirt with cuffed jeans and loafers":
+        "Short-sleeved button-down shirt with cuffed jeans and loafers":
             "I wish I was sophisticated enough to pull off this look."
             $ B = B + 1
-        "Bold colorblock shirt tucked into tapered pants and boots":
+        "Bold color block shirt tucked into tapered pants and boots":
             "I've always admired really expressive outfits, but I've never been brave enough to actually wear this before now."
             $ C = C + 1
         "Neko-Chan graphic tee with sweatpants and sandals":
             "There's nothing like being comfortable. Now if only I could find my fedora, that would really complete this outfit."
     if act1_scene0_menu1_option2b:
-        jump act1_scene0_menu1_option3
+        scene bg_room_aa with dissolve
+        show neko
+        n "\"Well, I better get going. Wish me luck, Neko-Chan!\""
+        nc "\"...\""
+        jump act1_scene1
     else:
         jump act1_scene0_menu1
 
@@ -50,14 +58,14 @@ label act1_scene0_menu1_option2:
     $ act1_scene0_menu1_option2 = True
     menu: 
         "Confide in Neko-Chan.":
-            n "\'Hey, Neko-Chan. I'm kind of nervous about this class.\'"
-            n "\'It seems like a lot of work, and I don't know if I can handle it all.\'"
-            n "\'This is going to be a rough few weeks, isn't it?\'"
-            nc "\'...\'"
-            n "\'The only thing that could make this class even slightly bearable would be meeting a cute girl, but we both know how unlikely that is.\'"
-            n "\'Not that I'd ever be able to find a girl better than you, Neko-Chan.\'"
-            n "\'You were drawn with proportions real women need surgery to achieve.\'"
-            nc "\'...\'"
+            n "\"Hey, Neko-Chan. I'm kind of nervous about this class.\""
+            n "\"It seems like a lot of work, and I don't know if I can handle it all.\""
+            n "\"This is going to be a rough few weeks, isn't it?\""
+            nc "\"...\""
+            n "\"The only thing that could make this class even slightly bearable would be meeting a cute girl, but we both know how unlikely that is.\""
+            n "\"Not that I'd ever be able to find a girl better than you, Neko-Chan.\""
+            n "\"You were drawn with proportions real women need surgery to achieve.\""
+            nc "\"...\""
             hide neko
             scene bg_room_a with dissolve
             jump act1_scene0_menu1
@@ -65,18 +73,13 @@ label act1_scene0_menu1_option2:
             $ act1_scene0_menu1_option2b = True
             if not act1_scene0_menu1_option1:
                 "I should get dressed first..."
+                hide neko
+                scene bg_room_a with dissolve
                 jump act1_scene0_menu1_option1
             else:
-                jump act1_scene0_menu1_option3
-
-
-label act1_scene0_menu1_option3:
-    scene bg_room_aa with dissolve
-    show neko
-    n "\'Well, I better get going. Wish me luck, Neko-Chan!\'"
-    nc "\'...\'"
-    jump act1_scene1
-
+                n "\"Well, I better get going. Wish me luck, Neko-Chan!\""
+                nc "\"...\""
+                jump act1_scene1
 
 label end_of_act:
     scene bg_school_transition_b with longfade
@@ -304,35 +307,35 @@ label end_of_act_menu1_option3:
             jump end_of_act_menu1 
     
     if love_points <= 0:
-        n "\'I'm glad I get to come home to you, Neko-Chan. My day wasn't so great. I think [love_interest] really doesn't like me very much. I wonder what I did wrong...\'"
-        nc "\'...\'"
+        n "\"I'm glad I get to come home to you, Neko-Chan. My day wasn't so great. I think [love_interest] really doesn't like me very much. I wonder what I did wrong...\""
+        nc "\"...\""
 
     elif 0 < love_points <= 3:
-        n "\'Hey, Neko-Chan. Today was alright, but I would've stayed home with you if I could. [love_interest] is pretty cool. Not that she thinks of me in that way...Why don't girls ever like me...\'"
-        nc "\'...\'"
+        n "\"Hey, Neko-Chan. Today was alright, but I would've stayed home with you if I could. [love_interest] is pretty cool. Not that she thinks of me in that way...Why don't girls ever like me...\""
+        nc "\"...\""
 
     elif 3 < love_points <= 6:
-        n "\'Today wasn't so bad...I wonder what [love_interest] is doing right now.\'"
-        nc "\'...\'"
+        n "\"Today wasn't so bad...I wonder what [love_interest] is doing right now.\""
+        nc "\"...\""
 
     elif 6 < love_points <= 9:
-        n "\'It was a pretty good day, Neko-Chan. [love_interest] and I are really hitting it off I think.\'"
-        nc "\'...\'"
+        n "\"It was a pretty good day, Neko-Chan. [love_interest] and I are really hitting it off I think.\""
+        nc "\"...\""
 
     elif 9 < love_points <= 12:
-        n "\'I woke feeling kind of off this morning, but getting to see [love_interest] completely turned my day around.\'"
-        nc "\'...\'"
+        n "\"I woke feeling kind of off this morning, but getting to see [love_interest] completely turned my day around.\""
+        nc "\"...\""
 
     elif 12 < love_points <= 15:
-        n "\'I had a great day, Neko-Chan! I think [love_interest] might even like me. Who knows? Maybe I'll finally get a girlfriend.\'"
-        nc "\'...\'"
-        n "\'Don't look at me like that. You knew what this was.\'" 
+        n "\"I had a great day, Neko-Chan! I think [love_interest] might even like me. Who knows? Maybe I'll finally get a girlfriend.\""
+        nc "\"...\""
+        n "\"Don't look at me like that. You knew what this was.\"" 
 
     else:
-        n "\'I'm sorry, Neko-Chan, but if this thing with [love_interest] and me is going to work, I think you and I should stop talking.\'"
-        nc "\'...\'"
-        n "\'I've never felt this way about anyone before...And I want to give a real relationship a shot.\'" 
-        nc "\'...\'"
+        n "\"I'm sorry, Neko-Chan, but if this thing with [love_interest] and me is going to work, I think you and I should stop talking.\""
+        nc "\"...\""
+        n "\"I've never felt this way about anyone before...And I want to give a real relationship a shot.\"" 
+        nc "\"...\""
     
     hide neko
     scene bg_room_b with dissolve
@@ -343,7 +346,7 @@ label end_of_act_menu1_option4:
     $ end_of_act_menu1_flag4 = True
 
     if not phoneFlagA and not phoneFlagB and not phoneFlagC:
-        n "\'Oh, it looks like I don't have anyone to text...\'"
+        n "\"Oh, it looks like I don't have anyone to text...\""
         jump end_of_act_menu1 
     else:
         "Who should I text?"
@@ -363,7 +366,6 @@ label end_of_act_menu1_option5:
 
 label act1_scene3:
     scene bg_school_transition_a with dissolve
-    play sound "audio/morning.mp3"
     with Pause (2)
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -376,17 +378,17 @@ label act1_scene3:
         if eventADateFlag:
             $ temp = day_counter
             $ temp_usage = True
-            $ day_counter = 10
+            $ day_counter = 100
             jump eventADate
         elif eventBDateFlag:
             $ temp = day_counter
             $ temp_usage = True
-            $ day_counter = 10
+            $ day_counter = 100
             jump eventBDate 
         elif eventCDateFlag:
             $ temp = day_counter
             $ temp_usage = True
-            $ day_counter = 10
+            $ day_counter = 100
             jump eventCDate
 
     else: 
@@ -397,7 +399,6 @@ label act1_scene3:
 
 label act2_scene3:
     scene bg_school_transition_a with dissolve
-    play sound "audio/morning.mp3"
     with Pause (2)
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -410,17 +411,17 @@ label act2_scene3:
         if eventADateFlag:
             $ temp = day_counter
             $ temp_usage = True
-            $ day_counter = 10
+            $ day_counter = 100
             jump eventADate
         elif eventBDateFlag:
             $ temp = day_counter
             $ temp_usage = True
-            $ day_counter = 10
+            $ day_counter = 100
             jump eventBDate 
         elif eventCDateFlag:
             $ temp = day_counter
             $ temp_usage = True
-            $ day_counter = 10
+            $ day_counter = 100
             jump eventCDate
 
     else: 
@@ -431,7 +432,6 @@ label act2_scene3:
 
 label act3_scene1:
     scene bg_school_transition_a with dissolve
-    play sound "audio/morning.mp3"
     with Pause (2)
     scene bg_room_a with dissolve
     play music "audio/dorm.mp3" fadein 1.0
@@ -441,7 +441,7 @@ label act3_scene1:
     scene black with fade
     "When I wake up again, it's 3:30pm."
     scene bg_room_b with dissolve
-    n "\'Man, I can't believe I slept through the afternoon...\'"
+    n "\"Man, I can't believe I slept through the afternoon...\""
     "I put a palm to my forehead--it's a little warm. All around me are laundry and dishes that need cleaning, and I wonder how my dorm got so out of hand. Lying there in bed, I feel equally like a part of the mess."
     "What should I do?"
     menu: 
@@ -514,28 +514,28 @@ label event_ending_decision2_decision:
             $ endingAFlag_Attempt = True
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
-            n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
+            n "\"Hey, there's something I want to talk with you about. Do you think we could meet up?\""
             "After a few minutes, my phone chimes and a response from Maddie shows on the screen."
-            a "\'Sounds serious. :o When did you want to meet?\'"
-            "I type \'Meet me on top of the library, at sunset\' and hit send."
+            a "\"Sounds serious. :o When did you want to meet?\""
+            "I type \"Meet me on top of the library, at sunset\" and hit send."
             jump event_ending_decision2
         "Confess feelings to Anna" if phoneFlagB:
             $ endingBFlag_Attempt = True
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
-            n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
+            n "\"Hey, there's something I want to talk with you about. Do you think we could meet up?\""
             "After a few minutes, my phone chimes and a response from Anna shows on the screen."
-            b "\'We can do that. Give me a time and place, and I'll be there.\'"
-            "I type \'Meet me on top of the library, at sunset\' and hit send."
+            b "\"We can do that. Give me a time and place, and I'll be there.\""
+            "I type \"Meet me on top of the library, at sunset\" and hit send."
             jump event_ending_decision2
         "Confess feelings to Erin" if phoneFlagC:
             $ endingCFlag_Attempt = True
             "I can't just tell her something like that over text. It should be in person."
             "So I write and send a message that reads:"
-            n "\'Hey, there's something I want to talk with you about. Do you think we could meet up?\'"
+            n "\"Hey, there's something I want to talk with you about. Do you think we could meet up?\""
             "After a few minutes, my phone chimes and a response from Erin shows on the screen."
-            c "\'Is everything okay?? We can talk. Where should I meet you?\'"
-            "I type \'Meet me on top of the library, at sunset\' and hit send."
+            c "\"Is everything okay?? We can talk. Where should I meet you?\""
+            "I type \"Meet me on top of the library, at sunset\" and hit send."
             jump event_ending_decision2
         "I have nothing to say":
             "I think some people might see my life and assume I'm lonely. But I'm actually okay."
@@ -550,8 +550,8 @@ label event_ending_decision2_decision:
             
 
 label event_ending_decision2:
-    scene bg_room_b with dissolve
-    play music "audio/event.mp3" fadein 1.0
+    # scene bg_room_b with dissolve
+    # play music "audio/event.mp3" fadein 1.0
 
     "I take a deep breath."
     "I don't know much about this kind of thing, but if I'm really going to do this, I feel like I should bring a gift. Luckily, I have a couple hours before dusk to get something."
@@ -562,9 +562,9 @@ label event_ending_decision2:
         "A potted succulent":
             $ maddie_gift = True
             "I swing by the local nursery and pick up a succulent before heading back to campus."
-        "A venus fly trap":
+        "A Venus flytrap":
             $ anna_gift = True
-            "I grab a venus fly trap at a pet shop before heading back to campus."
+            "I grab a Venus flytrap at a pet shop before heading back to campus."
         "A bouquet of sunflowers":
             $ erin_gift = True
             "I pick up a bouquet of sunflowers from a flower shop before heading back to campus."
@@ -581,9 +581,10 @@ label event_ending_decision2:
 
 label event_calculation_a:
     # day_counter calculation for outfits
+    stop music fadeout 1.0
+    play sound "audio/night.mp3"
     if eventADateCompletedFlag and eventADateToday:
         scene bg_room_c with longfade
-        play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
         $ day_counter = temp
         $ temp_usage = False
@@ -591,7 +592,6 @@ label event_calculation_a:
         $ calendar_days_skipped = 2
     elif eventBDateCompletedFlag and eventBDateToday:
         scene bg_room_c with longfade
-        play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
         $ day_counter = temp
         $ temp_usage = False
@@ -599,7 +599,6 @@ label event_calculation_a:
         $ calendar_days_skipped = 2
     elif eventCDateCompletedFlag and eventCDateToday:
         scene bg_room_c with longfade
-        play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
         $ day_counter = temp
         $ temp_usage = False
@@ -607,7 +606,6 @@ label event_calculation_a:
         $ calendar_days_skipped = 2
     elif eventAHangCompletedFlag and eventAHangToday:
         scene bg_room_c with longfade
-        play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
         $ day_counter = temp
         $ temp_usage = False
@@ -618,7 +616,6 @@ label event_calculation_a:
             $ calendar_days_skipped = 1
     elif eventBHangCompletedFlag and eventBHangToday:
         scene bg_room_c with longfade
-        play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
         $ day_counter = temp
         $ temp_usage = False
@@ -629,7 +626,6 @@ label event_calculation_a:
             $ calendar_days_skipped = 1
     elif eventCHangCompletedFlag and eventCHangToday:
         scene bg_room_c with longfade
-        play music "audio/dorm.mp3"
         "I get ready for bed after a long day."
         $ day_counter = temp
         $ temp_usage = False
@@ -651,7 +647,6 @@ label event_calculation_a:
 
     stop music fadeout 1.0
     scene black with longfade
-    play sound "audio/night.mp3"
 
     jump calendarAnimation_1
 

@@ -1,4 +1,4 @@
-Wed Aug 21 09:58:13 2024
+Fri Aug 30 15:12:46 2024
 Windows-10-10.0.22631
 Ren'Py 8.1.3.23091805
  
@@ -7,17 +7,4800 @@ Bootstrap to the start of init.init. took 0.03s
 Early init. took 0.01s
 Loader init. took 0.05s
 Loading error handling. took 0.03s
+Loading script. took 0.14s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 191.77s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.03s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 278.90s
+Early init. took 0.00s
+Loader init. took 0.06s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/main scenes.rpy", line 120, in script
+    "Dr. Paige lectures for the remainder of the class period and then dismisses us for the day."
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1003, in do_display
+    display_say(who,
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 4379, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1224, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1202, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1144, in periodic_pass
+    c.periodic()
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'audio/after_schools.mp3'.
+
+While running game code:
+  File "game/main scenes.rpy", line 120, in script
+    "Dr. Paige lectures for the remainder of the class period and then dismisses us for the day."
+OSError: Couldn't find file 'audio/after_schools.mp3'.
+Resetting cache.
+Bootstrap to the start of init.init. took 288.66s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 635.40s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.24s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 658.48s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.25s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 811.03s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 846.22s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 928.33s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 933.21s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1006.15s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1181.70s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1321.59s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1360.23s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.16s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1528.21s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.16s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1542.17s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1610.70s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.32s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1639.76s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.16s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1784.58s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1836.74s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1861.32s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.03s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1902.64s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 2012.44s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 2461.02s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 2511.27s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.25s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 2744.84s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 2796.66s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 2818.19s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 3128.94s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.24s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 3809.92s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 3822.39s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4031.03s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4126.75s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 4178.64s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4299.65s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4388.18s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.16s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4417.29s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4527.27s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.25s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4648.85s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
 Loading script. took 0.20s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
 
-File "game/screens.rpy", line 305: 'with' is not a keyword argument or valid child of the textbutton statement.
-    textbutton _("Start") action Start() with pixellate
-                                             ^
+File "game/anna.rpy", line 419: invalid syntax
+    renpy.show(custom_show("anna", "H"), [trueleft]) with dissolve
+                                                      ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Interface start. took 0.33s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4745.37s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.06s
+Loading script. took 0.91s
+Loading save slot metadata. took 0.17s
+Loading persistent. took 0.00s
+Running init code. took 0.14s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.11s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/anna.rpy", line 419, in script
+    $ renpy.show(custom_show("anna", "H"), [trueleft], atl="dissolve")
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/anna.rpy", line 419, in <module>
+    $ renpy.show(custom_show("anna", "H"), [trueleft], atl="dissolve")
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 759, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 1280, in add
+    thing.visit_all(lambda d : None)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 674, in visit_all
+    for d in self.visit():
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\atl.py", line 636, in visit
+    block = self.compile()
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\atl.py", line 520, in compile
+    constant = (self.atl.constant == GLOBAL_CONST)
+AttributeError: 'str' object has no attribute 'constant'
+
+While running game code:
+  File "game/anna.rpy", line 419, in script
+    $ renpy.show(custom_show("anna", "H"), [trueleft], atl="dissolve")
+  File "game/anna.rpy", line 419, in <module>
+    $ renpy.show(custom_show("anna", "H"), [trueleft], atl="dissolve")
+AttributeError: 'str' object has no attribute 'constant'
+Resetting cache.
+Bootstrap to the start of init.init. took 4815.08s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4835.08s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4844.48s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4856.90s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4881.52s
+Early init. took 0.00s
+Loader init. took 0.06s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4904.62s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 4980.65s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5034.31s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5064.91s
+Early init. took 0.00s
+Loader init. took 0.07s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5084.97s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5092.93s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5219.52s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5259.37s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5288.83s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5371.99s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5381.36s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5481.61s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5529.23s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5535.64s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5540.51s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5613.97s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.66s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5646.14s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.19s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5661.59s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5663.39s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5665.23s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.07s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5676.14s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5685.58s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5702.55s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5711.95s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.25s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5713.75s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5715.56s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5823.42s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5857.08s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.25s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5890.66s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 5951.96s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5977.90s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 6196.58s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/library.rpy", line 292, in script
+    $ renpy.hide(custom_show("anna"))
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kim\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/library.rpy", line 292, in <module>
+    $ renpy.hide(custom_show("anna"))
+TypeError: custom_show() missing 1 required positional argument: 'emotion'
+
+While running game code:
+  File "game/library.rpy", line 292, in script
+    $ renpy.hide(custom_show("anna"))
+  File "game/library.rpy", line 292, in <module>
+    $ renpy.hide(custom_show("anna"))
+TypeError: custom_show() missing 1 required positional argument: 'emotion'
+Resetting cache.
+Bootstrap to the start of init.init. took 6415.88s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 6484.96s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 6610.11s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 6891.73s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.24s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 6904.14s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 6943.87s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7027.51s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7196.66s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7359.37s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7451.04s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7474.26s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7548.81s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 7726.97s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7929.07s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7946.19s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 7974.67s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8014.45s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8167.45s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8313.80s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.24s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8455.73s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8484.82s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8625.90s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 8802.00s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 8932.81s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 9033.83s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 9155.64s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 9160.51s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.07s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 531.29'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3440, 1369) drawable=(3440, 1369)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 9162.31s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kim\\AppData\\Roaming/RenPy/backups\\Call It Fate':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3440, 1440)

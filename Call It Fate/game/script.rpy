@@ -12,6 +12,14 @@ define persistent.endingCFlag = False
 define persistent.titleScreenCounter = 0
 
 init:
+    # This is actually done in gui.rpy instead
+    # $ config.screen_width = 1920
+    # $ config.screen_height = 1080
+    # $ config.window_title = "Call it Fate"
+
+    # KIM - Set to false before release
+    $ config.developer = True
+
     image neko = Image('emote_neko_11.png')
     image jennifer = Image('emote_jenn_11.PNG')    
     image jennifer2 = Image('emote_jenn_12.PNG')    
@@ -182,12 +190,10 @@ default kk = 0
 default iii = 0
 default jjj = 0
 default kkk = 0
-default special_A = 5
-default special_B = 5
-default special_C = 5
 default class_score = 0
 default end_of_act_menu1_flag1_counter = 0
 default temp = 0
+default randnotice = None
 # default A_bad = 0
 # default A_low = 5
 # default A_mid = 10
@@ -199,27 +205,34 @@ default temp = 0
 default A_bad = 0
 default A_low = 6
 default A_mid = 11
-default A_mid2 = 13
-default A_mid3 = 18
-default A_high = 20
-default A_high2 = 25
-default A_high3 = 35
+default A_mid1 = 14
+default A_mid2 = 17
+default A_mid3 = 22
+default A_high = 24
+default A_high2 = 29
+default A_high3 = 39
+# lowering everything by 2 but then im adding everything the high stuff by 4 because i'm allowing u to get points just for visiting the library and stuff
 default B_bad = 0
-default B_low = 5
-default B_mid = 10
-default B_mid2 = 15
-default B_mid3 = 20
-default B_high = 25
-default B_high2 = 30
-default B_high3 = 35
+default B_low = 3
+default B_mid = 8
+default B_mid1 = 14
+default B_mid2 = 17
+default B_mid3 = 22
+default B_high = 27
+default B_high2 = 32
+default B_high3 = 37
 default C_bad = 0
 default C_low = 5
 default C_mid = 10
-default C_mid2 = 15
-default C_mid3 = 20
-default C_high = 25
-default C_high2 = 30
-default C_high3 = 35
+default C_mid1 = 16
+default C_mid2 = 19
+default C_mid3 = 24
+default C_high = 29
+default C_high2 = 34
+default C_high3 = 39
+default special_A = A_mid+2
+default special_B = B_mid+2
+default special_C = C_mid+2
 default neko_counter = 0
 default calendar_days_skipped = 0
 # DELETE default love_points = 'K'
@@ -330,19 +343,19 @@ define longfade = Fade(2.0, 1.0, 2.0)
 init python:
 
     def custom_show(person, emotion):
-        if day_counter == 1:
+        if day_counter == 1 or day_counter == 5 or day_counter == 11 or day_counter == 14 or day_counter == 18:
             str_out = person + '_1 ' + emotion
             return str_out
-        elif day_counter == 2:
+        elif day_counter == 2 or day_counter == 6 or day_counter == 10 or day_counter == 15 or day_counter == 19:
             str_out = person + '_2 ' + emotion
             return str_out
-        elif day_counter == 3:
+        elif day_counter == 3 or day_counter == 8 or day_counter == 12 or day_counter == 13 or day_counter == 17:
             str_out = person + '_3 ' + emotion
             return str_out
-        elif day_counter == 4:
+        elif day_counter == 4 or day_counter == 7 or day_counter == 9 or day_counter == 16 or day_counter == 20:
             str_out = person + '_4 ' + emotion
             return str_out
-        elif day_counter == 10:
+        elif day_counter == 100:
             str_out = person + '_5 ' + emotion
             return str_out
         else: 
@@ -351,19 +364,19 @@ init python:
 
 
     def custom_hide(person):
-        if day_counter == 1:
+        if day_counter == 1 or day_counter == 5 or day_counter == 11 or day_counter == 14 or day_counter == 18:
             str_out = person + '_1 '
             return str_out
-        elif day_counter == 2:
+        elif day_counter == 2 or day_counter == 6 or day_counter == 10 or day_counter == 15 or day_counter == 19:
             str_out = person + '_2 '
             return str_out
-        elif day_counter == 3:
+        elif day_counter == 3 or day_counter == 8 or day_counter == 12 or day_counter == 13 or day_counter == 17:
             str_out = person + '_3 '
             return str_out
-        elif day_counter == 4:
+        elif day_counter == 4 or day_counter == 7 or day_counter == 9 or day_counter == 16 or day_counter == 20:
             str_out = person + '_4 '
             return str_out
-        elif day_counter == 10:
+        elif day_counter == 100:
             str_out = person + '_5 '
             return str_out
         else: 
@@ -372,8 +385,8 @@ init python:
 
 
 label splashscreen:
-
-    play music 'audio/end.mp3' fadein 1.0
+    # Kim define config.main_menu_music = "audio/free.mp3"
+    play music 'audio/free.mp3' fadein 1.0
 
     scene black
     with Pause(1)
@@ -406,8 +419,11 @@ label splashscreen:
 
 
 label start:
+    # play sound "audio/morning.mp3"
+    $_dismiss_pause = False
     scene bg_room_a
-    play sound "audio/morning.mp3"
+    with Dissolve (1.0)
+    # with dissolve has to be on next line or it glitches
     play music "audio/dorm.mp3" fadein 1.0
     "It's the first day of my summer session class, and I'm only now looking at the syllabus."
     "My professor sent it a few weeks back before the spring semester had ended, but now is the first time I'm realizing what three months of work looks like crammed into three weeks."
