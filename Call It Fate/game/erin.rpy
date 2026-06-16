@@ -207,9 +207,10 @@ label eventCDate:
 
                 "I lean in."
                 "And our lips meet."
+                scene bg_after_date with dissolve
+
                 c "\"So, I'll see you in class?\""
                 n "\"Yeah, I'll see you then.\""
-                scene event_kiss_c with dissolve
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
                 jump event_calculation_a
@@ -336,11 +337,12 @@ label actC_scene3:
                 c "\"Yeah! That'd be fun.\""
                 $ renpy.show(custom_show("erin", "A"), [])
                 c "\"Oh but...I should let you rest then! Or you won't heal in time for our date.\""
-                $ renpy.hide(custom_hide("erin"))
-                scene event_sick_c with dissolve
+                # $ renpy.hide(custom_hide("erin"))
+                # scene event_sick_c with dissolve
                 "While leaving my room, she hesitates by the doorway."
                 c "\"I'm glad we talked, Sam. Rest up, okay?\""
-                scene bg_room_b with dissolve
+                $ renpy.show(custom_show("erin", "H"), [])
+                # scene bg_room_b with dissolve
                 "Erin closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Erin would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
@@ -354,11 +356,12 @@ label actC_scene3:
                 c "\"Sam!\""
                 "Erin grabs me as I almost fall to the ground."
                 "I know I need to respond to her confession, but my head hurts so much..."
-                $ renpy.hide(custom_hide("erin"))
-                scene event_sick_c with dissolve
+                # $ renpy.hide(custom_hide("erin"))
+                # scene event_sick_c with dissolve
                 "While leaving my room, she hesitates by the doorway."
                 c "\"I'll head out...let's talk later okay?\""
-                scene bg_room_b with dissolve
+                $ renpy.show(custom_show("erin", "N"), [])
+                # scene bg_room_b with dissolve
                 "She heads out, closing the door behind her before I have a chance to say anything else."
                 $ renpy.hide(custom_hide("erin"))
                 n "\"Erin...\""

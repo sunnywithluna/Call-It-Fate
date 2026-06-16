@@ -249,7 +249,7 @@ label eventADate:
                 $ A = A + 1
                 "I lean in."
                 "And our lips meet."
-                scene event_kiss_a with dissolve
+                scene bg_after_date with dissolve
 
                 a "\"Bye, Sam.\""
                 "She gets in her car and drives away."
@@ -368,10 +368,11 @@ label actA_scene3:
                 a "\"Sam!\""
                 "Maddie grabs me as I almost fall to the ground."
                 a "\"I'm sorry. I should go so you can rest.\""
-                scene event_sick_a with dissolve
+                # scene event_sick_a with dissolve
                 "While leaving my room, she hesitates by the doorway."
+                $ renpy.show(custom_show("maddie", "H"), [])
                 a "\"Call me later, okay? When you're feeling better.\""
-                scene bg_room_b with dissolve
+                # scene bg_room_b with dissolve
                 "Maddie closes the door behind her, and I'm left standing in the middle of my dorm, wishing my headache away so I could go after her and ask her to stay a little longer."
                 "But spending time with Maddie would have to wait."
                 "The second I lie down in my bed, I'm already drifting back to sleep."
@@ -386,10 +387,11 @@ label actA_scene3:
                 a "\"Sam!\""
                 "Maddie grabs me as I almost fall to the ground."
                 a "\"I'm sorry. I should go so you can rest.\""
-                scene event_sick_a with dissolve
+                # scene event_sick_a with dissolve
                 "While leaving my room, she hesitates by the doorway."
+                $ renpy.show(custom_show("maddie", "N"), [])
                 a "\"Call me later, okay? When you're feeling better.\""
-                scene bg_room_b with dissolve
+                # scene bg_room_b with dissolve
                 "She rushes out, closing the door behind her before I have a chance to say anything else."
     else: 
         $ renpy.show(custom_show("maddie", "U"), [])

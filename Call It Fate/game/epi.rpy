@@ -28,9 +28,9 @@ label epilogueScene:
 
 
 label epi_maddie:
-    scene event_epi_a with dissolve
+    scene bg_room_outside_a with dissolve
     "Standing outside is Maddie, holding up a large plastic bag in her hand."
-
+    $ renpy.show(custom_show("maddie", "N"), []) 
     a "\"Ready for lunch?\""
 
     n "\"Oh, wow, you didn't have to do that.\""
@@ -103,6 +103,7 @@ label epi_maddie:
 
 
 label epi_anna:
+    scene bg_room_outside_a with dissolve
 
     $ renpy.show(custom_show("anna", "N"), [])
 
@@ -204,6 +205,8 @@ label epi_anna:
 
 
 label epi_erin:
+    scene bg_room_outside_a with dissolve
+
     "Standing outside is Erin, holding up a large plastic bag in her hand."
     $ renpy.show(custom_show("erin", "N"), [])
 
@@ -268,53 +271,86 @@ label credits_1:
 
     if endingAFlag:
         $ persistent.endingAFlag = True
-        # scene black with fade
-        # play music "audio/rooftop.mp3" fadein 1.0
+        scene black with fade
+        play music "audio/rooftop.mp3" fadein 1.0
         
-        # scene credits_a_1 with dissolve
-        # with Pause(3)
+        scene credits_a_1 with dissolve
+        with Pause(3)
 
-        # show credits_a_2 with dissolve
-        # with Pause(3)
+        show credits_a_2 with dissolve
+        with Pause(3)
 
-        # show credits_a_3 with dissolve
-        # with Pause(3)
+        show credits_a_3 with dissolve
+        with Pause(3)
 
-        # show credits_a_4 with dissolve
-        # with Pause(3)
-
-        # show credits_a_5 with dissolve
-        # with Pause(3)
-
-        # show credits_a_6 with dissolve
-        # with Pause(3)
-
-        # show credits_a_7 with dissolve
-        # with Pause(4)
+        show credits_a_4 with dissolve
+        with Pause(3)
 
     elif endingBFlag:
         $ persistent.endingBFlag = True
         scene black with fade
-        # play music "audio/rooftop.mp3" fadein 1.0
-        # "ended up with anna"
-        # "Kim Jang Kris Gathman Nick Gathman Etc"
+        play music "audio/rooftop.mp3" fadein 1.0
+        
+        scene credits_b_1 with dissolve
+        with Pause(3)
+
+        show credits_b_2 with dissolve
+        with Pause(3)
+
+        show credits_b_3 with dissolve
+        with Pause(3)
+
+        show credits_b_4 with dissolve
+        with Pause(3)
+
     elif endingCFlag:
         $ persistent.endingCFlag = True
         scene black with fade
-        # play music "audio/rooftop.mp3" fadein 1.0
-        # "ended up with erin"
-        # "Kim Jang Kris Gathman Nick Gathman Etc"
+        play music "audio/rooftop.mp3" fadein 1.0
+        
+        scene credits_c_1 with dissolve
+        with Pause(3)
+
+        show credits_c_2 with dissolve
+        with Pause(3)
+
+        show credits_c_3 with dissolve
+        with Pause(3)
+
+        show credits_c_4 with dissolve
+        with Pause(3)
+
     elif nekochan:
-        $ persistent.d_ending_success = True
         scene black with fade
-        # play music "audio/rooftop.mp3" fadein 1.0
-        # "ended up with neko"
-        # "Kim Jang Kris Gathman Nick Gathman Etc"
+        play music "audio/rooftop.mp3" fadein 1.0
+        
+        scene credits_d_1 with dissolve
+        with Pause(3)
+
+        show credits_d_2 with dissolve
+        with Pause(3)
+
+        show credits_d_3 with dissolve
+        with Pause(3)
+
+        show credits_d_4 with dissolve
+        with Pause(3)
+
     else:
         scene black with fade
-        # play music "audio/end.mp3" fadein 1.0
-        # "You somehow didn't end up with anyone"
-        # "Kim Jang Kris Gathman Nick Gathman Etc"
+        play music "audio/rooftop.mp3" fadein 1.0
+        
+        scene credits_d_1 with dissolve
+        with Pause(3)
+
+        show credits_d_2 with dissolve
+        with Pause(3)
+
+        show credits_d_3 with dissolve
+        with Pause(3)
+
+        show credits_d_4 with dissolve
+        with Pause(3)
     
     jump persistent_check
 
