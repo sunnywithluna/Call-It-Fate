@@ -223,7 +223,6 @@ label eventBDate:
                 "I lean in."
                 "And our lips meet."
                 scene bg_after_date with dissolve
-
                 "Smiling, she gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
                 jump event_calculation_a

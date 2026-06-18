@@ -17,8 +17,6 @@ label epilogueScene:
         "I let out a tired sigh. I guess I'll just have to retake the class next year..."
 
     "A knock at my door pulls me away from my computer."
-    scene bg_room_outside_a with dissolve
-
     if endingAFlag:
         jump epi_maddie
     if endingBFlag:
@@ -29,12 +27,11 @@ label epilogueScene:
 
 label epi_maddie:
     scene bg_room_outside_a with dissolve
-    "Standing outside is Maddie, holding up a large plastic bag in her hand."
     $ renpy.show(custom_show("maddie", "N"), []) 
+    "Standing outside is Maddie, holding up a large plastic bag in her hand."
     a "\"Ready for lunch?\""
 
     n "\"Oh, wow, you didn't have to do that.\""
-    scene bg_room_outside_a with dissolve
 
     $ renpy.show(custom_show("maddie", "H"), []) 
     a "\"I know, I wanted to.\""
@@ -206,9 +203,9 @@ label epi_anna:
 
 label epi_erin:
     scene bg_room_outside_a with dissolve
+    $ renpy.show(custom_show("erin", "N"), [])
 
     "Standing outside is Erin, holding up a large plastic bag in her hand."
-    $ renpy.show(custom_show("erin", "N"), [])
 
     c "\"I thought I'd surprise you with lunch today.\""
 
@@ -220,7 +217,7 @@ label epi_erin:
     scene bg_room_a with dissolve
 
     n "\"Did you check your Philosophy grade yet?\""
-    $ renpy.show(custom_show("erin", "surprised"), [])
+    $ renpy.show(custom_show("erin", "S"), [])
 
     c "\"Are they posted?\""
 
@@ -231,7 +228,9 @@ label epi_erin:
 
     c "\"I'll check later. I took the class and tried my best. So, I give myself an 'A+' for effort.\""
     n "\"Yeah, but don't you want to know…the actual grade?\""
+    $ renpy.show(custom_show("erin", "A"), [])
     c "\"I don't think I have to be too worried. I finished my homework every night and studied even when I didn't feel like it. That's enough, right?\""
+    $ renpy.show(custom_show("erin", "N"), [])
     c "\"There's this quote I heard once, \'Until you make the unconscious conscious, it will direct your life and you will call it fate.\'\""
 
     n "\"Make the unconscious conscious?\""
@@ -356,17 +355,6 @@ label credits_1:
 
 
 label persistent_check:
-    # current credit test
-    scene black with fade
-    show text "Credits" with dissolve
-
-    $ renpy.pause(2.0)
-    show text "Writer: Kris Gathman\n\nProgrammer & Artist: Kim Jang\n\nComposer: Nicholas Gathman"
-
-    $ renpy.pause(4.0)
-    show text "Thank you for playing Call it Fate\n\nA Jang Jang Productions Game\n\nPowered by Ren\'Py"
-    $ renpy.pause(4.0)
-
     if persistent.endingAFlag == True:
         if persistent.endingCFlag == True:
             if persistent.endingBFlag == True:

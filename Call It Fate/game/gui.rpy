@@ -10,7 +10,6 @@ init offset = -2
 ## width and height of the game.
 init python:
     gui.init(1920, 1080)
-    # KIM
     config.context_fadeout_music = 5
     config.context_fadein_music = 5
     config.fadeout_audio = 0.016
@@ -26,32 +25,32 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = u'#000060'
+define gui.accent_color = u'#003366'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#606060'
+define gui.idle_color = u'#707070'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = u'#404040'
+define gui.idle_small_color = u'#606060'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = u'#3284d6'
+define gui.hover_color = u'#003366'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
 define gui.selected_color = u'#555555'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = u'#8888887f'
+define gui.insensitive_color = u'#7070707f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = u'#6080d0'
-define gui.hover_muted_color = u'#8080f0'
+define gui.muted_color = u'#6684a3'
+define gui.hover_muted_color = u'#99adc1'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = u'#402000'
+define gui.text_color = u'#404040'
 define gui.interface_text_color = u'#404040'
 
 
@@ -229,9 +228,9 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#888888"
-define gui.choice_button_text_hover_color = "#0066cc"
-define gui.choice_button_text_insensitive_color = "#444444"
+define gui.choice_button_text_idle_color = "#707070"
+define gui.choice_button_text_hover_color = "#003366"
+define gui.choice_button_text_insensitive_color = "#7070707f"
 
 
 ## File Slot Buttons ###########################################################

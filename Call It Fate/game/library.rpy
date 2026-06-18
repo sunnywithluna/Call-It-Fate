@@ -369,7 +369,7 @@ label library_1_workout:
 
     "I take out my philosophy book and start to read today's assigned pages, highlighting any sections that seem important."
     
-    $  randnotice = renpy.random.choice(['notice', 'notice', 'or not'])
+    $  randnotice = renpy.random.choice(['notice', 'or not'])
     if randnotice == 'notice':
         $ renpy.show(custom_show("anna", "N"), [])
         "I catch Anna looking in my direction."

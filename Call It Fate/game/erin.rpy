@@ -8,7 +8,7 @@ label eventCHang:
     "I head to the art room where Erin is waiting."
     c "\"Hi, Sam! I brought the pizza--\""
     scene bg_art_a with dissolve
-    $ renpy.show(custom_show("erin", "surprised"), [])
+    $ renpy.show(custom_show("erin", "E"), [])
 
     c "\"Oh.\""
     "I'm in the doorway with a pizza box in my hands, looking at Erin holding a cardboard box of her own."
@@ -90,7 +90,7 @@ label eventCDate:
     $ renpy.show(custom_show("erin", "N"), [])
     c "\"Hi, Sam.\""
     "I see now that the painting depicts a sunflower field with all flowers but one facing the sun."
-    scene sunflowers with dissolve
+    scene bg_sunflowers with dissolve
     c "\"What do you think of it?\""
 
     menu:
@@ -125,7 +125,7 @@ label eventCDate:
 
     "Even the way she approaches each painting is intriguing, like she's truly trying to understand the artist through their work. Like she's getting to know a friend."
 
-    $ renpy.show(custom_show("erin", "surprised"), [])
+    $ renpy.show(custom_show("erin", "W"), [])
 
     "Suddenly, Erin's phone rings, and everyone in the gallery turns to see who's guilty of causing the disturbance."
 
@@ -208,9 +208,11 @@ label eventCDate:
                 "I lean in."
                 "And our lips meet."
                 scene bg_after_date with dissolve
+                $ renpy.show(custom_show("erin", "H"), [])
 
                 c "\"So, I'll see you in class?\""
                 n "\"Yeah, I'll see you then.\""
+                $ renpy.hide(custom_hide("erin"))
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
                 jump event_calculation_a
@@ -295,12 +297,11 @@ label actC_scene3:
 
     "I watch her eyes move across my shelves over every trinket on display."
 
-    $ renpy.show(custom_show("erin", "N"), [])
-
+    $ renpy.show(custom_show("erin", "W"), [])
     c "\"You have quite the merch collection.\""
 
     n "\"Yeah, most of them are from conventions. That's where you get the best deals.\""
-    $ renpy.show(custom_show("erin", "surprised"), [])
+    $ renpy.show(custom_show("erin", "S"), [])
 
     c "\"Really? I didn't know that. I've never been.\""
 
@@ -328,14 +329,14 @@ label actC_scene3:
             "I like you too": 
                 n "\"Erin, I--\""
                 "A wave of dizziness overwhelms me."
-                $ renpy.show(custom_show("erin", "S"), [])
+                $ renpy.show(custom_show("erin", "W"), [])
                 c "\"Sam!\""
                 "Erin grabs me as I almost fall to the ground."
                 "I know I need to respond to her confession, but my head hurts so much..."
                 n "\"Let's go out this weekend. I should be feeling better by then.\""
                 $ renpy.show(custom_show("erin", "F"), [])
                 c "\"Yeah! That'd be fun.\""
-                $ renpy.show(custom_show("erin", "A"), [])
+                $ renpy.show(custom_show("erin", "U"), [])
                 c "\"Oh but...I should let you rest then! Or you won't heal in time for our date.\""
                 # $ renpy.hide(custom_hide("erin"))
                 # scene event_sick_c with dissolve
@@ -366,7 +367,7 @@ label actC_scene3:
                 $ renpy.hide(custom_hide("erin"))
                 n "\"Erin...\""
     else: 
-        $ renpy.show(custom_show("erin", "S"), [])
+        $ renpy.show(custom_show("erin", "N"), [])
         c "\"Is it alright if I head out? I know I just got here, but I have some stuff I should probably take care of.\""
         n "\"Are you sure?\""
         $ renpy.show(custom_show("erin", "U"), [])

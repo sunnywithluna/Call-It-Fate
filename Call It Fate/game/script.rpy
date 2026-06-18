@@ -205,7 +205,7 @@ default randnotice = None
 default A_bad = 0
 default A_low = 6
 default A_mid = 11
-default A_mid1 = 14
+default A_mid1 = 16
 default A_mid2 = 17
 default A_mid3 = 22
 default A_high = 24
@@ -215,7 +215,7 @@ default A_high3 = 39
 default B_bad = 0
 default B_low = 3
 default B_mid = 8
-default B_mid1 = 14
+default B_mid1 = 16
 default B_mid2 = 17
 default B_mid3 = 22
 default B_high = 27
@@ -235,9 +235,6 @@ default special_B = B_mid+2
 default special_C = C_mid+2
 default neko_counter = 0
 default calendar_days_skipped = 0
-# DELETE default love_points = 'K'
-# DELETE default love_interest = 'Kim'
-
 default act1_scene0_menu1_option2b = False
 default smallTalkFlagA = False
 default smallTalkFlagB = False
@@ -382,10 +379,8 @@ init python:
         else: 
             str_out = person + '_1 '
             return str_out
-
-
+            
 label splashscreen:
-    # Kim define config.main_menu_music = "audio/free.mp3"
     play music 'audio/free.mp3' fadein 1.0
 
     scene black

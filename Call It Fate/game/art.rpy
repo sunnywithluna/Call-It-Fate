@@ -67,20 +67,24 @@ label art:
         "When I walk into the art room, Erin doesn't look back to see who it is."
         $ renpy.show(custom_show("erin", "A"), [])
         c "\"I used to be the same way with my art, you know, scared of what people thought.\""
+        $ renpy.show(custom_show("erin", "N"), [])
         c "\"But then, I realized it didn't matter.\"" 
         c "\"The important thing was that I kept drawing.\""
+        $ renpy.show(custom_show("erin", "H"), [])
         c "\"That I kept getting better.\""
         n "\"What?\""
         "Erin turns towards me, a serious look on her face."
+        $ renpy.show(custom_show("erin", "A"), [])
         c "\"The other day, you hid your sketchbook from me.\""
+        $ renpy.show(custom_show("erin", "N"), [])
         c "\"You don't have to do that.\""
         n "\"I was embarrassed. Because I was drawing you.\""
-        $ renpy.show(custom_show("erin", "U"), [])
         "She shrugs."
+        $ renpy.show(custom_show("erin", "H"), [])
         c "\"I draw people all the time.\""
         n "\"So you don't care?\""
         "Erin turns back to her tablet before sliding out of her seat and walking up to me."
-        $ renpy.show(custom_show("erin", "E"), [])
+        $ renpy.show(custom_show("erin", "F"), [])
         "Then, she holds up the device, a drawing of myself in our class on the screen."
         c "\"We'll call it even.\""
         "She returns to her seat."
@@ -98,7 +102,7 @@ label art_main_menu:
         "Draw" if not art_choice_1_b:
             jump art_1_workout
         "Say bye":
-            $ renpy.show(custom_show("Erin", "N"), [])
+            $ renpy.show(custom_show("erin", "N"), [])
             "I say goodbye to Erin before heading out."
             $ C = C + 1
             jump end_of_act
@@ -174,14 +178,15 @@ label art_choice_2_b:
         c "\"Right now, I'm just refining my skills as best I can.\""
     if C >= special_C:
         $ special_C_on = True
-        $ renpy.show(custom_show("erin", "S"), [])
+        $ renpy.show(custom_show("erin", "H"), [])
         c "\"Hm, well, I like games. It's a nice way to relax after a long day.\""
 
         n "\"That's cool, have you ever thought about doing game art professionally? After you graduate?\""
 
         $ renpy.show(custom_show("erin", "F"), [])
         c "\"That's actually a big reason I started drawing in the first place. I'd love to be a character artist or work on illustrations for deck-building games or something. No pressure though.\""
-    
+        $ renpy.show(custom_show("erin", "S"), [])
+
         c "\"Well...Actually, there is a little pressure.\""
 
         n "\"There is?\""
@@ -203,7 +208,7 @@ label art_choice_2_b:
             "Of course you'll get it!":
                 $ believe_in_her = True
                 n "\"Are you kidding? I've seen some of your art in the student gallery, and you're way better than most of the seniors.\""
-                $ renpy.show(custom_show("erin", "surprised"), [])
+                $ renpy.show(custom_show("erin", "S"), [])
 
                 c "\"You really think so? They're all so amazing though...\""
 
@@ -350,7 +355,7 @@ label art_choice_compliment_b:
                 c "\"No problem! Always happy to help.\""
 
             else:
-                $ renpy.show(custom_show("erin", "S"), [])
+                $ renpy.show(custom_show("erin", "W"), [])
                 c "\"Hm, there aren't really any shortcuts to improving. You kind of just have to experiment and practice consistently. Sorry if that isn't really helpful.\""
             jump talking_to_erin 
 
@@ -363,7 +368,7 @@ label art_1_workout:
     $ C = C + 1
     "The pencil scratches against the page of my sketchbook, the lines light in case they'll need erasing."
     
-    $  randnotice = renpy.random.choice(['notice', 'notice', 'or not'])
+    $  randnotice = renpy.random.choice(['notice', 'or not'])
     if randnotice == 'notice':
         $ renpy.show(custom_show("erin", "N"), []) 
         "I catch Erin looking in my direction."

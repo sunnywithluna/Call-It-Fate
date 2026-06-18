@@ -302,7 +302,7 @@ label gym_1_workout:
     $ A = A + 1
 
     "I work my way through some of the gym equipment, doing three sets for every exercise and moving up in weight when it seems too easy."
-    $  randnotice = renpy.random.choice(['notice', 'notice', 'or not'])
+    $  randnotice = renpy.random.choice(['notice', 'or not'])
     if randnotice == 'notice':
         "I catch Maddie looking in my direction."
         $ renpy.show(custom_show("maddie", "N"), [])

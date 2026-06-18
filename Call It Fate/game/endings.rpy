@@ -248,7 +248,7 @@ label endingC11:
     c "\"Ahh! That was so embarrassing. Can you just forget I said anything?\""
 
     n "\"No, you don't understand!\""
-    $ renpy.show(custom_show("erin", "surprised"), [])
+    $ renpy.show(custom_show("erin", "S"), [])
 
     n "\"I-I didn't get a chance to respond before, but...\""
     n "\"I feel the same way.\""

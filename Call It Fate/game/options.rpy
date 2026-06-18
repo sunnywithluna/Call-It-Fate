@@ -37,14 +37,6 @@ But opportunities for growth soon arise when he takes a philosophy course and me
 And who knows? Maybe he'll find love along the way.
 """)
 
-# Jang Jang Productions
-
-# Writer: Kris Gathman
-
-# Programmer & Artist: Kim Jang
-
-# Composer: Nicholas Gathman
-
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.

@@ -250,8 +250,10 @@ label eventADate:
                 "I lean in."
                 "And our lips meet."
                 scene bg_after_date with dissolve
+                $ renpy.show(custom_show("maddie", "H"), [])
 
                 a "\"Bye, Sam.\""
+                $ renpy.hide(custom_hide("maddie"))
                 "She gets in her car and drives away."
                 "And I can't wait until Tuesday when I get to see her again."
                 jump event_calculation_a
